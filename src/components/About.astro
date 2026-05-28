@@ -1,16 +1,23 @@
 ---
-// About V2 — bio + crédibilités
 const badges = [
   'Skéma — Mastère Spécialisé',
   'IAE Lille — Master Marketing',
   'Certifié Agile PM',
   'Certifié Google Ads / Analytics',
 ];
+
+const parcours = [
+  { role: 'Chef de projet digital & Traffic manager', orgs: 'Sonepar, WebdealAuto', detail: 'SEO/SEA, campagnes, data, communication B2B' },
+  { role: 'Product Owner & PM', orgs: 'Top Office, Auchan', detail: 'Missions ESN, pilotage produit' },
+  { role: 'Responsable e-commerce & acquisition', orgs: 'Alfaprint', detail: 'Refonte Odoo, flux produit, Google Shopping, +35 % ventes' },
+];
 ---
 
 <section id="a-propos" class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Bio + photo -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
       <div>
         <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
@@ -28,14 +35,104 @@ const badges = [
           ))}
         </div>
       </div>
-      <div class="relative">
-        <div class="aspect-[4/5] bg-gradient-to-br from-blue-500 to-indigo-700 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-blue-500/20">
-          <div class="text-center">
-            <div class="text-9xl font-serif italic">DG</div>
-            <div class="mt-4 text-blue-100">Photo professionnelle à ajouter</div>
+
+      <!-- Photo -->
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-3xl blur-2xl opacity-30" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); transform: scale(1.1);"></div>
+          <img
+            src="/images/david-gacquer.png"
+            alt="David Gacquer — Fondateur Magnetic-IA"
+            class="relative rounded-3xl object-cover shadow-2xl"
+            style="width: 380px; max-width: 100%; height: 460px; object-position: top;"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Omotenashi -->
+    <div class="mb-20 p-10 lg:p-14 rounded-3xl relative overflow-hidden" style="background: var(--bg-tertiary); border: 1px solid var(--border);">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 blur-3xl" style="background: radial-gradient(circle, var(--accent), transparent);"></div>
+      <div class="relative max-w-3xl">
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Philosophie</div>
+        <h3 class="text-2xl md:text-3xl font-bold mb-5">
+          L'Omotenashi comme méthode de travail
+        </h3>
+        <p class="text-lg leading-relaxed mb-6" style="color: var(--text-secondary);">
+          J'ai quitté les silos des ESN pour une approche intégrée et pragmatique, inspirée de la philosophie japonaise du service.
+        </p>
+        <blockquote class="border-l-4 border-blue-400 pl-6 font-serif italic text-xl leading-relaxed" style="color: var(--text-primary);">
+          « L'omotenashi, c'est anticiper les besoins d'un client avant même qu'il en soit conscient. »
+        </blockquote>
+        <p class="mt-6 leading-relaxed" style="color: var(--text-secondary);">
+          Rigueur du détail, attention sincère, innovation utile. Pas d'outil imposé, pas d'automatisation par défaut, pas de complexité ajoutée. Ce qui fait sens dans votre contexte, et rien d'autre.
+        </p>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucun outil imposé</div>
+            Le bon outil est celui qui s'adapte à votre contexte, pas l'inverse.
+          </div>
+          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucune automatisation par défaut</div>
+            Automatiser ce qui n'est pas cadré, c'est amplifier le chaos.
+          </div>
+          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucune complexité ajoutée</div>
+            L'IA est un levier, et seulement si tout le reste est en ordre.
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Témoignages -->
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-8" style="color: var(--accent);">Ce que disent mes clients</div>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Témoignage 1 : Abdelkarim Feddal -->
+        <div class="p-8 rounded-3xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
+          <div class="flex items-center gap-1 mb-4">
+            {Array(5).fill(null).map(() => (
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="font-serif italic text-lg leading-relaxed mb-6" style="color: var(--text-primary);">
+            « Une vraie montée en compétences et une stratégie claire, que j'ai pu mettre en œuvre sans perdre de temps. »
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="/images/testimonial-1.jpg" alt="Abdelkarim Feddal" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <div class="font-semibold text-sm" style="color: var(--text-primary);">Abdelkarim Feddal</div>
+              <div class="text-xs" style="color: var(--text-tertiary);">Dirigeant — alfaprint.fr</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 2 : Charlotte Baert -->
+        <div class="p-8 rounded-3xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
+          <div class="flex items-center gap-1 mb-4">
+            {Array(5).fill(null).map(() => (
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="font-serif italic text-lg leading-relaxed mb-6" style="color: var(--text-primary);">
+            « Grâce à David, j'ai enfin compris comment structurer ma communication sur LinkedIn. Résultat : j'ai gagné en visibilité et en crédibilité auprès de ma cible. »
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="/images/testimonial-2.jpg" alt="Charlotte Baert" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <div class="font-semibold text-sm" style="color: var(--text-primary);">Charlotte Baert</div>
+              <div class="text-xs" style="color: var(--text-tertiary);">Experte assurance — Agence SwissLife Wambrechies</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>

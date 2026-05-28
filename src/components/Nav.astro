@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouverte';
 ---
 
 <nav
@@ -7,18 +8,22 @@ import Logo from './Logo.astro';
   style="background: color-mix(in srgb, var(--bg-primary) 80%, transparent); border-color: var(--border);"
 >
   <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
     <a href="#" class="flex items-center" style="color: var(--text-primary);" aria-label="Magnetic-IA — Accueil">
       <Logo height="32px" />
     </a>
 
+    <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: var(--text-secondary);">
       <a href="#services" class="hover:opacity-100 transition" style="opacity: 0.8;">Services</a>
       <a href="#methode" class="hover:opacity-100 transition" style="opacity: 0.8;">Méthode</a>
-      <a href="#cas-client" class="hover:opacity-100 transition" style="opacity: 0.8;">Cas client</a>
+      <a href="#cas-client" class="hover:opacity-100 transition" style="opacity: 0.8;">Cas clients</a>
       <a href="#a-propos" class="hover:opacity-100 transition" style="opacity: 0.8;">À propos</a>
     </div>
 
-    <div class="flex items-center gap-3">
+    <!-- Actions desktop -->
+    <div class="hidden md:flex items-center gap-3">
       <button
         type="button"
         onclick="window.toggleTheme()"
@@ -35,7 +40,9 @@ import Logo from './Logo.astro';
       </button>
 
       <a
-        href="#contact"
+        href={CALENDLY_URL}
+        target="_blank"
+        rel="noopener"
         class="inline-flex items-center gap-2 px-4 py-2 bg-white text-slate-900 dark:bg-blue-500 dark:text-white text-sm font-medium rounded-xl hover:opacity-90 transition shadow-lg"
       >
         Échanger 30 min
@@ -44,5 +51,89 @@ import Logo from './Logo.astro';
         </svg>
       </a>
     </div>
+
+    <!-- Mobile : theme toggle + hamburger -->
+    <div class="flex md:hidden items-center gap-2">
+      <button
+        type="button"
+        onclick="window.toggleTheme()"
+        class="theme-toggle relative w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition"
+        style="border: 1px solid var(--border);"
+        aria-label="Basculer thème"
+      >
+        <svg class="sun-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <svg class="moon-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition"
+        style="border: 1px solid var(--border); color: var(--text-primary);"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu drawer -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t px-6 py-6 space-y-4"
+    style="background: var(--bg-primary); border-color: var(--border);"
+  >
+    <a href="#services" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Services</a>
+    <a href="#methode" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Méthode</a>
+    <a href="#cas-client" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Cas clients</a>
+    <a href="#a-propos" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">À propos</a>
+    <div class="pt-4 border-t" style="border-color: var(--border);">
+      <a
+        href={CALENDLY_URL}
+        target="_blank"
+        rel="noopener"
+        class="flex items-center justify-center gap-2 w-full px-4 py-3 bg-blue-500 text-white text-sm font-medium rounded-xl hover:bg-blue-600 transition"
+      >
+        Réserver un créneau gratuit
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
   </div>
 </nav>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var hamburger = document.getElementById('hamburger-icon');
+    var closeIco = document.getElementById('close-icon');
+
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        hamburger.classList.toggle('hidden');
+        closeIco.classList.toggle('hidden');
+      });
+    }
+
+    window.closeMobileMenu = function () {
+      if (menu) menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (hamburger) hamburger.classList.remove('hidden');
+      if (closeIco) closeIco.classList.add('hidden');
+    };
+  })();
+</script>

@@ -1,5 +1,6 @@
 ---
-// FinalCTA V2 — CTA final avant footer
+// FinalCTA V3 — CTA final avec email officiel et Calendly
+const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouverte';
 ---
 
 <section id="contact" class="py-32 relative overflow-hidden">
@@ -16,18 +17,27 @@
       Un premier échange de 30 minutes, gratuit, pour comprendre votre situation et voir si je peux vous aider.
     </p>
     <div class="mt-12 flex flex-wrap gap-4 justify-center">
-      <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-2xl shadow-blue-500/30">
+      <a href={CALENDLY_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-2xl shadow-blue-500/30">
         Réserver un créneau
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </a>
-      <a href="mailto:davidgacquer59@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-xl transition" style="border: 1px solid var(--border); color: var(--text-primary);">
+      <a href="mailto:contact@magnetic-ia.fr" class="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-xl transition" style="border: 1px solid var(--border); color: var(--text-primary);">
         M'écrire un email
       </a>
     </div>
     <div class="mt-12 text-sm" style="color: var(--text-tertiary);">
-      davidgacquer59@gmail.com · 06 32 35 12 94 · Wambrechies (59)
+      contact@magnetic-ia.fr · +33 6 32 35 12 94 · Wambrechies (59)
+    </div>
+    <div class="mt-4 flex items-center justify-center gap-4">
+      <a href="https://www.linkedin.com/in/david-gacquer-20973064/" target="_blank" rel="noopener" class="text-sm hover:opacity-100 transition" style="color: var(--text-tertiary);">
+        LinkedIn
+      </a>
+      <span style="color: var(--border);">·</span>
+      <a href="https://twitter.com/davidgacquer" target="_blank" rel="noopener" class="text-sm hover:opacity-100 transition" style="color: var(--text-tertiary);">
+        Twitter / X
+      </a>
     </div>
   </div>
 </section>
