@@ -1,0 +1,83 @@
+---
+// Hero.astro — Hero principal avec post-its dispersés (état actuel = dispersion)
+const stickies = [
+  { text: 'CRM ?',           color: 'var(--color-pi-yellow)', x: 8,  y: 12, r: -6 },
+  { text: 'Newsletter',      color: 'var(--color-pi-pink)',   x: 70, y: 8,  r: 5  },
+  { text: 'Refonte\nsite',   color: 'var(--color-pi-mint)',   x: 6,  y: 56, r: 4  },
+  { text: 'Agent IA ?',      color: 'var(--color-pi-blue)',   x: 60, y: 60, r: -8 },
+  { text: 'Pub Meta',        color: 'var(--color-pi-peach)',  x: 36, y: 32, r: 2  },
+  { text: 'SEO local',       color: 'var(--color-pi-yellow)', x: 78, y: 38, r: -4 },
+  { text: 'Auto.\nfacturation', color: 'var(--color-pi-pink)', x: 24, y: 70, r: 6 },
+  { text: 'Linkedin',        color: 'var(--color-pi-mint)',   x: 52, y: 80, r: -3 },
+];
+---
+
+<section class="relative pt-20 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+  <div class="max-w-[var(--container-default)] mx-auto px-7">
+    <div class="grid lg:grid-cols-[1.15fr_1fr] gap-16 items-center">
+      <!-- Colonne texte -->
+      <div>
+        <div class="inline-flex items-center gap-2.5 font-mono-tag text-[11.5px] uppercase tracking-[0.18em] text-[var(--color-ink-mute)] mb-7">
+          <span class="w-5 h-px bg-[var(--color-accent)]"></span>
+          Accompagnement · Cadrage digital
+        </div>
+
+        <h1 class="text-[clamp(44px,6vw,88px)] leading-[1.02] tracking-tight">
+          Votre digital part dans
+          <span class="relative inline-block">
+            tous les sens
+            <svg class="absolute -left-1.5 -right-1.5 -bottom-2.5 w-[calc(100%+12px)] h-5.5" viewBox="0 0 200 22" preserveAspectRatio="none">
+              <path d="M2 14 C 40 4, 80 20, 120 10 S 196 6, 198 12" stroke="var(--color-hot)" stroke-width="3" fill="none" stroke-linecap="round" />
+            </svg>
+          </span> ?
+          <br />
+          <span class="serif-it">On remet de la clarté.</span>
+        </h1>
+
+        <p class="mt-7 max-w-[560px] text-[var(--color-ink-dim)] text-[19px] leading-[1.5]">
+          Avant d'ajouter un outil, une IA ou une automatisation : on regarde, on trie, on priorise. Un cadrage pour dirigeants de PME qui veulent <strong class="text-[var(--color-ink)]">décider, pas empiler</strong>.
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-3.5">
+          <a href="/prise-de-rdv/" class="inline-flex items-center gap-2.5 px-6 py-4 bg-[var(--color-accent)] text-white font-semibold rounded-full shadow-xl shadow-[var(--color-accent)]/40 hover:-translate-y-0.5 transition">
+            Faire le point sur mon écosystème
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a href="#methode" class="inline-flex items-center gap-2.5 px-6 py-4 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-semibold rounded-full hover:border-[var(--color-accent)] transition">
+            Voir la méthode
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne post-its -->
+      <div class="relative aspect-square rounded-2xl border border-[var(--color-line)] overflow-hidden" style="background: radial-gradient(circle at 30% 30%, rgba(77,111,255,.18), transparent 50%), linear-gradient(180deg, #0e1a30, #0a1124);">
+        <!-- Grille de fond -->
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 36px 36px;"></div>
+
+        <!-- Post-its -->
+        {stickies.map((s) => (
+          <div
+            class="absolute w-[110px] h-[110px] flex items-center justify-center font-hand text-[18px] leading-[1.1] text-center p-2.5 text-[#1a1a1a] shadow-[0_10px_20px_-8px_rgba(0,0,0,.6)] rounded-sm"
+            style={`background: ${s.color}; left: ${s.x}%; top: ${s.y}%; transform: rotate(${s.r}deg); white-space: pre-line;`}
+          >
+            {s.text}
+          </div>
+        ))}
+
+        <!-- Flèches manuscrites de confusion -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="none">
+          <path d="M 90 80 C 160 60, 220 120, 280 90" stroke="rgba(255,255,255,.25)" stroke-width="2" fill="none" stroke-dasharray="4 5" />
+          <path d="M 100 250 C 180 320, 240 180, 320 240" stroke="rgba(255,255,255,.25)" stroke-width="2" fill="none" stroke-dasharray="4 5" />
+          <path d="M 200 130 L 200 280" stroke="rgba(255,93,143,.5)" stroke-width="2" fill="none" />
+        </svg>
+
+        <!-- Label état actuel -->
+        <div class="absolute bottom-3.5 left-3.5 font-mono-tag text-[10px] tracking-[0.18em] text-[var(--color-ink-mute)] uppercase">
+          État actuel · Dispersion
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
