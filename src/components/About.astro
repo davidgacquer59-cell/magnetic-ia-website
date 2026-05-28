@@ -5,21 +5,15 @@ const badges = [
   'Certifié Agile PM',
   'Certifié Google Ads / Analytics',
 ];
-
-const parcours = [
-  { role: 'Chef de projet digital & Traffic manager', orgs: 'Sonepar, WebdealAuto', detail: 'SEO/SEA, campagnes, data, communication B2B' },
-  { role: 'Product Owner & PM', orgs: 'Top Office, Auchan', detail: 'Missions ESN, pilotage produit' },
-  { role: 'Responsable e-commerce & acquisition', orgs: 'Alfaprint', detail: 'Refonte Odoo, flux produit, Google Shopping, +35 % ventes' },
-];
 ---
 
 <section id="a-propos" class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- Bio + photo — photo à GAUCHE -->
+    <!-- Bio + photo -->
     <div class="grid lg:grid-cols-2 gap-8 items-center mb-20">
 
-      <!-- Photo (colonne gauche) -->
+      <!-- Photo à gauche -->
       <div class="flex justify-center lg:justify-start order-2 lg:order-1">
         <img
           src="/images/david-gacquer.png"
@@ -29,7 +23,7 @@ const parcours = [
         />
       </div>
 
-      <!-- Texte (colonne droite) -->
+      <!-- Texte à droite -->
       <div class="order-1 lg:order-2">
         <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
@@ -47,45 +41,74 @@ const parcours = [
           ))}
         </div>
       </div>
-
-      </div>
     </div>
 
-    <!-- Omotenashi -->
-    <div class="mb-20 p-10 lg:p-14 rounded-3xl relative overflow-hidden" style="background: var(--bg-tertiary); border: 1px solid var(--border);">
-      <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 blur-3xl" style="background: radial-gradient(circle, var(--accent), transparent);"></div>
-      <div class="relative max-w-3xl">
-        <div class="flex items-center gap-5 mb-6">
-          <!-- Kanji 心 (kokoro = cœur / âme) — symbole de l'attention sincère -->
-          <div class="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-4xl font-bold select-none" style="background: rgba(96, 165, 250, 0.08); border: 1px solid rgba(96, 165, 250, 0.2); color: var(--accent); font-family: 'Hiragino Mincho ProN', 'Yu Mincho', Georgia, serif;">心</div>
-          <div>
-            <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-1" style="color: var(--accent);">Philosophie</div>
-            <h3 class="text-2xl md:text-3xl font-bold">
-              L'Omotenashi comme méthode de travail
-            </h3>
+    <!-- Omotenashi — section visuelle forte -->
+    <div class="mb-20 rounded-3xl relative overflow-hidden" style="background: linear-gradient(135deg, #0a0e1a 0%, #0f1424 60%, #0d1830 100%); border: 1px solid rgba(96,165,250,0.15);">
+
+      <!-- Grand kanji décoratif en arrière-plan -->
+      <div class="absolute right-0 top-0 bottom-0 flex items-center pr-8 pointer-events-none select-none" aria-hidden="true">
+        <span style="font-size: 280px; line-height: 1; opacity: 0.04; color: #60a5fa; font-family: 'Hiragino Mincho ProN','Yu Mincho',Georgia,serif; font-weight: 400;">心</span>
+      </div>
+
+      <!-- Halo bleu -->
+      <div class="absolute top-0 left-0 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%); filter: blur(60px);"></div>
+
+      <div class="relative grid lg:grid-cols-2 gap-0">
+
+        <!-- Gauche : philosophie -->
+        <div class="p-10 lg:p-14 lg:border-r" style="border-color: rgba(96,165,250,0.1);">
+          <div class="flex items-center gap-4 mb-8">
+            <!-- Kanji visible -->
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0" style="background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.25); color: #60a5fa; font-family: 'Hiragino Mincho ProN','Yu Mincho',Georgia,serif;">心</div>
+            <div>
+              <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-1" style="color: #60a5fa;">Philosophie · おもてなし</div>
+              <div class="text-2xl font-bold" style="color: #f1f5f9;">L'Omotenashi</div>
+            </div>
+          </div>
+
+          <p class="text-base leading-relaxed mb-6" style="color: #94a3b8;">
+            Inspiré de la philosophie japonaise du service : anticiper les besoins d'un client <em>avant même qu'il les exprime</em>. Rigueur du détail, attention sincère, innovation utile.
+          </p>
+
+          <blockquote class="pl-5 font-serif italic text-lg leading-relaxed" style="border-left: 3px solid #60a5fa; color: #e2e8f0;">
+            « L'omotenashi, c'est aller au-delà d'un service irréprochable. C'est anticiper sans attendre qu'on vous le demande. »
+          </blockquote>
+
+          <!-- Séparateur japonais décoratif -->
+          <div class="mt-8 flex items-center gap-3">
+            <div class="h-px flex-1" style="background: linear-gradient(to right, rgba(96,165,250,0.3), transparent);"></div>
+            <span class="text-xs font-mono" style="color: rgba(96,165,250,0.4);">⌬</span>
+            <div class="h-px flex-1" style="background: linear-gradient(to left, rgba(96,165,250,0.3), transparent);"></div>
           </div>
         </div>
-        <p class="text-lg leading-relaxed mb-6" style="color: var(--text-secondary);">
-          J'ai quitté les silos des ESN pour une approche intégrée et pragmatique, inspirée de la philosophie japonaise du service.
-        </p>
-        <blockquote class="border-l-4 border-blue-400 pl-6 font-serif italic text-xl leading-relaxed" style="color: var(--text-primary);">
-          « L'omotenashi, c'est anticiper les besoins d'un client avant même qu'il en soit conscient. »
-        </blockquote>
-        <p class="mt-6 leading-relaxed" style="color: var(--text-secondary);">
-          Rigueur du détail, attention sincère, innovation utile. Pas d'outil imposé, pas d'automatisation par défaut, pas de complexité ajoutée. Ce qui fait sens dans votre contexte, et rien d'autre.
-        </p>
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
-            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucun outil imposé</div>
-            Le bon outil est celui qui s'adapte à votre contexte, pas l'inverse.
+
+        <!-- Droite : 3 non-négociables -->
+        <div class="p-10 lg:p-14 flex flex-col justify-center gap-6">
+          <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-2" style="color: rgba(96,165,250,0.6);">Mes 3 non-négociables</div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #60a5fa;">01</div>
+            <div>
+              <div class="font-semibold mb-1" style="color: #f1f5f9;">Aucun outil imposé</div>
+              <div class="text-sm" style="color: #64748b;">Le bon outil est celui qui s'adapte à votre contexte. Pas l'inverse.</div>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
-            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucune automatisation par défaut</div>
-            Automatiser ce qui n'est pas cadré, c'est amplifier le chaos.
+
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #a78bfa;">02</div>
+            <div>
+              <div class="font-semibold mb-1" style="color: #f1f5f9;">Aucune automatisation par défaut</div>
+              <div class="text-sm" style="color: #64748b;">Automatiser ce qui n'est pas cadré, c'est amplifier le chaos.</div>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl text-sm" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
-            <div class="font-semibold mb-1" style="color: var(--text-primary);">Aucune complexité ajoutée</div>
-            L'IA est un levier, et seulement si tout le reste est en ordre.
+
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #34d399;">03</div>
+            <div>
+              <div class="font-semibold mb-1" style="color: #f1f5f9;">Aucune complexité ajoutée</div>
+              <div class="text-sm" style="color: #64748b;">L'IA est un levier — seulement si tout le reste est en ordre.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +119,6 @@ const parcours = [
       <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-8" style="color: var(--accent);">Ce que disent mes clients</div>
       <div class="grid md:grid-cols-2 gap-6">
 
-        <!-- Témoignage 1 : Abdelkarim Feddal -->
         <div class="p-8 rounded-3xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
           <div class="flex items-center gap-1 mb-4">
             {Array(5).fill(null).map(() => (
@@ -109,7 +131,7 @@ const parcours = [
             « Une vraie montée en compétences et une stratégie claire, que j'ai pu mettre en œuvre sans perdre de temps. »
           </blockquote>
           <div class="flex items-center gap-3">
-            <img src="/images/abdelkarim-feddal.webp" alt="Abdelkarim Feddal" class="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+            <img src="/images/abdelkarim-feddal.webp" alt="Abdelkarim Feddal" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
             <div>
               <div class="font-semibold text-sm" style="color: var(--text-primary);">Abdelkarim Feddal</div>
               <div class="text-xs" style="color: var(--text-tertiary);">Dirigeant — alfaprint.fr</div>
@@ -117,7 +139,6 @@ const parcours = [
           </div>
         </div>
 
-        <!-- Témoignage 2 : Charlotte Baert -->
         <div class="p-8 rounded-3xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
           <div class="flex items-center gap-1 mb-4">
             {Array(5).fill(null).map(() => (
@@ -130,7 +151,7 @@ const parcours = [
             « Grâce à David, j'ai enfin compris comment structurer ma communication sur LinkedIn. Résultat : j'ai gagné en visibilité et en crédibilité auprès de ma cible. »
           </blockquote>
           <div class="flex items-center gap-3">
-            <img src="/images/charlotte-baert.webp" alt="Charlotte Baert" class="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+            <img src="/images/charlotte-baert.webp" alt="Charlotte Baert" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
             <div>
               <div class="font-semibold text-sm" style="color: var(--text-primary);">Charlotte Baert</div>
               <div class="text-xs" style="color: var(--text-tertiary);">Experte assurance — Agence SwissLife Wambrechies</div>

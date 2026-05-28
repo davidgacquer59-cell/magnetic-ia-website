@@ -11,15 +11,14 @@
       muted
       loop
       playsinline
+      preload="auto"
       class="absolute inset-0 w-full h-full object-cover"
-      style="opacity: 0.18;"
+      style="opacity: 0.15; will-change: transform;"
     >
       <source src="/images/background.mp4" type="video/mp4" />
     </video>
-    <!-- Overlay gradient -->
-    <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(10,14,26,0.85) 60%, rgba(59,130,246,0.08) 100%);"></div>
-    <!-- Grain léger -->
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E'); background-size: 200px;"></div>
+    <!-- Overlay opaque fort pour masquer le saut de boucle -->
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--bg-primary) 30%, rgba(10,14,26,0.92) 70%, var(--bg-primary) 100%);"></div>
   </div>
 
   <!-- Halo bleu gauche -->
