@@ -1,117 +1,99 @@
 ---
-// CaseStudy V3 — 2 cas clients réels
+// CaseStudy V4 — version allégée, 2 cartes côte à côte
 ---
 
-<section id="cas-client" class="py-24" style="background: var(--bg-secondary);">
+<section id="cas-client" class="py-20" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div class="max-w-3xl mb-16">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Cas clients</div>
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-        Des résultats mesurés,<br />
+    <div class="mb-12">
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-3" style="color: var(--accent);">Cas clients</div>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+        Des résultats mesurés,
         <span class="font-serif italic" style="color: var(--text-tertiary);">pas des promesses.</span>
       </h2>
     </div>
 
-    <!-- Cas 1 : Alfaprint -->
-    <div class="mb-12 grid lg:grid-cols-3 gap-8">
-      <div class="lg:col-span-1 space-y-8">
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Contexte</div>
-          <p style="color: var(--text-secondary);">PME spécialisée dans l'impression B2B (alfaprint.fr), fortement dépendante des marketplaces. Site e-commerce non performant, trafic faible et non qualifié, catalogue Google Shopping mal exploité.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Cas 1 : Alfaprint -->
+      <div class="rounded-2xl overflow-hidden" style="border: 1px solid var(--border);">
+        <!-- Header coloré léger -->
+        <div class="px-6 py-4 flex items-center justify-between" style="background: rgba(59,130,246,0.08); border-bottom: 1px solid rgba(59,130,246,0.15);">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-0.5" style="color: #60a5fa;">E-commerce B2B</div>
+            <div class="font-bold" style="color: var(--text-primary);">Alfaprint.fr</div>
+          </div>
+          <div class="text-xs" style="color: var(--text-tertiary);">10 mois · 2024–2025</div>
         </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Mission</div>
-          <p style="color: var(--text-secondary);">Refonte complète sur Odoo, optimisation du flux produit, structuration de la stratégie Google Ads Shopping, mise en place du tracking GA4/GTM, stratégie 20/80 sur les lignes à fort potentiel.</p>
+
+        <!-- KPIs compacts -->
+        <div class="grid grid-cols-4 divide-x" style="border-bottom: 1px solid var(--border); divide-color: var(--border);">
+          {[
+            { v: '+35 %', l: 'Ventes' },
+            { v: '÷ 2',   l: 'CAC' },
+            { v: '+20 %', l: 'Conversion' },
+            { v: '+35 %', l: 'Clics' },
+          ].map(k => (
+            <div class="px-3 py-4 text-center">
+              <div class="text-xl font-bold" style="color: #60a5fa;">{k.v}</div>
+              <div class="text-xs mt-0.5" style="color: var(--text-tertiary);">{k.l}</div>
+            </div>
+          ))}
         </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Durée</div>
-          <p style="color: var(--text-secondary);">10 mois d'accompagnement (octobre 2024 — juillet 2025).</p>
+
+        <!-- Citation + avatar -->
+        <div class="p-6">
+          <blockquote class="font-serif italic leading-relaxed mb-4 text-sm" style="color: var(--text-secondary);">
+            « David a remis de l'ordre dans une stratégie qui partait dans tous les sens. En trois mois, on avait des KPI fiables et un ROI publicitaire qu'on n'avait jamais atteint. »
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="/images/abdelkarim-feddal.webp" alt="Abdelkarim Feddal" class="w-9 h-9 rounded-full object-cover flex-shrink-0" />
+            <div>
+              <div class="font-semibold text-sm" style="color: var(--text-primary);">Abdelkarim Feddal</div>
+              <div class="text-xs" style="color: var(--text-tertiary);">Dirigeant — alfaprint.fr</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="lg:col-span-2 bg-gradient-to-br from-blue-500 to-indigo-700 rounded-3xl p-10 lg:p-14 text-white shadow-2xl shadow-blue-500/20">
-        <div class="text-sm font-semibold text-blue-200 uppercase tracking-[0.2em] mb-4">Résultats mesurés — Alfaprint</div>
-        <div class="grid grid-cols-2 gap-8 mb-10">
+      <!-- Cas 2 : SwissLife -->
+      <div class="rounded-2xl overflow-hidden" style="border: 1px solid var(--border);">
+        <div class="px-6 py-4 flex items-center justify-between" style="background: rgba(139,92,246,0.08); border-bottom: 1px solid rgba(139,92,246,0.15);">
           <div>
-            <div class="text-5xl font-bold">+35 %</div>
-            <div class="mt-2 text-blue-100">Ventes en 3 mois</div>
+            <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-0.5" style="color: #a78bfa;">LinkedIn B2B</div>
+            <div class="font-bold" style="color: var(--text-primary);">SwissLife Wambrechies</div>
           </div>
-          <div>
-            <div class="text-5xl font-bold">÷ 2</div>
-            <div class="mt-2 text-blue-100">Coût d'acquisition</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold">+20 %</div>
-            <div class="mt-2 text-blue-100">Taux de conversion</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold">+35 %</div>
-            <div class="mt-2 text-blue-100">Clics qualifiés</div>
-          </div>
+          <div class="text-xs" style="color: var(--text-tertiary);">En cours · depuis 2024</div>
         </div>
-        <blockquote class="border-l-2 border-blue-300 pl-6 font-serif italic text-blue-50 text-xl leading-relaxed">
-          « David a remis de l'ordre dans une stratégie qui partait dans tous les sens. En trois mois, on avait des KPI fiables et un ROI publicitaire qu'on n'avait jamais atteint. »
-        </blockquote>
-        <div class="mt-4 flex items-center gap-3">
-          <img src="/images/abdelkarim-feddal.webp" alt="Abdelkarim Feddal" class="w-9 h-9 rounded-full object-cover flex-shrink-0 border-2 border-blue-300" />
-          <div>
-            <div class="font-semibold text-sm">Abdelkarim Feddal</div>
-            <div class="text-xs text-blue-200">Dirigeant — alfaprint.fr</div>
+
+        <div class="grid grid-cols-4 divide-x" style="border-bottom: 1px solid var(--border); divide-color: var(--border);">
+          {[
+            { v: '+40 %', l: 'Engagement' },
+            { v: '5–10',  l: 'Leads/mois' },
+            { v: '100 %', l: 'Régularité' },
+            { v: '2 mois', l: 'Résultats' },
+          ].map(k => (
+            <div class="px-3 py-4 text-center">
+              <div class="text-xl font-bold" style="color: #a78bfa;">{k.v}</div>
+              <div class="text-xs mt-0.5" style="color: var(--text-tertiary);">{k.l}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="p-6">
+          <blockquote class="font-serif italic leading-relaxed mb-4 text-sm" style="color: var(--text-secondary);">
+            « Grâce à David, j'ai enfin compris comment structurer ma communication sur LinkedIn. Résultat : j'ai gagné en visibilité et en crédibilité auprès de ma cible. »
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="/images/charlotte-baert.webp" alt="Charlotte Baert" class="w-9 h-9 rounded-full object-cover flex-shrink-0" />
+            <div>
+              <div class="font-semibold text-sm" style="color: var(--text-primary);">Charlotte Baert</div>
+              <div class="text-xs" style="color: var(--text-tertiary);">Experte assurance — Agence SwissLife Wambrechies</div>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-
-    <!-- Cas 2 : SwissLife / Charlotte Baert -->
-    <div class="grid lg:grid-cols-3 gap-8">
-      <div class="lg:col-span-1 space-y-8">
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Contexte</div>
-          <p style="color: var(--text-secondary);">Experte en assurance et prévoyance chez SwissLife Wambrechies. Expertise solide mais présence LinkedIn quasi inexistante, peu de recommandations, pipeline qualifié inexistant.</p>
-        </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Mission</div>
-          <p style="color: var(--text-secondary);">Structuration de la stratégie LinkedIn avec IA : ligne éditoriale axée conseil (0 % promotion), 2 posts/semaine minimum, formats complémentaires, contenu pédagogique pour dirigeants.</p>
-        </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Durée</div>
-          <p style="color: var(--text-secondary);">Accompagnement en cours depuis juin 2024.</p>
-        </div>
-      </div>
-
-      <div class="lg:col-span-2 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl p-10 lg:p-14 text-white shadow-2xl shadow-purple-500/20">
-        <div class="text-sm font-semibold text-purple-200 uppercase tracking-[0.2em] mb-4">Résultats mesurés — SwissLife Wambrechies</div>
-        <div class="grid grid-cols-2 gap-8 mb-10">
-          <div>
-            <div class="text-5xl font-bold">+40 %</div>
-            <div class="mt-2 text-purple-100">Engagement LinkedIn</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold">5–10</div>
-            <div class="mt-2 text-purple-100">Leads qualifiés / mois</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold">100 %</div>
-            <div class="mt-2 text-purple-100">Régularité des contenus</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold">2 mois</div>
-            <div class="mt-2 text-purple-100">Pour atteindre ces résultats</div>
-          </div>
-        </div>
-        <blockquote class="border-l-2 border-purple-300 pl-6 font-serif italic text-purple-50 text-xl leading-relaxed">
-          « Grâce à David, j'ai enfin compris comment structurer ma communication sur LinkedIn. Résultat : j'ai gagné en visibilité et en crédibilité auprès de ma cible. »
-        </blockquote>
-        <div class="mt-4 flex items-center gap-3">
-          <img src="/images/charlotte-baert.webp" alt="Charlotte Baert" class="w-9 h-9 rounded-full object-cover flex-shrink-0 border-2 border-purple-300" />
-          <div>
-            <div class="font-semibold text-sm">Charlotte Baert</div>
-            <div class="text-xs text-purple-200">Experte assurance — Agence SwissLife Wambrechies</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>

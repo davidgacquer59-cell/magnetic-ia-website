@@ -1,23 +1,42 @@
 ---
-// Manifesto V2 — La promesse
+// Manifesto V3 — La promesse avec visuel à droite
 ---
 
-<section class="py-32 relative overflow-hidden" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
+<section class="py-24 relative overflow-hidden" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
   <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl" style="background: radial-gradient(circle, var(--accent), transparent);"></div>
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15 blur-3xl" style="background: radial-gradient(circle, var(--accent), transparent);"></div>
   </div>
+
   <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="max-w-4xl">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Ma promesse</div>
-      <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-        Je remets de la <span class="font-serif italic text-blue-400">clarté</span>,
-        de la <span class="font-serif italic text-blue-400">priorité</span>
-        et du <span class="font-serif italic text-blue-400">ROI</span>
-        dans votre stratégie IA et digitale.
-      </h2>
-      <p class="mt-8 text-xl leading-relaxed max-w-3xl" style="color: var(--text-secondary);">
-        Je ne suis pas un exécutant technique. Je suis un sparring partner stratégique. J'interviens <em class="font-serif text-blue-400 not-italic">avant</em> l'heure de décision, pour traduire un enjeu métier en cas d'usage IA priorisés, avec une feuille de route exécutable.
-      </p>
+    <div class="grid lg:grid-cols-[1fr_380px] gap-16 items-center">
+
+      <!-- Texte gauche -->
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Ma promesse</div>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
+          Je remets de la <span class="font-serif italic text-blue-400">clarté</span>,
+          de la <span class="font-serif italic text-blue-400">priorité</span>
+          et du <span class="font-serif italic text-blue-400">ROI</span>
+          dans votre stratégie IA.
+        </h2>
+        <p class="mt-8 text-lg leading-relaxed max-w-xl" style="color: var(--text-secondary);">
+          Je ne suis pas un exécutant technique. Je suis un sparring partner stratégique. J'interviens <em class="font-serif text-blue-400 not-italic">avant</em> l'heure de décision, pour traduire un enjeu métier en cas d'usage IA priorisés, avec une feuille de route exécutable.
+        </p>
+      </div>
+
+      <!-- Visuel droit — aimant qui connecte -->
+      <div class="relative flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-3xl blur-3xl opacity-20" style="background: radial-gradient(circle, #8b5cf6, #3b82f6); transform: scale(1.1);"></div>
+          <img
+            src="/images/magnet-connect.png"
+            alt="Connexion et structuration digitale"
+            class="relative rounded-3xl shadow-2xl w-full max-w-xs"
+            style="object-fit: cover;"
+          />
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

@@ -1,21 +1,40 @@
 ---
-// Problem V2 — Le constat : 3 douleurs
+// Problem V3 — Le constat avec visuel à droite
 ---
 
 <section class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="max-w-3xl">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Le constat</div>
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-        Vous lancez des campagnes, vous testez l'IA, vous publiez sur LinkedIn…
-        <span class="font-serif italic" style="color: var(--text-tertiary);">et le ROI reste flou.</span>
-      </h2>
-      <p class="mt-8 text-lg leading-relaxed" style="color: var(--text-secondary);">
-        <strong style="color: var(--text-primary);">87 % des PME françaises</strong> n'ont pas encore engagé de projet IA structuré. Pas par manque d'envie, mais parce qu'avant de choisir le bon outil, il faut savoir précisément quel problème on cherche à résoudre. C'est exactement là que j'interviens.
-      </p>
+
+    <div class="grid lg:grid-cols-[1fr_420px] gap-16 items-center mb-16">
+
+      <!-- Texte gauche -->
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Le constat</div>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+          Vous lancez des campagnes, vous testez l'IA, vous publiez sur LinkedIn…
+          <span class="font-serif italic" style="color: var(--text-tertiary);">et le ROI reste flou.</span>
+        </h2>
+        <p class="mt-8 text-lg leading-relaxed" style="color: var(--text-secondary);">
+          <strong style="color: var(--text-primary);">87 % des PME françaises</strong> n'ont pas encore engagé de projet IA structuré. Pas par manque d'envie, mais parce qu'avant de choisir le bon outil, il faut savoir précisément quel problème on cherche à résoudre. C'est exactement là que j'interviens.
+        </p>
+      </div>
+
+      <!-- Visuel droit — cerveau numérique -->
+      <div class="relative flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-3xl blur-3xl opacity-20" style="background: radial-gradient(circle, #60a5fa, #8b5cf6); transform: scale(1.1);"></div>
+          <img
+            src="/images/brain-network.png"
+            alt="Réseau digital structuré"
+            class="relative rounded-3xl shadow-2xl w-full max-w-sm"
+            style="object-fit: cover;"
+          />
+        </div>
+      </div>
     </div>
 
-    <div class="mt-16 grid md:grid-cols-3 gap-6">
+    <!-- 3 douleurs -->
+    <div class="grid md:grid-cols-3 gap-6">
       <div class="p-8 rounded-2xl card-hover" style="background: var(--bg-tertiary); border: 1px solid var(--border);">
         <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-5">
           <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,5 +65,6 @@
         <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Pas de KPI clairs, pas de dashboards, des décisions prises au feeling plutôt qu'à la donnée.</p>
       </div>
     </div>
+
   </div>
 </section>
