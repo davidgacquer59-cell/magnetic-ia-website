@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Magnetic-IA · Design tokens (alignés avec accompagnement-v2)
+   ============================================================ */
+@theme {
+  /* Palette principale */
+  --color-bg: #0b1426;
+  --color-bg-2: #0f1c33;
+  --color-bg-3: #142544;
+  --color-ink: #f4efe6;
+  --color-ink-dim: #b9c2d3;
+  --color-ink-mute: #7c879a;
+
+  /* Accents */
+  --color-accent: #4d6fff;
+  --color-accent-2: #00d4ff;
+  --color-hot: #ff5d8f;
+  --color-warn: #ffcc4d;
+  --color-mint: #7ee3b8;
+
+  /* Lignes */
+  --color-line: rgba(244, 239, 230, 0.14);
+  --color-line-strong: rgba(244, 239, 230, 0.3);
+
+  /* Post-its */
+  --color-pi-yellow: #ffd84d;
+  --color-pi-pink: #ff9ec7;
+  --color-pi-mint: #9fe8c6;
+  --color-pi-blue: #aed4ff;
+  --color-pi-peach: #ffb98a;
+
+  /* Polices */
+  --font-sans: "Bricolage Grotesque", "Helvetica Neue", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-hand: "Caveat", cursive;
+
+  /* Container */
+  --container-default: 1240px;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.serif-it { font-style: italic; }
+.font-hand { font-family: var(--font-hand); }
+.font-mono-tag { font-family: var(--font-mono); }
+
+/* Background glow effect */
+.bg-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(77, 111, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(0, 212, 255, 0.08), transparent 60%);
+  z-index: 0;
+}

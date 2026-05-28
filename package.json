@@ -1,0 +1,19 @@
+{
+  "name": "magnetic-ia-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site web officiel de Magnetic-IA — Cadrage de projets IA pour dirigeants TPE et PME",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
