@@ -1,80 +1,240 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Magnetic-IA · Design tokens (alignés avec accompagnement-v2)
+   Magnetic-IA · Design system aligné sur mockups/site-v2
    ============================================================ */
-@theme {
-  /* Palette principale */
-  --color-bg: #0b1426;
-  --color-bg-2: #0f1c33;
-  --color-bg-3: #142544;
-  --color-ink: #f4efe6;
-  --color-ink-dim: #b9c2d3;
-  --color-ink-mute: #7c879a;
 
-  /* Accents */
-  --color-accent: #4d6fff;
-  --color-accent-2: #00d4ff;
-  --color-hot: #ff5d8f;
-  --color-warn: #ffcc4d;
-  --color-mint: #7ee3b8;
-
-  /* Lignes */
-  --color-line: rgba(244, 239, 230, 0.14);
-  --color-line-strong: rgba(244, 239, 230, 0.3);
-
-  /* Post-its */
-  --color-pi-yellow: #ffd84d;
-  --color-pi-pink: #ff9ec7;
-  --color-pi-mint: #9fe8c6;
-  --color-pi-blue: #aed4ff;
-  --color-pi-peach: #ffb98a;
-
-  /* Polices */
-  --font-sans: "Bricolage Grotesque", "Helvetica Neue", system-ui, sans-serif;
-  --font-serif: "Instrument Serif", Georgia, serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-hand: "Caveat", cursive;
-
-  /* Container */
-  --container-default: 1240px;
+/* Light theme variables (défaut sans .dark) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
 }
 
-/* ============================================================
-   Base
-   ============================================================ */
+/* Dark theme overrides (classe .dark sur <html>) */
+.dark {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #0f1424;
+  --bg-tertiary: #1a1f2e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #64748b;
+  --border: #1e293b;
+  --accent: #60a5fa;
+  --accent-soft: rgba(96, 165, 250, 0.1);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  font-size: 17px;
-  line-height: 1.55;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+/* Reproduit V2 : Tailwind fournit la family ui-serif/Georgia, on force le weight 400. */
+.font-serif { font-weight: 400; }
+.font-hand { font-family: 'Caveat', cursive; }
+
+/* ============================================================
+   Post-its
+   ============================================================ */
+.postit {
+  position: absolute;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  min-width: 110px;
+  text-align: center;
+  color: #1a1a1a;
+}
+.postit:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 10;
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.4);
+}
+.postit-yellow { background: #FEF08A; }
+.postit-pink   { background: #FBCFE8; }
+.postit-orange { background: #FED7AA; }
+.postit-green  { background: #BBF7D0; }
+.postit-blue   { background: #BFDBFE; }
+.postit-purple { background: #DDD6FE; }
+
+/* ============================================================
+   Effets de fond / gradients
+   ============================================================ */
+.dark .glow-blue {
+  box-shadow: 0 0 80px -20px rgba(96, 165, 250, 0.4);
 }
 
-.serif-it { font-style: italic; }
-.font-hand { font-family: var(--font-hand); }
-.font-mono-tag { font-family: var(--font-mono); }
+.gradient-text {
+  background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #F472B6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-/* Background glow effect */
-.bg-glow::before {
-  content: "";
+/* Highlight underline (trait manuscrit rose) */
+.underline-handdrawn {
+  position: relative;
+  display: inline-block;
+}
+.underline-handdrawn::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: -2px;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M5 8 Q 50 2, 100 6 T 195 5' stroke='%23F472B6' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(var(--rot, 0deg)); }
+  50%      { transform: translateY(-8px) rotate(var(--rot, 0deg)); }
+}
+.float-anim { animation: float 6s ease-in-out infinite; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 0.8s ease-out; }
+
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); }
+
+/* ============================================================
+   Before/After slider
+   ============================================================ */
+.compare-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+}
+.compare-side {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  background-image:
-    radial-gradient(1200px 600px at 80% -10%, rgba(77, 111, 255, 0.18), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(0, 212, 255, 0.08), transparent 60%);
-  z-index: 0;
 }
+.compare-side * { pointer-events: none; }
+.compare-side.after {
+  clip-path: inset(0 0 0 var(--slider-pos, 50%));
+}
+.compare-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--slider-pos, 50%);
+  width: 3px;
+  background: white;
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+.compare-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.compare-handle::after {
+  content: '⇄';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+.compare-label {
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+}
+.compare-label.left  { left: 1rem;  background: rgba(239, 68, 68, 0.15);  color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
+.compare-label.right { right: 1rem; background: rgba(34, 197, 94, 0.15);  color: #86efac; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+/* "Org cols" pour l'état Après */
+.org-col {
+  position: absolute;
+  width: 28%;
+  top: 12%;
+  bottom: 12%;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.org-col-header {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.org-postit {
+  position: relative;
+  margin: 0.5rem auto;
+  padding: 0.6rem 0.4rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  max-width: 90%;
+}
+
+/* ============================================================
+   Theme toggle icons
+   ============================================================ */
+.theme-toggle { transition: all 0.3s ease; }
+.sun-icon, .moon-icon { transition: opacity 0.3s ease, transform 0.3s ease; }
+.dark .sun-icon { opacity: 1; transform: scale(1); }
+.dark .moon-icon { opacity: 0; transform: scale(0); position: absolute; }
+:not(.dark) .sun-icon { opacity: 0; transform: scale(0); position: absolute; }
+:not(.dark) .moon-icon { opacity: 1; transform: scale(1); }

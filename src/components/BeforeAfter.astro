@@ -1,0 +1,135 @@
+---
+// BeforeAfter V2 — slider de comparaison Avant/Après
+---
+
+<section class="py-24" style="background: var(--bg-primary);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl mb-12">
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Démo · 2 secondes</div>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        Glissez le curseur.
+        <span class="font-serif italic" style="color: var(--text-tertiary);">C'est exactement ce que je fais.</span>
+      </h2>
+      <p class="mt-6 text-lg" style="color: var(--text-secondary);">
+        À gauche, votre digital aujourd'hui. À droite, après cadrage : les mêmes briques, mais hiérarchisées, séquencées, pilotables.
+      </p>
+    </div>
+
+    <div
+      class="compare-container aspect-[16/10] lg:aspect-[16/9] max-w-5xl mx-auto"
+      id="compareContainer"
+      style="background: var(--bg-secondary); border: 1px solid var(--border);"
+    >
+      <div class="compare-side before">
+        <div class="absolute inset-0">
+          <div class="postit postit-yellow" style="top: 12%; left: 8%; transform: rotate(-8deg);">CRM ?</div>
+          <div class="postit postit-pink"   style="top: 8%;  left: 38%; transform: rotate(5deg);">Newsletter</div>
+          <div class="postit postit-orange" style="top: 18%; right: 12%; transform: rotate(-4deg);">Pub Méta</div>
+          <div class="postit postit-yellow" style="top: 40%; left: 18%; transform: rotate(7deg);">SEO local</div>
+          <div class="postit postit-green"  style="top: 36%; left: 48%; transform: rotate(-3deg);">Refonte site</div>
+          <div class="postit postit-blue"   style="top: 48%; right: 8%; transform: rotate(6deg);">Agent IA ?</div>
+          <div class="postit postit-purple" style="top: 68%; left: 10%; transform: rotate(-5deg);">Auto facturation</div>
+          <div class="postit postit-pink"   style="top: 72%; left: 42%; transform: rotate(4deg);">LinkedIn</div>
+          <div class="postit postit-green"  style="top: 70%; right: 14%; transform: rotate(-7deg);">Ads</div>
+        </div>
+        <div class="compare-label left">Avant · Dispersion</div>
+      </div>
+
+      <div class="compare-side after" style="background: var(--bg-secondary);">
+        <div class="org-col" style="left: 4%;">
+          <div class="org-col-header" style="color: #86efac;">Quick wins</div>
+          <div class="org-postit postit-green">Newsletter</div>
+          <div class="org-postit postit-green">SEO local</div>
+          <div class="org-postit postit-green">LinkedIn</div>
+        </div>
+        <div class="org-col" style="left: 36%;">
+          <div class="org-col-header" style="color: #fcd34d;">Structurel · Q3</div>
+          <div class="org-postit postit-yellow">CRM</div>
+          <div class="org-postit postit-yellow">Refonte site</div>
+          <div class="org-postit postit-yellow">Auto facturation</div>
+        </div>
+        <div class="org-col" style="right: 4%;">
+          <div class="org-col-header" style="color: #93c5fd;">Long terme · Q4+</div>
+          <div class="org-postit postit-blue">Agent IA</div>
+          <div class="org-postit postit-blue">Pub Méta</div>
+          <div class="org-postit postit-blue">Ads</div>
+        </div>
+        <div class="compare-label right">Après · Cadré</div>
+      </div>
+
+      <div class="compare-handle" id="compareHandle"></div>
+    </div>
+
+    <p class="text-center mt-8 text-sm" style="color: var(--text-tertiary);">
+      Faites glisser le curseur central, ou utilisez la barre ci-dessous
+    </p>
+
+    <div class="max-w-5xl mx-auto mt-4 px-4">
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        id="compareRange"
+        class="w-full h-2 rounded-full appearance-none cursor-pointer"
+        style="background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, var(--bg-tertiary) 50%, var(--bg-tertiary) 100%);"
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  const container = document.getElementById('compareContainer') as HTMLElement | null;
+  const range = document.getElementById('compareRange') as HTMLInputElement | null;
+
+  if (container) {
+    let dragging = false;
+
+    function setPos(pct: number) {
+      pct = Math.max(0, Math.min(100, pct));
+      container!.style.setProperty('--slider-pos', pct + '%');
+      if (range && Number(range.value) !== Math.round(pct)) {
+        range.value = String(pct);
+        updateRangeBg(pct);
+      }
+    }
+
+    function updateRangeBg(pct: number) {
+      if (!range) return;
+      range.style.background = `linear-gradient(to right, var(--accent) 0%, var(--accent) ${pct}%, var(--bg-tertiary) ${pct}%, var(--bg-tertiary) 100%)`;
+    }
+
+    function fromClientX(clientX: number) {
+      const r = container!.getBoundingClientRect();
+      setPos(((clientX - r.left) / r.width) * 100);
+    }
+
+    setPos(50);
+
+    container.addEventListener('mousedown', (e) => {
+      dragging = true;
+      fromClientX(e.clientX);
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (dragging) fromClientX(e.clientX);
+    });
+    window.addEventListener('mouseup', () => (dragging = false));
+
+    container.addEventListener('touchstart', (e) => {
+      dragging = true;
+      fromClientX(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (dragging) {
+        e.preventDefault();
+        fromClientX(e.touches[0].clientX);
+      }
+    }, { passive: false });
+    window.addEventListener('touchend', () => (dragging = false));
+
+    if (range) {
+      range.addEventListener('input', (e) => setPos(Number((e.target as HTMLInputElement).value)));
+    }
+  }
+</script>

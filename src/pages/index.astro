@@ -2,6 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import Problem from '../components/Problem.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import Manifesto from '../components/Manifesto.astro';
+import Services from '../components/Services.astro';
+import CaseStudy from '../components/CaseStudy.astro';
+import Method from '../components/Method.astro';
+import About from '../components/About.astro';
+import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -9,12 +17,14 @@ import Footer from '../components/Footer.astro';
   <Nav />
   <main class="relative">
     <Hero />
-    <!-- TODO: BeforeAfter, Audience, Outcomes, Steps, Manifesto, Showcases, IASection, FinalCTA -->
-    <section class="py-32 max-w-[var(--container-default)] mx-auto px-7">
-      <p class="text-center text-[var(--color-ink-mute)] font-mono-tag text-xs tracking-[0.2em] uppercase">
-        Sections en cours de portage · Nav · Hero · Footer livrés
-      </p>
-    </section>
+    <Problem />
+    <BeforeAfter />
+    <Manifesto />
+    <Services />
+    <CaseStudy />
+    <Method />
+    <About />
+    <FinalCTA />
   </main>
   <Footer />
 </Layout>
