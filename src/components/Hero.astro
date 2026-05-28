@@ -2,31 +2,19 @@
 // Hero V3 — vidéo de fond + proposition claire + animations
 ---
 
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" style="align-items: flex-start;">
 
-  <!-- Vidéo de fond -->
-  <div class="absolute inset-0 z-0">
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      class="absolute inset-0 w-full h-full object-cover"
-      style="opacity: 0.15; will-change: transform;"
-    >
-      <source src="/images/background.mp4" type="video/mp4" />
-    </video>
-    <!-- Overlay opaque fort pour masquer le saut de boucle -->
-    <div class="absolute inset-0" style="background: linear-gradient(135deg, var(--bg-primary) 30%, rgba(10,14,26,0.92) 70%, var(--bg-primary) 100%);"></div>
-  </div>
+  <!-- Canvas particules animées -->
+  <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0" style="opacity: 0.45;"></canvas>
+  <!-- Overlay dégradé pour la lisibilité -->
+  <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, var(--bg-primary) 0%, transparent 50%, var(--bg-primary) 100%);"></div>
 
   <!-- Halo bleu gauche -->
   <div class="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full pointer-events-none z-0" style="background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%); filter: blur(60px);"></div>
   <!-- Halo violet droit -->
   <div class="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0" style="background: radial-gradient(circle, rgba(139,92,246,0.1), transparent 70%); filter: blur(60px);"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16 w-full">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-16 w-full">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
       <!-- Texte -->
@@ -127,3 +115,83 @@
     </div>
   </div>
 </section>
+
+<script is:inline>
+(function () {
+  var canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, particles, animId;
+
+  var PARTICLE_COUNT = 80;
+  var MAX_DIST = 140;
+  var SPEED = 0.4;
+  // Couleur accent bleue alignée sur la charte
+  var COLOR = '96, 165, 250';
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function init() {
+    resize();
+    particles = [];
+    for (var i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x: rand(0, W), y: rand(0, H),
+        vx: rand(-SPEED, SPEED), vy: rand(-SPEED, SPEED),
+        r: rand(1.5, 3),
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Lignes de connexion
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          ctx.beginPath();
+          ctx.strokeStyle = 'rgba(' + COLOR + ',' + (1 - dist / MAX_DIST) * 0.18 + ')';
+          ctx.lineWidth = 0.8;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Points
+    particles.forEach(function (p) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + COLOR + ', 0.6)';
+      ctx.fill();
+
+      // Mouvement + rebond
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+    });
+
+    animId = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', function () {
+    cancelAnimationFrame(animId);
+    init();
+    draw();
+  });
+
+  init();
+  draw();
+})();
+</script>
