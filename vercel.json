@@ -1,0 +1,47 @@
+{
+  "redirects": [
+    { "source": "/accompagnement-v2", "destination": "/accompagnement", "permanent": true },
+    { "source": "/accompagnement-v2/", "destination": "/accompagnement", "permanent": true },
+
+    { "source": "/offre-seo", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-seo/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-ecommerce", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-ecommerce/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-webmarketing", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-webmarketing/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-creation-site-cms", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-creation-site-cms/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-ux-ui-cro", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-ux-ui-cro/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-communication", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-communication/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-gestion-de-projet", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-gestion-de-projet/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/offre-formation", "destination": "/formation", "permanent": true },
+    { "source": "/offre-formation/", "destination": "/formation", "permanent": true },
+
+    { "source": "/diagnostic-magnetic", "destination": "/diagnostic", "permanent": true },
+    { "source": "/diagnostic-magnetic/", "destination": "/diagnostic", "permanent": true },
+
+    { "source": "/prise-de-rdv", "destination": "/rdv", "permanent": true },
+    { "source": "/prise-de-rdv/", "destination": "/rdv", "permanent": true },
+
+    { "source": "/plan-de-site", "destination": "/sitemap", "permanent": true },
+    { "source": "/plan-de-site/", "destination": "/sitemap", "permanent": true },
+
+    { "source": "/merci-contact", "destination": "/contact", "permanent": true },
+    { "source": "/merci-contact/", "destination": "/contact", "permanent": true },
+    { "source": "/merci", "destination": "/", "permanent": true },
+    { "source": "/merci/", "destination": "/", "permanent": true },
+
+    { "source": "/elementor-10969", "destination": "/blog/comment-lia-peut-structurer-une-strategie-linkedin", "permanent": true },
+    { "source": "/elementor-10969/", "destination": "/blog/comment-lia-peut-structurer-une-strategie-linkedin", "permanent": true },
+
+    { "source": "/creer-facilement-un-site-wordpress-grace-a-lautomatisation-et-lia", "destination": "/blog", "permanent": true },
+    { "source": "/creer-facilement-un-site-wordpress-grace-a-lautomatisation-et-lia/", "destination": "/blog", "permanent": true },
+    { "source": "/outils-no-code-ia", "destination": "/blog", "permanent": true },
+    { "source": "/outils-no-code-ia/", "destination": "/blog", "permanent": true },
+    { "source": "/strategie-marketing-digital-lille-seo-sea", "destination": "/blog", "permanent": true },
+    { "source": "/strategie-marketing-digital-lille-seo-sea/", "destination": "/blog", "permanent": true }
+  ]
+}
