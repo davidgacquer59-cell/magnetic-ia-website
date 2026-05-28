@@ -1,0 +1,189 @@
+---
+// UseCases — Cas d'usage concrets avec logos d'outils et KPI
+
+// Logos SVG inline par outil
+const logos: Record<string, string> = {
+  gmail: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z" fill="#fff" stroke="#e2e8f0" stroke-width="0.5"/><path d="M2 6l10 7 10-7" stroke="#EA4335" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M2 6l10 7" fill="#EA4335"/><path d="M12 13L2 6v12h20V6L12 13z" fill="#fff"/><path d="M2 6l10 7 10-7" fill="none" stroke="#EA4335" stroke-width="2"/></svg>`,
+
+  whatsapp: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/></svg>`,
+
+  claude: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#1a1a2e"/><text x="12" y="16" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#60a5fa">AI</text></svg>`,
+
+  notion: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#fff" stroke="#e2e8f0" stroke-width="0.5"/><path d="M6 5.5h7.5c2.5 0 4.5 2 4.5 4.5v3c0 2.5-2 4.5-4.5 4.5H6V5.5z" fill="none"/><text x="12" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="800" fill="#000">N</text></svg>`,
+
+  make: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#6C35DE"/><text x="12" y="16" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="white">MAKE</text></svg>`,
+
+  gcalendar: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="18" rx="2" fill="white" stroke="#e2e8f0" stroke-width="0.5"/><rect x="2" y="4" width="20" height="5" rx="2" fill="#4285F4"/><rect x="2" y="7" width="20" height="2" fill="#4285F4"/><text x="12" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#1a73e8">31</text></svg>`,
+
+  gsheets: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="18" height="20" rx="2" fill="#0F9D58"/><rect x="7" y="7" width="10" height="1.5" rx="0.5" fill="white" opacity="0.8"/><rect x="7" y="10.5" width="10" height="1.5" rx="0.5" fill="white" opacity="0.8"/><rect x="7" y="14" width="7" height="1.5" rx="0.5" fill="white" opacity="0.8"/></svg>`,
+
+  check: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#10b981"/><path d="M7 12l3.5 3.5L17 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`,
+};
+
+const cases = [
+  {
+    id: 1,
+    sector: 'PME / e-commerce',
+    color: '#3b82f6',
+    colorSoft: 'rgba(59, 130, 246, 0.08)',
+    colorBorder: 'rgba(59, 130, 246, 0.2)',
+    title: 'Des leads entrants qui tombent dans le vide',
+    problems: [
+      'Formulaires de contact sans réponse rapide',
+      'Relances manuelles chronophages',
+      'Opportunités perdues faute de réactivité',
+    ],
+    steps: [
+      { name: 'Gmail / Form', desc: 'Lead entrant', logo: 'gmail' },
+      { name: 'Agent IA', desc: 'Qualification auto', logo: 'claude' },
+      { name: 'Notion / CRM', desc: 'Fiche + scoring', logo: 'notion' },
+      { name: 'Make', desc: 'Workflow déclenché', logo: 'make' },
+      { name: 'Email ciblé', desc: 'Réponse < 5 min', logo: 'gmail' },
+    ],
+    kpis: [
+      { value: '−70 %', label: 'de temps de traitement' },
+      { value: '< 5 min', label: 'délai de réponse moyen' },
+      { value: '+25 %', label: 'de taux de conversion' },
+    ],
+  },
+  {
+    id: 2,
+    sector: 'Commerce local / TPE',
+    color: '#8b5cf6',
+    colorSoft: 'rgba(139, 92, 246, 0.08)',
+    colorBorder: 'rgba(139, 92, 246, 0.2)',
+    title: 'Impossible de répondre pendant les heures de pointe',
+    problems: [
+      'Appels et messages WhatsApp manqués',
+      'Clients frustrés qui réservent ailleurs',
+      'Perte directe de chiffre d\'affaires',
+    ],
+    steps: [
+      { name: 'WhatsApp', desc: 'Client envoie un message', logo: 'whatsapp' },
+      { name: 'Agent IA', desc: 'Comprend la demande', logo: 'claude' },
+      { name: 'Google Calendar', desc: 'Vérifie les dispo', logo: 'gcalendar' },
+      { name: 'WhatsApp', desc: 'Confirmation envoyée', logo: 'whatsapp' },
+      { name: 'Réservation', desc: 'Ajoutée à l\'agenda', logo: 'check' },
+    ],
+    kpis: [
+      { value: '−80 %', label: 'd\'appels manqués' },
+      { value: '+35 %', label: 'de RDV réservés' },
+      { value: '24/7', label: 'disponibilité du service' },
+    ],
+  },
+  {
+    id: 3,
+    sector: 'Consultant / Solopreneur',
+    color: '#10b981',
+    colorSoft: 'rgba(16, 185, 129, 0.08)',
+    colorBorder: 'rgba(16, 185, 129, 0.2)',
+    title: 'Facturation et relances qui prennent des heures',
+    problems: [
+      'Devis et factures rédigés manuellement',
+      'Relances oubliées ou faites trop tard',
+      'Temps administratif = temps perdu sur le cœur de métier',
+    ],
+    steps: [
+      { name: 'Google Sheets', desc: 'Données mission saisies', logo: 'gsheets' },
+      { name: 'Make / n8n', desc: 'Déclenchement auto', logo: 'make' },
+      { name: 'Agent IA', desc: 'Rédige devis + facture', logo: 'claude' },
+      { name: 'Gmail', desc: 'Envoi automatique', logo: 'gmail' },
+      { name: 'Relance J+7', desc: 'Si non payé', logo: 'check' },
+    ],
+    kpis: [
+      { value: '+10 h', label: 'économisées / semaine' },
+      { value: '0', label: 'facture oubliée' },
+      { value: '−60 %', label: 'de temps administratif' },
+    ],
+  },
+];
+---
+
+<section id="cas-usage" class="py-24" style="background: var(--bg-secondary);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="max-w-3xl mb-16">
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Cas d'usage concrets</div>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        L'IA dans votre quotidien,<br />
+        <span class="font-serif italic" style="color: var(--text-tertiary);">avec vos outils existants.</span>
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
+        Pas de théorie. Des workflows réels, construits sur ce que vous utilisez déjà.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {cases.map((c) => (
+        <div class="rounded-3xl overflow-hidden" style="border: 1px solid var(--border); background: var(--bg-primary);">
+          <div class="grid lg:grid-cols-[260px_1fr_220px]">
+
+            <!-- Gauche : secteur + problème -->
+            <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder}; color: ${c.color};`}>
+                {c.sector}
+              </div>
+              <p class="font-bold text-base mb-5 leading-snug" style="color: var(--text-primary);">{c.title}</p>
+              <div class="space-y-2.5">
+                {c.problems.map((p) => (
+                  <div class="flex items-start gap-2 text-sm" style="color: var(--text-secondary);">
+                    <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #f87171;">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                    {p}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Centre : workflow avec logos -->
+            <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
+              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-5" style={`color: ${c.color};`}>
+                La résolution IA →
+              </div>
+              <div class="flex items-start gap-1 flex-wrap">
+                {c.steps.map((step, i) => (
+                  <div class="flex items-start gap-1">
+                    <!-- Outil -->
+                    <div class="flex flex-col items-center text-center" style="min-width: 68px;">
+                      <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-1.5 shadow-sm overflow-hidden" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+                        <div class="w-8 h-8" set:html={logos[step.logo]} />
+                      </div>
+                      <div class="text-xs font-semibold leading-tight" style="color: var(--text-primary);">{step.name}</div>
+                      <div class="text-xs leading-tight mt-0.5" style="color: var(--text-tertiary); max-width: 68px;">{step.desc}</div>
+                    </div>
+                    <!-- Flèche -->
+                    {i < c.steps.length - 1 && (
+                      <svg class="w-4 h-4 flex-shrink-0 mt-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-tertiary);">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                      </svg>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Droite : KPI -->
+            <div class="p-7">
+              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">KPI & résultats</div>
+              <div class="space-y-5">
+                {c.kpis.map((kpi) => (
+                  <div>
+                    <div class="text-2xl font-bold" style={`color: ${c.color};`}>{kpi.value}</div>
+                    <div class="text-xs mt-0.5" style="color: var(--text-secondary);">{kpi.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-10 text-sm text-center" style="color: var(--text-tertiary);">
+      Ces workflows sont construits à partir de vos outils existants. Aucune solution imposée, aucun budget logiciel superflu.
+    </p>
+
+  </div>
+</section>

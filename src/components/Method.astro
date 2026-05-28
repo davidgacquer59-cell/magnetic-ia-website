@@ -1,5 +1,5 @@
 ---
-// Method V2 — 3 étapes
+// Method V3 — 3 étapes avec pictos
 ---
 
 <section id="methode" class="py-24">
@@ -13,21 +13,94 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 relative">
-      <div class="relative">
-        <div class="text-7xl font-bold mb-4" style="color: var(--accent-soft); -webkit-text-stroke: 1px var(--accent);">01</div>
+
+      <!-- Étape 01 : Discovery -->
+      <div class="relative p-8 rounded-3xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2);">
+            <!-- Loupe / exploration -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #3b82f6;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px var(--accent);">01</div>
+        </div>
         <h3 class="text-xl font-semibold mb-3">Discovery</h3>
-        <p class="leading-relaxed" style="color: var(--text-secondary);">Compréhension de votre métier, de vos enjeux, de vos contraintes. Cartographie de l'existant. Identification des points de friction.</p>
+        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Compréhension de votre métier, de vos enjeux, de vos contraintes. Cartographie de l'existant. Identification des points de friction.</p>
+        <div class="mt-6 space-y-2">
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Audit de l'existant
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Entretiens dirigeant + équipes
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Cartographie des flux et outils
+          </div>
+        </div>
       </div>
-      <div class="relative">
-        <div class="text-7xl font-bold mb-4" style="color: var(--accent-soft); -webkit-text-stroke: 1px var(--accent);">02</div>
+
+      <!-- Étape 02 : Cadrage -->
+      <div class="relative p-8 rounded-3xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+            <!-- Cible / priorisation -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #8b5cf6;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px #8b5cf6;">02</div>
+        </div>
         <h3 class="text-xl font-semibold mb-3">Cadrage</h3>
-        <p class="leading-relaxed" style="color: var(--text-secondary);">Décomposition de la problématique, identification des cas d'usage IA pertinents, priorisation par valeur et faisabilité.</p>
+        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Décomposition de la problématique, identification des cas d'usage IA pertinents, priorisation par valeur et faisabilité.</p>
+        <div class="mt-6 space-y-2">
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            GARDER · AMPLIFIER · ARRÊTER
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Matrice valeur / faisabilité
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Cas d'usage IA identifiés
+          </div>
+        </div>
       </div>
-      <div class="relative">
-        <div class="text-7xl font-bold mb-4" style="color: var(--accent-soft); -webkit-text-stroke: 1px var(--accent);">03</div>
+
+      <!-- Étape 03 : Roadmap -->
+      <div class="relative p-8 rounded-3xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2);">
+            <!-- Feuille de route -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #10b981;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+          </div>
+          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px #10b981;">03</div>
+        </div>
         <h3 class="text-xl font-semibold mb-3">Roadmap</h3>
-        <p class="leading-relaxed" style="color: var(--text-secondary);">Feuille de route exécutable avec quick wins, étapes structurantes et KPI de pilotage. Vous savez exactement quoi faire et dans quel ordre.</p>
+        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Feuille de route exécutable avec quick wins, étapes structurantes et KPI de pilotage. Vous savez exactement quoi faire et dans quel ordre.</p>
+        <div class="mt-6 space-y-2">
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Quick wins identifiés
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            KPI de pilotage définis
+          </div>
+          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            Livrable : rapport + plan d'action
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
