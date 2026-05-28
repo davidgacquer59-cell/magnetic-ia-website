@@ -138,27 +138,28 @@ const cases = [
 
             <!-- Centre : workflow avec logos -->
             <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
-              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-5" style={`color: ${c.color};`}>
-                La résolution IA →
+              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-6" style={`color: ${c.color};`}>
+                La résolution IA
               </div>
-              <div class="flex items-start gap-1 flex-wrap">
+              <!-- Workflow : centré verticalement, espacement uniforme -->
+              <div class="flex items-center justify-start gap-2 flex-wrap">
                 {c.steps.map((step, i) => (
-                  <div class="flex items-start gap-1">
+                  <>
                     <!-- Outil -->
-                    <div class="flex flex-col items-center text-center" style="min-width: 68px;">
-                      <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-1.5 shadow-sm overflow-hidden" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-                        <div class="w-8 h-8" set:html={logos[step.logo]} />
+                    <div class="flex flex-col items-center text-center" style="width: 72px;">
+                      <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-2 overflow-hidden" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder};`}>
+                        <div class="w-9 h-9" set:html={logos[step.logo]} />
                       </div>
                       <div class="text-xs font-semibold leading-tight" style="color: var(--text-primary);">{step.name}</div>
-                      <div class="text-xs leading-tight mt-0.5" style="color: var(--text-tertiary); max-width: 68px;">{step.desc}</div>
+                      <div class="text-xs leading-tight mt-0.5" style={`color: var(--text-tertiary); max-width: 72px;`}>{step.desc}</div>
                     </div>
-                    <!-- Flèche -->
+                    <!-- Flèche entre les étapes -->
                     {i < c.steps.length - 1 && (
-                      <svg class="w-4 h-4 flex-shrink-0 mt-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-tertiary);">
+                      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-tertiary);">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                       </svg>
                     )}
-                  </div>
+                  </>
                 ))}
               </div>
             </div>

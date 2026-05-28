@@ -16,9 +16,28 @@ const parcours = [
 <section id="a-propos" class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- Bio + photo -->
+    <!-- Bio + photo — photo à GAUCHE -->
     <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
-      <div>
+
+      <!-- Photo (colonne gauche) -->
+      <div class="relative flex justify-center lg:justify-start order-2 lg:order-1">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-2xl blur-2xl opacity-25" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); transform: scale(1.08);"></div>
+          <img
+            src="/images/david-gacquer.png"
+            alt="David Gacquer — Fondateur Magnetic-IA"
+            class="relative rounded-2xl object-cover shadow-xl"
+            style="width: 260px; max-width: 100%; height: 320px; object-position: top;"
+          />
+          <!-- Badge flottant -->
+          <div class="absolute -bottom-4 -right-4 px-4 py-2 rounded-xl shadow-lg text-sm font-semibold" style="background: var(--bg-primary); border: 1px solid var(--border); color: var(--text-primary);">
+            25 ans d'expertise
+          </div>
+        </div>
+      </div>
+
+      <!-- Texte (colonne droite) -->
+      <div class="order-1 lg:order-2">
         <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
           David Gacquer,<br />
@@ -36,17 +55,6 @@ const parcours = [
         </div>
       </div>
 
-      <!-- Photo -->
-      <div class="relative flex justify-center lg:justify-end">
-        <div class="relative">
-          <div class="absolute inset-0 rounded-2xl blur-2xl opacity-25" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); transform: scale(1.08);"></div>
-          <img
-            src="/images/david-gacquer.png"
-            alt="David Gacquer — Fondateur Magnetic-IA"
-            class="relative rounded-2xl object-cover shadow-xl"
-            style="width: 260px; max-width: 100%; height: 320px; object-position: top;"
-          />
-        </div>
       </div>
     </div>
 
@@ -108,7 +116,7 @@ const parcours = [
             « Une vraie montée en compétences et une stratégie claire, que j'ai pu mettre en œuvre sans perdre de temps. »
           </blockquote>
           <div class="flex items-center gap-3">
-            <img src="/images/testimonial-1.jpg" alt="Abdelkarim Feddal" class="w-10 h-10 rounded-full object-cover" />
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">AF</div>
             <div>
               <div class="font-semibold text-sm" style="color: var(--text-primary);">Abdelkarim Feddal</div>
               <div class="text-xs" style="color: var(--text-tertiary);">Dirigeant — alfaprint.fr</div>
@@ -129,7 +137,7 @@ const parcours = [
             « Grâce à David, j'ai enfin compris comment structurer ma communication sur LinkedIn. Résultat : j'ai gagné en visibilité et en crédibilité auprès de ma cible. »
           </blockquote>
           <div class="flex items-center gap-3">
-            <img src="/images/testimonial-2.jpg" alt="Charlotte Baert" class="w-10 h-10 rounded-full object-cover" />
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">CB</div>
             <div>
               <div class="font-semibold text-sm" style="color: var(--text-primary);">Charlotte Baert</div>
               <div class="text-xs" style="color: var(--text-tertiary);">Experte assurance — Agence SwissLife Wambrechies</div>

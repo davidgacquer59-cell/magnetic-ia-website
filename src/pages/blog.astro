@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const articles = [
+  {
+    slug: 'ia-strategie-linkedin-charlotte-baert',
+    date: '9 février 2026',
+    tag: 'Cas client',
+    tagColor: '#8b5cf6',
+    title: 'Comment l\'IA peut structurer une stratégie LinkedIn (sans remplacer l\'expertise)',
+    excerpt: 'Charlotte Baert, experte en assurance chez SwissLife Wambrechies, a transformé sa présence LinkedIn en 2 mois grâce à une stratégie IA bien cadrée. +40 % d\'engagement, 5 à 10 leads qualifiés par mois.',
+    readTime: '6 min',
+  },
+  {
+    slug: 'mcp-vs-api-differences-cas-pratiques',
+    date: '25 septembre 2025',
+    tag: 'Technique',
+    tagColor: '#3b82f6',
+    title: 'MCP vs API : différences et cas pratiques',
+    excerpt: 'Le Model Context Protocol change la façon dont les agents IA accèdent aux données. Quand utiliser MCP plutôt qu\'une API classique ? Les réponses avec des exemples concrets.',
+    readTime: '8 min',
+  },
+  {
+    slug: 'integration-tally-google-sheets-systemeio',
+    date: '10 septembre 2025',
+    tag: 'Automatisation',
+    tagColor: '#10b981',
+    title: 'Intégration Tally → Google Sheets → Systeme.io : guide complet',
+    excerpt: 'Comment connecter un formulaire Tally à une feuille Google Sheets puis déclencher une séquence dans Systeme.io, sans coder, en moins d\'une heure.',
+    readTime: '10 min',
+  },
+  {
+    slug: 'audit-strategique-positionnement',
+    date: '1er septembre 2025',
+    tag: 'Stratégie',
+    tagColor: '#f59e0b',
+    title: 'Audit stratégique de positionnement',
+    excerpt: 'Avant de déployer l\'IA, il faut savoir où vous en êtes. Méthode complète pour auditer son positionnement digital et identifier les leviers à fort impact.',
+    readTime: '7 min',
+  },
+  {
+    slug: 'creer-site-wordpress-ia-automatisation',
+    date: '1er septembre 2025',
+    tag: 'Outils',
+    tagColor: '#3b82f6',
+    title: 'Créer facilement un site WordPress grâce à l\'automatisation et l\'IA',
+    excerpt: 'L\'IA peut accélérer la création d\'un site de A à Z : structure, contenus, SEO on-page. Retour d\'expérience et outils utilisés.',
+    readTime: '5 min',
+  },
+  {
+    slug: 'outils-no-code-ia-automatiser-sans-coder',
+    date: '1er septembre 2025',
+    tag: 'Outils',
+    tagColor: '#3b82f6',
+    title: 'Outils no-code IA : les meilleurs pour automatiser sans coder',
+    excerpt: 'Make, n8n, Zapier, Tally, Notion AI... Tour d\'horizon des outils no-code / low-code que j\'utilise et recommande pour automatiser efficacement.',
+    readTime: '9 min',
+  },
+  {
+    slug: '10-automations-ia-tpe',
+    date: '29 août 2025',
+    tag: 'Automatisation',
+    tagColor: '#10b981',
+    title: '10 automations IA faciles pour les TPE',
+    excerpt: 'Des automatisations concrètes, faciles à déployer, pour gagner du temps sur les tâches répétitives : relances, facturation, qualification de leads, publication LinkedIn.',
+    readTime: '6 min',
+  },
+  {
+    slug: 'alfaprint-transformation-ecommerce',
+    date: '21 août 2025',
+    tag: 'Cas client',
+    tagColor: '#8b5cf6',
+    title: 'Comment Alfaprint a transformé son e-commerce',
+    excerpt: 'Migration vers Odoo, optimisation du flux Google Shopping, stratégie 20/80 sur le catalogue. +35 % de ventes en 3 mois, coût d\'acquisition divisé par 2.',
+    readTime: '8 min',
+  },
+  {
+    slug: 'ia-opportunite-pme-tpe',
+    date: '20 août 2025',
+    tag: 'IA & PME',
+    tagColor: '#f59e0b',
+    title: 'L\'intelligence artificielle : une opportunité concrète pour les PME et TPE',
+    excerpt: 'L\'IA n\'est pas réservée aux grandes entreprises. Tour d\'horizon des cas d\'usage accessibles, des erreurs à éviter et de la bonne façon d\'aborder un premier projet IA.',
+    readTime: '7 min',
+  },
+  {
+    slug: 'strategie-marketing-digital-lille',
+    date: '20 août 2025',
+    tag: 'Stratégie',
+    tagColor: '#f59e0b',
+    title: 'Stratégie marketing digital à Lille',
+    excerpt: 'Les spécificités du marché lillois et des Hauts-de-France pour les PME locales. Comment construire une stratégie digitale efficace en tenant compte du tissu économique régional.',
+    readTime: '5 min',
+  },
+];
+---
+
+<Layout
+  title="Blog — Magnetic-IA"
+  description="Articles sur le cadrage de projets IA, l'automatisation, les outils no-code et la stratégie digitale pour dirigeants de PME."
+>
+  <Nav />
+  <main class="pt-28 pb-20">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="mb-16">
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Blog</div>
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">
+          Ressources & réflexions
+        </h1>
+        <p class="text-lg max-w-2xl" style="color: var(--text-secondary);">
+          Cas clients, outils, méthodes et analyses. Du concret pour les dirigeants qui veulent comprendre et agir, pas juste lire.
+        </p>
+      </div>
+
+      <!-- Liste des articles -->
+      <div class="grid md:grid-cols-2 gap-8">
+        {articles.map((article) => (
+          <article class="group p-6 rounded-2xl card-hover" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold" style={`background: ${article.tagColor}18; color: ${article.tagColor}; border: 1px solid ${article.tagColor}30;`}>
+                {article.tag}
+              </span>
+              <span class="text-xs" style="color: var(--text-tertiary);">{article.readTime} de lecture</span>
+            </div>
+
+            <h2 class="font-bold text-lg leading-snug mb-3 group-hover:opacity-80 transition" style="color: var(--text-primary);">
+              {article.title}
+            </h2>
+
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">
+              {article.excerpt}
+            </p>
+
+            <div class="flex items-center justify-between">
+              <span class="text-xs" style="color: var(--text-tertiary);">{article.date}</span>
+              <span class="inline-flex items-center gap-1 text-xs font-medium" style={`color: ${article.tagColor};`}>
+                Lire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-16 pt-8 border-t" style="border-color: var(--border);">
+        <a href="/" style="color: var(--accent);" class="text-sm hover:opacity-80 transition">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
