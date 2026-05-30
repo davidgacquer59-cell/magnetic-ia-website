@@ -10,38 +10,34 @@ const badges = [
 <section id="a-propos" class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- ── BIO + SLIDER (grille 3 colonnes) ── -->
-    <div class="grid lg:grid-cols-[240px_1fr_1fr] gap-10 items-start mb-16 reveal">
+    <!-- ── HEADER ── -->
+    <div class="max-w-3xl mb-14 reveal">
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        David Gacquer,
+        <span class="font-serif italic" style="color: var(--text-tertiary);"> sparring partner stratégique.</span>
+      </h2>
+    </div>
 
-      <!-- Col 1 : Photo + Mission -->
-      <div class="flex flex-col gap-6">
+    <!-- ── BIO + SLIDER ── -->
+    <div class="grid lg:grid-cols-2 gap-12 items-start mb-14 reveal">
+
+      <!-- Gauche : photo + bio -->
+      <div class="flex gap-8 items-start">
         <img
           src="/images/david-gacquer.png"
           alt="David Gacquer — Fondateur Magnetic-IA"
-          class="rounded-2xl object-cover shadow-lg w-full"
-          style="height: 280px; object-position: top;"
+          class="rounded-2xl object-cover shadow-lg flex-shrink-0"
+          style="width: 180px; height: 220px; object-position: top;"
         />
-        <div class="p-5 rounded-2xl" style="background: var(--bg-primary); border: 1px solid rgba(96,165,250,0.2);">
-          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em] mb-3" style="color: var(--accent);">Ma mission</div>
-          <p class="text-base font-semibold leading-snug" style="color: var(--text-primary);">"Je remets de la clarté, de la priorité et du ROI dans votre stratégie IA."</p>
-        </div>
-      </div>
-
-      <!-- Col 2 : Bio -->
-      <div>
-        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-          David Gacquer,<br />
-          <span class="font-serif italic" style="color: var(--text-tertiary);">sparring partner stratégique.</span>
-        </h2>
         <div class="space-y-4 text-base leading-relaxed" style="color: var(--text-secondary);">
-          <p>25 ans à structurer la performance digitale dans le retail, l'industrie, le e-commerce et la finance. J'ai piloté des budgets jusqu'à 600 k€/an, managé des équipes de 15 personnes, et accompagné des marques comme SwissLife, Alfaprint ou Sonepar.</p>
-          <p>Aujourd'hui, je consacre cette expérience aux dirigeants de TPE et PME qui veulent intégrer l'IA dans leur stratégie sans tomber dans le piège du gadget technologique.</p>
-          <p>Basé à Wambrechies, j'interviens principalement dans les Hauts-de-France et à distance.</p>
+          <p>25 ans à structurer la performance digitale dans le retail, l'industrie, le e-commerce et la finance. Budgets jusqu'à 600 k€/an, équipes de 15 personnes, clients comme SwissLife, Alfaprint ou Sonepar.</p>
+          <p>Aujourd'hui, je consacre cette expérience aux dirigeants de TPE et PME qui veulent intégrer l'IA sans tomber dans le piège du gadget technologique.</p>
+          <p style="color: var(--text-tertiary);">Basé à Wambrechies · Hauts-de-France · à distance</p>
         </div>
       </div>
 
-      <!-- Col 3 : Slider -->
+      <!-- Droite : Slider -->
       <div>
         <div
           id="demoSlider"
