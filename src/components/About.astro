@@ -10,10 +10,9 @@ const badges = [
 <section id="a-propos" class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- Bio + photo -->
-    <div class="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-20">
+    <!-- ── 1. BIO ── -->
+    <div class="grid lg:grid-cols-[280px_1fr] gap-10 items-start mb-16">
 
-      <!-- Photo à gauche -->
       <div class="flex justify-center lg:justify-start order-2 lg:order-1 reveal reveal-left">
         <img
           src="/images/david-gacquer.png"
@@ -23,19 +22,18 @@ const badges = [
         />
       </div>
 
-      <!-- Texte à droite -->
       <div class="order-1 lg:order-2 reveal reveal-right reveal-delay-1">
         <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">À propos</div>
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
           David Gacquer,<br />
           <span class="font-serif italic" style="color: var(--text-tertiary);">sparring partner stratégique.</span>
         </h2>
-        <div class="space-y-5 leading-relaxed text-lg" style="color: var(--text-secondary);">
+        <div class="space-y-4 leading-relaxed text-lg" style="color: var(--text-secondary);">
           <p>25 ans à structurer la performance digitale dans le retail, l'industrie, le e-commerce et la finance. J'ai piloté des budgets jusqu'à 600 k€/an, managé des équipes de 15 personnes, et accompagné des marques comme SwissLife, Alfaprint ou Sonepar.</p>
           <p>Aujourd'hui, je consacre cette expérience aux dirigeants de TPE et PME qui veulent intégrer l'IA dans leur stratégie sans tomber dans le piège du gadget technologique.</p>
           <p>Basé à Wambrechies, j'interviens principalement dans les Hauts-de-France et à distance.</p>
         </div>
-        <div class="mt-10 flex flex-wrap gap-3">
+        <div class="mt-8 flex flex-wrap gap-3">
           {badges.map((b) => (
             <span class="px-3 py-1.5 rounded-full text-xs font-medium" style="background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-secondary);">{b}</span>
           ))}
@@ -43,50 +41,87 @@ const badges = [
       </div>
     </div>
 
-    <!-- Omotenashi — section visuelle forte -->
-    <div class="mb-20 rounded-3xl relative overflow-hidden" style="background: linear-gradient(135deg, #0a0e1a 0%, #0f1424 60%, #0d1830 100%); border: 1px solid rgba(96,165,250,0.15);">
+    <!-- ── 2. MISSION + SLIDER ── -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center mb-16 reveal">
 
-      <!-- Grand kanji décoratif en arrière-plan -->
-      <div class="absolute right-0 top-0 bottom-0 flex items-center pr-8 pointer-events-none select-none" aria-hidden="true">
-        <span style="font-size: 280px; line-height: 1; opacity: 0.04; color: #60a5fa; font-family: 'Hiragino Mincho ProN','Yu Mincho',Georgia,serif; font-weight: 400;">心</span>
+      <!-- Mission -->
+      <div class="p-8 rounded-2xl flex flex-col justify-center" style="background: var(--bg-primary); border: 1px solid var(--border);">
+        <div class="text-xs font-mono font-semibold uppercase tracking-[0.18em] mb-5" style="color: var(--accent);">Ma mission</div>
+        <p class="text-2xl md:text-3xl font-bold leading-tight mb-6" style="color: var(--text-primary);">
+          "Je remets de la clarté, de la priorité et du ROI dans votre stratégie IA."
+        </p>
+        <p class="text-sm font-semibold" style="color: var(--accent);">David Gacquer · Magnetic-IA</p>
       </div>
 
-      <!-- Halo bleu -->
+      <!-- Slider -->
+      <div>
+        <div
+          id="demoSlider"
+          class="demo-slider relative rounded-2xl overflow-hidden"
+          style="aspect-ratio: 1/1; background: linear-gradient(135deg, rgba(15,20,36,0.97), rgba(10,14,26,0.92)); border: 1px solid var(--border); cursor: ew-resize;"
+        >
+          <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 36px 36px;"></div>
+          <div class="demo-col-labels absolute top-0 left-0 right-0 flex z-10 pointer-events-none" style="padding: 12px 4px 0;">
+            <div class="demo-col-label" style="color: #86efac;">GARDER</div>
+            <div class="demo-col-label" style="color: #60a5fa;">AMPLIFIER</div>
+            <div class="demo-col-label" style="color: #fca5a5;">ARRÊTER</div>
+            <div class="demo-col-label" style="color: #c4b5fd;">PARKING</div>
+          </div>
+          <div class="demo-col-sep" style="left: 25%;"></div>
+          <div class="demo-col-sep" style="left: 50%;"></div>
+          <div class="demo-col-sep" style="left: 75%;"></div>
+          <div class="dpi postit-yellow" style="--cx:8%;  --cy:22%; --cr:-6deg; --sx:2%;  --sy:26%; --sr:-2deg;">CRM</div>
+          <div class="dpi postit-pink"   style="--cx:72%; --cy:14%; --cr:4deg;  --sx:2%;  --sy:52%; --sr:1deg;">Newsletter</div>
+          <div class="dpi postit-yellow" style="--cx:80%; --cy:44%; --cr:-3deg; --sx:2%;  --sy:74%; --sr:-1deg;">SEO local</div>
+          <div class="dpi postit-green"  style="--cx:52%; --cy:82%; --cr:-2deg; --sx:27%; --sy:26%; --sr:2deg;">LinkedIn</div>
+          <div class="dpi postit-pink"   style="--cx:28%; --cy:74%; --cr:7deg;  --sx:27%; --sy:52%; --sr:-1deg;">Facturation</div>
+          <div class="dpi postit-blue"   style="--cx:26%; --cy:48%; --cr:-5deg; --sx:27%; --sy:74%; --sr:1deg;">Analytics</div>
+          <div class="dpi postit-orange" style="--cx:38%; --cy:34%; --cr:3deg;  --sx:52%; --sy:26%; --sr:-2deg;">Pub Meta</div>
+          <div class="dpi postit-orange" style="--cx:4%;  --cy:38%; --cr:-4deg; --sx:52%; --sy:52%; --sr:1deg;">Webinars</div>
+          <div class="dpi postit-yellow" style="--cx:44%; --cy:10%; --cr:6deg;  --sx:52%; --sy:74%; --sr:-1deg;">Chatbot</div>
+          <div class="dpi postit-green"  style="--cx:14%; --cy:62%; --cr:5deg;  --sx:77%; --sy:26%; --sr:2deg;">Refonte site</div>
+          <div class="dpi postit-blue"   style="--cx:62%; --cy:64%; --cr:-8deg; --sx:77%; --sy:52%; --sr:-1deg;">Agent IA</div>
+          <div class="dpi postit-purple" style="--cx:86%; --cy:68%; --cr:4deg;  --sx:77%; --sy:74%; --sr:1deg;">Notion</div>
+          <div id="demoHandleLine" class="demo-handle-line pointer-events-none"></div>
+          <div id="demoHandleKnob" class="demo-handle-knob pointer-events-none">⇄</div>
+          <div class="demo-chaos-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; color:var(--text-tertiary); text-transform:uppercase; z-index:5;">AVANT · DISPERSION</div>
+          <div class="demo-sorted-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#86efac; text-transform:uppercase; z-index:5;">APRÈS CADRAGE · DÉCISION</div>
+        </div>
+        <input type="range" id="demoRange" min="0" max="100" value="20"
+          class="w-full mt-3 h-1.5 rounded-full appearance-none cursor-pointer"
+          style="background: linear-gradient(to right, var(--accent) 20%, var(--bg-tertiary) 20%);"
+        />
+        <div class="flex justify-between mt-1 text-xs" style="color: var(--text-tertiary);">
+          <span>Chaos</span><span>Clarté</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. OMOTENASHI ── -->
+    <div class="rounded-3xl relative overflow-hidden reveal" style="background: linear-gradient(135deg, #0a0e1a 0%, #0f1424 60%, #0d1830 100%); border: 1px solid rgba(96,165,250,0.15);">
+      <div class="absolute right-0 top-0 bottom-0 flex items-center pr-8 pointer-events-none select-none" aria-hidden="true">
+        <span style="font-size: 280px; line-height: 1; opacity: 0.04; color: #60a5fa; font-family: 'Hiragino Mincho ProN','Yu Mincho',Georgia,serif;">心</span>
+      </div>
       <div class="absolute top-0 left-0 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%); filter: blur(60px);"></div>
 
       <div class="relative grid lg:grid-cols-2 gap-0">
-
-        <!-- Gauche : philosophie -->
         <div class="p-10 lg:p-14 lg:border-r" style="border-color: rgba(96,165,250,0.1);">
           <div class="flex items-center gap-4 mb-8">
-            <!-- Kanji visible -->
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0" style="background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.25); color: #60a5fa; font-family: 'Hiragino Mincho ProN','Yu Mincho',Georgia,serif;">心</div>
             <div>
               <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-1" style="color: #60a5fa;">Philosophie · おもてなし</div>
               <div class="text-2xl font-bold" style="color: #f1f5f9;">L'Omotenashi</div>
             </div>
           </div>
-
           <p class="text-base leading-relaxed mb-6" style="color: #94a3b8;">
             Inspiré de la philosophie japonaise du service : anticiper les besoins d'un client <em>avant même qu'il les exprime</em>. Rigueur du détail, attention sincère, innovation utile.
           </p>
-
           <blockquote class="pl-5 font-serif italic text-lg leading-relaxed" style="border-left: 3px solid #60a5fa; color: #e2e8f0;">
             « L'omotenashi, c'est aller au-delà d'un service irréprochable. C'est anticiper sans attendre qu'on vous le demande. »
           </blockquote>
-
-          <!-- Séparateur japonais décoratif -->
-          <div class="mt-8 flex items-center gap-3">
-            <div class="h-px flex-1" style="background: linear-gradient(to right, rgba(96,165,250,0.3), transparent);"></div>
-            <span class="text-xs font-mono" style="color: rgba(96,165,250,0.4);">⌬</span>
-            <div class="h-px flex-1" style="background: linear-gradient(to left, rgba(96,165,250,0.3), transparent);"></div>
-          </div>
         </div>
-
-        <!-- Droite : 3 non-négociables -->
         <div class="p-10 lg:p-14 flex flex-col justify-center gap-6">
           <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-2" style="color: rgba(96,165,250,0.6);">Mes 3 non-négociables</div>
-
           <div class="flex items-start gap-4">
             <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #60a5fa;">01</div>
             <div>
@@ -94,7 +129,6 @@ const badges = [
               <div class="text-sm" style="color: #64748b;">Le bon outil est celui qui s'adapte à votre contexte. Pas l'inverse.</div>
             </div>
           </div>
-
           <div class="flex items-start gap-4">
             <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #a78bfa;">02</div>
             <div>
@@ -102,7 +136,6 @@ const badges = [
               <div class="text-sm" style="color: #64748b;">Automatiser ce qui n'est pas cadré, c'est amplifier le chaos.</div>
             </div>
           </div>
-
           <div class="flex items-start gap-4">
             <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-bold" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #34d399;">03</div>
             <div>
@@ -116,3 +149,53 @@ const badges = [
 
   </div>
 </section>
+
+<style>
+  .dpi {
+    position: absolute; width: 22%; padding: 0.45rem 0.35rem;
+    font-family: 'Caveat', cursive; font-size: 1.05rem; font-weight: 600;
+    color: #1a1a1a; text-align: center; line-height: 1.15; border-radius: 3px;
+    box-shadow: 0 6px 16px -6px rgba(0,0,0,0.55);
+    left: var(--cx); top: var(--cy); transform: rotate(var(--cr));
+    transition: left 0.6s cubic-bezier(.2,.7,.2,1), top 0.6s cubic-bezier(.2,.7,.2,1), transform 0.6s cubic-bezier(.2,.7,.2,1);
+    z-index: 3; user-select: none;
+  }
+  .demo-slider.is-sorted .dpi { left: var(--sx); top: var(--sy); transform: rotate(var(--sr)); }
+  .demo-handle-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent); left: 20%; transform: translateX(-50%); z-index: 8; box-shadow: 0 0 8px rgba(96,165,250,0.5); }
+  .demo-handle-knob { position: absolute; top: 50%; left: 20%; transform: translate(-50%,-50%); width: 34px; height: 34px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; color: white; font-weight: bold; z-index: 9; box-shadow: 0 4px 14px rgba(96,165,250,0.45); }
+  .demo-col-label { flex: 1; text-align: center; font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; opacity: 0; transition: opacity 0.5s ease; }
+  .demo-slider.is-sorted .demo-col-label { opacity: 1; }
+  .demo-col-sep { position: absolute; top: 28px; bottom: 14px; width: 1px; background: rgba(255,255,255,0.07); opacity: 0; transition: opacity 0.5s ease; z-index: 2; }
+  .demo-slider.is-sorted .demo-col-sep { opacity: 1; }
+  .demo-chaos-label { transition: opacity 0.4s ease; }
+  .demo-sorted-label { opacity: 0; transition: opacity 0.4s ease; }
+  .demo-slider.is-sorted .demo-chaos-label { opacity: 0; }
+  .demo-slider.is-sorted .demo-sorted-label { opacity: 1; }
+</style>
+
+<script>
+  const slider     = document.getElementById('demoSlider')     as HTMLElement | null;
+  const range      = document.getElementById('demoRange')      as HTMLInputElement | null;
+  const handleLine = document.getElementById('demoHandleLine') as HTMLElement | null;
+  const handleKnob = document.getElementById('demoHandleKnob') as HTMLElement | null;
+
+  function updatePos(val: number) {
+    const pct = Math.max(0, Math.min(100, val));
+    if (handleLine) handleLine.style.left = pct + '%';
+    if (handleKnob) handleKnob.style.left = pct + '%';
+    if (range) { range.value = String(Math.round(pct)); range.style.background = `linear-gradient(to right, var(--accent) ${pct}%, var(--bg-tertiary) ${pct}%)`; }
+    if (slider) slider.classList.toggle('is-sorted', pct > 50);
+  }
+  range?.addEventListener('input', () => updatePos(Number(range.value)));
+  if (slider) {
+    let dragging = false;
+    const getPct = (clientX: number) => ((clientX - slider.getBoundingClientRect().left) / slider.getBoundingClientRect().width) * 100;
+    slider.addEventListener('mousedown', (e) => { dragging = true; updatePos(getPct(e.clientX)); e.preventDefault(); });
+    window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    slider.addEventListener('touchstart', (e) => { dragging = true; updatePos(getPct(e.touches[0].clientX)); }, { passive: true });
+    window.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); } }, { passive: false });
+    window.addEventListener('touchend', () => { dragging = false; });
+  }
+  updatePos(20);
+</script>
