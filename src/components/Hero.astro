@@ -2,7 +2,7 @@
 // Hero V5 — alignement propre, carousel schémas soigné
 ---
 
-<section class="relative overflow-hidden pt-20">
+<section class="relative overflow-hidden pt-20 pb-8 md:pb-12">
 
   <!-- Fond -->
   <div class="absolute inset-0 z-0 pointer-events-none">
@@ -14,7 +14,7 @@
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid lg:grid-cols-[1fr_480px] gap-16 items-center w-full py-10 pb-6">
+    <div class="grid lg:grid-cols-[1fr_640px] gap-8 lg:gap-10 items-center w-full py-8 md:py-12">
 
       <!-- ── TEXTE ── -->
       <div class="fade-in-up">
@@ -54,97 +54,52 @@
 
       </div>
 
-      <!-- ── CAROUSEL SCHÉMAS ── -->
-      <div class="relative w-full">
+      <!-- ── VISUEL POST-ITS CHAOS ── -->
+      <div class="relative w-full fade-in-up" style="animation-delay:0.2s;">
+        <div class="relative rounded-2xl overflow-hidden w-full"
+          style="aspect-ratio: 4/3; background: #080d1a; border: 1px solid rgba(96,165,250,0.18); box-shadow: 0 0 60px -20px rgba(96,165,250,0.2); padding: 1rem;">
 
-        <!-- Container principal -->
-        <div id="schemaCarousel"
-          class="relative rounded-2xl overflow-hidden w-full"
-          style="aspect-ratio: 4/3; background: linear-gradient(135deg, #080d1a 0%, #0c1426 100%); border: 1px solid rgba(96,165,250,0.2); box-shadow: 0 0 60px -20px rgba(96,165,250,0.2);">
+          <!-- Grille fond tableau -->
+          <div class="absolute inset-0" style="
+            background-image:
+              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 44px 44px;
+          "></div>
 
-          <!-- Halo interne -->
-          <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(96,165,250,0.08), transparent 70%);"></div>
+          <!-- Post-its flottants — répartition organique sur tout l'espace -->
+          <div class="postit postit-yellow float-anim" style="top:4%;  left:5%;   --rot:-8deg; transform:rotate(-8deg);  animation-delay:0s;    font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Trop d'emails</div>
+          <div class="postit postit-blue   float-anim" style="top:6%;  left:43%;  --rot:5deg;  transform:rotate(5deg);   animation-delay:1.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Cash flow ?</div>
+          <div class="postit postit-pink   float-anim" style="top:3%;  right:5%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:0.7s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Recruter ?</div>
+          <div class="postit postit-green  float-anim" style="top:20%; left:16%;  --rot:3deg;  transform:rotate(3deg);   animation-delay:1.8s;  font-size:clamp(0.6rem,1.1vw,0.9rem);  min-width:85px; padding:0.9rem 0.75rem;">Mon équipe me sollicite</div>
+          <div class="postit postit-purple float-anim" style="top:24%; right:6%;  --rot:7deg;  transform:rotate(7deg);   animation-delay:0.5s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">CRM ?</div>
+          <div class="postit postit-orange float-anim" style="top:36%; left:5%;   --rot:4deg;  transform:rotate(4deg);   animation-delay:0.4s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Trop d'appels</div>
+          <div class="postit postit-green  float-anim" style="top:38%; left:40%;  --rot:-5deg; transform:rotate(-5deg);  animation-delay:1.1s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">IA ?</div>
+          <div class="postit postit-pink   float-anim" style="top:48%; left:6%;   --rot:-6deg; transform:rotate(-6deg);  animation-delay:1s;    font-size:clamp(0.6rem,1.1vw,0.9rem);  min-width:85px; padding:0.9rem 0.75rem;">Je manque de temps</div>
+          <div class="postit postit-yellow float-anim" style="top:52%; right:5%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:0.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Priorités ?</div>
+          <div class="postit postit-blue   float-anim" style="top:64%; left:20%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:0.9s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Devis en attente</div>
+          <div class="postit postit-orange float-anim" style="top:67%; right:7%;  --rot:-6deg; transform:rotate(-6deg);  animation-delay:1.5s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Processus ?</div>
+          <div class="postit postit-purple float-anim" style="top:78%; left:5%;   --rot:-7deg; transform:rotate(-7deg);  animation-delay:0.2s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Relances clients</div>
+          <div class="postit postit-pink   float-anim" style="top:80%; left:42%;  --rot:4deg;  transform:rotate(4deg);   animation-delay:1.6s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Reporting ?</div>
+          <div class="postit postit-green  float-anim" style="top:14%; right:8%;  --rot:-5deg; transform:rotate(-5deg);  animation-delay:2.1s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Formation équipe</div>
+          <div class="postit postit-yellow float-anim" style="top:30%; left:44%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:2.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Marges ?</div>
+          <div class="postit postit-orange float-anim" style="top:57%; left:36%;  --rot:-3deg; transform:rotate(-3deg);  animation-delay:2s;    font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Site web ?</div>
+          <div class="postit postit-blue   float-anim" style="top:72%; right:6%;  --rot:5deg;  transform:rotate(5deg);   animation-delay:1.9s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Réunions inutiles</div>
+          <div class="postit postit-purple float-anim" style="top:86%; left:26%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:2.4s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Croissance ?</div>
+          <div class="postit postit-pink   float-anim" style="top:88%; right:8%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:0.6s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Facturation ?</div>
 
-          <!-- Slides -->
-          {[
-            { src: '/images/schemas/du chaos à la clarté.png',           label: 'Du chaos à la clarté' },
-            { src: '/images/schemas/02_solution_rarement_probleme.png',  label: 'La solution est rarement le problème' },
-            { src: '/images/schemas/03_enquete_diagnostic.png',          label: 'Enquête & diagnostic' },
-            { src: '/images/schemas/04_entonnoir_magnetic_ia.png',       label: "L'entonnoir Magnetic-IA" },
-            { src: '/images/schemas/06_methode_magnetic_ia.png',         label: 'La méthode en 5 étapes' },
-          ].map((slide, i) => (
-            <div class="schema-slide absolute inset-0 flex items-center justify-center p-6 transition-opacity duration-700"
-              style={i === 0 ? 'opacity:1; z-index:2;' : 'opacity:0; z-index:1;'}>
-              <img src={slide.src} alt={slide.label}
-                class="w-full h-full object-contain"
-                loading={i === 0 ? 'eager' : 'lazy'} />
-              <!-- Overlay bas avec label -->
-              <div class="absolute bottom-0 left-0 right-0 h-14 flex items-end justify-between px-5 pb-3"
-                style="background: linear-gradient(to top, rgba(8,13,26,0.9), transparent);">
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:rgba(255,255,255,0.5); text-transform:uppercase;">{slide.label}</span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(96,165,250,0.5);">{String(i+1).padStart(2,'0')} / 05</span>
-              </div>
-            </div>
-          ))}
-
-          <!-- Dots navigation (en bas) -->
-          <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
-            {[0,1,2,3,4].map(i => (
-              <button class="schema-dot h-1 rounded-full transition-all duration-300 cursor-pointer"
-                style={i === 0 ? 'background:var(--accent); width:1.5rem;' : 'background:rgba(255,255,255,0.2); width:0.375rem;'}
-                data-dot={i}></button>
-            ))}
+          <!-- Label bas -->
+          <div class="absolute bottom-0 left-0 right-0 h-10 flex items-center justify-center"
+            style="background: linear-gradient(to top, rgba(8,13,26,0.95), transparent);">
+            <span style="font-family:'Courier New',monospace; font-size:9px; letter-spacing:0.18em; color:rgba(255,255,255,0.35); text-transform:uppercase;">
+              Votre situation actuelle · Dispersion
+            </span>
           </div>
 
         </div>
-
-        <!-- Flèches de navigation -->
-        <div class="flex justify-end gap-2 mt-3">
-          <button id="schemaPrev" class="w-9 h-9 rounded-lg flex items-center justify-center transition hover:opacity-80"
-            style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          <button id="schemaNext" class="w-9 h-9 rounded-lg flex items-center justify-center transition hover:opacity-80"
-            style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-
       </div>
 
     </div>
   </div>
 </section>
 
-<script>
-  const slides  = document.querySelectorAll<HTMLElement>('.schema-slide');
-  const dots    = document.querySelectorAll<HTMLElement>('.schema-dot');
-  const prev    = document.getElementById('schemaPrev');
-  const next    = document.getElementById('schemaNext');
-  const total   = slides.length;
-  let current   = 0;
-  let timer: ReturnType<typeof setInterval>;
-
-  function goTo(i: number) {
-    slides[current].style.opacity = '0';
-    slides[current].style.zIndex  = '1';
-    dots[current].style.background = 'rgba(255,255,255,0.2)';
-    dots[current].style.width = '0.375rem';
-    current = (i + total) % total;
-    slides[current].style.opacity = '1';
-    slides[current].style.zIndex  = '2';
-    dots[current].style.background = 'var(--accent)';
-    dots[current].style.width = '1.5rem';
-  }
-
-  function startTimer() { timer = setInterval(() => goTo(current + 1), 4000); }
-  function stopTimer()  { clearInterval(timer); }
-
-  startTimer();
-
-  document.getElementById('schemaCarousel')?.addEventListener('mouseenter', stopTimer);
-  document.getElementById('schemaCarousel')?.addEventListener('mouseleave', startTimer);
-  prev?.addEventListener('click', () => { stopTimer(); goTo(current - 1); startTimer(); });
-  next?.addEventListener('click', () => { stopTimer(); goTo(current + 1); startTimer(); });
-  dots.forEach((d, i) => d.addEventListener('click', () => { stopTimer(); goTo(i); startTimer(); }));
-</script>
