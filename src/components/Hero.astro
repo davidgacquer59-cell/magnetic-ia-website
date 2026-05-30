@@ -1,254 +1,150 @@
 ---
-// Hero V4 — slider interactif post-its mobiles (chaos → colonnes)
+// Hero V5 — alignement propre, carousel schémas soigné
 ---
 
-<section class="relative pt-20 overflow-hidden">
+<section class="relative overflow-hidden" style="min-height: calc(100vh - 80px);">
 
-  <!-- Fond : grille de points + halos -->
+  <!-- Fond -->
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(96,165,250,0.18) 1px, transparent 1px); background-size: 36px 36px;"></div>
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 0%, transparent 40%, var(--bg-primary) 100%);"></div>
-    <div class="absolute bottom-0 left-0 right-0 h-32" style="background: linear-gradient(to bottom, transparent, var(--bg-primary));"></div>
-    <div class="absolute top-1/3 -left-24 w-80 h-80 rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%); filter: blur(60px);"></div>
-    <div class="absolute top-1/4 right-0 w-72 h-72 rounded-full" style="background: radial-gradient(circle, rgba(139,92,246,0.08), transparent 70%); filter: blur(60px);"></div>
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(96,165,250,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, transparent 30%, var(--bg-primary) 100%);"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-40" style="background: linear-gradient(to bottom, transparent, var(--bg-primary));"></div>
+    <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.1), transparent 70%); filter: blur(80px);"></div>
+    <div class="absolute top-1/4 -right-16 w-96 h-96 rounded-full" style="background: radial-gradient(circle, rgba(139,92,246,0.07), transparent 70%); filter: blur(80px);"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-6 pb-16 w-full">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 flex items-center" style="min-height: calc(100vh - 80px);">
+    <div class="grid lg:grid-cols-[1fr_480px] gap-16 items-center w-full py-16">
 
-      <!-- Texte gauche -->
+      <!-- ── TEXTE ── -->
       <div class="fade-in-up">
 
         <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-3 mb-8">
+        <div class="inline-flex items-center gap-3 mb-10">
           <span class="w-6 h-px" style="background: var(--accent);"></span>
-          <span class="text-xs font-mono font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
           <span class="w-2 h-2 rounded-full animate-pulse" style="background: var(--accent);"></span>
         </div>
 
         <!-- H1 -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.03] mb-6">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] mb-7">
           Avant les outils,<br />
           <span class="font-serif italic" style="color: var(--accent);">la réflexion.</span>
         </h1>
 
         <!-- Phrase signature -->
-        <p class="text-lg leading-relaxed mb-1 max-w-lg" style="color: var(--text-secondary);">
+        <p class="text-xl leading-relaxed mb-10 max-w-lg" style="color: var(--text-secondary);">
           Beaucoup d'entreprises cherchent les bons outils.<br/>
           <strong style="color: var(--text-primary);">Les meilleures commencent par les bonnes questions.</strong>
         </p>
+
         <!-- CTAs -->
-        <div class="flex flex-wrap gap-3 mb-8">
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/20">
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/25 text-base">
             Faire le point sur mon projet
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
-          <a href="#methode" class="inline-flex items-center gap-2 px-6 py-3.5 font-medium rounded-xl transition" style="border: 1px solid var(--border); color: var(--text-primary);">
+          <a href="#methode"
+            class="inline-flex items-center gap-2 px-7 py-4 font-medium rounded-xl transition text-base"
+            style="border: 1px solid var(--border); color: var(--text-primary);">
             Voir la méthode
           </a>
         </div>
 
-
       </div>
 
-      <!-- Carousel schémas 5 Why -->
-      <div class="relative max-w-md mx-auto lg:mx-0 lg:ml-auto w-full">
-        <div id="schemaCarousel" class="relative rounded-3xl overflow-hidden" style="aspect-ratio: 1/1; background: #0a0e1a; border: 1px solid var(--border);">
+      <!-- ── CAROUSEL SCHÉMAS ── -->
+      <div class="relative w-full">
+
+        <!-- Container principal -->
+        <div id="schemaCarousel"
+          class="relative rounded-2xl overflow-hidden w-full"
+          style="aspect-ratio: 4/3; background: linear-gradient(135deg, #080d1a 0%, #0c1426 100%); border: 1px solid rgba(96,165,250,0.2); box-shadow: 0 0 60px -20px rgba(96,165,250,0.2);">
+
+          <!-- Halo interne -->
+          <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(96,165,250,0.08), transparent 70%);"></div>
 
           <!-- Slides -->
           {[
-            { src: '/images/schemas/du chaos à la clarté.png',             alt: 'Du chaos à la clarté', label: '01 · Du chaos à la clarté' },
-            { src: '/images/schemas/02_solution_rarement_probleme.png',     alt: 'La solution est rarement le problème', label: '02 · La solution est rarement le problème' },
-            { src: '/images/schemas/03_enquete_diagnostic.png',             alt: 'Enquête & diagnostic', label: '03 · Enquête & diagnostic' },
-            { src: '/images/schemas/04_entonnoir_magnetic_ia.png',          alt: "L'entonnoir Magnetic-IA", label: "04 · L'entonnoir Magnetic-IA" },
-            { src: '/images/schemas/06_methode_magnetic_ia.png',            alt: 'La méthode en 5 étapes', label: '05 · La méthode en 5 étapes' },
+            { src: '/images/schemas/du chaos à la clarté.png',           label: 'Du chaos à la clarté' },
+            { src: '/images/schemas/02_solution_rarement_probleme.png',  label: 'La solution est rarement le problème' },
+            { src: '/images/schemas/03_enquete_diagnostic.png',          label: 'Enquête & diagnostic' },
+            { src: '/images/schemas/04_entonnoir_magnetic_ia.png',       label: "L'entonnoir Magnetic-IA" },
+            { src: '/images/schemas/06_methode_magnetic_ia.png',         label: 'La méthode en 5 étapes' },
           ].map((slide, i) => (
-            <div class="schema-slide absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-700"
-              style={i === 0 ? 'opacity:1; z-index:2;' : 'opacity:0; z-index:1;'}
-              data-slide={i}>
-              <img src={slide.src} alt={slide.alt} class="w-full h-full object-contain rounded-xl" loading="lazy" />
-              <div class="absolute bottom-4 left-0 right-0 text-center" style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:rgba(255,255,255,0.4); text-transform:uppercase;">{slide.label}</div>
+            <div class="schema-slide absolute inset-0 flex items-center justify-center p-6 transition-opacity duration-700"
+              style={i === 0 ? 'opacity:1; z-index:2;' : 'opacity:0; z-index:1;'}>
+              <img src={slide.src} alt={slide.label}
+                class="w-full h-full object-contain"
+                loading={i === 0 ? 'eager' : 'lazy'} />
+              <!-- Overlay bas avec label -->
+              <div class="absolute bottom-0 left-0 right-0 h-14 flex items-end justify-between px-5 pb-3"
+                style="background: linear-gradient(to top, rgba(8,13,26,0.9), transparent);">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:rgba(255,255,255,0.5); text-transform:uppercase;">{slide.label}</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(96,165,250,0.5);">{String(i+1).padStart(2,'0')} / 05</span>
+              </div>
             </div>
           ))}
 
-          <!-- Dots -->
-          <div class="absolute top-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+          <!-- Dots navigation (en bas) -->
+          <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
             {[0,1,2,3,4].map(i => (
-              <div class="schema-dot w-1.5 h-1.5 rounded-full transition-all duration-300"
-                style={i === 0 ? 'background:var(--accent); width:1rem;' : 'background:rgba(255,255,255,0.25);'}
-                data-dot={i}></div>
+              <button class="schema-dot h-1 rounded-full transition-all duration-300 cursor-pointer"
+                style={i === 0 ? 'background:var(--accent); width:1.5rem;' : 'background:rgba(255,255,255,0.2); width:0.375rem;'}
+                data-dot={i}></button>
             ))}
           </div>
 
         </div>
+
+        <!-- Flèches de navigation -->
+        <div class="flex justify-end gap-2 mt-3">
+          <button id="schemaPrev" class="w-9 h-9 rounded-lg flex items-center justify-center transition hover:opacity-80"
+            style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="schemaNext" class="w-9 h-9 rounded-lg flex items-center justify-center transition hover:opacity-80"
+            style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
       </div>
 
     </div>
-
   </div>
 </section>
 
 <script>
-  const slides = document.querySelectorAll<HTMLElement>('.schema-slide');
-  const dots   = document.querySelectorAll<HTMLElement>('.schema-dot');
-  let current  = 0;
+  const slides  = document.querySelectorAll<HTMLElement>('.schema-slide');
+  const dots    = document.querySelectorAll<HTMLElement>('.schema-dot');
+  const prev    = document.getElementById('schemaPrev');
+  const next    = document.getElementById('schemaNext');
+  const total   = slides.length;
+  let current   = 0;
   let timer: ReturnType<typeof setInterval>;
 
   function goTo(i: number) {
     slides[current].style.opacity = '0';
     slides[current].style.zIndex  = '1';
-    dots[current].style.background = 'rgba(255,255,255,0.25)';
+    dots[current].style.background = 'rgba(255,255,255,0.2)';
     dots[current].style.width = '0.375rem';
-    current = (i + slides.length) % slides.length;
+    current = (i + total) % total;
     slides[current].style.opacity = '1';
     slides[current].style.zIndex  = '2';
     dots[current].style.background = 'var(--accent)';
-    dots[current].style.width = '1rem';
+    dots[current].style.width = '1.5rem';
   }
 
-  // Auto-avance toutes les 3.5s
-  function startTimer() { timer = setInterval(() => goTo(current + 1), 3500); }
+  function startTimer() { timer = setInterval(() => goTo(current + 1), 4000); }
   function stopTimer()  { clearInterval(timer); }
 
   startTimer();
 
-  // Pause au hover
   document.getElementById('schemaCarousel')?.addEventListener('mouseenter', stopTimer);
   document.getElementById('schemaCarousel')?.addEventListener('mouseleave', startTimer);
-
-  // Click sur dot
+  prev?.addEventListener('click', () => { stopTimer(); goTo(current - 1); startTimer(); });
+  next?.addEventListener('click', () => { stopTimer(); goTo(current + 1); startTimer(); });
   dots.forEach((d, i) => d.addEventListener('click', () => { stopTimer(); goTo(i); startTimer(); }));
-</script>
-
-<style>
-  .pi {
-    position: absolute;
-    width: 22%;
-    padding: 0.45rem 0.35rem;
-    font-family: 'Caveat', cursive;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    text-align: center;
-    line-height: 1.15;
-    border-radius: 3px;
-    box-shadow: 0 6px 16px -6px rgba(0,0,0,0.55);
-    left: var(--cx);
-    top: var(--cy);
-    transform: rotate(var(--cr));
-    transition:
-      left   0.6s cubic-bezier(.2,.7,.2,1),
-      top    0.6s cubic-bezier(.2,.7,.2,1),
-      transform 0.6s cubic-bezier(.2,.7,.2,1);
-    z-index: 3;
-    user-select: none;
-  }
-  .hero-slider.is-sorted .pi {
-    left: var(--sx);
-    top: var(--sy);
-    transform: rotate(var(--sr));
-  }
-
-  .hero-handle-line {
-    position: absolute;
-    top: 0; bottom: 0;
-    width: 2px;
-    background: var(--accent);
-    left: 20%;
-    transform: translateX(-50%);
-    z-index: 8;
-    box-shadow: 0 0 8px rgba(96,165,250,0.5);
-  }
-  .hero-handle-knob {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 34px; height: 34px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 13px; color: white; font-weight: bold;
-    z-index: 9;
-    box-shadow: 0 4px 14px rgba(96,165,250,0.45);
-  }
-
-  .col-label {
-    flex: 1;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  .hero-slider.is-sorted .col-label { opacity: 1; }
-
-  .col-sep {
-    position: absolute;
-    top: 28px; bottom: 14px;
-    width: 1px;
-    background: rgba(255,255,255,0.07);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 2;
-    pointer-events: none;
-  }
-  .hero-slider.is-sorted .col-sep { opacity: 1; }
-
-  .chaos-label  { transition: opacity 0.4s ease; }
-  .sorted-label { opacity: 0; transition: opacity 0.4s ease; }
-  .hero-slider.is-sorted .chaos-label  { opacity: 0; }
-  .hero-slider.is-sorted .sorted-label { opacity: 1; }
-</style>
-
-<script>
-  const slider    = document.getElementById('heroSlider')    as HTMLElement | null;
-  const range     = document.getElementById('heroRange')     as HTMLInputElement | null;
-  const handleLine = document.getElementById('heroHandleLine') as HTMLElement | null;
-  const handleKnob = document.getElementById('heroHandleKnob') as HTMLElement | null;
-
-  function updatePos(val: number) {
-    const pct = Math.max(0, Math.min(100, val));
-    if (handleLine) handleLine.style.left = pct + '%';
-    if (handleKnob) handleKnob.style.left = pct + '%';
-    if (range) {
-      range.value = String(Math.round(pct));
-      range.style.background = `linear-gradient(to right, var(--accent) ${pct}%, var(--bg-tertiary) ${pct}%)`;
-    }
-    if (slider) {
-      slider.classList.toggle('is-sorted', pct > 50);
-    }
-  }
-
-  if (range) {
-    range.addEventListener('input', () => updatePos(Number(range.value)));
-  }
-
-  if (slider) {
-    let dragging = false;
-    const getPct = (clientX: number) => {
-      const r = slider.getBoundingClientRect();
-      return ((clientX - r.left) / r.width) * 100;
-    };
-    slider.addEventListener('mousedown', (e) => {
-      dragging = true;
-      updatePos(getPct(e.clientX));
-      e.preventDefault();
-    });
-    window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
-    window.addEventListener('mouseup',   () => { dragging = false; });
-    slider.addEventListener('touchstart', (e) => {
-      dragging = true;
-      updatePos(getPct(e.touches[0].clientX));
-    }, { passive: true });
-    window.addEventListener('touchmove', (e) => {
-      if (dragging) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); }
-    }, { passive: false });
-    window.addEventListener('touchend', () => { dragging = false; });
-  }
-
-  updatePos(20);
 </script>
