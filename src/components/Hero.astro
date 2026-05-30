@@ -16,43 +16,67 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-6 pb-10 w-full">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Texte gauche -->
-      <div class="fade-in-up">
+      <!-- Texte gauche : Constat → Problème → Solution -->
+      <div class="fade-in-up flex flex-col gap-8">
 
-        <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-3 mb-8">
-          <span class="w-6 h-px" style="background: var(--accent);"></span>
-          <span class="text-xs font-mono font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
-          <span class="w-2 h-2 rounded-full animate-pulse" style="background: var(--accent);"></span>
-        </div>
-
-        <!-- H1 -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.03]">
-          Avant les outils,<br />
-          <span class="font-serif italic" style="color: var(--accent);">la réflexion.</span>
-        </h1>
-
-        <!-- Sous-titre -->
-        <p class="mt-6 text-xl leading-relaxed max-w-lg" style="color: var(--text-secondary);">
-          Je cadre vos projets IA pour que vous décidiez avec clarté — pas en empilant des outils.
-        </p>
-
-        <!-- Stat BPI -->
-        <p class="mt-5 text-sm leading-relaxed" style="color: var(--text-tertiary);">
-          <strong style="color: var(--text-secondary);">58% des dirigeants de PME</strong> voient l'IA comme un enjeu de survie. Autant n'ont aucune stratégie. —
-          <a href="https://www.francenum.gouv.fr/magazine-du-numerique/lia-dans-les-pme-et-eti-francaises-une-revolution-tranquille" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition underline underline-offset-2">Bpifrance Le Lab, 2025 ↗</a>
-        </p>
-
-        <!-- CTAs -->
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/20">
-            Faire le point sur mon projet
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
-          <a href="#methode" class="inline-flex items-center gap-2 px-6 py-3.5 font-medium rounded-xl transition" style="border: 1px solid var(--border); color: var(--text-primary);">
-            Voir la méthode
+        <!-- 1. CONSTAT -->
+        <div>
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="w-4 h-px" style="background: var(--accent);"></span>
+            <span class="text-xs font-mono font-semibold uppercase tracking-[0.18em]" style="color: var(--accent);">01 · Le constat</span>
+          </div>
+          <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">
+            <strong style="color: var(--text-primary);">58% des dirigeants de PME</strong> voient l'IA comme un enjeu de survie. Autant n'ont encore aucune stratégie en place.
+          </p>
+          <a href="https://www.francenum.gouv.fr/magazine-du-numerique/lia-dans-les-pme-et-eti-francaises-une-revolution-tranquille"
+            target="_blank" rel="noopener noreferrer"
+            class="text-xs hover:opacity-70 transition underline underline-offset-2 mt-1 block"
+            style="color: var(--text-tertiary);">
+            Bpifrance Le Lab · 1 200 dirigeants PME-ETI · 2025 ↗
           </a>
         </div>
+
+        <!-- Séparateur -->
+        <div class="h-px" style="background: var(--border);"></div>
+
+        <!-- 2. PROBLÈME -->
+        <div>
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="w-4 h-px" style="background: #f87171;"></span>
+            <span class="text-xs font-mono font-semibold uppercase tracking-[0.18em]" style="color: #f87171;">02 · Le problème</span>
+          </div>
+          <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">
+            Vous perdez du <strong style="color: var(--text-primary);">temps</strong> et de <strong style="color: var(--text-primary);">l'argent</strong> sur des outils non cadrés. Pas de stratégie, pas de priorisation, pas de résultats mesurables.
+          </p>
+        </div>
+
+        <!-- Séparateur -->
+        <div class="h-px" style="background: var(--border);"></div>
+
+        <!-- 3. SOLUTION -->
+        <div>
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="w-4 h-px" style="background: #10b981;"></span>
+            <span class="text-xs font-mono font-semibold uppercase tracking-[0.18em]" style="color: #10b981;">03 · La solution</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-4">
+            Avant les outils,<br />
+            <span class="font-serif italic" style="color: var(--accent);">la réflexion.</span>
+          </h1>
+          <p class="text-base leading-relaxed mb-6 max-w-md" style="color: var(--text-secondary);">
+            Je cadre vos projets IA pour que vous décidiez avec clarté. <strong style="color: var(--text-primary);">Décider, pas empiler.</strong>
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/20">
+              Faire le point sur mon projet
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+            <a href="#methode" class="inline-flex items-center gap-2 px-6 py-3.5 font-medium rounded-xl transition" style="border: 1px solid var(--border); color: var(--text-primary);">
+              Voir la méthode
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <!-- Visuel : slider interactif -->
