@@ -1,75 +1,208 @@
 ---
-// BeforeAfter V2 — slider de comparaison Avant/Après
+// BeforeAfter V3 — slider visuel harmonisé avec la charte "tableau blanc"
 ---
 
 <section class="py-24" style="background: var(--bg-primary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- En-tête -->
     <div class="max-w-3xl mb-12">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Démo · 2 secondes</div>
+      <div class="inline-flex items-center gap-3 mb-4">
+        <span class="w-6 h-px" style="background: var(--accent);"></span>
+        <span class="text-xs font-mono font-semibold uppercase tracking-[0.2em]" style="color: var(--accent);">Démo · 2 secondes</span>
+      </div>
       <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
         Glissez le curseur.
         <span class="font-serif italic" style="color: var(--text-tertiary);">C'est exactement ce que je fais.</span>
       </h2>
-      <p class="mt-6 text-lg" style="color: var(--text-secondary);">
-        À gauche, votre digital aujourd'hui. À droite, après cadrage : les mêmes briques, mais hiérarchisées, séquencées, pilotables.
+      <p class="mt-4 text-lg" style="color: var(--text-secondary);">
+        À gauche, votre situation aujourd'hui. À droite, après cadrage : les mêmes briques, mais hiérarchisées, séquencées, pilotables.
       </p>
     </div>
 
+    <!-- Slider container -->
     <div
-      class="compare-container aspect-[16/10] lg:aspect-[16/9] max-w-5xl mx-auto"
+      class="compare-container max-w-5xl mx-auto"
       id="compareContainer"
-      style="background: var(--bg-secondary); border: 1px solid var(--border);"
+      style="aspect-ratio: 16/9; background: #060c1a; border: 1px solid var(--border);"
     >
-      <div class="compare-side before">
-        <div class="absolute inset-0">
-          <div class="postit postit-yellow" style="top: 12%; left: 8%; transform: rotate(-8deg);">CRM ?</div>
-          <div class="postit postit-pink"   style="top: 8%;  left: 38%; transform: rotate(5deg);">Newsletter</div>
-          <div class="postit postit-orange" style="top: 18%; right: 12%; transform: rotate(-4deg);">Pub Méta</div>
-          <div class="postit postit-yellow" style="top: 40%; left: 18%; transform: rotate(7deg);">SEO local</div>
-          <div class="postit postit-green"  style="top: 36%; left: 48%; transform: rotate(-3deg);">Refonte site</div>
-          <div class="postit postit-blue"   style="top: 48%; right: 8%; transform: rotate(6deg);">Agent IA ?</div>
-          <div class="postit postit-purple" style="top: 68%; left: 10%; transform: rotate(-5deg);">Auto facturation</div>
-          <div class="postit postit-pink"   style="top: 72%; left: 42%; transform: rotate(4deg);">LinkedIn</div>
-          <div class="postit postit-green"  style="top: 70%; right: 14%; transform: rotate(-7deg);">Ads</div>
+
+      <!-- ═══════════════════════════════════
+           AVANT — Chaos / Dispersion
+      ═══════════════════════════════════ -->
+      <div class="compare-side before" style="overflow: hidden;">
+
+        <!-- Fond grille de lignes style tableau -->
+        <div class="absolute inset-0" style="
+          background-image:
+            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+          background-size: 48px 48px;
+        "></div>
+
+        <!-- Titre chalk -->
+        <div class="absolute" style="top: 6%; left: 50%; transform: translateX(-50%); text-align: center; white-space: nowrap;">
+          <span style="font-family: 'Caveat', cursive; font-size: clamp(1rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; text-transform: uppercase;">
+            30 idées · 0 priorité
+          </span>
         </div>
+
+        <!-- Post-its dispersés -->
+        <div class="postit postit-yellow" style="top: 16%; left: 6%;  transform: rotate(-9deg); font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">CRM ?</div>
+        <div class="postit postit-pink"   style="top: 13%; left: 36%; transform: rotate(6deg);  font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Newsletter</div>
+        <div class="postit postit-orange" style="top: 14%; right: 8%; transform: rotate(-4deg); font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Pub Méta</div>
+        <div class="postit postit-yellow" style="top: 40%; left: 12%; transform: rotate(8deg);  font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">SEO local</div>
+        <div class="postit postit-green"  style="top: 37%; left: 44%; transform: rotate(-5deg); font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Refonte site</div>
+        <div class="postit postit-blue"   style="top: 42%; right: 6%; transform: rotate(5deg);  font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Agent IA ?</div>
+        <div class="postit postit-purple" style="top: 64%; left: 8%;  transform: rotate(-6deg); font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Auto facturation</div>
+        <div class="postit postit-pink"   style="top: 66%; left: 40%; transform: rotate(4deg);  font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">LinkedIn</div>
+        <div class="postit postit-green"  style="top: 64%; right: 10%;transform: rotate(-7deg); font-size: clamp(0.7rem,1.5vw,1.1rem); min-width: 80px;">Ads</div>
+
+        <!-- Flèches bleues partant dans tous les sens (SVG inline) -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arrowB" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="rgba(96,165,250,0.5)"/>
+            </marker>
+          </defs>
+          <!-- flèches désordonnées -->
+          <path d="M 180 190 Q 280 120 340 200" stroke="rgba(96,165,250,0.4)" stroke-width="1.5" fill="none" marker-end="url(#arrowB)" stroke-dasharray="4 3"/>
+          <path d="M 500 200 Q 420 280 320 310" stroke="rgba(96,165,250,0.35)" stroke-width="1.5" fill="none" marker-end="url(#arrowB)" stroke-dasharray="4 3"/>
+          <path d="M 620 200 Q 580 280 520 310" stroke="rgba(96,165,250,0.35)" stroke-width="1.5" fill="none" marker-end="url(#arrowB)" stroke-dasharray="4 3"/>
+          <path d="M 130 310 Q 260 250 370 330" stroke="rgba(96,165,250,0.3)"  stroke-width="1.5" fill="none" marker-end="url(#arrowB)" stroke-dasharray="4 3"/>
+          <path d="M 400 120 Q 500 180 450 260" stroke="rgba(96,165,250,0.3)"  stroke-width="1.5" fill="none" marker-end="url(#arrowB)" stroke-dasharray="4 3"/>
+        </svg>
+
         <div class="compare-label left">Avant · Dispersion</div>
       </div>
 
-      <div class="compare-side after" style="background: var(--bg-secondary);">
-        <div class="org-col" style="left: 4%;">
-          <div class="org-col-header" style="color: #86efac;">Quick wins</div>
-          <div class="org-postit postit-green">Newsletter</div>
-          <div class="org-postit postit-green">SEO local</div>
-          <div class="org-postit postit-green">LinkedIn</div>
+
+      <!-- ═══════════════════════════════════
+           APRÈS — Cadrage / Clarté
+      ═══════════════════════════════════ -->
+      <div class="compare-side after" style="background: #060c1a; overflow: hidden;">
+
+        <!-- Fond grille de lignes style tableau -->
+        <div class="absolute inset-0" style="
+          background-image:
+            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+          background-size: 48px 48px;
+        "></div>
+
+        <!-- Titre chalk -->
+        <div class="absolute" style="top: 6%; left: 50%; transform: translateX(-50%); text-align: center; white-space: nowrap;">
+          <span style="font-family: 'Caveat', cursive; font-size: clamp(1rem, 2.5vw, 1.6rem); font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.12em; text-transform: uppercase;">
+            3 priorités · 1 feuille de route
+          </span>
         </div>
-        <div class="org-col" style="left: 36%;">
-          <div class="org-col-header" style="color: #fcd34d;">Structurel · Q3</div>
-          <div class="org-postit postit-yellow">CRM</div>
-          <div class="org-postit postit-yellow">Refonte site</div>
-          <div class="org-postit postit-yellow">Auto facturation</div>
+
+        <!-- SVG principal : flèche centrale + 3 colonnes connectées -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arrowA" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="rgba(96,165,250,0.8)"/>
+            </marker>
+            <marker id="arrowG" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="rgba(134,239,172,0.8)"/>
+            </marker>
+            <marker id="arrowY" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="rgba(252,211,77,0.8)"/>
+            </marker>
+          </defs>
+
+          <!-- Flèche d'entrée centrale (entonnoir) -->
+          <path d="M 400 90 L 400 155" stroke="rgba(96,165,250,0.7)" stroke-width="2" fill="none" marker-end="url(#arrowA)"/>
+
+          <!-- Box CADRAGE centrale -->
+          <rect x="300" y="60" width="200" height="42" rx="6"
+            fill="rgba(96,165,250,0.12)" stroke="rgba(96,165,250,0.6)" stroke-width="1.5"/>
+          <text x="400" y="86" text-anchor="middle"
+            font-family="Caveat, cursive" font-size="20" font-weight="700"
+            fill="rgba(96,165,250,0.95)" letter-spacing="2">CADRAGE</text>
+
+          <!-- Ligne de séparation vers les 3 colonnes -->
+          <path d="M 400 197 L 400 210 L 140 210 L 140 225" stroke="rgba(134,239,172,0.6)" stroke-width="1.5" fill="none" marker-end="url(#arrowG)"/>
+          <path d="M 400 197 L 400 225" stroke="rgba(252,211,77,0.6)" stroke-width="1.5" fill="none" marker-end="url(#arrowY)"/>
+          <path d="M 400 197 L 400 210 L 660 210 L 660 225" stroke="rgba(96,165,250,0.6)" stroke-width="1.5" fill="none" marker-end="url(#arrowA)"/>
+
+          <!-- Résultats en bas -->
+          <path d="M 400 385 L 400 415" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" fill="none" marker-end="url(#arrowA)"/>
+          <rect x="270" y="415" width="260" height="30" rx="5"
+            fill="rgba(96,165,250,0.15)" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
+          <text x="400" y="435" text-anchor="middle"
+            font-family="Caveat, cursive" font-size="17" font-weight="700"
+            fill="rgba(96,165,250,0.9)" letter-spacing="1">RÉSULTATS MESURABLES</text>
+        </svg>
+
+        <!-- Colonne 1 : Quick wins (vert) -->
+        <div class="absolute" style="left: 5%; top: 50%; transform: translateY(-50%); width: 26%;">
+          <div style="
+            border: 1.5px solid rgba(134,239,172,0.5);
+            border-radius: 10px;
+            padding: clamp(0.4rem, 1vw, 0.75rem);
+            background: rgba(134,239,172,0.06);
+          ">
+            <div style="font-family:'Caveat',cursive; font-size:clamp(0.65rem,1.4vw,0.9rem); font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(134,239,172,0.9); margin-bottom:0.5rem; text-align:center;">
+              Quick wins
+            </div>
+            <div class="org-postit postit-green" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Newsletter</div>
+            <div class="org-postit postit-green" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">SEO local</div>
+            <div class="org-postit postit-green" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">LinkedIn</div>
+          </div>
         </div>
-        <div class="org-col" style="right: 4%;">
-          <div class="org-col-header" style="color: #93c5fd;">Long terme · Q4+</div>
-          <div class="org-postit postit-blue">Agent IA</div>
-          <div class="org-postit postit-blue">Pub Méta</div>
-          <div class="org-postit postit-blue">Ads</div>
+
+        <!-- Colonne 2 : Structurel (jaune) — centrée -->
+        <div class="absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%); width: 26%;">
+          <div style="
+            border: 1.5px solid rgba(252,211,77,0.5);
+            border-radius: 10px;
+            padding: clamp(0.4rem, 1vw, 0.75rem);
+            background: rgba(252,211,77,0.06);
+          ">
+            <div style="font-family:'Caveat',cursive; font-size:clamp(0.65rem,1.4vw,0.9rem); font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(252,211,77,0.9); margin-bottom:0.5rem; text-align:center;">
+              Structurel · Q3
+            </div>
+            <div class="org-postit postit-yellow" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">CRM</div>
+            <div class="org-postit postit-yellow" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Refonte site</div>
+            <div class="org-postit postit-yellow" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Auto fact.</div>
+          </div>
         </div>
+
+        <!-- Colonne 3 : Long terme (bleu) -->
+        <div class="absolute" style="right: 5%; top: 50%; transform: translateY(-50%); width: 26%;">
+          <div style="
+            border: 1.5px solid rgba(147,197,253,0.5);
+            border-radius: 10px;
+            padding: clamp(0.4rem, 1vw, 0.75rem);
+            background: rgba(147,197,253,0.06);
+          ">
+            <div style="font-family:'Caveat',cursive; font-size:clamp(0.65rem,1.4vw,0.9rem); font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(147,197,253,0.85); margin-bottom:0.5rem; text-align:center;">
+              Long terme · Q4+
+            </div>
+            <div class="org-postit postit-blue" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Agent IA</div>
+            <div class="org-postit postit-blue" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Pub Méta</div>
+            <div class="org-postit postit-blue" style="font-size:clamp(0.6rem,1.2vw,0.95rem); margin:0.3rem auto;">Ads</div>
+          </div>
+        </div>
+
         <div class="compare-label right">Après · Cadré</div>
       </div>
 
+      <!-- Handle du slider -->
       <div class="compare-handle" id="compareHandle"></div>
     </div>
 
-    <p class="text-center mt-8 text-sm" style="color: var(--text-tertiary);">
-      Faites glisser le curseur central, ou utilisez la barre ci-dessous
+    <!-- Hint -->
+    <p class="text-center mt-6 text-sm" style="color: var(--text-tertiary);">
+      Faites glisser le curseur pour comparer avant et après
     </p>
 
-    <div class="max-w-5xl mx-auto mt-4 px-4">
+    <!-- Range input -->
+    <div class="max-w-5xl mx-auto mt-3 px-2">
       <input
         type="range"
-        min="0"
-        max="100"
-        value="50"
+        min="0" max="100" value="50"
         id="compareRange"
         class="w-full h-2 rounded-full appearance-none cursor-pointer"
         style="background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, var(--bg-tertiary) 50%, var(--bg-tertiary) 100%);"
@@ -106,26 +239,12 @@
 
     setPos(50);
 
-    container.addEventListener('mousedown', (e) => {
-      dragging = true;
-      fromClientX(e.clientX);
-      e.preventDefault();
-    });
-    window.addEventListener('mousemove', (e) => {
-      if (dragging) fromClientX(e.clientX);
-    });
+    container.addEventListener('mousedown', (e) => { dragging = true; fromClientX(e.clientX); e.preventDefault(); });
+    window.addEventListener('mousemove', (e) => { if (dragging) fromClientX(e.clientX); });
     window.addEventListener('mouseup', () => (dragging = false));
 
-    container.addEventListener('touchstart', (e) => {
-      dragging = true;
-      fromClientX(e.touches[0].clientX);
-    }, { passive: true });
-    window.addEventListener('touchmove', (e) => {
-      if (dragging) {
-        e.preventDefault();
-        fromClientX(e.touches[0].clientX);
-      }
-    }, { passive: false });
+    container.addEventListener('touchstart', (e) => { dragging = true; fromClientX(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); fromClientX(e.touches[0].clientX); } }, { passive: false });
     window.addEventListener('touchend', () => (dragging = false));
 
     if (range) {

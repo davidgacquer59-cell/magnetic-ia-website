@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostic Maturité IA — Magnetic-IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-secondary: #0f1424;
+      --bg-tertiary: #1a1f2e;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-tertiary: #64748b;
+      --border: #1e293b;
+      --accent: #60a5fa;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(96,165,250,0.12) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Halos de fond */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vh;
+      background: radial-gradient(ellipse, rgba(59,130,246,0.07) 0%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-line { width: 1.5rem; height: 1px; background: var(--accent); }
+
+    .eyebrow-text {
+      font-size: 0.68rem;
+      font-family: 'Courier New', monospace;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .title em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Progress */
+    .progress-wrap { margin-bottom: 1.75rem; }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-label { font-size: 0.72rem; color: var(--text-tertiary); font-weight: 500; }
+    .progress-steps { font-size: 0.72rem; color: var(--accent); font-weight: 700; }
+
+    .progress-bar {
+      height: 3px;
+      background: var(--bg-tertiary);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      border-radius: 999px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Card */
+    .card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Question */
+    .question-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9rem 1.1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 0.875rem;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-align: left;
+      width: 100%;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .option:hover {
+      border-color: rgba(96, 165, 250, 0.5);
+      background: rgba(96, 165, 250, 0.06);
+      transform: translateX(3px);
+    }
+
+    .option.selected {
+      border-color: var(--accent);
+      background: rgba(96, 165, 250, 0.1);
+    }
+
+    .option-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 0.5rem;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: all 0.18s ease;
+    }
+
+    .option:hover .option-icon,
+    .option.selected .option-icon {
+      border-color: var(--accent);
+    }
+
+    /* Nav */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 6px 20px -6px rgba(59,130,246,0.5);
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px -6px rgba(59,130,246,0.6);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-tertiary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text-secondary);
+      border-color: var(--text-tertiary);
+    }
+
+    /* Email step */
+    .email-step { text-align: center; }
+
+    .result-teaser {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      background: rgba(96,165,250,0.1);
+      border: 1px solid rgba(96,165,250,0.25);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .email-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .email-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .input-field {
+      padding: 0.85rem 1.1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 0.875rem;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .input-field:focus { border-color: var(--accent); }
+    .input-field::placeholder { color: var(--text-tertiary); }
+
+    .input-field.error { border-color: var(--danger); }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+      padding: 0.9rem 1.5rem;
+      font-size: 0.925rem;
+    }
+
+    .privacy-note {
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .skip-link {
+      display: block;
+      text-align: center;
+      font-size: 0.775rem;
+      color: var(--text-tertiary);
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: color 0.2s;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .skip-link:hover { color: var(--text-secondary); }
+
+    /* Result step */
+    .result-step { text-align: center; }
+
+    /* Circular gauge */
+    .gauge-wrap {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .gauge-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .gauge-bg {
+      fill: none;
+      stroke: var(--bg-tertiary);
+      stroke-width: 10;
+    }
+
+    .gauge-fill {
+      fill: none;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dasharray: 408;
+      stroke-dashoffset: 408;
+      transition: stroke-dashoffset 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gauge-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gauge-score {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .gauge-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-tertiary);
+      margin-top: 0.2rem;
+    }
+
+    /* Profile badge */
+    .profile-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .result-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .result-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Insights */
+    .insights {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.1rem 1.25rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .insight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+    }
+
+    .insight-item + .insight-item {
+      border-top: 1px solid var(--border);
+    }
+
+    .insight-icon { font-size: 0.95rem; flex-shrink: 0; margin-top: 1px; }
+
+    .insight-text {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* CTA buttons */
+    .result-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .btn-cta-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.925rem 1.5rem;
+      background: #3b82f6;
+      color: white;
+      border-radius: 0.875rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      border: none;
+      text-decoration: none;
+      box-shadow: 0 6px 20px -6px rgba(59,130,246,0.5);
+    }
+
+    .btn-cta-primary:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      border-radius: 0.875rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-decoration: none;
+    }
+
+    .btn-cta-secondary:hover {
+      border-color: rgba(96,165,250,0.4);
+      color: var(--text-primary);
+    }
+
+    /* Divider with label */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0.25rem 0;
+    }
+
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-text { font-size: 0.68rem; color: var(--text-tertiary); font-weight: 500; white-space: nowrap; }
+
+    /* Brand footer */
+    .brand-footer {
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+
+    .brand-footer a {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-footer a:hover { color: var(--accent); }
+
+    /* Transitions */
+    .step-enter {
+      animation: stepIn 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes stepIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in { animation: fadeIn 0.5s ease; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Diagnostic gratuit · 2 minutes</span>
+        <div class="eyebrow-dot"></div>
+      </div>
+      <h1 class="title">Votre entreprise est-elle<br><em>prête pour l'IA ?</em></h1>
+      <p class="subtitle">5 questions pour identifier votre potentiel et vos premiers quick wins.</p>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-meta">
+        <span class="progress-label" id="progressLabel">Question 1 sur 5</span>
+        <span class="progress-steps" id="progressSteps">20%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+      </div>
+    </div>
+
+    <div id="mainCard"></div>
+
+    <div class="brand-footer">
+      <a href="https://magnetic-ia.fr">magnetic-ia.fr · David Gacquer</a>
+    </div>
+
+  </div>
+
+  <script>
+    const CALENDLY = 'https://calendly.com/davidgacquer59/consultation-decouverte';
+
+    const questions = [
+      {
+        id: 1,
+        text: "Avez-vous des tâches que vous répétez chaque semaine de façon similaire ?",
+        options: [
+          { emoji: "✅", label: "Oui, plusieurs tâches bien identifiées", score: 3 },
+          { emoji: "🔄", label: "Quelques-unes, mais pas vraiment formalisées", score: 2 },
+          { emoji: "❌", label: "Non, chaque semaine est vraiment différente", score: 0 }
+        ]
+      },
+      {
+        id: 2,
+        text: "Ces tâches vous prennent-elles plus de 30 minutes par semaine au total ?",
+        options: [
+          { emoji: "⏱️", label: "Oui, plusieurs heures perdues chaque semaine", score: 3 },
+          { emoji: "🕐", label: "Oui, environ une heure", score: 2 },
+          { emoji: "🟡", label: "Non, c'est marginal", score: 0 }
+        ]
+      },
+      {
+        id: 3,
+        text: "Pourriez-vous expliquer ces tâches étape par étape à un stagiaire ?",
+        options: [
+          { emoji: "📋", label: "Oui, c'est structuré et documentable", score: 3 },
+          { emoji: "🗂️", label: "En partie, avec un peu de travail", score: 2 },
+          { emoji: "🤷", label: "Non, c'est du feeling et de l'expérience", score: 1 }
+        ]
+      },
+      {
+        id: 4,
+        text: "La décision finale sur ces tâches peut-elle rester entre vos mains ?",
+        options: [
+          { emoji: "👤", label: "Oui, toujours — c'est moi qui valide", score: 3 },
+          { emoji: "🤝", label: "Souvent, sauf sur les points très techniques", score: 2 },
+          { emoji: "⚡", label: "Difficile à dire pour l'instant", score: 1 }
+        ]
+      },
+      {
+        id: 5,
+        text: "Quel est votre principal frein face à l'IA aujourd'hui ?",
+        options: [
+          { emoji: "🧭", label: "Je ne sais pas par où commencer", score: 0, tag: "start" },
+          { emoji: "⏳", label: "Manque de temps pour tester", score: 0, tag: "time" },
+          { emoji: "🔒", label: "Préoccupations sur la confidentialité", score: 0, tag: "data" },
+          { emoji: "💰", label: "Pas encore convaincu du ROI", score: 0, tag: "roi" }
+        ]
+      }
+    ];
+
+    let currentStep = 0;
+    let answers = new Array(questions.length).fill(undefined);
+    let totalScore = 0;
+    let freinTag = '';
+
+    const mainCard   = document.getElementById('mainCard');
+    const progressFill  = document.getElementById('progressFill');
+    const progressLabel = document.getElementById('progressLabel');
+    const progressSteps = document.getElementById('progressSteps');
+    const progressWrap  = document.getElementById('progressWrap');
+
+    function updateProgress(step) {
+      if (step >= questions.length) {
+        progressWrap.style.transition = 'opacity 0.3s';
+        progressWrap.style.opacity = '0';
+        return;
+      }
+      const pct = Math.round(((step + 1) / questions.length) * 100);
+      progressFill.style.width = pct + '%';
+      progressLabel.textContent = 'Question ' + (step + 1) + ' sur ' + questions.length;
+      progressSteps.textContent = pct + '%';
+    }
+
+    function renderQuestion(index) {
+      const q = questions[index];
+      const selected = answers[index];
+
+      mainCard.innerHTML = `
+        <div class="card step-enter">
+          <p class="question-text">${q.text}</p>
+          <div class="options">
+            ${q.options.map((opt, i) => `
+              <button class="option ${selected === i ? 'selected' : ''}"
+                onclick="selectOption(${index}, ${i}, ${opt.score}, '${opt.tag || ''}')">
+                <span class="option-icon">${opt.emoji}</span>
+                <span>${opt.label}</span>
+              </button>
+            `).join('')}
+          </div>
+          <div class="nav">
+            ${index > 0
+              ? `<button class="btn btn-ghost" onclick="goBack()">← Précédent</button>`
+              : `<div></div>`}
+            <button class="btn btn-primary" id="nextBtn"
+              onclick="goNext()"
+              ${selected === undefined ? 'disabled' : ''}>
+              ${index === questions.length - 1 ? 'Voir mon résultat →' : 'Suivant →'}
+            </button>
+          </div>
+        </div>`;
+    }
+
+    function selectOption(qIndex, optIndex, score, tag) {
+      answers[qIndex] = optIndex;
+      if (tag) freinTag = tag;
+
+      document.querySelectorAll('.option').forEach((el, i) => {
+        el.classList.toggle('selected', i === optIndex);
+      });
+
+      const btn = document.getElementById('nextBtn');
+      if (btn) btn.disabled = false;
+    }
+
+    function goNext() {
+      if (answers[currentStep] === undefined) return;
+
+      // Accumulate score from Q1-Q4 (Q5 is qualitative)
+      if (currentStep < 4) {
+        totalScore += questions[currentStep].options[answers[currentStep]].score;
+      }
+
+      currentStep++;
+
+      if (currentStep < questions.length) {
+        updateProgress(currentStep);
+        renderQuestion(currentStep);
+      } else {
+        updateProgress(currentStep);
+        renderEmailStep();
+      }
+    }
+
+    function goBack() {
+      if (currentStep > 0) {
+        // Remove score of current step when going back
+        if (currentStep <= 4 && answers[currentStep - 1] !== undefined) {
+          totalScore -= questions[currentStep - 1].options[answers[currentStep - 1]].score;
+        }
+        currentStep--;
+        updateProgress(currentStep);
+        renderQuestion(currentStep);
+      }
+    }
+
+    function renderEmailStep() {
+      mainCard.innerHTML = `
+        <div class="card step-enter email-step">
+          <div class="result-teaser">🎁 Votre résultat est prêt</div>
+          <h2 class="email-title">Recevez votre diagnostic<br>+ les 5 cas d'usage concrets</h2>
+          <p class="email-subtitle">
+            Entrez votre email pour recevoir votre score détaillé et les 5 fiches cas d'usage IA
+            avec prompts prêts à l'emploi, adaptés à votre profil.
+          </p>
+          <div class="input-group">
+            <input class="input-field" type="text"  id="firstName"   placeholder="Votre prénom" />
+            <input class="input-field" type="email" id="emailInput"  placeholder="Votre email professionnel" />
+            <button class="btn btn-primary btn-full" onclick="submitEmail()">
+              Voir mon diagnostic →
+            </button>
+          </div>
+          <p class="privacy-note">🔒 Aucun spam. Données confidentielles. Désinscription en un clic.</p>
+          <span class="skip-link" onclick="renderResult()">Continuer sans email</span>
+        </div>`;
+    }
+
+    function submitEmail() {
+      const email = document.getElementById('emailInput')?.value || '';
+      const emailField = document.getElementById('emailInput');
+
+      if (email && !email.includes('@')) {
+        emailField.classList.add('error');
+        return;
+      }
+
+      // TODO: envoyer email + prénom à votre service (Mailchimp, Brevo, etc.)
+      renderResult();
+    }
+
+    function getProfile(score) {
+      const max = 12;
+      const pct = Math.round((score / max) * 100);
+
+      if (pct < 40) return {
+        pct,
+        scoreColor: '#f87171',
+        gradStart: '#f87171', gradEnd: '#fbbf24',
+        badgeBg: 'rgba(248,113,113,0.12)', badgeBorder: 'rgba(248,113,113,0.3)', badgeColor: '#f87171',
+        badgeText: 'Bases à construire',
+        title: 'Quelques prérequis avant de se lancer',
+        desc: "Votre activité a du potentiel, mais certains processus doivent d'abord être clarifiés avant d'introduire l'IA. Poser les bases maintenant vous évitera d'investir dans des outils qui ne collent pas avec votre réalité terrain.",
+        insights: [
+          { icon: '🧭', text: 'Commencez par lister vos activités hebdomadaires, même grossièrement' },
+          { icon: '📋', text: 'Identifiez une seule tâche répétitive à documenter en premier' },
+          { icon: '🎯', text: 'Un appel découverte gratuit suffit pour clarifier votre point de départ' }
+        ],
+        cta1Label: '📅 Réserver un appel découverte gratuit', cta1Href: CALENDLY,
+        cta2Label: '📥 Télécharger les 5 cas d\'usage IA', cta2Href: '#'
+      };
+
+      if (pct < 70) return {
+        pct,
+        scoreColor: '#fbbf24',
+        gradStart: '#fbbf24', gradEnd: '#60a5fa',
+        badgeBg: 'rgba(251,191,36,0.12)', badgeBorder: 'rgba(251,191,36,0.3)', badgeColor: '#fbbf24',
+        badgeText: 'Potentiel identifié',
+        title: 'Des quick wins à portée de main',
+        desc: "Vous avez des tâches répétitives et du temps à gagner. Il y a des gains rapides à saisir sans grand investissement. Un seul cas d'usage bien choisi peut être opérationnel en quelques jours.",
+        insights: [
+          { icon: '⚡', text: 'Vos tâches répétitives sont exactement là où l\'IA excelle' },
+          { icon: '📊', text: 'La matrice impact/effort vous aidera à prioriser sans vous disperser' },
+          { icon: '🚀', text: 'Premier résultat concret possible en moins d\'une semaine' }
+        ],
+        cta1Label: '📥 Télécharger les 5 cas d\'usage IA', cta1Href: '#',
+        cta2Label: '📅 Réserver un atelier diagnostic', cta2Href: CALENDLY
+      };
+
+      return {
+        pct,
+        scoreColor: '#34d399',
+        gradStart: '#60a5fa', gradEnd: '#34d399',
+        badgeBg: 'rgba(52,211,153,0.12)', badgeBorder: 'rgba(52,211,153,0.3)', badgeColor: '#34d399',
+        badgeText: 'Fort potentiel',
+        title: 'Votre activité est mûre pour l\'IA',
+        desc: "Vos processus sont structurés, vos tâches identifiables, vous gardez la maîtrise des décisions. Vous avez tout ce qu'il faut pour déployer l'IA efficacement. Un diagnostic complet identifierait vos 3 cas d'usage prioritaires et un plan d'action 30-60-90 jours.",
+        insights: [
+          { icon: '🏆', text: 'Vos processus répétitifs sont directement automatisables' },
+          { icon: '💰', text: 'ROI potentiel élevé : les projets bien cadrés génèrent x2,6 en médiane (Baromètre IA PME)' },
+          { icon: '📅', text: 'Un atelier diagnostic demi-journée identifie vos 3 cas d\'usage prioritaires' }
+        ],
+        cta1Label: '📅 Réserver mon appel découverte gratuit →', cta1Href: CALENDLY,
+        cta2Label: '📥 Télécharger les 5 cas d\'usage IA', cta2Href: '#'
+      };
+    }
+
+    function renderResult() {
+      const profile = getProfile(totalScore);
+      const circumference = 2 * Math.PI * 65; // r=65
+
+      mainCard.innerHTML = `
+        <div class="card step-enter result-step">
+
+          <div class="gauge-wrap fade-in">
+            <svg class="gauge-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"   stop-color="${profile.gradStart}"/>
+                  <stop offset="100%" stop-color="${profile.gradEnd}"/>
+                </linearGradient>
+              </defs>
+              <circle class="gauge-bg"   cx="80" cy="80" r="65"/>
+              <circle class="gauge-fill" cx="80" cy="80" r="65" id="gaugeFill"
+                stroke="url(#gGrad)"
+                stroke-dasharray="${circumference}"
+                stroke-dashoffset="${circumference}"/>
+            </svg>
+            <div class="gauge-center">
+              <div class="gauge-score" id="gaugeScore" style="color:${profile.scoreColor}">0%</div>
+              <div class="gauge-label">Maturité IA</div>
+            </div>
+          </div>
+
+          <div class="profile-badge" style="background:${profile.badgeBg}; border:1px solid ${profile.badgeBorder}; color:${profile.badgeColor};">
+            ${profile.badgeText}
+          </div>
+
+          <h2 class="result-title">${profile.title}</h2>
+          <p class="result-desc">${profile.desc}</p>
+
+          <div class="insights">
+            ${profile.insights.map(ins => `
+              <div class="insight-item">
+                <span class="insight-icon">${ins.icon}</span>
+                <span class="insight-text">${ins.text}</span>
+              </div>`).join('')}
+          </div>
+
+          <div class="result-ctas">
+            <a href="${profile.cta1Href}" class="btn-cta-primary" target="_blank" rel="noopener">
+              ${profile.cta1Label}
+            </a>
+            <a href="${profile.cta2Href}" class="btn-cta-secondary" target="_blank" rel="noopener">
+              ${profile.cta2Label}
+            </a>
+          </div>
+
+        </div>`;
+
+      // Animate gauge after paint
+      setTimeout(() => {
+        const fill = document.getElementById('gaugeFill');
+        const score = document.getElementById('gaugeScore');
+        if (!fill || !score) return;
+
+        const offset = circumference - (profile.pct / 100) * circumference;
+        fill.style.strokeDashoffset = offset;
+
+        // Animate counter
+        let cur = 0;
+        const target = profile.pct;
+        const step = target / (1500 / 16);
+        const timer = setInterval(() => {
+          cur = Math.min(cur + step, target);
+          score.textContent = Math.round(cur) + '%';
+          if (cur >= target) clearInterval(timer);
+        }, 16);
+      }, 80);
+    }
+
+    // Boot
+    updateProgress(0);
+    renderQuestion(0);
+  </script>
+</body>
+</html>
