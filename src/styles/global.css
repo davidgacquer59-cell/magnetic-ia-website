@@ -119,6 +119,42 @@ body {
 }
 .fade-in-up { animation: fadeInUp 0.8s ease-out; }
 
+/* ── Animations au scroll (IntersectionObserver) ── */
+
+/* État initial : invisible, décalé vers le bas */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.reveal-left {
+  transform: translateX(-32px);
+}
+.reveal.reveal-right {
+  transform: translateX(32px);
+}
+.reveal.reveal-scale {
+  transform: scale(0.95);
+}
+
+/* État visible : déclenché par IntersectionObserver */
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Délais pour animations en cascade */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Respect des préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 .card-hover { transition: all 0.3s ease; }
 .card-hover:hover { transform: translateY(-4px); }
 
