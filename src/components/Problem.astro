@@ -1,83 +1,107 @@
 ---
-// Problem V5 — Le constat, sans stats invérifiables
+// Problem V6 — Logos flottants + 3 symptômes
 ---
 
 <section class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div class="max-w-3xl mb-10 reveal">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Les 3 symptômes classiques</div>
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-        Vous reconnaissez-vous
-        <span class="font-serif italic" style="color: var(--text-tertiary);"> là-dedans ?</span>
-      </h2>
-    </div>
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
 
-    <!-- Logos outils testés -->
-    <div class="mb-14 reveal">
-      <p class="text-xs font-mono uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">Les outils que vos équipes testent en ce moment</p>
-      <div class="flex flex-wrap items-center gap-4">
-        {[
-          { name: 'ChatGPT',  icon: 'openai',      color: '#10b981' },
-          { name: 'Claude',   icon: 'anthropic',   color: '#60a5fa' },
-          { name: 'Notion',   icon: 'notion',      color: '#ffffff' },
-          { name: 'Make',     icon: 'make',        color: '#9b59b6' },
-          { name: 'n8n',      icon: 'n8n',         color: '#ef5350' },
-          { name: 'Zapier',   icon: 'zapier',      color: '#ff4a00' },
-          { name: 'Canva',    icon: 'canva',       color: '#00c4cc' },
-          { name: 'Gemini',   icon: 'googlegemini',color: '#4285f4' },
-        ].map(tool => (
-          <div class="flex items-center gap-2 px-3 py-2 rounded-xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-            <img
-              src={`https://cdn.simpleicons.org/${tool.icon}/${tool.color.replace('#','')}`}
-              alt={tool.name}
-              class="w-4 h-4 object-contain"
-              loading="lazy"
-            />
-            <span class="text-xs font-medium" style="color: var(--text-secondary);">{tool.name}</span>
+      <!-- Gauche : titre + symptômes -->
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4 reveal" style="color: var(--accent);">Les 3 symptômes classiques</div>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-10 reveal">
+          Vous reconnaissez-vous
+          <span class="font-serif italic" style="color: var(--text-tertiary);"> là-dedans ?</span>
+        </h2>
+
+        <div class="space-y-5">
+          <div class="flex items-start gap-4 p-5 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" style="color: #f87171;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h8"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Dispersion sans vision</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">CRM, LinkedIn, refonte site, agent IA... Tout part en même temps. Rien n'avance vraiment.</p>
+            </div>
           </div>
-        ))}
-        <div class="px-3 py-2 rounded-xl text-xs font-medium" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-tertiary);">+ des dizaines d'autres</div>
-      </div>
-    </div>
 
-    <!-- 3 douleurs -->
-    <div class="grid md:grid-cols-3 gap-6">
+          <div class="flex items-start gap-4 p-5 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">L'IA comme gadget</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">ChatGPT testé, quelques prompts, un outil acheté. Rien d'intégré au vrai processus métier.</p>
+            </div>
+          </div>
 
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-primary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6" style="color: #f87171;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h8"/>
-          </svg>
+          <div class="flex items-start gap-4 p-5 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5" style="color: #818cf8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Décisions sans boussole</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Par où commencer ? Quel outil choisir ? Sans cadrage, impossible de décider avec confiance.</p>
+            </div>
+          </div>
         </div>
-        <h3 class="font-bold text-lg mb-3">Dispersion sans vision</h3>
-        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">CRM, LinkedIn, refonte site, agent IA, automatisation... Tout part en même temps. Rien n'avance vraiment. Le temps file, le ROI reste flou.</p>
       </div>
 
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-primary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-          </svg>
+      <!-- Droite : logos flottants -->
+      <div class="reveal reveal-right">
+        <div class="logos-chaos relative rounded-3xl overflow-hidden" style="aspect-ratio: 1/1; background: radial-gradient(ellipse at 30% 30%, rgba(59,130,246,0.08), transparent 60%), linear-gradient(135deg, #080d1a, #0a1020); border: 1px solid var(--border);">
+
+          <!-- Grille de fond -->
+          <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+          <!-- Label -->
+          <div class="absolute bottom-4 left-0 right-0 text-center pointer-events-none" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(255,255,255,0.2); text-transform: uppercase;">Vos outils · sans stratégie</div>
+
+          <!-- Logos flottants -->
+          <div class="logo-item" style="top: 8%; left: 12%; animation-delay: 0s; --glow: rgba(16,185,129,0.4);">
+            <img src="https://cdn.simpleicons.org/openai/10b981" alt="ChatGPT" width="44" height="44" />
+          </div>
+          <div class="logo-item" style="top: 6%; left: 52%; animation-delay: 0.8s; --glow: rgba(255,255,255,0.3);">
+            <img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion" width="38" height="38" />
+          </div>
+          <div class="logo-item" style="top: 5%; right: 10%; animation-delay: 1.6s; --glow: rgba(255,74,0,0.5);">
+            <img src="https://cdn.simpleicons.org/zapier/ff4a00" alt="Zapier" width="42" height="42" />
+          </div>
+          <div class="logo-item" style="top: 30%; left: 5%; animation-delay: 2.2s; --glow: rgba(96,165,250,0.4);">
+            <img src="https://cdn.simpleicons.org/anthropic/60a5fa" alt="Claude" width="36" height="36" />
+          </div>
+          <div class="logo-item" style="top: 28%; left: 38%; animation-delay: 0.4s; --glow: rgba(155,89,182,0.5);">
+            <img src="https://cdn.simpleicons.org/make/9b59b6" alt="Make" width="40" height="40" />
+          </div>
+          <div class="logo-item" style="top: 26%; right: 8%; animation-delay: 1.2s; --glow: rgba(0,196,204,0.4);">
+            <img src="https://cdn.simpleicons.org/canva/00c4cc" alt="Canva" width="38" height="38" />
+          </div>
+          <div class="logo-item" style="top: 54%; left: 18%; animation-delay: 1.8s; --glow: rgba(239,83,80,0.4);">
+            <img src="https://cdn.simpleicons.org/n8n/ef5350" alt="n8n" width="36" height="36" />
+          </div>
+          <div class="logo-item" style="top: 56%; left: 52%; animation-delay: 0.6s; --glow: rgba(66,133,244,0.5);">
+            <img src="https://cdn.simpleicons.org/googlegemini/4285f4" alt="Gemini" width="40" height="40" />
+          </div>
+          <div class="logo-item" style="top: 52%; right: 6%; animation-delay: 2.5s; --glow: rgba(99,102,241,0.4);">
+            <img src="https://cdn.simpleicons.org/hubspot/ff7a59" alt="HubSpot" width="36" height="36" />
+          </div>
+          <div class="logo-item" style="top: 76%; left: 8%; animation-delay: 1.4s; --glow: rgba(16,185,129,0.3);">
+            <img src="https://cdn.simpleicons.org/airtable/18bfff" alt="Airtable" width="34" height="34" />
+          </div>
+          <div class="logo-item" style="top: 78%; left: 44%; animation-delay: 0.2s; --glow: rgba(255,255,255,0.2);">
+            <img src="https://cdn.simpleicons.org/googleworkspace/4285f4" alt="Google Workspace" width="36" height="36" />
+          </div>
+          <div class="logo-item" style="top: 74%; right: 10%; animation-delay: 2.0s; --glow: rgba(255,155,100,0.4);">
+            <img src="https://cdn.simpleicons.org/microsoftazure/0078d4" alt="Azure AI" width="34" height="34" />
+          </div>
+
         </div>
-        <h3 class="font-bold text-lg mb-3">L'IA comme gadget</h3>
-        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">ChatGPT testé, quelques prompts écrits, un outil acheté. Mais rien d'intégré au vrai processus métier. L'IA reste un jouet coûteux, pas un levier de performance.</p>
       </div>
-
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-primary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6" style="color: #818cf8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="font-bold text-lg mb-3">Décisions sans boussole</h3>
-        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Par où commencer ? Quel outil choisir ? Combien ça coûte vraiment ? Quand ça va payer ? Sans cadrage préalable, impossible de décider avec confiance.</p>
-      </div>
-
     </div>
 
     <!-- Message pivot -->
-    <div class="mt-14 p-8 rounded-2xl reveal" style="background: var(--bg-primary); border: 1px solid rgba(96,165,250,0.2);">
+    <div class="p-8 rounded-2xl reveal" style="background: var(--bg-primary); border: 1px solid rgba(96,165,250,0.2);">
       <div class="max-w-3xl mx-auto text-center">
         <p class="text-lg font-serif italic leading-relaxed" style="color: var(--text-primary);">
           "L'IA n'est pas une solution. C'est un levier — et seulement si le problème est bien posé en amont."
@@ -88,3 +112,34 @@
 
   </div>
 </section>
+
+<style>
+  .logo-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(4px);
+    animation: logo-float 7s ease-in-out infinite;
+    box-shadow: 0 0 20px -5px var(--glow, rgba(96,165,250,0.3));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .logo-item:hover {
+    transform: scale(1.12) !important;
+    box-shadow: 0 0 30px -5px var(--glow, rgba(96,165,250,0.5));
+    z-index: 10;
+  }
+  .logo-item img {
+    display: block;
+    object-fit: contain;
+  }
+  @keyframes logo-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25%       { transform: translateY(-8px) rotate(2deg); }
+    75%       { transform: translateY(6px) rotate(-2deg); }
+  }
+</style>
