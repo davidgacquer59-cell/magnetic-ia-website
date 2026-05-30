@@ -1,106 +1,131 @@
 ---
-// Method V3 — 3 étapes avec pictos
+// Method V4 — 5 étapes : Comprendre → Décomposer → Prioriser → Construire → Mesurer
 ---
 
 <section id="methode" class="py-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
     <div class="max-w-3xl mb-16 reveal">
       <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Ma méthode</div>
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
-        Une méthode éprouvée<br />
-        <span class="font-serif italic" style="color: var(--text-tertiary);">en trois temps.</span>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        Avant les outils,
+        <span class="font-serif italic" style="color: var(--text-tertiary);"> la réflexion.</span>
       </h2>
+      <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
+        5 étapes qui transforment un problème flou en décisions claires. Dans l'ordre. Sans sauter les étapes.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8 relative">
+    <!-- Connecteur horizontal (desktop) -->
+    <div class="hidden lg:block relative mb-2">
+      <div class="absolute top-7 left-[10%] right-[10%] h-px" style="background: linear-gradient(to right, transparent, var(--border) 15%, var(--border) 85%, transparent);"></div>
+    </div>
 
-      <!-- Étape 01 : Discovery -->
-      <div class="relative p-8 rounded-3xl reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2);">
-            <!-- Loupe / exploration -->
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #3b82f6;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
-          </div>
-          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px var(--accent);">01</div>
+    <div class="grid md:grid-cols-5 gap-4 relative">
+
+      <!-- 01 COMPRENDRE -->
+      <div class="relative p-6 rounded-2xl reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.25);">
+          <svg class="w-6 h-6" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Discovery</h3>
-        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Compréhension de votre métier, de vos enjeux, de vos contraintes. Cartographie de l'existant. Identification des points de friction.</p>
-        <div class="mt-6 space-y-2">
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Audit de l'existant
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Entretiens dirigeant + équipes
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Cartographie des flux et outils
-          </div>
+        <div class="text-center mb-3">
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: #60a5fa;">01</span>
+          <h3 class="font-bold text-base mt-1">Comprendre</h3>
+        </div>
+        <p class="text-xs leading-relaxed text-center" style="color: var(--text-secondary);">Entretiens dirigeant et équipes. Inventaire complet de l'existant. Cartographie des flux et outils.</p>
+        <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Audit de l'existant</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Identification des flux</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Points de friction</div>
         </div>
       </div>
 
-      <!-- Étape 02 : Cadrage -->
-      <div class="relative p-8 rounded-3xl reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
-            <!-- Cible / priorisation -->
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #8b5cf6;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px #8b5cf6;">02</div>
+      <!-- 02 DÉCOMPOSER -->
+      <div class="relative p-6 rounded-2xl reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.25);">
+          <svg class="w-6 h-6" style="color: #a78bfa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Cadrage</h3>
-        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Décomposition de la problématique, identification des cas d'usage IA pertinents, priorisation par valeur et faisabilité.</p>
-        <div class="mt-6 space-y-2">
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            GARDER · AMPLIFIER · ARRÊTER
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Matrice valeur / faisabilité
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Cas d'usage IA identifiés
-          </div>
+        <div class="text-center mb-3">
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: #a78bfa;">02</span>
+          <h3 class="font-bold text-base mt-1">Décomposer</h3>
+        </div>
+        <p class="text-xs leading-relaxed text-center" style="color: var(--text-secondary);">Méthode des 5 Why. Identification des causes racines. Ce qu'on cherche à résoudre vraiment.</p>
+        <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Causes racines</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Problème réel vs. symptôme</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Données vérifiées</div>
         </div>
       </div>
 
-      <!-- Étape 03 : Roadmap -->
-      <div class="relative p-8 rounded-3xl reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2);">
-            <!-- Feuille de route -->
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #10b981;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-            </svg>
-          </div>
-          <div class="text-5xl font-bold" style="color: var(--accent-soft); -webkit-text-stroke: 1px #10b981;">03</div>
+      <!-- 03 PRIORISER -->
+      <div class="relative p-6 rounded-2xl reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid rgba(251,191,36,0.3);">
+        <!-- Badge "Étape clé" -->
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-xs font-bold" style="background: #fbbf24; color: #1a1a1a;">Étape clé</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3);">
+          <svg class="w-6 h-6" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+          </svg>
         </div>
-        <h3 class="text-xl font-semibold mb-3">Roadmap</h3>
-        <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">Feuille de route exécutable avec quick wins, étapes structurantes et KPI de pilotage. Vous savez exactement quoi faire et dans quel ordre.</p>
-        <div class="mt-6 space-y-2">
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Quick wins identifiés
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            KPI de pilotage définis
-          </div>
-          <div class="flex items-center gap-2 text-xs" style="color: var(--text-tertiary);">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-            Livrable : rapport + plan d'action
-          </div>
+        <div class="text-center mb-3">
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: #fbbf24;">03</span>
+          <h3 class="font-bold text-base mt-1">Prioriser</h3>
+        </div>
+        <p class="text-xs leading-relaxed text-center" style="color: var(--text-secondary);">GARDER · AMPLIFIER · ARRÊTER · PARKING. Matrice impact / effort. Décisions assumées et documentées.</p>
+        <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Matrice impact / effort</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Quick wins identifiés</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Arbitrages documentés</div>
+        </div>
+      </div>
+
+      <!-- 04 CONSTRUIRE -->
+      <div class="relative p-6 rounded-2xl reveal reveal-delay-4" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25);">
+          <svg class="w-6 h-6" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+          </svg>
+        </div>
+        <div class="text-center mb-3">
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: #34d399;">04</span>
+          <h3 class="font-bold text-base mt-1">Construire</h3>
+        </div>
+        <p class="text-xs leading-relaxed text-center" style="color: var(--text-secondary);">Feuille de route 90 jours. Sélection des outils adaptés. KPIs de pilotage. Plan d'action séquencé.</p>
+        <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Roadmap 90 jours</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Outils sélectionnés</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ RGPD / IA Act vérifié</div>
+        </div>
+      </div>
+
+      <!-- 05 MESURER -->
+      <div class="relative p-6 rounded-2xl reveal reveal-delay-5" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.25);">
+          <svg class="w-6 h-6" style="color: #22d3ee;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <div class="text-center mb-3">
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: #22d3ee;">05</span>
+          <h3 class="font-bold text-base mt-1">Mesurer</h3>
+        </div>
+        <p class="text-xs leading-relaxed text-center" style="color: var(--text-secondary);">Suivi des indicateurs. Ajustements continus. ROI prouvé, pas supposé. Ce qui marche, on amplifie.</p>
+        <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Tableau de bord KPIs</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Avant / Après mesuré</div>
+          <div class="text-xs" style="color: var(--text-tertiary);">→ Itération continue</div>
         </div>
       </div>
 
     </div>
+
+    <!-- Signature -->
+    <div class="mt-12 text-center reveal">
+      <p class="text-sm font-mono uppercase tracking-[0.2em]" style="color: var(--text-tertiary);">Avant les outils · La réflexion</p>
+    </div>
+
   </div>
 </section>
