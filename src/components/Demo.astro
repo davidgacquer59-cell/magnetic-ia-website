@@ -1,0 +1,64 @@
+---
+// Demo — Slider chaos → clarté, section dédiée
+---
+
+<section class="py-16" style="background: var(--bg-primary);">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+
+    <div class="text-center mb-8 reveal">
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-3" style="color: var(--accent);">Démo interactive</div>
+      <p class="text-lg font-semibold" style="color: var(--text-secondary);">
+        Glissez le curseur. <span class="font-serif italic" style="color: var(--text-primary);">C'est exactement ce que je fais.</span>
+      </p>
+    </div>
+
+    <div class="reveal">
+      <div
+        id="heroSlider"
+        class="hero-slider relative rounded-3xl overflow-hidden mx-auto"
+        style="aspect-ratio: 16/7; max-height: 340px; background: linear-gradient(135deg, rgba(15,20,36,0.97), rgba(10,14,26,0.92)); border: 1px solid var(--border); cursor: ew-resize;"
+      >
+        <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 36px 36px;"></div>
+
+        <div class="col-labels absolute top-0 left-0 right-0 flex z-10 pointer-events-none" style="padding: 10px 4px 0;">
+          <div class="col-label" style="color: #86efac;">GARDER</div>
+          <div class="col-label" style="color: #60a5fa;">AMPLIFIER</div>
+          <div class="col-label" style="color: #fca5a5;">ARRÊTER</div>
+          <div class="col-label" style="color: #c4b5fd;">PARKING</div>
+        </div>
+        <div class="col-sep" style="left: 25%;"></div>
+        <div class="col-sep" style="left: 50%;"></div>
+        <div class="col-sep" style="left: 75%;"></div>
+
+        <div class="pi postit-yellow" style="--cx:8%;  --cy:22%; --cr:-6deg; --sx:2%;  --sy:26%; --sr:-2deg;">CRM</div>
+        <div class="pi postit-pink"   style="--cx:72%; --cy:14%; --cr:4deg;  --sx:2%;  --sy:52%; --sr:1deg;">Newsletter</div>
+        <div class="pi postit-yellow" style="--cx:80%; --cy:44%; --cr:-3deg; --sx:2%;  --sy:74%; --sr:-1deg;">SEO local</div>
+        <div class="pi postit-green"  style="--cx:52%; --cy:82%; --cr:-2deg; --sx:27%; --sy:26%; --sr:2deg;">LinkedIn</div>
+        <div class="pi postit-pink"   style="--cx:28%; --cy:74%; --cr:7deg;  --sx:27%; --sy:52%; --sr:-1deg;">Facturation</div>
+        <div class="pi postit-blue"   style="--cx:26%; --cy:48%; --cr:-5deg; --sx:27%; --sy:74%; --sr:1deg;">Analytics</div>
+        <div class="pi postit-orange" style="--cx:38%; --cy:34%; --cr:3deg;  --sx:52%; --sy:26%; --sr:-2deg;">Pub Meta</div>
+        <div class="pi postit-orange" style="--cx:4%;  --cy:38%; --cr:-4deg; --sx:52%; --sy:52%; --sr:1deg;">Webinars</div>
+        <div class="pi postit-yellow" style="--cx:44%; --cy:10%; --cr:6deg;  --sx:52%; --sy:74%; --sr:-1deg;">Chatbot</div>
+        <div class="pi postit-green"  style="--cx:14%; --cy:62%; --cr:5deg;  --sx:77%; --sy:26%; --sr:2deg;">Refonte site</div>
+        <div class="pi postit-blue"   style="--cx:62%; --cy:64%; --cr:-8deg; --sx:77%; --sy:52%; --sr:-1deg;">Agent IA</div>
+        <div class="pi postit-purple" style="--cx:86%; --cy:68%; --cr:4deg;  --sx:77%; --sy:74%; --sr:1deg;">Notion</div>
+
+        <div id="heroHandleLine" class="hero-handle-line pointer-events-none"></div>
+        <div id="heroHandleKnob" class="hero-handle-knob pointer-events-none">⇄</div>
+
+        <div class="chaos-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-tertiary); text-transform: uppercase; z-index: 5;">AVANT · DISPERSION</div>
+        <div class="sorted-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: #86efac; text-transform: uppercase; z-index: 5;">APRÈS CADRAGE · DÉCISION</div>
+      </div>
+
+      <input type="range" id="heroRange" min="0" max="100" value="20"
+        class="w-full mt-3 h-1.5 rounded-full appearance-none cursor-pointer"
+        style="background: linear-gradient(to right, var(--accent) 20%, var(--bg-tertiary) 20%);"
+      />
+      <div class="flex justify-between mt-1 text-xs" style="color: var(--text-tertiary);">
+        <span>Chaos</span>
+        <span>Clarté</span>
+      </div>
+    </div>
+
+  </div>
+</section>
