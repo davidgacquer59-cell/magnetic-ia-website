@@ -5,7 +5,7 @@
 <section class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div class="max-w-3xl mb-16 reveal">
+    <div class="max-w-3xl mb-10 reveal">
       <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Le constat</div>
       <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
         Vous testez des outils IA.<br />
@@ -14,7 +14,37 @@
       <p class="mt-6 text-lg leading-relaxed max-w-2xl" style="color: var(--text-secondary);">
         Pas par manque d'outils. Par manque de cadrage. <strong style="color: var(--text-primary);">58% des dirigeants de PME considèrent l'IA comme un enjeu de survie.</strong> Mais autant n'ont encore aucune stratégie en place.
       </p>
-      <p class="mt-2 text-xs" style="color: var(--text-tertiary);">Source : Bpifrance Le Lab, enquête 1 200 dirigeants PME-ETI, août 2025</p>
+      <p class="mt-2 text-xs">
+        <a href="https://www.francenum.gouv.fr/magazine-du-numerique/lia-dans-les-pme-et-eti-francaises-une-revolution-tranquille" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition underline" style="color: var(--text-tertiary);">Source : Bpifrance Le Lab, enquête 1 200 dirigeants PME-ETI, août 2025 ↗</a>
+      </p>
+    </div>
+
+    <!-- Logos outils testés -->
+    <div class="mb-14 reveal">
+      <p class="text-xs font-mono uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">Les outils que vos équipes testent en ce moment</p>
+      <div class="flex flex-wrap items-center gap-4">
+        {[
+          { name: 'ChatGPT',  icon: 'openai',      color: '#10b981' },
+          { name: 'Claude',   icon: 'anthropic',   color: '#60a5fa' },
+          { name: 'Notion',   icon: 'notion',      color: '#ffffff' },
+          { name: 'Make',     icon: 'make',        color: '#9b59b6' },
+          { name: 'n8n',      icon: 'n8n',         color: '#ef5350' },
+          { name: 'Zapier',   icon: 'zapier',      color: '#ff4a00' },
+          { name: 'Canva',    icon: 'canva',       color: '#00c4cc' },
+          { name: 'Gemini',   icon: 'googlegemini',color: '#4285f4' },
+        ].map(tool => (
+          <div class="flex items-center gap-2 px-3 py-2 rounded-xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <img
+              src={`https://cdn.simpleicons.org/${tool.icon}/${tool.color.replace('#','')}`}
+              alt={tool.name}
+              class="w-4 h-4 object-contain"
+              loading="lazy"
+            />
+            <span class="text-xs font-medium" style="color: var(--text-secondary);">{tool.name}</span>
+          </div>
+        ))}
+        <div class="px-3 py-2 rounded-xl text-xs font-medium" style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-tertiary);">+ des dizaines d'autres</div>
+      </div>
     </div>
 
     <!-- 3 douleurs -->
