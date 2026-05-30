@@ -13,8 +13,8 @@
     <div class="absolute top-1/4 right-0 w-72 h-72 rounded-full" style="background: radial-gradient(circle, rgba(139,92,246,0.08), transparent 70%); filter: blur(60px);"></div>
   </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 pt-6 pb-16 w-full">
-    <div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-6 pb-16 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
 
       <!-- Texte gauche -->
       <div class="fade-in-up">
@@ -68,10 +68,74 @@
 
       </div>
 
+      <!-- Carousel schémas 5 Why -->
+      <div class="relative max-w-md mx-auto lg:mx-0 lg:ml-auto w-full">
+        <div id="schemaCarousel" class="relative rounded-3xl overflow-hidden" style="aspect-ratio: 1/1; background: #0a0e1a; border: 1px solid var(--border);">
+
+          <!-- Slides -->
+          {[
+            { src: '/images/schemas/du chaos à la clarté.png',             alt: 'Du chaos à la clarté', label: '01 · Du chaos à la clarté' },
+            { src: '/images/schemas/02_solution_rarement_probleme.png',     alt: 'La solution est rarement le problème', label: '02 · La solution est rarement le problème' },
+            { src: '/images/schemas/03_enquete_diagnostic.png',             alt: 'Enquête & diagnostic', label: '03 · Enquête & diagnostic' },
+            { src: '/images/schemas/04_entonnoir_magnetic_ia.png',          alt: "L'entonnoir Magnetic-IA", label: "04 · L'entonnoir Magnetic-IA" },
+            { src: '/images/schemas/06_methode_magnetic_ia.png',            alt: 'La méthode en 5 étapes', label: '05 · La méthode en 5 étapes' },
+          ].map((slide, i) => (
+            <div class="schema-slide absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-700"
+              style={i === 0 ? 'opacity:1; z-index:2;' : 'opacity:0; z-index:1;'}
+              data-slide={i}>
+              <img src={slide.src} alt={slide.alt} class="w-full h-full object-contain rounded-xl" loading="lazy" />
+              <div class="absolute bottom-4 left-0 right-0 text-center" style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:rgba(255,255,255,0.4); text-transform:uppercase;">{slide.label}</div>
+            </div>
+          ))}
+
+          <!-- Dots -->
+          <div class="absolute top-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+            {[0,1,2,3,4].map(i => (
+              <div class="schema-dot w-1.5 h-1.5 rounded-full transition-all duration-300"
+                style={i === 0 ? 'background:var(--accent); width:1rem;' : 'background:rgba(255,255,255,0.25);'}
+                data-dot={i}></div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
   </div>
 </section>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.schema-slide');
+  const dots   = document.querySelectorAll<HTMLElement>('.schema-dot');
+  let current  = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function goTo(i: number) {
+    slides[current].style.opacity = '0';
+    slides[current].style.zIndex  = '1';
+    dots[current].style.background = 'rgba(255,255,255,0.25)';
+    dots[current].style.width = '0.375rem';
+    current = (i + slides.length) % slides.length;
+    slides[current].style.opacity = '1';
+    slides[current].style.zIndex  = '2';
+    dots[current].style.background = 'var(--accent)';
+    dots[current].style.width = '1rem';
+  }
+
+  // Auto-avance toutes les 3.5s
+  function startTimer() { timer = setInterval(() => goTo(current + 1), 3500); }
+  function stopTimer()  { clearInterval(timer); }
+
+  startTimer();
+
+  // Pause au hover
+  document.getElementById('schemaCarousel')?.addEventListener('mouseenter', stopTimer);
+  document.getElementById('schemaCarousel')?.addEventListener('mouseleave', startTimer);
+
+  // Click sur dot
+  dots.forEach((d, i) => d.addEventListener('click', () => { stopTimer(); goTo(i); startTimer(); }));
+</script>
 
 <style>
   .pi {
