@@ -1,106 +1,147 @@
 ---
-// Services V2 — 4 formats d'intervention
+// Services V3 — Offre phare "Diagnostic IA Dirigeant" + 3 formats complémentaires
 ---
 
 <section id="services" class="py-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
     <div class="max-w-3xl mb-16 reveal">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Comment j'interviens</div>
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
-        Quatre formats d'intervention,<br />
-        <span class="font-serif italic" style="color: var(--text-tertiary);">du diagnostic à la mise en œuvre.</span>
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Interventions</div>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        Du diagnostic à la mise en œuvre.
+        <span class="font-serif italic" style="color: var(--text-tertiary);"> À votre rythme.</span>
       </h2>
+      <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
+        Chaque intervention commence par comprendre votre situation réelle. Aucune solution imposée avant un diagnostic sérieux.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Service 1 — Conseil stratégique -->
-      <div class="p-8 lg:p-10 rounded-3xl card-hover reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-start justify-between mb-6">
-          <div class="w-14 h-14 rounded-2xl bg-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
-          </div>
-          <div class="text-right">
-            <div class="text-xs font-medium" style="color: var(--text-tertiary);">À partir de</div>
-            <div class="text-lg font-bold">500 € HT / jour</div>
-          </div>
-        </div>
-        <h3 class="text-2xl font-bold mb-3">Conseil stratégique</h3>
-        <p class="leading-relaxed mb-6" style="color: var(--text-secondary);">Sparring partner sur vos enjeux digitaux et IA. Vision long terme, priorisation des chantiers, alignement business / data / exécution.</p>
-        <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Roadmap projet priorisée</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Alignement équipes métier et techniques</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Suivi mensuel ou retainer</li>
-        </ul>
-      </div>
+    <!-- Offre phare — Diagnostic IA Dirigeant -->
+    <div class="mb-8 reveal" >
+      <div class="relative rounded-3xl overflow-hidden p-10 lg:p-14" style="background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.06) 100%); border: 1px solid rgba(96,165,250,0.25);">
 
-      <!-- Service 2 — Atelier diagnostic -->
-      <div class="p-8 lg:p-10 rounded-3xl card-hover reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-start justify-between mb-6">
-          <div class="w-14 h-14 rounded-2xl bg-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <div class="text-right">
-            <div class="text-xs font-medium" style="color: var(--text-tertiary);">À partir de</div>
-            <div class="text-lg font-bold">1 500 € HT</div>
-          </div>
+        <!-- Badge -->
+        <div class="absolute top-6 right-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background: var(--accent); color: white;">Offre phare</span>
         </div>
-        <h3 class="text-2xl font-bold mb-3">Atelier diagnostic IA</h3>
-        <p class="leading-relaxed mb-6" style="color: var(--text-secondary);">Une journée d'atelier structuré avec votre équipe pour identifier les cas d'usage IA à plus forte valeur et bâtir un plan d'action concret.</p>
-        <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Décomposition de la problématique</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Construction du workflow cible</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Livrable : rapport + roadmap</li>
-        </ul>
-      </div>
 
-      <!-- Service 3 — Formation -->
-      <div class="p-8 lg:p-10 rounded-3xl card-hover reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-start justify-between mb-6">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500 flex items-center justify-center shadow-lg shadow-purple-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-            </svg>
-          </div>
-          <div class="text-right">
-            <div class="text-xs font-medium" style="color: var(--text-tertiary);">À partir de</div>
-            <div class="text-lg font-bold">1 500 € HT / jour</div>
-          </div>
-        </div>
-        <h3 class="text-2xl font-bold mb-3">Formation</h3>
-        <p class="leading-relaxed mb-6" style="color: var(--text-secondary);">Sessions adaptées aux dirigeants et aux équipes. Initiation IA, cadrage de projets IA, marketing digital. Finançable OPCO / CPF.</p>
-        <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Format inter ou intra-entreprise</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Cas pratiques sur vos enjeux</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Montée en autonomie de vos équipes</li>
-        </ul>
-      </div>
+        <!-- Halo -->
+        <div class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(96,165,250,0.1), transparent 70%); filter: blur(40px);"></div>
 
-      <!-- Service 4 — Accompagnement -->
-      <div class="p-8 lg:p-10 rounded-3xl card-hover reveal reveal-delay-4" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-start justify-between mb-6">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+        <div class="grid lg:grid-cols-[1fr_280px] gap-10 items-center relative">
+
+          <div>
+            <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-3" style="color: var(--accent);">Diagnostic IA Dirigeant</div>
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+              4 à 6 semaines pour passer<br />du flou à la clarté décisionnelle.
+            </h3>
+            <p class="text-base leading-relaxed mb-8" style="color: var(--text-secondary);">
+              Un cadrage complet de votre situation digitale et IA : état des lieux sans angles morts, identification des vrais leviers, arbitrages documentés, feuille de route exécutable. Vous repartez avec un plan clair, pas un rapport de 200 pages.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-3 mb-8">
+              {[
+                'Cartographie complète de l\'existant',
+                'Identification des cas d\'usage IA prioritaires',
+                'Matrice GARDER · AMPLIFIER · ARRÊTER · PARKING',
+                'Roadmap 90 jours avec quick wins',
+                'Vérification conformité RGPD / IA Act',
+                'Sélection d\'outils adaptés à votre contexte',
+              ].map((item) => (
+                <div class="flex items-start gap-2 text-sm" style="color: var(--text-secondary);">
+                  <svg class="w-4 h-4 flex-shrink-0 mt-0.5" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-lg shadow-blue-500/20 text-sm">
+              Discuter de mon projet
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
           </div>
-          <div class="text-right">
-            <div class="text-xs font-medium" style="color: var(--text-tertiary);">Sur devis</div>
-            <div class="text-lg font-bold">Forfait projet</div>
+
+          <!-- Tarif + durée -->
+          <div class="lg:border-l lg:pl-10" style="border-color: rgba(96,165,250,0.15);">
+            <div class="space-y-6">
+              <div>
+                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-1" style="color: var(--text-tertiary);">Investissement</div>
+                <div class="text-3xl font-bold" style="color: var(--text-primary);">3 000 – 8 000 €</div>
+                <div class="text-sm mt-0.5" style="color: var(--text-tertiary);">HT · selon périmètre</div>
+              </div>
+              <div class="h-px" style="background: var(--border);"></div>
+              <div>
+                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-1" style="color: var(--text-tertiary);">Durée</div>
+                <div class="text-lg font-semibold" style="color: var(--text-primary);">4 à 6 semaines</div>
+              </div>
+              <div class="h-px" style="background: var(--border);"></div>
+              <div>
+                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Livrables</div>
+                <div class="space-y-1.5 text-sm" style="color: var(--text-secondary);">
+                  <div>Rapport de diagnostic complet</div>
+                  <div>Roadmap priorisée</div>
+                  <div>Présentation dirigeant</div>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
-        <h3 class="text-2xl font-bold mb-3">Accompagnement à la mise en œuvre</h3>
-        <p class="leading-relaxed mb-6" style="color: var(--text-secondary);">Pilotage de votre projet IA, de la conception à la mise en production. Coordination avec partenaires techniques pour la partie développement.</p>
-        <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Gestion de projet de bout en bout</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Réseau de partenaires devs et no-code</li>
-          <li class="flex items-start gap-2"><svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Mesure d'impact et KPI</li>
-        </ul>
       </div>
     </div>
+
+    <!-- 3 formats complémentaires -->
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- Atelier -->
+      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.2);">
+          <svg class="w-6 h-6" style="color: #a78bfa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-bold text-lg">Atelier diagnostic</h3>
+          <span class="text-sm font-bold" style="color: var(--accent);">1 500 € HT</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Une demi-journée ou une journée avec votre équipe pour identifier les cas d'usage IA prioritaires et construire un plan d'action immédiatement actionnable.</p>
+        <div class="text-xs" style="color: var(--text-tertiary);">Format : présentiel ou distanciel · À partir d'une journée</div>
+      </div>
+
+      <!-- Formation -->
+      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
+          <svg class="w-6 h-6" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-bold text-lg">Formation</h3>
+          <span class="text-sm font-bold" style="color: var(--accent);">1 500 € HT / jour</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Initiation IA, cadrage de projets IA, marketing digital. Format intra ou inter-entreprise, adapté à votre contexte. Finançable OPCO / CPF.</p>
+        <div class="text-xs" style="color: var(--text-tertiary);">Finançable OPCO · CPF · Format sur mesure</div>
+      </div>
+
+      <!-- Accompagnement -->
+      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.2);">
+          <svg class="w-6 h-6" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-bold text-lg">Accompagnement projet</h3>
+          <span class="text-sm font-bold" style="color: var(--accent);">Sur devis</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Pilotage de votre projet IA de la conception à la mise en production. Coordination avec partenaires techniques pour le développement et les automatisations.</p>
+        <div class="text-xs" style="color: var(--text-tertiary);">TJM 500 € HT · Réseau partenaires devs & no-code</div>
+      </div>
+
+    </div>
+
   </div>
 </section>
