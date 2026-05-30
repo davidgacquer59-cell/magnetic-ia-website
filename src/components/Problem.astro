@@ -1,106 +1,70 @@
 ---
-// Problem V7 — Structure Constat / Problème, logos locaux colorés
+// Problem V8 — Pourquoi les projets IA échouent (3 erreurs, pas un constat)
 ---
 
 <section class="py-24" style="background: var(--bg-secondary);">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <!-- ── CONSTAT ── -->
-    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Texte gauche -->
-      <div class="reveal">
-        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Le constat</div>
-        <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
-          Des dizaines d'outils.<br />
-          <span class="font-serif italic" style="color: var(--text-tertiary);">Mais pas de stratégie.</span>
+      <!-- Gauche : 3 erreurs -->
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4 reveal" style="color: #f87171;">Pourquoi ça échoue</div>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-10 reveal">
+          Les 3 erreurs qui font
+          <span class="font-serif italic" style="color: var(--text-tertiary);"> perdre du temps et de l'argent.</span>
         </h2>
-        <p class="text-lg leading-relaxed mb-3" style="color: var(--text-secondary);">
-          <strong style="color: var(--text-primary);">58% des dirigeants de PME</strong> considèrent l'IA comme un enjeu de survie. Mais autant n'ont encore aucune stratégie en place.
-        </p>
-        <a href="https://www.francenum.gouv.fr/magazine-du-numerique/lia-dans-les-pme-et-eti-francaises-une-revolution-tranquille"
-          target="_blank" rel="noopener noreferrer"
-          class="text-xs hover:opacity-80 transition underline underline-offset-2"
-          style="color: var(--text-tertiary);">
-          Bpifrance Le Lab · 1 200 dirigeants PME-ETI · 2025 ↗
-        </a>
+
+        <div class="space-y-5">
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style="background: rgba(248,113,113,0.12); border: 1px solid rgba(248,113,113,0.25); color: #f87171;">1</div>
+            <div>
+              <h3 class="font-bold mb-1">Acheter des outils avant d'avoir identifié le problème</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">ChatGPT, Make, HubSpot, Notion... Chaque outil coûte entre 30 et 100 € par mois. Sans diagnostic préalable, vous payez pour des solutions à des problèmes que vous n'avez pas encore définis.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style="background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.25); color: #fbbf24;">2</div>
+            <div>
+              <h3 class="font-bold mb-1">Automatiser un processus qui n'est pas maîtrisé</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">L'IA n'améliore pas un processus cassé — elle l'accélère. Automatiser sans avoir d'abord structuré, c'est produire du chaos plus vite. Et perdre des mois de travail sur un projet que personne n'adopte.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style="background: rgba(129,140,248,0.12); border: 1px solid rgba(129,140,248,0.25); color: #818cf8;">3</div>
+            <div>
+              <h3 class="font-bold mb-1">Multiplier les expérimentations sans indicateurs de succès</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Tester 5 outils en parallèle, lancer 3 projets IA sans KPIs, changer de direction chaque mois. Sans boussole, impossible de savoir ce qui fonctionne — et impossible de défendre le budget engagé.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <!-- Logos flottants droite -->
+      <!-- Droite : logos flottants -->
       <div class="reveal reveal-right">
-        <div class="logos-chaos relative rounded-3xl overflow-hidden" style="aspect-ratio: 1/1; background: radial-gradient(ellipse at 30% 30%, rgba(59,130,246,0.08), transparent 60%), linear-gradient(135deg, #080d1a, #0a1020); border: 1px solid var(--border);">
+        <div class="logos-chaos relative rounded-3xl overflow-hidden" style="aspect-ratio: 1/1; background: radial-gradient(ellipse at 30% 30%, rgba(248,113,113,0.06), transparent 50%), linear-gradient(135deg, #080d1a, #0a1020); border: 1px solid var(--border);">
           <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 32px 32px;"></div>
           <div class="absolute bottom-4 left-0 right-0 text-center pointer-events-none" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(255,255,255,0.2); text-transform: uppercase;">Vos outils · sans stratégie</div>
 
-          <div class="logo-item" style="top:7%; left:10%; animation-delay:0s;    --glow:rgba(16,185,129,0.45);  --c:#10b981;"><img src="/icons/chatgpt.svg"   class="logo-svg" alt="ChatGPT"  width="42" height="42"/></div>
-          <div class="logo-item" style="top:5%; left:50%; animation-delay:0.8s;  --glow:rgba(255,255,255,0.2);  --c:#ffffff;"><img src="/icons/notion.svg"    class="logo-svg" alt="Notion"    width="36" height="36"/></div>
-          <div class="logo-item" style="top:4%; right:8%; animation-delay:1.6s;  --glow:rgba(255,74,0,0.5);     --c:#ff4a00;"><img src="/icons/zapier.svg"    class="logo-svg" alt="Zapier"    width="40" height="40"/></div>
-          <div class="logo-item" style="top:28%;left:4%;  animation-delay:2.2s;  --glow:rgba(96,165,250,0.4);   --c:#60a5fa;"><img src="/icons/anthropic.svg" class="logo-svg" alt="Claude"    width="34" height="34"/></div>
-          <div class="logo-item" style="top:26%;left:36%; animation-delay:0.4s;  --glow:rgba(155,89,182,0.5);   --c:#9b59b6;"><img src="/icons/make.svg"      class="logo-svg" alt="Make"      width="38" height="38"/></div>
-          <div class="logo-item" style="top:24%;right:6%; animation-delay:1.2s;  --glow:rgba(0,196,204,0.4);    --c:#00c4cc;"><img src="/icons/canva.svg"     class="logo-svg" alt="Canva"     width="36" height="36"/></div>
-          <div class="logo-item" style="top:52%;left:16%; animation-delay:1.8s;  --glow:rgba(239,83,80,0.4);    --c:#ef5350;"><img src="/icons/n8n.svg"       class="logo-svg" alt="n8n"       width="34" height="34"/></div>
-          <div class="logo-item" style="top:54%;left:50%; animation-delay:0.6s;  --glow:rgba(66,133,244,0.5);   --c:#4285f4;"><img src="/icons/gemini.svg"    class="logo-svg" alt="Gemini"    width="38" height="38"/></div>
-          <div class="logo-item" style="top:50%;right:5%; animation-delay:2.5s;  --glow:rgba(255,122,89,0.4);   --c:#ff7a59;"><img src="/icons/hubspot.svg"   class="logo-svg" alt="HubSpot"   width="34" height="34"/></div>
-          <div class="logo-item" style="top:74%;left:6%;  animation-delay:1.4s;  --glow:rgba(24,191,255,0.3);   --c:#18bfff;"><img src="/icons/airtable.svg"  class="logo-svg" alt="Airtable"  width="32" height="32"/></div>
-          <div class="logo-item" style="top:76%;left:42%; animation-delay:0.2s;  --glow:rgba(231,29,54,0.4);    --c:#e71d36;"><img src="/icons/slack.svg"     class="logo-svg" alt="Slack"     width="34" height="34"/></div>
-          <div class="logo-item" style="top:72%;right:8%; animation-delay:2.0s;  --glow:rgba(251,191,36,0.35);  --c:#fbbf24;"><img src="/icons/perplexity.svg" class="logo-svg" alt="Perplexity" width="32" height="32"/></div>
+          <div class="logo-item" style="top:7%;  left:10%; animation-delay:0s;    --glow:rgba(16,185,129,0.45);"><img src="/icons/chatgpt.svg"   class="logo-svg" alt="ChatGPT"   width="42" height="42"/></div>
+          <div class="logo-item" style="top:5%;  left:50%; animation-delay:0.8s;  --glow:rgba(255,255,255,0.2);"><img src="/icons/notion.svg"    class="logo-svg" alt="Notion"     width="36" height="36"/></div>
+          <div class="logo-item" style="top:4%;  right:8%; animation-delay:1.6s;  --glow:rgba(255,74,0,0.5);  "><img src="/icons/zapier.svg"    class="logo-svg" alt="Zapier"     width="40" height="40"/></div>
+          <div class="logo-item" style="top:28%; left:4%;  animation-delay:2.2s;  --glow:rgba(96,165,250,0.4);"><img src="/icons/anthropic.svg" class="logo-svg" alt="Claude"     width="34" height="34"/></div>
+          <div class="logo-item" style="top:26%; left:36%; animation-delay:0.4s;  --glow:rgba(155,89,182,0.5);"><img src="/icons/make.svg"      class="logo-svg" alt="Make"       width="38" height="38"/></div>
+          <div class="logo-item" style="top:24%; right:6%; animation-delay:1.2s;  --glow:rgba(0,196,204,0.4); "><img src="/icons/canva.svg"     class="logo-svg" alt="Canva"      width="36" height="36"/></div>
+          <div class="logo-item" style="top:52%; left:16%; animation-delay:1.8s;  --glow:rgba(239,83,80,0.4); "><img src="/icons/n8n.svg"       class="logo-svg" alt="n8n"        width="34" height="34"/></div>
+          <div class="logo-item" style="top:54%; left:50%; animation-delay:0.6s;  --glow:rgba(66,133,244,0.5);"><img src="/icons/gemini.svg"    class="logo-svg" alt="Gemini"     width="38" height="38"/></div>
+          <div class="logo-item" style="top:50%; right:5%; animation-delay:2.5s;  --glow:rgba(255,122,89,0.4);"><img src="/icons/hubspot.svg"   class="logo-svg" alt="HubSpot"    width="34" height="34"/></div>
+          <div class="logo-item" style="top:74%; left:6%;  animation-delay:1.4s;  --glow:rgba(24,191,255,0.3);"><img src="/icons/airtable.svg"  class="logo-svg" alt="Airtable"   width="32" height="32"/></div>
+          <div class="logo-item" style="top:76%; left:42%; animation-delay:0.2s;  --glow:rgba(231,29,54,0.4); "><img src="/icons/slack.svg"     class="logo-svg" alt="Slack"      width="34" height="34"/></div>
+          <div class="logo-item" style="top:72%; right:8%; animation-delay:2.0s;  --glow:rgba(251,191,36,0.35);"><img src="/icons/perplexity.svg" class="logo-svg" alt="Perplexity" width="32" height="32"/></div>
         </div>
       </div>
-    </div>
 
-    <!-- ── PROBLÈME ── -->
-    <div class="mb-16">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4 reveal" style="color: var(--accent);">Le problème</div>
-      <h3 class="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-10 reveal">
-        Vous vous reconnaissez<span class="font-serif italic" style="color: var(--text-tertiary);"> là-dedans ?</span>
-      </h3>
-
-      <div class="grid md:grid-cols-3 gap-5">
-
-        <div class="p-6 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-primary); border: 1px solid var(--border);">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5" style="color: #f87171;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div class="text-2xl font-bold" style="color: #f87171;">−8h / sem.</div>
-          </div>
-          <h4 class="font-bold mb-2">Du temps perdu sur des outils non cadrés</h4>
-          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">CRM, agent IA, refonte site, LinkedIn... Tout part en même temps. Vos équipes testent, abandonnent, recommencent. Le ROI reste introuvable.</p>
-        </div>
-
-        <div class="p-6 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-primary); border: 1px solid var(--border);">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-            </div>
-            <div class="text-2xl font-bold" style="color: #fbbf24;">−2 000 € / an</div>
-          </div>
-          <h4 class="font-bold mb-2">Des abonnements qui ne servent à rien</h4>
-          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">ChatGPT, Zapier, Notion, Make, HubSpot... Chaque outil coûte 30 à 100 € par mois. Sans cadrage, vous payez pour des outils que personne n'utilise vraiment.</p>
-        </div>
-
-        <div class="p-6 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-primary); border: 1px solid var(--border);">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5" style="color: #818cf8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-            </div>
-            <div class="text-2xl font-bold" style="color: #818cf8;">0 résultat</div>
-          </div>
-          <h4 class="font-bold mb-2">Des projets IA qui n'aboutissent pas</h4>
-          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Automatisation lancée sans diagnostic. Processus automatisé qui était déjà cassé. Mois de travail pour un outil que les équipes n'adoptent pas.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ── PONT VERS LA SOLUTION ── -->
-    <div class="p-8 rounded-2xl reveal" style="background: var(--bg-primary); border: 1px solid rgba(96,165,250,0.2);">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-lg font-serif italic leading-relaxed" style="color: var(--text-primary);">
-          "L'IA n'est pas une solution. C'est un levier — et seulement si le problème est bien posé en amont."
-        </p>
-        <p class="mt-3 text-sm font-semibold" style="color: var(--accent);">C'est exactement là qu'intervient le cadrage. ↓</p>
-      </div>
     </div>
 
   </div>
@@ -125,7 +89,6 @@
     box-shadow: 0 0 32px -4px var(--glow, rgba(96,165,250,0.5));
     z-index: 10;
   }
-  /* Colorisation SVG via filter CSS */
   .logo-svg {
     display: block;
     object-fit: contain;
@@ -134,7 +97,6 @@
     transition: opacity 0.3s;
   }
   .logo-item:hover .logo-svg { opacity: 1; }
-
   @keyframes logo-float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     25%       { transform: translateY(-9px) rotate(2deg); }
