@@ -106,78 +106,137 @@ const cases = [
       </p>
     </div>
 
-    <div class="space-y-6">
-      {cases.map((c) => (
-        <div class="rounded-3xl overflow-hidden" style="border: 1px solid var(--border); background: var(--bg-primary);">
-          <div class="grid lg:grid-cols-[260px_1fr_220px]">
+    <!-- Slider wrapper -->
+    <div class="relative">
 
-            <!-- Gauche : secteur + problème -->
-            <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
-              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder}; color: ${c.color};`}>
-                {c.sector}
-              </div>
-              <p class="font-bold text-base mb-5 leading-snug" style="color: var(--text-primary);">{c.title}</p>
-              <div class="space-y-2.5">
-                {c.problems.map((p) => (
-                  <div class="flex items-start gap-2 text-sm" style="color: var(--text-secondary);">
-                    <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #f87171;">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                    </svg>
-                    {p}
+      <!-- Track -->
+      <div id="ucTrack" class="overflow-hidden rounded-3xl">
+        <div id="ucSlides" class="flex transition-transform duration-500 ease-in-out">
+          {cases.map((c) => (
+            <div class="uc-slide w-full flex-shrink-0 rounded-3xl overflow-hidden" style="border: 1px solid var(--border); background: var(--bg-primary);">
+              <div class="grid lg:grid-cols-[260px_1fr_200px]">
+
+                <!-- Gauche -->
+                <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
+                  <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder}; color: ${c.color};`}>
+                    {c.sector}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <!-- Centre : workflow avec logos -->
-            <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
-              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-6" style={`color: ${c.color};`}>
-                La résolution IA
-              </div>
-              <!-- Workflow : centré verticalement, espacement uniforme -->
-              <div class="flex items-center justify-center gap-2 flex-wrap">
-                {c.steps.map((step, i) => (
-                  <>
-                    <!-- Outil -->
-                    <div class="flex flex-col items-center text-center" style="width: 72px;">
-                      <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-2 overflow-hidden" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder};`}>
-                        <div class="w-9 h-9" set:html={logos[step.logo]} />
+                  <p class="font-bold text-base mb-5 leading-snug" style="color: var(--text-primary);">{c.title}</p>
+                  <div class="space-y-2.5">
+                    {c.problems.map((p) => (
+                      <div class="flex items-start gap-2 text-sm" style="color: var(--text-secondary);">
+                        <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style="color: #f87171;"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+                        {p}
                       </div>
-                      <div class="text-xs font-semibold leading-tight" style="color: var(--text-primary);">{step.name}</div>
-                      <div class="text-xs leading-tight mt-0.5" style={`color: var(--text-tertiary); max-width: 72px;`}>{step.desc}</div>
-                    </div>
-                    <!-- Flèche entre les étapes -->
-                    {i < c.steps.length - 1 && (
-                      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-tertiary);">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                      </svg>
-                    )}
-                  </>
-                ))}
-              </div>
-            </div>
-
-            <!-- Droite : KPI -->
-            <div class="p-7">
-              <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">KPI & résultats</div>
-              <div class="space-y-5">
-                {c.kpis.map((kpi) => (
-                  <div>
-                    <div class="text-2xl font-bold" style={`color: ${c.color};`}>{kpi.value}</div>
-                    <div class="text-xs mt-0.5" style="color: var(--text-secondary);">{kpi.label}</div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <!-- Centre -->
+                <div class="p-7 border-b lg:border-b-0 lg:border-r" style="border-color: var(--border);">
+                  <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-6" style={`color: ${c.color};`}>La résolution IA</div>
+                  <div class="flex items-center justify-center gap-2 flex-wrap">
+                    {c.steps.map((step, i) => (
+                      <>
+                        <div class="flex flex-col items-center text-center" style="width: 72px;">
+                          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-2 overflow-hidden" style={`background: ${c.colorSoft}; border: 1px solid ${c.colorBorder};`}>
+                            <div class="w-9 h-9" set:html={logos[step.logo]} />
+                          </div>
+                          <div class="text-xs font-semibold leading-tight" style="color: var(--text-primary);">{step.name}</div>
+                          <div class="text-xs leading-tight mt-0.5" style="color: var(--text-tertiary);">{step.desc}</div>
+                        </div>
+                        {i < c.steps.length - 1 && (
+                          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-tertiary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                </div>
+
+                <!-- Droite KPI -->
+                <div class="p-7">
+                  <div class="text-xs font-semibold uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">KPI & résultats</div>
+                  <div class="space-y-5">
+                    {c.kpis.map((kpi) => (
+                      <div>
+                        <div class="text-2xl font-bold" style={`color: ${c.color};`}>{kpi.value}</div>
+                        <div class="text-xs mt-0.5" style="color: var(--text-secondary);">{kpi.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
-
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex items-center justify-between mt-6">
+
+        <!-- Dots -->
+        <div class="flex gap-2" id="ucDots">
+          {cases.map((_, i) => (
+            <button class="uc-dot w-2 h-2 rounded-full transition-all duration-300" data-index={i}
+              style={i === 0 ? 'background: var(--accent); width: 1.5rem;' : 'background: var(--border);'}
+            ></button>
+          ))}
+        </div>
+
+        <!-- Flèches -->
+        <div class="flex gap-3">
+          <button id="ucPrev" class="w-10 h-10 rounded-xl flex items-center justify-center transition hover:opacity-80"
+            style="background: var(--bg-primary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="ucNext" class="w-10 h-10 rounded-xl flex items-center justify-center transition hover:opacity-80"
+            style="background: var(--bg-primary); border: 1px solid var(--border); color: var(--text-secondary);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </div>
     </div>
 
-    <p class="mt-10 text-sm text-center" style="color: var(--text-tertiary);">
-      Ces workflows sont construits à partir de vos outils existants. Aucune solution imposée, aucun budget logiciel superflu.
+    <p class="mt-8 text-sm text-center" style="color: var(--text-tertiary);">
+      Workflows construits à partir de vos outils existants. Aucune solution imposée.
     </p>
 
   </div>
 </section>
+
+<script>
+  const slides  = document.getElementById('ucSlides');
+  const dots    = document.querySelectorAll<HTMLButtonElement>('.uc-dot');
+  const prev    = document.getElementById('ucPrev');
+  const next    = document.getElementById('ucNext');
+  const total   = dots.length;
+  let current   = 0;
+
+  function goTo(i: number) {
+    current = (i + total) % total;
+    if (slides) slides.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, idx) => {
+      if (idx === current) {
+        d.style.background = 'var(--accent)';
+        d.style.width = '1.5rem';
+      } else {
+        d.style.background = 'var(--border)';
+        d.style.width = '0.5rem';
+      }
+    });
+  }
+
+  prev?.addEventListener('click', () => goTo(current - 1));
+  next?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Swipe touch
+  let startX = 0;
+  slides?.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  slides?.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+</script>
