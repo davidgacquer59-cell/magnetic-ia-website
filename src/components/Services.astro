@@ -1,144 +1,132 @@
 ---
-// Services V3 — Offre phare "Diagnostic IA Dirigeant" + 3 formats complémentaires
+// Services V4 — Tunnel en 3 étapes : découverte → audit flash → diagnostic complet
 ---
 
 <section id="services" class="py-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
     <div class="max-w-3xl mb-16 reveal">
-      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Interventions</div>
+      <div class="text-sm font-semibold uppercase tracking-[0.2em] mb-4" style="color: var(--accent);">Comment on travaille ensemble</div>
       <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-        Du diagnostic à la mise en œuvre.
-        <span class="font-serif italic" style="color: var(--text-tertiary);"> À votre rythme.</span>
+        On commence petit.
+        <span class="font-serif italic" style="color: var(--text-tertiary);"> On avance vite.</span>
       </h2>
       <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
-        Chaque intervention commence par comprendre votre situation réelle. Aucune solution imposée avant un diagnostic sérieux.
+        Pas de grosse décision dès le départ. On se découvre, on valide que ça a du sens, puis on structure. À chaque étape, vous avez le choix de continuer ou non.
       </p>
     </div>
 
-    <!-- Offre phare — Diagnostic IA Dirigeant -->
-    <div class="mb-8 reveal" >
-      <div class="relative rounded-3xl overflow-hidden p-10 lg:p-14" style="background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.06) 100%); border: 1px solid rgba(96,165,250,0.25);">
+    <!-- Tunnel 3 étapes -->
+    <div class="grid lg:grid-cols-3 gap-0 mb-12 reveal">
 
-        <!-- Badge -->
-        <div class="absolute top-6 right-6">
-          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background: var(--accent); color: white;">Offre phare</span>
+      <!-- Étape 1 — Découverte -->
+      <div class="relative p-8 rounded-l-3xl lg:rounded-r-none rounded-3xl lg:rounded-3xl mb-4 lg:mb-0" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">1</div>
+          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Découverte</div>
         </div>
+        <h3 class="text-xl font-bold mb-3">Appel de 30 min</h3>
+        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">On fait le point sur votre situation, vos enjeux, ce que vous avez déjà testé. Je vous dis franchement si et comment je peux vous aider.</p>
+        <div class="mb-6">
+          <span class="text-2xl font-bold" style="color: var(--text-primary);">Gratuit</span>
+          <span class="text-sm ml-2" style="color: var(--text-tertiary);">Sans engagement</span>
+        </div>
+        <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
+          class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition"
+          style="border: 1px solid var(--border); color: var(--text-primary);">
+          Réserver →
+        </a>
+      </div>
 
-        <!-- Halo -->
-        <div class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(96,165,250,0.1), transparent 70%); filter: blur(40px);"></div>
-
-        <div class="grid lg:grid-cols-[1fr_280px] gap-10 items-center relative">
-
-          <div>
-            <div class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-3" style="color: var(--accent);">Diagnostic IA Dirigeant</div>
-            <h3 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-              4 à 6 semaines pour passer<br />du flou à la clarté décisionnelle.
-            </h3>
-            <p class="text-base leading-relaxed mb-8" style="color: var(--text-secondary);">
-              Un cadrage complet de votre situation digitale et IA : état des lieux sans angles morts, identification des vrais leviers, arbitrages documentés, feuille de route exécutable. Vous repartez avec un plan clair, pas un rapport de 200 pages.
-            </p>
-
-            <div class="grid sm:grid-cols-2 gap-3 mb-8">
-              {[
-                'Cartographie complète de l\'existant',
-                'Identification des cas d\'usage IA prioritaires',
-                'Matrice GARDER · AMPLIFIER · ARRÊTER · PARKING',
-                'Roadmap 90 jours avec quick wins',
-                'Vérification conformité RGPD / IA Act',
-                'Sélection d\'outils adaptés à votre contexte',
-              ].map((item) => (
-                <div class="flex items-start gap-2 text-sm" style="color: var(--text-secondary);">
-                  <svg class="w-4 h-4 flex-shrink-0 mt-0.5" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-lg shadow-blue-500/20 text-sm">
-              Discuter de mon projet
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-
-          <!-- Tarif + durée -->
-          <div class="lg:border-l lg:pl-10" style="border-color: rgba(96,165,250,0.15);">
-            <div class="space-y-6">
-              <div>
-                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-1" style="color: var(--text-tertiary);">Investissement</div>
-                <div class="text-3xl font-bold" style="color: var(--text-primary);">3 000 – 8 000 €</div>
-                <div class="text-sm mt-0.5" style="color: var(--text-tertiary);">HT · selon périmètre</div>
-              </div>
-              <div class="h-px" style="background: var(--border);"></div>
-              <div>
-                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-1" style="color: var(--text-tertiary);">Durée</div>
-                <div class="text-lg font-semibold" style="color: var(--text-primary);">4 à 6 semaines</div>
-              </div>
-              <div class="h-px" style="background: var(--border);"></div>
-              <div>
-                <div class="text-xs font-mono uppercase tracking-[0.15em] mb-2" style="color: var(--text-tertiary);">Livrables</div>
-                <div class="space-y-1.5 text-sm" style="color: var(--text-secondary);">
-                  <div>Rapport de diagnostic complet</div>
-                  <div>Roadmap priorisée</div>
-                  <div>Présentation dirigeant</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      <!-- Connecteur -->
+      <div class="hidden lg:flex items-center justify-center z-10 -mx-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--bg-primary); border: 1px solid var(--border);">
+          <svg class="w-4 h-4" style="color: var(--accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </div>
       </div>
+
+      <!-- Étape 2 — Audit Flash -->
+      <div class="relative p-8 rounded-3xl mb-4 lg:mb-0 lg:-mx-2 z-10" style="background: var(--bg-primary); border: 2px solid var(--accent); box-shadow: 0 0 40px -10px rgba(96,165,250,0.2);">
+        <!-- Badge recommandé -->
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold" style="background: var(--accent); color: white;">Point d'entrée recommandé</div>
+
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3);">2</div>
+          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--accent);">Audit Flash</div>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Demi-journée de diagnostic</h3>
+        <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">En 4 heures : état des lieux de votre digital, identification des 3 leviers prioritaires, premières décisions GARDER / AMPLIFIER / ARRÊTER. Vous repartez avec un plan d'action clair.</p>
+        <ul class="space-y-2 text-sm mb-6" style="color: var(--text-secondary);">
+          {['Cartographie de l\'existant', 'Top 3 des priorités identifiées', 'Rapport + plan d\'action'].map(item => (
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div class="mb-6">
+          <span class="text-3xl font-bold" style="color: var(--text-primary);">750 €</span>
+          <span class="text-sm ml-1" style="color: var(--text-tertiary);">HT</span>
+        </div>
+        <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
+          class="block text-center px-4 py-3 rounded-xl text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white transition shadow-lg shadow-blue-500/20">
+          Je veux cet audit →
+        </a>
+      </div>
+
+      <!-- Connecteur -->
+      <div class="hidden lg:flex items-center justify-center z-10 -mx-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--bg-primary); border: 1px solid var(--border);">
+          <svg class="w-4 h-4" style="color: var(--accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
+      <!-- Étape 3 — Diagnostic complet -->
+      <div class="relative p-8 rounded-r-3xl lg:rounded-l-none rounded-3xl lg:rounded-3xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">3</div>
+          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Mission complète</div>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Diagnostic IA Dirigeant</h3>
+        <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">4 à 6 semaines de cadrage complet : état des lieux sans angles morts, cas d'usage IA priorisés, conformité RGPD / IA Act, roadmap 90 jours exécutable.</p>
+        <ul class="space-y-2 text-sm mb-6" style="color: var(--text-secondary);">
+          {['Méthode 5 étapes complète', 'Livrables : rapport + roadmap + présentation', 'Vérification RGPD / IA Act'].map(item => (
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" style="color: var(--text-tertiary);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div class="mb-6">
+          <span class="text-2xl font-bold" style="color: var(--text-primary);">À partir de 3 000 €</span>
+          <span class="text-sm ml-1" style="color: var(--text-tertiary);">HT</span>
+        </div>
+        <a href="mailto:contact@magnetic-ia.fr"
+          class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition"
+          style="border: 1px solid var(--border); color: var(--text-primary);">
+          Discuter du périmètre →
+        </a>
+      </div>
+
     </div>
 
-    <!-- 3 formats complémentaires -->
-    <div class="grid md:grid-cols-3 gap-5">
+    <!-- Formats complémentaires -->
+    <div class="grid md:grid-cols-2 gap-5 reveal">
 
-      <!-- Atelier -->
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.2);">
-          <svg class="w-6 h-6" style="color: #a78bfa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-        </div>
-        <div class="flex items-start justify-between mb-3">
-          <h3 class="font-bold text-lg">Atelier diagnostic</h3>
-          <span class="text-sm font-bold" style="color: var(--accent);">1 500 € HT</span>
-        </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Une demi-journée ou une journée avec votre équipe pour identifier les cas d'usage IA prioritaires et construire un plan d'action immédiatement actionnable.</p>
-        <div class="text-xs" style="color: var(--text-tertiary);">Format : présentiel ou distanciel · À partir d'une journée</div>
-      </div>
-
-      <!-- Formation -->
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
-          <svg class="w-6 h-6" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-          </svg>
-        </div>
-        <div class="flex items-start justify-between mb-3">
-          <h3 class="font-bold text-lg">Formation</h3>
+      <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center justify-between mb-3">
+          <h4 class="font-semibold">Formation équipes</h4>
           <span class="text-sm font-bold" style="color: var(--accent);">1 500 € HT / jour</span>
         </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Initiation IA, cadrage de projets IA, marketing digital. Format intra ou inter-entreprise, adapté à votre contexte. Finançable OPCO / CPF.</p>
-        <div class="text-xs" style="color: var(--text-tertiary);">Finançable OPCO · CPF · Format sur mesure</div>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Initiation IA, cadrage de projets, marketing digital. Format intra ou inter-entreprise. <span style="color: var(--text-tertiary);">Finançable OPCO / CPF.</span></p>
       </div>
 
-      <!-- Accompagnement -->
-      <div class="p-8 rounded-2xl card-hover reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.2);">
-          <svg class="w-6 h-6" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <div class="flex items-start justify-between mb-3">
-          <h3 class="font-bold text-lg">Accompagnement projet</h3>
+      <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center justify-between mb-3">
+          <h4 class="font-semibold">Accompagnement à la mise en œuvre</h4>
           <span class="text-sm font-bold" style="color: var(--accent);">Sur devis</span>
         </div>
-        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">Pilotage de votre projet IA de la conception à la mise en production. Coordination avec partenaires techniques pour le développement et les automatisations.</p>
-        <div class="text-xs" style="color: var(--text-tertiary);">TJM 500 € HT · Réseau partenaires devs & no-code</div>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Pilotage projet de la conception à la production. Réseau de partenaires devs et no-code. <span style="color: var(--text-tertiary);">TJM 500 € HT.</span></p>
       </div>
 
     </div>
