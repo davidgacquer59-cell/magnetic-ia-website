@@ -1,5 +1,5 @@
 ---
-// Services V4 — Tunnel en 3 étapes : découverte → audit flash → diagnostic complet
+// Services V5 — Tunnel 3 étapes, layout propre, TVA non applicable
 ---
 
 <section id="services" class="py-24">
@@ -16,20 +16,20 @@
       </p>
     </div>
 
-    <!-- Tunnel 3 étapes -->
-    <div class="grid lg:grid-cols-3 gap-0 mb-12 reveal">
+    <!-- 3 cartes tunnel -->
+    <div class="grid lg:grid-cols-3 gap-6 mb-10 reveal">
 
-      <!-- Étape 1 — Découverte -->
-      <div class="relative p-8 rounded-l-3xl lg:rounded-r-none rounded-3xl lg:rounded-3xl mb-4 lg:mb-0" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">1</div>
-          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Découverte</div>
+      <!-- 1 — Découverte -->
+      <div class="p-8 rounded-2xl flex flex-col" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">1</div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Découverte</span>
         </div>
         <h3 class="text-xl font-bold mb-3">Appel de 30 min</h3>
-        <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">On fait le point sur votre situation, vos enjeux, ce que vous avez déjà testé. Je vous dis franchement si et comment je peux vous aider.</p>
-        <div class="mb-6">
-          <span class="text-2xl font-bold" style="color: var(--text-primary);">Gratuit</span>
-          <span class="text-sm ml-2" style="color: var(--text-tertiary);">Sans engagement</span>
+        <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">On fait le point sur votre situation, vos enjeux, ce que vous avez déjà testé. Je vous dis franchement si et comment je peux vous aider.</p>
+        <div class="mb-5">
+          <span class="text-2xl font-bold">Gratuit</span>
+          <span class="text-xs ml-2" style="color: var(--text-tertiary);">Sans engagement</span>
         </div>
         <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
           class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition"
@@ -38,25 +38,16 @@
         </a>
       </div>
 
-      <!-- Connecteur -->
-      <div class="hidden lg:flex items-center justify-center z-10 -mx-4">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--bg-primary); border: 1px solid var(--border);">
-          <svg class="w-4 h-4" style="color: var(--accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </div>
-      </div>
-
-      <!-- Étape 2 — Audit Flash -->
-      <div class="relative p-8 rounded-3xl mb-4 lg:mb-0 lg:-mx-2 z-10" style="background: var(--bg-primary); border: 2px solid var(--accent); box-shadow: 0 0 40px -10px rgba(96,165,250,0.2);">
-        <!-- Badge recommandé -->
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold" style="background: var(--accent); color: white;">Point d'entrée recommandé</div>
-
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3);">2</div>
-          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--accent);">Audit Flash</div>
+      <!-- 2 — Audit Flash (vedette) -->
+      <div class="p-8 rounded-2xl flex flex-col relative" style="background: var(--bg-primary); border: 2px solid var(--accent); box-shadow: 0 0 40px -10px rgba(96,165,250,0.2);">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap" style="background: var(--accent); color: white;">Point d'entrée recommandé</div>
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3);">2</div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--accent);">Audit Flash</span>
         </div>
         <h3 class="text-xl font-bold mb-3">Demi-journée de diagnostic</h3>
-        <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">En 4 heures : état des lieux de votre digital, identification des 3 leviers prioritaires, premières décisions GARDER / AMPLIFIER / ARRÊTER. Vous repartez avec un plan d'action clair.</p>
-        <ul class="space-y-2 text-sm mb-6" style="color: var(--text-secondary);">
+        <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">En 4 heures : état des lieux de votre digital, identification des 3 leviers prioritaires, premières décisions GARDER / AMPLIFIER / ARRÊTER. Vous repartez avec un plan d'action clair.</p>
+        <ul class="space-y-2 text-sm mb-5" style="color: var(--text-secondary);">
           {['Cartographie de l\'existant', 'Top 3 des priorités identifiées', 'Rapport + plan d\'action'].map(item => (
             <li class="flex items-center gap-2">
               <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -64,9 +55,8 @@
             </li>
           ))}
         </ul>
-        <div class="mb-6">
-          <span class="text-3xl font-bold" style="color: var(--text-primary);">750 €</span>
-          <span class="text-sm ml-1" style="color: var(--text-tertiary);">HT</span>
+        <div class="mb-5">
+          <span class="text-3xl font-bold">750 €</span>
         </div>
         <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
           class="block text-center px-4 py-3 rounded-xl text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white transition shadow-lg shadow-blue-500/20">
@@ -74,32 +64,24 @@
         </a>
       </div>
 
-      <!-- Connecteur -->
-      <div class="hidden lg:flex items-center justify-center z-10 -mx-4">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--bg-primary); border: 1px solid var(--border);">
-          <svg class="w-4 h-4" style="color: var(--accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </div>
-      </div>
-
-      <!-- Étape 3 — Diagnostic complet -->
-      <div class="relative p-8 rounded-r-3xl lg:rounded-l-none rounded-3xl lg:rounded-3xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">3</div>
-          <div class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Mission complète</div>
+      <!-- 3 — Diagnostic complet -->
+      <div class="p-8 rounded-2xl flex flex-col" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">3</div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Mission complète</span>
         </div>
         <h3 class="text-xl font-bold mb-3">Diagnostic IA Dirigeant</h3>
-        <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">4 à 6 semaines de cadrage complet : état des lieux sans angles morts, cas d'usage IA priorisés, conformité RGPD / IA Act, roadmap 90 jours exécutable.</p>
-        <ul class="space-y-2 text-sm mb-6" style="color: var(--text-secondary);">
-          {['Méthode 5 étapes complète', 'Livrables : rapport + roadmap + présentation', 'Vérification RGPD / IA Act'].map(item => (
+        <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">4 à 6 semaines de cadrage complet : état des lieux sans angles morts, cas d'usage IA priorisés, conformité RGPD / IA Act, roadmap 90 jours exécutable.</p>
+        <ul class="space-y-2 text-sm mb-5" style="color: var(--text-secondary);">
+          {['Méthode 5 étapes complète', 'Rapport + roadmap + présentation', 'Vérification RGPD / IA Act'].map(item => (
             <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 flex-shrink-0" style="color: var(--text-tertiary);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <svg class="w-4 h-4 flex-shrink-0" style="color: var(--text-tertiary);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
               {item}
             </li>
           ))}
         </ul>
-        <div class="mb-6">
-          <span class="text-2xl font-bold" style="color: var(--text-primary);">À partir de 3 000 €</span>
-          <span class="text-sm ml-1" style="color: var(--text-tertiary);">HT</span>
+        <div class="mb-5">
+          <span class="text-2xl font-bold">À partir de 3 000 €</span>
         </div>
         <a href="mailto:contact@magnetic-ia.fr"
           class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition"
@@ -110,23 +92,28 @@
 
     </div>
 
+    <!-- Note légale TVA -->
+    <p class="text-xs mb-10 reveal" style="color: var(--text-tertiary);">
+      TVA non applicable, art. 293B du CGI.
+    </p>
+
     <!-- Formats complémentaires -->
     <div class="grid md:grid-cols-2 gap-5 reveal">
 
       <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center justify-between mb-3">
+        <div class="flex items-start justify-between mb-3">
           <h4 class="font-semibold">Formation équipes</h4>
-          <span class="text-sm font-bold" style="color: var(--accent);">1 500 € HT / jour</span>
+          <span class="text-sm font-bold" style="color: var(--accent);">1 500 € / jour</span>
         </div>
         <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Initiation IA, cadrage de projets, marketing digital. Format intra ou inter-entreprise. <span style="color: var(--text-tertiary);">Finançable OPCO / CPF.</span></p>
       </div>
 
       <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
-        <div class="flex items-center justify-between mb-3">
-          <h4 class="font-semibold">Accompagnement à la mise en œuvre</h4>
+        <div class="flex items-start justify-between mb-3">
+          <h4 class="font-semibold">Accompagnement projet</h4>
           <span class="text-sm font-bold" style="color: var(--accent);">Sur devis</span>
         </div>
-        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Pilotage projet de la conception à la production. Réseau de partenaires devs et no-code. <span style="color: var(--text-tertiary);">TJM 500 € HT.</span></p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Pilotage de la conception à la production. Réseau de partenaires devs et no-code. <span style="color: var(--text-tertiary);">500 € / jour.</span></p>
       </div>
 
     </div>
