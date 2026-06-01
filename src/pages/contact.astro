@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+const merci = Astro.url.searchParams.get('merci') === '1';
 ---
 
 <Layout
@@ -50,8 +52,8 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <!-- Formulaire -->
-      <div id="form-wrap">
-        <form id="contact-form" class="space-y-5">
+      <div id="form-wrap" class={merci ? 'hidden' : ''}>
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
 
           <div class="grid md:grid-cols-2 gap-5">
             <div>
@@ -113,7 +115,8 @@ import Footer from '../components/Footer.astro';
 
           <!-- Web3Forms access key — remplacer YOUR_ACCESS_KEY par la clé reçue sur web3forms.com -->
           <input type="hidden" name="access_key" value="41b886dc-bc26-4259-8629-f7430109ec69" />
-          <input type="hidden" name="from_name" value="magnetic-ia.fr" />
+          <input type="hidden" name="redirect" value="https://magnetic-ia.fr/contact?merci=1" />
+          <input type="hidden" name="from_name" value="Site magnetic-ia.fr" />
           <input type="checkbox" name="botcheck" style="display:none" />
 
           <button
@@ -122,6 +125,9 @@ import Footer from '../components/Footer.astro';
           >
             Envoyer mon message →
           </button>
+          <p class="text-xs text-center" style="color: var(--text-tertiary);">
+            Réponse garantie sous 24h · Vos données restent confidentielles
+          </p>
 
           <p class="text-xs text-center" style="color: var(--text-tertiary);">
             Réponse garantie sous 24h · Vos données restent confidentielles
@@ -131,7 +137,7 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <!-- Message de confirmation -->
-      <div id="form-success" class="hidden text-center py-12">
+      <div id="form-success" class={`${merci ? '' : 'hidden'} text-center py-12`}>
         <div class="text-4xl mb-4">✓</div>
         <h2 class="text-2xl font-bold mb-3" style="color: var(--text-primary);">Message envoyé !</h2>
         <p class="text-base leading-relaxed mb-6" style="color: var(--text-secondary);">
@@ -181,37 +187,3 @@ import Footer from '../components/Footer.astro';
   }
 </style>
 
-<script is:inline>
-  const form = document.getElementById('contact-form');
-  const success = document.getElementById('form-success');
-  const wrap = document.getElementById('form-wrap');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Envoi en cours...';
-    btn.disabled = true;
-
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        wrap.classList.add('hidden');
-        success.classList.remove('hidden');
-      } else {
-        btn.textContent = 'Erreur — réessayez';
-        btn.disabled = false;
-      }
-    } catch {
-      btn.textContent = 'Erreur — réessayez';
-      btn.disabled = false;
-    }
-  });
-</script>
