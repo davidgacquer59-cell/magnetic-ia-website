@@ -174,16 +174,13 @@
   .demo-slider.is-sorted .demo-sorted-label { opacity: 1; }
 
   @media (max-width: 767px) {
-    /* Hero plein écran sur mobile */
     .hero-mobile-wrap {
-      min-height: calc(100svh - 80px);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding-top: 1.5rem;
-      padding-bottom: 2rem;
+      gap: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
-    /* Slider caché sur mobile — apparaît en scrollant */
     .hero-slider-mobile { display: none !important; }
     /* Eyebrow compact */
     .hero-eyebrow { margin-bottom: 1.25rem !important; }
