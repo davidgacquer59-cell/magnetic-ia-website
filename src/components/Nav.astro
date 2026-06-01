@@ -1,4 +1,4 @@
-﻿---
+---
 import Logo from './Logo.astro';
 const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=site&utm_medium=nav&utm_campaign=30min-offert';
 ---
@@ -10,17 +10,17 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
   <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="/" class="flex items-center" style="color: var(--text-primary);" aria-label="Magnetic-IA â€” Accueil">
+    <a href="/" class="flex items-center" style="color: var(--text-primary);" aria-label="Magnetic-IA — Accueil">
       <Logo height="42px" />
     </a>
 
-    <!-- Desktop nav â€” 4 items + CTA -->
+    <!-- Desktop nav — 5 items + CTA -->
     <div class="hidden lg:flex items-center gap-8 text-sm font-medium" style="color: var(--text-secondary);">
-      <a href="#methode"    class="hover:opacity-100 transition" style="opacity: 0.8;">MÃ©thode</a>
-      <a href="#services"   class="hover:opacity-100 transition" style="opacity: 0.8;">Offres</a>
-      <a href="#diagnostic" class="hover:opacity-100 transition" style="opacity: 0.8;">Diagnostic</a>
-      <a href="#a-propos"   class="hover:opacity-100 transition" style="opacity: 0.8;">Ã€ propos</a>
-      <a href="/contact"    class="hover:opacity-100 transition" style="opacity: 0.8;">Contact</a>
+      <a href="/#methode"    class="hover:opacity-100 transition" style="opacity: 0.8;">Méthode</a>
+      <a href="/#services"   class="hover:opacity-100 transition" style="opacity: 0.8;">Offres</a>
+      <a href="/#diagnostic" class="hover:opacity-100 transition" style="opacity: 0.8;">Diagnostic</a>
+      <a href="/#a-propos"   class="hover:opacity-100 transition" style="opacity: 0.8;">À propos</a>
+      <a href="/contact"     class="hover:opacity-100 transition" style="opacity: 0.8;">Contact</a>
     </div>
 
     <!-- CTA + toggle desktop -->
@@ -30,7 +30,7 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
         onclick="window.toggleTheme()"
         class="theme-toggle w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition"
         style="border: 1px solid var(--border);"
-        aria-label="Basculer thÃ¨me clair/sombre"
+        aria-label="Basculer thème clair/sombre"
       >
         <svg class="sun-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
@@ -46,7 +46,7 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
         class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl hover:opacity-90 transition shadow-lg"
         style="background: var(--text-primary); color: var(--bg-primary);"
       >
-        Ã‰changer 30 min â†’
+        Échanger 30 min →
       </a>
     </div>
 
@@ -57,7 +57,7 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
         onclick="window.toggleTheme()"
         class="theme-toggle w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition"
         style="border: 1px solid var(--border);"
-        aria-label="Basculer thÃ¨me"
+        aria-label="Basculer thème"
       >
         <svg class="sun-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-primary);">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
@@ -66,36 +66,35 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
         </svg>
       </button>
-    <button
-      type="button"
-      id="mobile-menu-btn"
-      class="flex lg:hidden w-9 h-9 rounded-full items-center justify-center hover:bg-white/5 transition"
-      style="border: 1px solid var(--border); color: var(--text-primary);"
-      aria-label="Menu"
-      aria-expanded="false"
-    >
-
-      <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-      <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition"
+        style="border: 1px solid var(--border); color: var(--text-primary);"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
   </div>
 
   <!-- Mobile menu -->
   <div
     id="mobile-menu"
-    class="hidden md:hidden border-t px-6 py-6 space-y-4"
+    class="hidden border-t px-6 py-6 space-y-4"
     style="background: var(--bg-primary); border-color: var(--border);"
   >
-    <a href="#methode"    class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">MÃ©thode</a>
-    <a href="#services"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Offres</a>
-    <a href="#diagnostic" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Diagnostic</a>
-    <a href="#a-propos"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Ã€ propos</a>
-    <a href="/contact"    class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Contact</a>
+    <a href="/#methode"    class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Méthode</a>
+    <a href="/#services"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Offres</a>
+    <a href="/#diagnostic" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Diagnostic</a>
+    <a href="/#a-propos"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">À propos</a>
+    <a href="/contact"     class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Contact</a>
     <div class="pt-4 border-t" style="border-color: var(--border);">
       <a
         href={CALENDLY_URL}
@@ -103,7 +102,7 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
         rel="noopener noreferrer"
         class="flex items-center justify-center gap-2 w-full px-4 py-3 bg-blue-500 text-white text-sm font-semibold rounded-xl hover:bg-blue-600 transition"
       >
-        Ã‰changer 30 min â†’
+        Échanger 30 min →
       </a>
     </div>
   </div>
@@ -131,4 +130,3 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
     };
   })();
 </script>
-
