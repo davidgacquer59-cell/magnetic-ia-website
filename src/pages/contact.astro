@@ -89,7 +89,7 @@ const merci = Astro.url.searchParams.get('merci') === '1';
           <div>
             <label class="block text-sm font-medium mb-2" style="color: var(--text-primary);">Votre besoin *</label>
             <select
-              name="subject" required
+              name="subject"
               class="w-full px-4 py-3 rounded-xl text-sm transition"
               style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary); outline: none; appearance: none; cursor: pointer;"
             >
@@ -115,9 +115,7 @@ const merci = Astro.url.searchParams.get('merci') === '1';
 
           <!-- Web3Forms access key — remplacer YOUR_ACCESS_KEY par la clé reçue sur web3forms.com -->
           <input type="hidden" name="access_key" value="41b886dc-bc26-4259-8629-f7430109ec69" />
-          <input type="hidden" name="redirect" value="https://magnetic-ia.fr/contact?merci=1" />
           <input type="hidden" name="from_name" value="Site magnetic-ia.fr" />
-          <input type="checkbox" name="botcheck" style="display:none" />
 
           <button
             type="submit"
