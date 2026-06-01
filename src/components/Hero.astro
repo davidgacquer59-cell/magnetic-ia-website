@@ -156,9 +156,19 @@
   .demo-slider.is-sorted .demo-chaos-label { opacity: 0; }
   .demo-slider.is-sorted .demo-sorted-label { opacity: 1; }
 
-  @media (max-width: 768px) {
-    h1 { font-size: 2rem !important; line-height: 1.15 !important; }
-    .dpi { font-size: 0.75rem !important; padding: 0.3rem 0.4rem !important; width: 18% !important; }
+  @media (max-width: 767px) {
+    section { padding-top: 5rem !important; padding-bottom: 1.5rem !important; }
+    .py-8 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+    h1 { font-size: 1.75rem !important; line-height: 1.15 !important; margin-bottom: 0.75rem !important; }
+    .mb-6 { margin-bottom: 0.75rem !important; }
+    .mb-10 { margin-bottom: 1rem !important; }
+    .mb-8 { margin-bottom: 0.5rem !important; }
+    .text-lg { font-size: 0.875rem !important; }
+    /* Slider plus compact */
+    #heroSlider { aspect-ratio: 16/9 !important; }
+    .dpi { font-size: 0.65rem !important; padding: 0.25rem 0.35rem !important; width: 16% !important; }
+    /* Gap réduit entre colonne texte et slider */
+    .gap-8 { gap: 1rem !important; }
   }
 </style>
 
