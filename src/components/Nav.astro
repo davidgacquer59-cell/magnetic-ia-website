@@ -14,11 +14,12 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
       <Logo height="42px" />
     </a>
 
-    <!-- Desktop nav — 3 items + CTA -->
+    <!-- Desktop nav — 4 items + CTA -->
     <div class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: var(--text-secondary);">
-      <a href="#methode"   class="hover:opacity-100 transition" style="opacity: 0.8;">Méthode</a>
-      <a href="#services"  class="hover:opacity-100 transition" style="opacity: 0.8;">Offres</a>
-      <a href="#a-propos"  class="hover:opacity-100 transition" style="opacity: 0.8;">À propos</a>
+      <a href="#methode"    class="hover:opacity-100 transition" style="opacity: 0.8;">Méthode</a>
+      <a href="#services"   class="hover:opacity-100 transition" style="opacity: 0.8;">Offres</a>
+      <a href="#diagnostic" class="hover:opacity-100 transition" style="opacity: 0.8;">Diagnostic</a>
+      <a href="#a-propos"   class="hover:opacity-100 transition" style="opacity: 0.8;">À propos</a>
     </div>
 
     <!-- CTA desktop -->
@@ -59,8 +60,9 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
     style="background: var(--bg-primary); border-color: var(--border);"
   >
     <a href="#methode"  class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Méthode</a>
-    <a href="#services" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Offres</a>
-    <a href="#a-propos" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">À propos</a>
+    <a href="#services"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Offres</a>
+    <a href="#diagnostic" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">Diagnostic</a>
+    <a href="#a-propos"   class="block py-2 text-sm font-medium" style="color: var(--text-secondary);" onclick="closeMobileMenu()">À propos</a>
     <div class="pt-4 border-t" style="border-color: var(--border);">
       <a
         href={CALENDLY_URL}

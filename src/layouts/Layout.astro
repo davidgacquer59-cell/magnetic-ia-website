@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
 
 interface Props {
   title?: string;
@@ -206,6 +207,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHXNW4C4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <slot />
+    <CookieBanner />
 
     <script is:inline>
       window.toggleTheme = function () {
