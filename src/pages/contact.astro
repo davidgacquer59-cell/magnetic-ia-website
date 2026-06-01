@@ -92,12 +92,12 @@ import Footer from '../components/Footer.astro';
               style="background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-secondary); outline: none; appearance: none; cursor: pointer;"
             >
               <option value="" disabled selected>Sélectionnez votre besoin</option>
-              <option value="diagnostic">Audit Flash — demi-journée de diagnostic (900€)</option>
-              <option value="mission">Mission Complète — cadrage IA (à partir de 4 500€)</option>
-              <option value="formation">Formation équipe IA</option>
-              <option value="accompagnement">Accompagnement projet sur mesure</option>
-              <option value="information">Demande d'information générale</option>
-              <option value="partenariat">Proposition de partenariat</option>
+              <option value="Audit Flash (900€)">Audit Flash — demi-journée de diagnostic (900€)</option>
+              <option value="Mission Complète (4 500€+)">Mission Complète — cadrage IA (à partir de 4 500€)</option>
+              <option value="Formation équipe IA">Formation équipe IA</option>
+              <option value="Accompagnement projet">Accompagnement projet sur mesure</option>
+              <option value="Information générale">Demande d'information générale</option>
+              <option value="Partenariat">Proposition de partenariat</option>
             </select>
           </div>
 
@@ -113,7 +113,7 @@ import Footer from '../components/Footer.astro';
 
           <!-- Web3Forms access key — remplacer YOUR_ACCESS_KEY par la clé reçue sur web3forms.com -->
           <input type="hidden" name="access_key" value="41b886dc-bc26-4259-8629-f7430109ec69" />
-          <input type="hidden" name="subject" value="Nouveau message — magnetic-ia.fr" />
+          <input type="hidden" name="from_name" value="magnetic-ia.fr" />
           <input type="checkbox" name="botcheck" style="display:none" />
 
           <button
