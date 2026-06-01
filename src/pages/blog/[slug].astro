@@ -38,7 +38,58 @@ const icon = tagIcon[article.data.tag] ?? '●';
 <Layout
   title={`${article.data.title} — Magnetic-IA`}
   description={article.data.excerpt}
+  type="article"
 >
+  <!-- JSON-LD Article — GEO/AIO optimisé -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.data.title,
+    "description": article.data.excerpt,
+    "datePublished": article.data.date,
+    "dateModified": article.data.date,
+    "url": `https://magnetic-ia.fr/blog/${article.slug}`,
+    "author": {
+      "@type": "Person",
+      "name": "David Gacquer",
+      "url": "https://magnetic-ia.fr",
+      "jobTitle": "Expert en cadrage de projets IA pour PME",
+      "sameAs": [
+        "https://www.linkedin.com/in/david-gacquer-20973064/",
+        "https://twitter.com/davidgacquer"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Magnetic-IA",
+        "url": "https://magnetic-ia.fr"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Magnetic-IA",
+      "url": "https://magnetic-ia.fr",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://magnetic-ia.fr/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://magnetic-ia.fr/blog/${article.slug}`
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".prose p:first-of-type", "h2"]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Cadrage de projets IA pour PME",
+      "description": "Méthode de diagnostic et de priorisation des projets d'intelligence artificielle pour les dirigeants de TPE et PME"
+    },
+    "keywords": `${article.data.tag}, cadrage IA, intelligence artificielle PME, David Gacquer, Magnetic-IA`,
+    "inLanguage": "fr-FR",
+    "isAccessibleForFree": true
+  })} />
   <Nav />
   <main class="pt-28 pb-20">
 
@@ -132,7 +183,7 @@ const icon = tagIcon[article.data.tag] ?? '●';
             <p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">
               Gratuit, sans engagement. On regarde ensemble où vous en êtes et si un cadrage a du sens pour vous.
             </p>
-            <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
+            <a href="https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=blog&utm_medium=article-cta&utm_campaign=30min-offert" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition text-sm">
               Prendre rendez-vous
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -145,7 +196,7 @@ const icon = tagIcon[article.data.tag] ?? '●';
             <div class="p-6 rounded-2xl text-center" style="background: var(--bg-secondary); border: 1px solid var(--border);">
               <p class="text-sm mb-2" style="color: var(--text-secondary);">Les commentaires seront activés prochainement.</p>
               <p class="text-xs" style="color: var(--text-tertiary);">
-                En attendant, <a href="https://www.linkedin.com/in/david-gacquer-20973064/" target="_blank" class="underline" style="color: var(--accent);">réagissez sur LinkedIn</a> ou <a href="/contact" class="underline" style="color: var(--accent);">envoyez-moi un message</a>.
+                En attendant, <a href="https://www.linkedin.com/in/david-gacquer-20973064/" target="_blank" rel="noopener noreferrer" class="underline" style="color: var(--accent);">réagissez sur LinkedIn</a> ou <a href="/contact" class="underline" style="color: var(--accent);">envoyez-moi un message</a>.
               </p>
             </div>
           </div>
@@ -200,7 +251,7 @@ const icon = tagIcon[article.data.tag] ?? '●';
             <div class="p-5 rounded-2xl" style="background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.2);">
               <p class="text-sm font-bold mb-1.5" style="color: var(--text-primary);">Un projet IA en tête ?</p>
               <p class="text-xs leading-relaxed mb-4" style="color: var(--text-secondary);">30 min offertes pour faire le point.</p>
-              <a href="https://calendly.com/davidgacquer59/consultation-decouverte" target="_blank" rel="noopener noreferrer"
+              <a href="https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=blog&utm_medium=sidebar&utm_campaign=30min-offert" target="_blank" rel="noopener noreferrer"
                 class="block text-center px-4 py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition text-xs">
                 Réserver →
               </a>

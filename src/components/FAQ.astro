@@ -1,0 +1,134 @@
+---
+// FAQ — accordéon 8 questions
+const faqs = [
+  {
+    q: "C'est pour quel type d'entreprise ?",
+    a: "PME et TPE de tous secteurs, à partir d'une personne. <strong>Pas besoin d'avoir un service IT ou de déjà utiliser l'IA.</strong> La plupart des clients arrivent avec des outils dispersés et sans vision claire — c'est exactement la situation de départ idéale."
+  },
+  {
+    q: "Est-ce que je dois déjà utiliser l'IA ?",
+    a: "Non. <strong>Le diagnostic part de là où vous en êtes.</strong> Beaucoup de clients arrivent avec zéro outil IA — c'est souvent la meilleure situation pour bien commencer, sans mauvaises habitudes à défaire."
+  },
+  {
+    q: "Combien de temps ça prend ?",
+    a: "L'Audit Flash se fait en <strong>une demi-journée</strong>. La Mission Complète dure <strong>4 à 6 semaines</strong>, à raison de quelques heures par semaine de votre côté. Vous n'êtes pas mobilisé à plein temps — la mission s'adapte à votre agenda de dirigeant."
+  },
+  {
+    q: "Quand est-ce que je vois les premiers résultats ?",
+    a: "Dès l'Audit Flash, vous repartez avec <strong>un plan d'action concret</strong>. Les premiers effets mesurables apparaissent généralement dans les <strong>30 à 90 jours</strong> suivant la mise en œuvre."
+  },
+  {
+    q: "Mes données sont-elles en sécurité ?",
+    a: "Toutes les missions démarrent avec un <strong>accord de confidentialité</strong>. Vos données restent les vôtres — rien n'est partagé, revendu ou utilisé dans des modèles IA tiers. La conformité RGPD et IA Act fait partie intégrante de la méthode."
+  },
+  {
+    q: "On travaille comment — sur site ou à distance ?",
+    a: "Les deux. Le diagnostic initial se fait souvent en visio. Les sessions de travail peuvent être <strong>sur site dans les Hauts-de-France</strong> ou à distance selon votre préférence. Basé à Wambrechies, j'interviens physiquement en région et à distance partout en France."
+  },
+  {
+    q: "Quelle différence avec une agence ou un grand cabinet ?",
+    a: "<strong>Pas de junior qui reprend votre dossier.</strong> Pas de méthode imposée. Pas d'outil en partenariat à placer. Vous travaillez directement avec moi, sur votre situation réelle, sans conflit d'intérêt. L'indépendance technologique est un principe non négociable."
+  },
+  {
+    q: "Est-ce que ça vaut vraiment l'investissement ?",
+    a: "L'Audit Flash à 900€ vous évite d'investir dans des outils ou des projets mal cadrés — erreur qui coûte en moyenne <strong>3 à 5x plus cher</strong>. Si le diagnostic ne révèle aucun levier actionnable, je vous le dis franchement. Pas de rapport pour faire bonne figure."
+  },
+];
+---
+
+<!-- JSON-LD FAQ — optimisé GEO/AIO pour Google et LLMs -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"C'est pour quel type d'entreprise ?","acceptedAnswer":{"@type":"Answer","text":"PME et TPE de tous secteurs, à partir d'une personne. Pas besoin d'avoir un service IT ou de déjà utiliser l'IA. La plupart des clients arrivent avec des outils dispersés et sans vision claire."}},
+    {"@type":"Question","name":"Est-ce que je dois déjà utiliser l'IA ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le diagnostic part de là où vous en êtes. Beaucoup de clients arrivent avec zéro outil IA — c'est souvent la meilleure situation pour bien commencer."}},
+    {"@type":"Question","name":"Combien de temps ça prend ?","acceptedAnswer":{"@type":"Answer","text":"L'Audit Flash se fait en une demi-journée. La Mission Complète dure 4 à 6 semaines, à raison de quelques heures par semaine de votre côté."}},
+    {"@type":"Question","name":"Mes données sont-elles en sécurité ?","acceptedAnswer":{"@type":"Answer","text":"Toutes les missions démarrent avec un accord de confidentialité. Vos données restent les vôtres — rien n'est partagé, revendu ou utilisé dans des modèles IA tiers. La conformité RGPD et IA Act fait partie intégrante de la méthode."}},
+    {"@type":"Question","name":"On travaille comment — sur site ou à distance ?","acceptedAnswer":{"@type":"Answer","text":"Les deux. Le diagnostic initial se fait souvent en visio. Les sessions de travail peuvent être sur site dans les Hauts-de-France ou à distance selon votre préférence."}},
+    {"@type":"Question","name":"Quelle différence avec une agence ou un grand cabinet ?","acceptedAnswer":{"@type":"Answer","text":"Pas de junior qui reprend votre dossier. Pas de méthode imposée. Pas d'outil en partenariat à placer. Vous travaillez directement avec David Gacquer, sans conflit d'intérêt."}},
+    {"@type":"Question","name":"Est-ce que ça vaut vraiment l'investissement ?","acceptedAnswer":{"@type":"Answer","text":"L'Audit Flash à 900€ vous évite d'investir dans des outils ou des projets mal cadrés — erreur qui coûte en moyenne 3 à 5 fois plus cher. Si le diagnostic ne révèle aucun levier actionnable, David Gacquer le dit franchement."}}
+  ]
+}</script>
+
+<section id="faq" class="py-16 md:py-24" style="background: var(--bg-secondary);">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+    <!-- Eyebrow -->
+    <div class="inline-flex items-center gap-3 mb-8 reveal">
+      <span class="w-6 h-px" style="background: var(--accent);"></span>
+      <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Questions fréquentes</span>
+    </div>
+
+    <!-- Titre -->
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-10 reveal">
+      Tout ce que vous voulez savoir
+      <span class="font-serif italic" style="color: var(--accent);"> avant de vous lancer.</span>
+    </h2>
+
+    <!-- Accordéon -->
+    <div class="faq-list rounded-2xl overflow-hidden reveal" style="border: 1px solid var(--border);">
+      {faqs.map((item, i) => (
+        <div class="faq-item" style={i < faqs.length - 1 ? 'border-bottom: 1px solid var(--border);' : ''}>
+          <button class="faq-btn" data-index={i}>
+            <span class="faq-question-text">{item.q}</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" set:html={item.a} />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA bas -->
+    <div class="text-center mt-8 reveal">
+      <p class="text-sm mb-3" style="color: var(--text-tertiary);">Une question qui n'est pas là ?</p>
+      <a href="mailto:contact@magnetic-ia.fr"
+        class="inline-flex items-center gap-2 text-sm font-medium hover:opacity-80 transition"
+        style="color: var(--accent);">
+        M'écrire directement →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-list { background: var(--bg-primary); }
+  .faq-btn {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 1.25rem 1.75rem; background: var(--bg-primary);
+    border: none; cursor: pointer; text-align: left; transition: background 0.2s;
+  }
+  .faq-btn:hover, .faq-btn.open { background: var(--bg-secondary); }
+  .faq-question-text { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+  .faq-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--accent); transition: transform 0.25s; }
+  .faq-btn.open .faq-icon { transform: rotate(45deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--bg-secondary); }
+  .faq-answer.open { max-height: 300px; }
+  .faq-answer-inner { padding: 0 1.75rem 1.5rem; font-size: 0.9rem; line-height: 1.75; color: var(--text-secondary); }
+
+  @media (max-width: 600px) {
+    .faq-btn { padding: 1rem 1.25rem; }
+    .faq-answer-inner { padding: 0 1.25rem 1.25rem; }
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-btn.open').forEach(b => {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+</script>

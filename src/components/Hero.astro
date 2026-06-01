@@ -1,49 +1,49 @@
 ---
-// Hero V5 — alignement propre, carousel schémas soigné
+// Hero V6 — nouveau positionnement + slider Chaos→Clarté
 ---
 
-<section class="relative overflow-hidden pt-20 pb-8 md:pb-12">
+<section class="relative overflow-hidden pt-24 pb-12 md:pb-16">
 
   <!-- Fond -->
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(96,165,250,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(96,165,250,0.12) 1px, transparent 1px); background-size: 40px 40px;"></div>
     <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, transparent 30%, var(--bg-primary) 100%);"></div>
-    <div class="absolute bottom-0 left-0 right-0 h-40" style="background: linear-gradient(to bottom, transparent, var(--bg-primary));"></div>
-    <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.1), transparent 70%); filter: blur(80px);"></div>
-    <div class="absolute top-1/4 -right-16 w-96 h-96 rounded-full" style="background: radial-gradient(circle, rgba(139,92,246,0.07), transparent 70%); filter: blur(80px);"></div>
+    <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%); filter: blur(80px);"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid lg:grid-cols-[1fr_640px] gap-8 lg:gap-10 items-center w-full py-8 md:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 md:py-12">
 
       <!-- ── TEXTE ── -->
       <div class="fade-in-up">
 
         <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-3 mb-10">
+        <div class="inline-flex items-center gap-3 mb-8">
           <span class="w-6 h-px" style="background: var(--accent);"></span>
           <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
           <span class="w-2 h-2 rounded-full animate-pulse" style="background: var(--accent);"></span>
         </div>
 
         <!-- H1 -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] mb-7">
-          Avant les outils,<br />
-          <span class="font-serif italic" style="color: var(--accent);">la réflexion.</span>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] mb-6">
+          La plupart des projets IA échouent.<br />
+          <span class="font-serif italic" style="color: var(--accent);">Avant même de commencer.</span>
         </h1>
 
-        <!-- Phrase signature -->
-        <p class="text-xl leading-relaxed mb-10 max-w-lg" style="color: var(--text-secondary);">
-          Beaucoup d'entreprises cherchent les bons outils.<br/>
-          <strong style="color: var(--text-primary);">Les meilleures commencent par les bonnes questions.</strong>
+        <!-- Sous-texte -->
+        <p class="text-lg leading-relaxed mb-10 max-w-lg" style="color: var(--text-secondary);">
+          Pas à cause de la technologie.<br/>
+          <strong style="color: var(--text-primary);">À cause du manque de cadrage en amont.</strong><br/>
+          Posez les bonnes questions avant d'investir dans les mauvais outils.
         </p>
 
         <!-- CTAs -->
         <div class="flex flex-wrap gap-4">
-          <a href="#contact"
+          <a href="#diagnostic"
             class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/25 text-base">
-            Faire le point sur mon projet
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            Faire mon diagnostic IA
+            <span class="text-xs font-semibold px-2 py-0.5 rounded" style="background: rgba(255,255,255,0.2);">2 min</span>
+            →
           </a>
           <a href="#methode"
             class="inline-flex items-center gap-2 px-7 py-4 font-medium rounded-xl transition text-base"
@@ -54,48 +54,56 @@
 
       </div>
 
-      <!-- ── VISUEL POST-ITS CHAOS ── -->
+      <!-- ── SLIDER CHAOS → CLARTÉ ── -->
       <div class="relative w-full fade-in-up" style="animation-delay:0.2s;">
-        <div class="relative rounded-2xl overflow-hidden w-full"
-          style="aspect-ratio: 4/3; background: #080d1a; border: 1px solid rgba(96,165,250,0.18); box-shadow: 0 0 60px -20px rgba(96,165,250,0.2); padding: 1rem;">
+        <div
+          id="heroSlider"
+          class="demo-slider relative rounded-2xl overflow-hidden w-full"
+          style="aspect-ratio: 1/1; background: linear-gradient(135deg, rgba(15,20,36,0.97), rgba(10,14,26,0.92)); border: 1px solid rgba(96,165,250,0.18); box-shadow: 0 0 60px -20px rgba(96,165,250,0.2); cursor: ew-resize;"
+        >
+          <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 36px 36px;"></div>
 
-          <!-- Grille fond tableau -->
-          <div class="absolute inset-0" style="
-            background-image:
-              linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 44px 44px;
-          "></div>
-
-          <!-- Post-its flottants — répartition organique sur tout l'espace -->
-          <div class="postit postit-yellow float-anim" style="top:4%;  left:5%;   --rot:-8deg; transform:rotate(-8deg);  animation-delay:0s;    font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Trop d'emails</div>
-          <div class="postit postit-blue   float-anim" style="top:6%;  left:43%;  --rot:5deg;  transform:rotate(5deg);   animation-delay:1.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Cash flow ?</div>
-          <div class="postit postit-pink   float-anim" style="top:3%;  right:5%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:0.7s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Recruter ?</div>
-          <div class="postit postit-green  float-anim" style="top:20%; left:16%;  --rot:3deg;  transform:rotate(3deg);   animation-delay:1.8s;  font-size:clamp(0.6rem,1.1vw,0.9rem);  min-width:85px; padding:0.9rem 0.75rem;">Mon équipe me sollicite</div>
-          <div class="postit postit-purple float-anim" style="top:24%; right:6%;  --rot:7deg;  transform:rotate(7deg);   animation-delay:0.5s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">CRM ?</div>
-          <div class="postit postit-orange float-anim" style="top:36%; left:5%;   --rot:4deg;  transform:rotate(4deg);   animation-delay:0.4s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Trop d'appels</div>
-          <div class="postit postit-green  float-anim" style="top:38%; left:40%;  --rot:-5deg; transform:rotate(-5deg);  animation-delay:1.1s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">IA ?</div>
-          <div class="postit postit-pink   float-anim" style="top:48%; left:6%;   --rot:-6deg; transform:rotate(-6deg);  animation-delay:1s;    font-size:clamp(0.6rem,1.1vw,0.9rem);  min-width:85px; padding:0.9rem 0.75rem;">Je manque de temps</div>
-          <div class="postit postit-yellow float-anim" style="top:52%; right:5%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:0.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Priorités ?</div>
-          <div class="postit postit-blue   float-anim" style="top:64%; left:20%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:0.9s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Devis en attente</div>
-          <div class="postit postit-orange float-anim" style="top:67%; right:7%;  --rot:-6deg; transform:rotate(-6deg);  animation-delay:1.5s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Processus ?</div>
-          <div class="postit postit-purple float-anim" style="top:78%; left:5%;   --rot:-7deg; transform:rotate(-7deg);  animation-delay:0.2s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Relances clients</div>
-          <div class="postit postit-pink   float-anim" style="top:80%; left:42%;  --rot:4deg;  transform:rotate(4deg);   animation-delay:1.6s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Reporting ?</div>
-          <div class="postit postit-green  float-anim" style="top:14%; right:8%;  --rot:-5deg; transform:rotate(-5deg);  animation-delay:2.1s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Formation équipe</div>
-          <div class="postit postit-yellow float-anim" style="top:30%; left:44%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:2.3s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Marges ?</div>
-          <div class="postit postit-orange float-anim" style="top:57%; left:36%;  --rot:-3deg; transform:rotate(-3deg);  animation-delay:2s;    font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Site web ?</div>
-          <div class="postit postit-blue   float-anim" style="top:72%; right:6%;  --rot:5deg;  transform:rotate(5deg);   animation-delay:1.9s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Réunions inutiles</div>
-          <div class="postit postit-purple float-anim" style="top:86%; left:26%;  --rot:-4deg; transform:rotate(-4deg);  animation-delay:2.4s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Croissance ?</div>
-          <div class="postit postit-pink   float-anim" style="top:88%; right:8%;  --rot:6deg;  transform:rotate(6deg);   animation-delay:0.6s;  font-size:clamp(0.65rem,1.2vw,0.95rem); min-width:85px; padding:0.9rem 0.75rem;">Facturation ?</div>
-
-          <!-- Label bas -->
-          <div class="absolute bottom-0 left-0 right-0 h-10 flex items-center justify-center"
-            style="background: linear-gradient(to top, rgba(8,13,26,0.95), transparent);">
-            <span style="font-family:'Courier New',monospace; font-size:9px; letter-spacing:0.18em; color:rgba(255,255,255,0.35); text-transform:uppercase;">
-              Votre situation actuelle · Dispersion
-            </span>
+          <!-- Labels colonnes APRÈS -->
+          <div class="demo-col-labels absolute top-0 left-0 right-0 flex z-10 pointer-events-none" style="padding: 12px 4px 0;">
+            <div class="demo-col-label" style="color: #86efac;">GARDER</div>
+            <div class="demo-col-label" style="color: #60a5fa;">AMPLIFIER</div>
+            <div class="demo-col-label" style="color: #fca5a5;">ARRÊTER</div>
+            <div class="demo-col-label" style="color: #c4b5fd;">PARKING</div>
           </div>
+          <div class="demo-col-sep" style="left: 25%;"></div>
+          <div class="demo-col-sep" style="left: 50%;"></div>
+          <div class="demo-col-sep" style="left: 75%;"></div>
 
+          <!-- Post-its -->
+          <div class="dpi postit-yellow" style="--cx:8%;  --cy:22%; --cr:-6deg; --sx:2%;  --sy:26%; --sr:-2deg;">CRM</div>
+          <div class="dpi postit-pink"   style="--cx:72%; --cy:14%; --cr:4deg;  --sx:2%;  --sy:52%; --sr:1deg;">Newsletter</div>
+          <div class="dpi postit-yellow" style="--cx:80%; --cy:44%; --cr:-3deg; --sx:2%;  --sy:74%; --sr:-1deg;">SEO local</div>
+          <div class="dpi postit-green"  style="--cx:52%; --cy:82%; --cr:-2deg; --sx:27%; --sy:26%; --sr:2deg;">LinkedIn</div>
+          <div class="dpi postit-pink"   style="--cx:28%; --cy:74%; --cr:7deg;  --sx:27%; --sy:52%; --sr:-1deg;">Facturation</div>
+          <div class="dpi postit-blue"   style="--cx:26%; --cy:48%; --cr:-5deg; --sx:27%; --sy:74%; --sr:1deg;">Analytics</div>
+          <div class="dpi postit-orange" style="--cx:38%; --cy:34%; --cr:3deg;  --sx:52%; --sy:26%; --sr:-2deg;">Pub Meta</div>
+          <div class="dpi postit-orange" style="--cx:4%;  --cy:38%; --cr:-4deg; --sx:52%; --sy:52%; --sr:1deg;">Webinars</div>
+          <div class="dpi postit-yellow" style="--cx:44%; --cy:10%; --cr:6deg;  --sx:52%; --sy:74%; --sr:-1deg;">Chatbot</div>
+          <div class="dpi postit-green"  style="--cx:14%; --cy:62%; --cr:5deg;  --sx:77%; --sy:26%; --sr:2deg;">Refonte site</div>
+          <div class="dpi postit-blue"   style="--cx:62%; --cy:64%; --cr:-8deg; --sx:77%; --sy:52%; --sr:-1deg;">Agent IA</div>
+          <div class="dpi postit-purple" style="--cx:86%; --cy:68%; --cr:4deg;  --sx:77%; --sy:74%; --sr:1deg;">Notion</div>
+
+          <!-- Handle -->
+          <div id="heroHandleLine" class="demo-handle-line pointer-events-none"></div>
+          <div id="heroHandleKnob" class="demo-handle-knob pointer-events-none">⇄</div>
+
+          <!-- Labels bas -->
+          <div class="demo-chaos-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.18em; color:var(--text-tertiary); text-transform:uppercase; z-index:5;">AVANT · DISPERSION</div>
+          <div class="demo-sorted-label absolute bottom-3 left-0 right-0 text-center pointer-events-none" style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.18em; color:#86efac; text-transform:uppercase; z-index:5;">APRÈS CADRAGE · DÉCISION</div>
+        </div>
+
+        <!-- Range slider -->
+        <input type="range" id="heroRange" min="0" max="100" value="20"
+          class="w-full mt-3 h-1.5 rounded-full appearance-none cursor-pointer"
+          style="background: linear-gradient(to right, var(--accent) 20%, var(--bg-tertiary) 20%);"
+        />
+        <div class="flex justify-between mt-1 text-xs" style="color: var(--text-tertiary);">
+          <span>← Chaos</span><span>Clarté →</span>
         </div>
       </div>
 
@@ -103,3 +111,59 @@
   </div>
 </section>
 
+<style>
+  .dpi {
+    position: absolute; width: 22%; padding: 0.45rem 0.35rem;
+    font-family: 'Caveat', cursive; font-size: 1.05rem; font-weight: 600;
+    color: #1a1a1a; text-align: center; line-height: 1.15; border-radius: 3px;
+    box-shadow: 0 6px 16px -6px rgba(0,0,0,0.55);
+    left: var(--cx); top: var(--cy); transform: rotate(var(--cr));
+    transition: left 0.6s cubic-bezier(.2,.7,.2,1), top 0.6s cubic-bezier(.2,.7,.2,1), transform 0.6s cubic-bezier(.2,.7,.2,1);
+    z-index: 3; user-select: none;
+  }
+  .demo-slider.is-sorted .dpi { left: var(--sx); top: var(--sy); transform: rotate(var(--sr)); }
+  .demo-handle-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent); left: 20%; transform: translateX(-50%); z-index: 8; box-shadow: 0 0 8px rgba(96,165,250,0.5); }
+  .demo-handle-knob { position: absolute; top: 50%; left: 20%; transform: translate(-50%,-50%); width: 34px; height: 34px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; color: white; font-weight: bold; z-index: 9; box-shadow: 0 4px 14px rgba(96,165,250,0.45); }
+  .demo-col-label { flex: 1; text-align: center; font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; opacity: 0; transition: opacity 0.5s ease; }
+  .demo-slider.is-sorted .demo-col-label { opacity: 1; }
+  .demo-col-sep { position: absolute; top: 28px; bottom: 14px; width: 1px; background: rgba(255,255,255,0.07); opacity: 0; transition: opacity 0.5s ease; z-index: 2; }
+  .demo-slider.is-sorted .demo-col-sep { opacity: 1; }
+  .demo-chaos-label { transition: opacity 0.4s ease; }
+  .demo-sorted-label { opacity: 0; transition: opacity 0.4s ease; }
+  .demo-slider.is-sorted .demo-chaos-label { opacity: 0; }
+  .demo-slider.is-sorted .demo-sorted-label { opacity: 1; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 2rem !important; line-height: 1.15 !important; }
+    .dpi { font-size: 0.75rem !important; padding: 0.3rem 0.4rem !important; width: 18% !important; }
+  }
+</style>
+
+<script>
+  const slider     = document.getElementById('heroSlider')     as HTMLElement | null;
+  const range      = document.getElementById('heroRange')      as HTMLInputElement | null;
+  const handleLine = document.getElementById('heroHandleLine') as HTMLElement | null;
+  const handleKnob = document.getElementById('heroHandleKnob') as HTMLElement | null;
+
+  function updatePos(val: number) {
+    const pct = Math.max(0, Math.min(100, val));
+    if (handleLine) handleLine.style.left = pct + '%';
+    if (handleKnob) handleKnob.style.left = pct + '%';
+    if (range) { range.value = String(Math.round(pct)); range.style.background = `linear-gradient(to right, var(--accent) ${pct}%, var(--bg-tertiary) ${pct}%)`; }
+    if (slider) slider.classList.toggle('is-sorted', pct > 50);
+  }
+
+  range?.addEventListener('input', () => updatePos(Number(range.value)));
+
+  if (slider) {
+    let dragging = false;
+    const getPct = (clientX: number) => ((clientX - slider.getBoundingClientRect().left) / slider.getBoundingClientRect().width) * 100;
+    slider.addEventListener('mousedown', (e) => { dragging = true; updatePos(getPct(e.clientX)); e.preventDefault(); });
+    window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    slider.addEventListener('touchstart', (e) => { dragging = true; updatePos(getPct(e.touches[0].clientX)); }, { passive: true });
+    window.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); } }, { passive: false });
+    window.addEventListener('touchend', () => { dragging = false; });
+  }
+  updatePos(20);
+</script>

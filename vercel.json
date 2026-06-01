@@ -1,41 +1,106 @@
 {
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com https://www.clarity.ms https://cdn.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms https://api.calendly.com; frame-src https://calendly.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "redirects": [
-    { "source": "/accompagnement-v2", "destination": "/accompagnement", "permanent": true },
-    { "source": "/accompagnement-v2/", "destination": "/accompagnement", "permanent": true },
+    { "source": "/accompagnement-v2", "destination": "/", "permanent": true },
+    { "source": "/accompagnement-v2/", "destination": "/", "permanent": true },
 
-    { "source": "/offre-seo", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-seo/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-ecommerce", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-ecommerce/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-webmarketing", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-webmarketing/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-creation-site-cms", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-creation-site-cms/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-ux-ui-cro", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-ux-ui-cro/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-communication", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-communication/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-gestion-de-projet", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-gestion-de-projet/", "destination": "/accompagnement", "permanent": true },
-    { "source": "/offre-formation", "destination": "/formation", "permanent": true },
-    { "source": "/offre-formation/", "destination": "/formation", "permanent": true },
+    { "source": "/offre-seo", "destination": "/#services", "permanent": true },
+    { "source": "/offre-seo/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-ecommerce", "destination": "/#services", "permanent": true },
+    { "source": "/offre-ecommerce/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-webmarketing", "destination": "/#services", "permanent": true },
+    { "source": "/offre-webmarketing/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-creation-site-cms", "destination": "/#services", "permanent": true },
+    { "source": "/offre-creation-site-cms/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-ux-ui-cro", "destination": "/#services", "permanent": true },
+    { "source": "/offre-ux-ui-cro/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-communication", "destination": "/#services", "permanent": true },
+    { "source": "/offre-communication/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-gestion-de-projet", "destination": "/#services", "permanent": true },
+    { "source": "/offre-gestion-de-projet/", "destination": "/#services", "permanent": true },
+    { "source": "/offre-formation", "destination": "/#services", "permanent": true },
+    { "source": "/offre-formation/", "destination": "/#services", "permanent": true },
 
-    { "source": "/diagnostic-magnetic", "destination": "/diagnostic", "permanent": true },
-    { "source": "/diagnostic-magnetic/", "destination": "/diagnostic", "permanent": true },
+    { "source": "/diagnostic-magnetic", "destination": "/#diagnostic", "permanent": true },
+    { "source": "/diagnostic-magnetic/", "destination": "/#diagnostic", "permanent": true },
 
-    { "source": "/prise-de-rdv", "destination": "/rdv", "permanent": true },
-    { "source": "/prise-de-rdv/", "destination": "/rdv", "permanent": true },
+    { "source": "/prise-de-rdv", "destination": "/contact", "permanent": true },
+    { "source": "/prise-de-rdv/", "destination": "/contact", "permanent": true },
 
-    { "source": "/plan-de-site", "destination": "/sitemap", "permanent": true },
-    { "source": "/plan-de-site/", "destination": "/sitemap", "permanent": true },
+    { "source": "/plan-de-site", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/plan-de-site/", "destination": "/sitemap.xml", "permanent": true },
 
     { "source": "/merci-contact", "destination": "/contact", "permanent": true },
     { "source": "/merci-contact/", "destination": "/contact", "permanent": true },
     { "source": "/merci", "destination": "/", "permanent": true },
     { "source": "/merci/", "destination": "/", "permanent": true },
 
-    { "source": "/elementor-10969", "destination": "/blog/comment-lia-peut-structurer-une-strategie-linkedin", "permanent": true },
-    { "source": "/elementor-10969/", "destination": "/blog/comment-lia-peut-structurer-une-strategie-linkedin", "permanent": true },
+    { "source": "/manifeste", "destination": "/#a-propos", "permanent": true },
+    { "source": "/manifeste/", "destination": "/#a-propos", "permanent": true },
+
+    { "source": "/elementor-10969", "destination": "/blog/ia-strategie-linkedin-charlotte-baert", "permanent": true },
+    { "source": "/elementor-10969/", "destination": "/blog/ia-strategie-linkedin-charlotte-baert", "permanent": true },
 
     { "source": "/creer-facilement-un-site-wordpress-grace-a-lautomatisation-et-lia", "destination": "/blog", "permanent": true },
     { "source": "/creer-facilement-un-site-wordpress-grace-a-lautomatisation-et-lia/", "destination": "/blog", "permanent": true },

@@ -4,12 +4,20 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
 const {
   title = 'Magnetic-IA — Cadrage de projets IA pour dirigeants de TPE et PME',
-  description = "25 ans d'expertise marketing et digital au service du cadrage de vos projets IA. Je remets de la clarté, de la priorité et du ROI dans votre stratégie.",
+  description = "La plupart des projets IA échouent avant même de commencer. J'aide les dirigeants de PME à poser les bonnes questions avant d'investir dans les mauvais outils. Hauts-de-France.",
+  image = 'https://magnetic-ia.fr/og-image.png',
+  url = 'https://magnetic-ia.fr',
+  type = 'website',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
 ---
 
 <!doctype html>
@@ -17,16 +25,167 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO de base -->
+    <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Indexation -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="David Gacquer — Magnetic-IA" />
+    <meta name="keywords" content="cadrage projets IA, consultant IA PME, intelligence artificielle PME, audit IA, cadrage IA Hauts-de-France, David Gacquer" />
+
+    <!-- Open Graph (LinkedIn, Facebook) -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Magnetic-IA" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@davidgacquer" />
+    <meta name="twitter:creator" content="@davidgacquer" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Analytics 4 (via gtag direct) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-441514514"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-441514514');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KHXNW4C4');</script>
+
+    <!-- Microsoft Clarity -->
+    <script is:inline type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x05fn89yxs");</script>
+
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- JSON-LD : WebSite + SearchAction (GEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Magnetic-IA",
+        "url": "https://magnetic-ia.fr",
+        "description": "Cadrage de projets IA pour dirigeants de TPE et PME — Hauts-de-France",
+        "inLanguage": "fr-FR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://magnetic-ia.fr/blog?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- JSON-LD : Person — entité David Gacquer pour LLMs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Gacquer",
+        "url": "https://magnetic-ia.fr",
+        "image": "https://magnetic-ia.fr/images/david-gacquer.png",
+        "jobTitle": "Expert en cadrage de projets IA pour PME",
+        "description": "David Gacquer est expert en cadrage de projets IA pour les dirigeants de TPE et PME. Basé à Wambrechies dans les Hauts-de-France, il aide les entreprises à poser les bonnes questions avant d'investir dans l'intelligence artificielle.",
+        "knowsAbout": [
+          "Cadrage de projets IA",
+          "Intelligence artificielle pour PME",
+          "Diagnostic IA",
+          "RGPD et IA Act",
+          "Transformation digitale",
+          "Automatisation processus métier"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Consultant en cadrage de projets IA",
+          "occupationLocation": {
+            "@type": "State",
+            "name": "Hauts-de-France"
+          }
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Wambrechies",
+          "addressRegion": "Hauts-de-France",
+          "postalCode": "59118",
+          "addressCountry": "FR"
+        },
+        "email": "contact@magnetic-ia.fr",
+        "telephone": "+33632351294",
+        "sameAs": [
+          "https://www.linkedin.com/in/david-gacquer-20973064/",
+          "https://twitter.com/davidgacquer"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Magnetic-IA",
+          "url": "https://magnetic-ia.fr"
+        }
+      }
+    </script>
+
+    <!-- JSON-LD : ProfessionalService -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Magnetic-IA",
+        "description": "Cadrage de projets IA pour dirigeants de TPE et PME — Hauts-de-France",
+        "url": "https://magnetic-ia.fr",
+        "founder": {
+          "@type": "Person",
+          "name": "David Gacquer",
+          "sameAs": "https://www.linkedin.com/in/david-gacquer-20973064/"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Hauts-de-France"
+        },
+        "serviceType": "Conseil en intelligence artificielle",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Wambrechies",
+          "addressRegion": "Hauts-de-France",
+          "addressCountry": "FR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@magnetic-ia.fr",
+          "telephone": "+33632351294",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/david-gacquer-20973064/",
+          "https://twitter.com/davidgacquer"
+        ]
+      }
+    </script>
+
+    <!-- Thème au chargement (anti-flash) -->
     <script is:inline>
       (function () {
         try {
@@ -40,8 +199,14 @@ const {
       })();
     </script>
   </head>
+
   <body class="antialiased">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHXNW4C4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <slot />
+
     <script is:inline>
       window.toggleTheme = function () {
         var html = document.documentElement;

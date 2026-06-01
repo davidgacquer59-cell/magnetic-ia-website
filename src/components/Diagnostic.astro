@@ -1,0 +1,355 @@
+---
+// Diagnostic interactif — 5 questions, jauge circulaire animée
+---
+
+<section id="diagnostic" class="py-16 md:py-24">
+  <div class="max-w-2xl mx-auto px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-10 reveal">
+      <div class="inline-flex items-center gap-2 mb-4">
+        <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Diagnostic IA</span>
+        <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--accent);"></span>
+        <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">2 min</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-3">
+        Où en êtes-vous
+        <span class="font-serif italic" style="color: var(--accent);"> vraiment avec l'IA ?</span>
+      </h2>
+      <p class="text-base" style="color: var(--text-secondary);">5 questions pour identifier votre situation et le bon point d'entrée.</p>
+    </div>
+
+    <!-- Progress -->
+    <div id="diag-progress" class="mb-6 reveal">
+      <div class="flex justify-between text-xs font-mono mb-2" style="color: var(--text-tertiary);">
+        <span id="diag-progress-label">Question 1 sur 5</span>
+        <span id="diag-progress-pct">20%</span>
+      </div>
+      <div class="h-0.5 rounded-full" style="background: var(--border);">
+        <div id="diag-progress-fill" class="h-full rounded-full transition-all duration-400" style="width: 20%; background: var(--accent);"></div>
+      </div>
+    </div>
+
+    <!-- Questions -->
+    <div id="diag-q1" class="diag-card reveal" style="display:block;">
+      <div class="diag-qnum">01 / 05</div>
+      <p class="diag-qtext">Quel est votre plus gros frein opérationnel en ce moment ?</p>
+      <div class="diag-options">
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>Trop de tâches manuelles qui me prennent du temps</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Je perds du temps à gérer des urgences qui reviennent toujours</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Des outils éparpillés qui ne se parlent pas</button>
+        <button class="diag-option" data-score="0"><span class="diag-dot"></span>Je n'ai pas de vision claire sur mes priorités</button>
+      </div>
+      <div class="diag-nav">
+        <button class="diag-btn-next" data-q="1" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <div id="diag-q2" class="diag-card" style="display:none;">
+      <div class="diag-qnum">02 / 05</div>
+      <p class="diag-qtext">Avez-vous déjà utilisé des outils IA ?</p>
+      <div class="diag-options">
+        <button class="diag-option" data-score="0"><span class="diag-dot"></span>Non, jamais testé</button>
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>Oui, ChatGPT, Gemini ou Copilot — mais sans méthode</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Oui, plusieurs outils (Make, Notion AI, Claude…) sans résultat concluant</button>
+        <button class="diag-option" data-score="3"><span class="diag-dot"></span>Oui, on a un projet IA en cours qui patine</button>
+      </div>
+      <div class="diag-nav">
+        <button class="diag-btn-back" data-q="2">← Retour</button>
+        <button class="diag-btn-next" data-q="2" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <div id="diag-q3" class="diag-card" style="display:none;">
+      <div class="diag-qnum">03 / 05</div>
+      <p class="diag-qtext">Qu'est-ce qui vous retient d'aller plus loin ?</p>
+      <div class="diag-options">
+        <button class="diag-option" data-score="0"><span class="diag-dot"></span>Je ne sais pas par où commencer</button>
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>Peur d'investir sans garantie de résultat</button>
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>Je n'ai pas le temps de m'en occuper sérieusement</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Je doute que ce soit adapté à ma taille d'entreprise</button>
+      </div>
+      <div class="diag-nav">
+        <button class="diag-btn-back" data-q="3">← Retour</button>
+        <button class="diag-btn-next" data-q="3" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <div id="diag-q4" class="diag-card" style="display:none;">
+      <div class="diag-qnum">04 / 05</div>
+      <p class="diag-qtext">Qui décide sur ce type de projet dans votre entreprise ?</p>
+      <div class="diag-options">
+        <button class="diag-option" data-score="3"><span class="diag-dot"></span>Moi seul — je décide et j'agis</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Moi avec mon équipe</button>
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>Il faut en parler avec un associé ou un DG</button>
+        <button class="diag-option" data-score="0"><span class="diag-dot"></span>Ce n'est pas encore défini</button>
+      </div>
+      <div class="diag-nav">
+        <button class="diag-btn-back" data-q="4">← Retour</button>
+        <button class="diag-btn-next" data-q="4" disabled>Suivant →</button>
+      </div>
+    </div>
+
+    <div id="diag-q5" class="diag-card" style="display:none;">
+      <div class="diag-qnum">05 / 05</div>
+      <p class="diag-qtext">Dans combien de temps voulez-vous un premier résultat concret ?</p>
+      <div class="diag-options">
+        <button class="diag-option" data-score="3"><span class="diag-dot"></span>Maintenant — c'est urgent</button>
+        <button class="diag-option" data-score="2"><span class="diag-dot"></span>Dans les 3 prochains mois</button>
+        <button class="diag-option" data-score="1"><span class="diag-dot"></span>D'ici 6 mois</button>
+        <button class="diag-option" data-score="0"><span class="diag-dot"></span>Je veux comprendre avant de m'engager</button>
+      </div>
+      <div class="diag-nav">
+        <button class="diag-btn-back" data-q="5">← Retour</button>
+        <button class="diag-btn-next diag-btn-result" data-q="5" disabled>Voir mon résultat →</button>
+      </div>
+    </div>
+
+    <!-- Résultat -->
+    <div id="diag-result" style="display:none; text-align:center;" class="reveal">
+
+      <!-- Jauge circulaire -->
+      <div style="display:flex; justify-content:center; margin-bottom:1.5rem;">
+        <div style="position:relative; width:160px; height:160px;">
+          <svg width="160" height="160" viewBox="0 0 160 160" style="transform:rotate(90deg);">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="var(--border)" stroke-width="10"/>
+            <circle id="diag-gauge-fill" cx="80" cy="80" r="70" fill="none" stroke="#60a5fa" stroke-width="10"
+              stroke-linecap="round" stroke-dasharray="439.8" stroke-dashoffset="439.8"/>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <span id="diag-gauge-num" style="font-size:2.5rem;font-weight:700;line-height:1;color:var(--text-primary);">0</span>
+            <span style="font-size:0.7rem;color:var(--text-tertiary);font-family:'JetBrains Mono',monospace;">/ 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="diag-result-label" class="text-xs font-mono font-semibold uppercase tracking-[0.2em] mb-3" style="color: var(--accent);"></div>
+      <div id="diag-result-title" class="text-2xl font-bold leading-tight mb-4"></div>
+      <p id="diag-result-text" class="text-base leading-relaxed mb-6 mx-auto" style="color: var(--text-secondary); max-width: 480px;"></p>
+
+      <div class="flex flex-col items-center gap-3">
+        <a id="diag-result-cta" href="https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=site&utm_medium=diagnostic&utm_campaign=audit-flash" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition text-base">
+        </a>
+        <a href="mailto:contact@magnetic-ia.fr" style="color: var(--text-tertiary); font-size:0.85rem; text-decoration:none; border-bottom: 1px solid var(--border);">ou m'écrire directement</a>
+        <button id="diag-restart" style="background:none;border:none;color:var(--text-tertiary);font-size:0.8rem;cursor:pointer;text-decoration:underline;margin-top:0.5rem;">↺ Recommencer</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .diag-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    animation: diagFadeIn 0.25s ease;
+  }
+  @keyframes diagFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .diag-qnum {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .diag-qtext {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+  .diag-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .diag-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    text-align: left;
+    width: 100%;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .diag-option:hover { border-color: var(--accent); color: var(--text-primary); background: rgba(96,165,250,0.05); }
+  .diag-option.selected { border-color: var(--accent); background: rgba(96,165,250,0.1); color: var(--text-primary); }
+  .diag-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 2px solid var(--border); flex-shrink: 0;
+    margin-top: 2px; transition: all 0.15s;
+  }
+  .diag-option.selected .diag-dot { background: var(--accent); border-color: var(--accent); }
+  .diag-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  .diag-btn-back {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .diag-btn-back:hover { border-color: var(--text-secondary); color: var(--text-primary); }
+  .diag-btn-next {
+    background: var(--accent);
+    border: none;
+    color: var(--bg-primary);
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-left: auto;
+    font-family: inherit;
+  }
+  .diag-btn-next:disabled { opacity: 0.3; cursor: not-allowed; }
+  .diag-btn-next:not(:disabled):hover { opacity: 0.85; }
+</style>
+
+<script is:inline>
+  (function() {
+    const scores = [0, 0, 0, 0, 0];
+    let currentQ = 1;
+
+    function showQ(n) {
+      for (let i = 1; i <= 5; i++) {
+        const el = document.getElementById('diag-q' + i);
+        if (el) el.style.display = i === n ? 'block' : 'none';
+      }
+      const pct = Math.round((n / 5) * 100);
+      const fill = document.getElementById('diag-progress-fill');
+      const label = document.getElementById('diag-progress-label');
+      const pctEl = document.getElementById('diag-progress-pct');
+      if (fill) fill.style.width = pct + '%';
+      if (label) label.textContent = 'Question ' + n + ' sur 5';
+      if (pctEl) pctEl.textContent = pct + '%';
+      currentQ = n;
+    }
+
+    function showResult() {
+      document.getElementById('diag-progress').style.display = 'none';
+      for (let i = 1; i <= 5; i++) {
+        const el = document.getElementById('diag-q' + i);
+        if (el) el.style.display = 'none';
+      }
+      document.getElementById('diag-result').style.display = 'block';
+
+      const total = scores.reduce((a, b) => a + b, 0);
+      const pct = Math.round((total / 15) * 10);
+
+      const fill = document.getElementById('diag-gauge-fill');
+      const numEl = document.getElementById('diag-gauge-num');
+      const colors = { low: '#60a5fa', mid: '#34d399', high: '#a78bfa' };
+      const colorKey = pct <= 3 ? 'low' : pct <= 6 ? 'mid' : 'high';
+
+      if (fill) {
+        fill.style.transition = 'none';
+        fill.style.strokeDashoffset = '439.8';
+        fill.setAttribute('stroke', colors[colorKey]);
+        fill.getBoundingClientRect();
+        fill.style.transition = 'stroke-dashoffset 1.6s cubic-bezier(0.4,0,0.2,1)';
+        setTimeout(() => {
+          fill.style.strokeDashoffset = String(439.8 - (pct / 10) * 439.8);
+        }, 50);
+      }
+
+      if (numEl) {
+        let c = 0;
+        const iv = setInterval(() => {
+          c++;
+          numEl.textContent = String(c);
+          if (c >= pct) clearInterval(iv);
+        }, Math.max(50, 1400 / (pct || 1)));
+      }
+
+      const data = pct <= 3
+        ? { label: 'Profil — Débutant', title: 'Vous partez de zéro.<br><em style="font-family:\'Instrument Serif\',serif;font-style:italic;color:var(--accent)">C\'est le bon moment.</em>', text: 'Partir de zéro, c\'est une chance : <strong>pas de mauvaises habitudes à défaire.</strong> Un Audit Flash vous donnera une vision claire de vos vrais leviers IA en une demi-journée.', cta: 'Réserver mon Audit Flash — 900€ →' }
+        : pct <= 6
+        ? { label: 'Profil — En transition', title: 'Vous avez des bases.<br><em style="font-family:\'Instrument Serif\',serif;font-style:italic;color:var(--accent)">Il manque un cadrage.</em>', text: 'Vous avez commencé à explorer — ChatGPT, quelques outils — mais les résultats ne sont pas là. <strong>Ce n\'est pas un problème d\'outil. C\'est un problème de méthode.</strong>', cta: 'Réserver mon Audit Flash — 900€ →' }
+        : { label: 'Profil — Prêt à accélérer', title: 'Vous avez les bases.<br><em style="font-family:\'Instrument Serif\',serif;font-style:italic;color:var(--accent)">Passez à la vitesse supérieure.</em>', text: 'Votre maturité digitale est là. <strong>Ce qu\'il vous faut, c\'est un cadrage complet</strong> — état des lieux, priorisation, conformité RGPD/IA Act, roadmap 90 jours.', cta: 'Discuter de la Mission Complète →' };
+
+      const labelEl = document.getElementById('diag-result-label');
+      const titleEl = document.getElementById('diag-result-title');
+      const textEl  = document.getElementById('diag-result-text');
+      const ctaEl   = document.getElementById('diag-result-cta');
+      if (labelEl) labelEl.textContent = data.label;
+      if (titleEl) titleEl.innerHTML   = data.title;
+      if (textEl)  textEl.innerHTML    = data.text;
+      if (ctaEl)   ctaEl.textContent   = data.cta;
+    }
+
+    // Event delegation
+    document.addEventListener('click', function(e) {
+      const t = e.target;
+
+      // Option select
+      const opt = t.closest('.diag-option');
+      if (opt) {
+        const card = opt.closest('.diag-card');
+        card.querySelectorAll('.diag-option').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        const q = parseInt(card.id.replace('diag-q', ''));
+        scores[q - 1] = parseInt(opt.dataset.score);
+        const nextBtn = card.querySelector('.diag-btn-next');
+        if (nextBtn) nextBtn.disabled = false;
+      }
+
+      // Next
+      const nextBtn = t.closest('.diag-btn-next');
+      if (nextBtn && !nextBtn.disabled) {
+        const q = parseInt(nextBtn.dataset.q);
+        if (nextBtn.classList.contains('diag-btn-result')) {
+          showResult();
+        } else {
+          showQ(q + 1);
+        }
+      }
+
+      // Back
+      const backBtn = t.closest('.diag-btn-back');
+      if (backBtn) {
+        const q = parseInt(backBtn.dataset.q);
+        showQ(q - 1);
+      }
+
+      // Restart
+      if (t.id === 'diag-restart' || t.closest('#diag-restart')) {
+        for (let i = 0; i < 5; i++) scores[i] = 0;
+        document.getElementById('diag-progress').style.display = 'block';
+        document.getElementById('diag-result').style.display = 'none';
+        document.querySelectorAll('.diag-option').forEach(o => o.classList.remove('selected'));
+        document.querySelectorAll('.diag-btn-next').forEach(b => { b.disabled = true; });
+        const gf = document.getElementById('diag-gauge-fill');
+        if (gf) { gf.style.transition = 'none'; gf.style.strokeDashoffset = '439.8'; }
+        showQ(1);
+      }
+    });
+  })();
+</script>
