@@ -9,12 +9,12 @@ const year = new Date().getFullYear();
     <!-- Ligne principale -->
     <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
 
-      <!-- Logo + baseline -->
-      <div class="flex flex-col gap-2">
+      <!-- Logo + filet + baseline -->
+      <div class="flex flex-col gap-3">
         <Logo height="28px" />
-        <p class="text-xs max-w-xs leading-relaxed" style="color: var(--text-tertiary);">
-          Cadrage de projets IA pour dirigeants de PME.<br/>
-          Wambrechies · Hauts-de-France · À distance toute la France.
+        <div class="w-full h-px" style="background: var(--border);"></div>
+        <p class="text-xs leading-relaxed" style="color: var(--text-tertiary);">
+          Cadrage de projets IA pour dirigeants de PME.
         </p>
       </div>
 
@@ -43,7 +43,7 @@ const year = new Date().getFullYear();
 
         <div class="flex flex-col gap-2">
           <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em] mb-1" style="color: var(--text-tertiary);">Contact</span>
-          <a href="mailto:contact@magnetic-ia.fr" class="hover:opacity-100 transition" style="color: var(--text-secondary); opacity: 0.7;">contact@magnetic-ia.fr</a>
+          <a href="/contact" class="hover:opacity-100 transition" style="color: var(--text-secondary); opacity: 0.7;">Formulaire de contact</a>
           <a href="tel:+33632351294" class="hover:opacity-100 transition" style="color: var(--text-secondary); opacity: 0.7;">+33 6 32 35 12 94</a>
           <div class="flex gap-3 mt-1">
             <a href="https://www.linkedin.com/in/david-gacquer-20973064/" target="_blank" rel="noopener noreferrer"
