@@ -55,3 +55,4 @@ Le cadrage IA, c'est donc à la fois plus de ROI et moins d'empreinte. Les deux 
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

@@ -64,3 +64,4 @@ C'est là que commence mon travail avec les dirigeants de PME. [Prenez 30 minute
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

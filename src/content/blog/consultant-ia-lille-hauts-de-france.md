@@ -5,7 +5,6 @@ date: "2026-06-01"
 tag: "Local"
 tagColor: "#34d399"
 readTime: "5 min"
-image: /images/blog/consultant-ia-lille.png
 ---
 
 Le marché de l'accompagnement IA explose dans les Hauts-de-France. Agences digitales, cabinets de conseil, freelances : tout le monde se revendique "expert IA". Mais la vraie question n'est pas **qui** accompagne votre projet — c'est **comment**.
@@ -53,3 +52,4 @@ La première étape est un [appel de 30 minutes, gratuit](/), pour faire le poin
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de TPE et PME. Wambrechies (59), Hauts-de-France. Interventions sur Lille, métropole lilloise et toute la France.*
+

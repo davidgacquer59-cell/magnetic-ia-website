@@ -70,3 +70,4 @@ Vous voulez construire votre matrice impact/effort IA avec un regard extérieur 
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

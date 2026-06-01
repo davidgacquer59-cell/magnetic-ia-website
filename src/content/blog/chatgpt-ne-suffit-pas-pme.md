@@ -53,3 +53,4 @@ Un [Audit Flash](/) de 4 heures permet de répondre à ces questions et de défi
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

@@ -60,3 +60,4 @@ La conformité RGPD et IA Act fait partie intégrante de ma méthode de cadrage.
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+

@@ -53,3 +53,4 @@ Vous voulez savoir où l'IA peut vraiment créer de la valeur dans votre PME ? L
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

@@ -56,3 +56,4 @@ L'[Audit Flash](/) permet de répondre à ces cinq questions et de repartir avec
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+

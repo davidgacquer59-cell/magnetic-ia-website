@@ -5,7 +5,6 @@ date: "2026-06-01"
 tag: "Méthode"
 tagColor: "#60a5fa"
 readTime: "6 min"
-image: /images/blog/par-ou-commencer-ia-pme.png
 featured: true
 ---
 
@@ -62,3 +61,4 @@ Si le diagnostic ne révèle aucun levier actionnable, je vous le dis franchemen
 ---
 
 *David Gacquer est consultant en cadrage de projets IA pour dirigeants de TPE et PME, basé à Wambrechies (Hauts-de-France). Il intervient en présentiel dans la métropole lilloise et à distance dans toute la France.*
+

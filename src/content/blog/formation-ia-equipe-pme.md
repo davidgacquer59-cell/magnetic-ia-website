@@ -54,3 +54,4 @@ Vous voulez mettre en place une formation IA adaptée à votre équipe ? [Contac
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Formation finançable OPCO/CPF.*
+

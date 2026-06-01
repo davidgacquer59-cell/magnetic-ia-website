@@ -5,7 +5,6 @@ date: "2026-06-01"
 tag: "Budget"
 tagColor: "#fbbf24"
 readTime: "7 min"
-image: /images/blog/cout-projet-ia-pme.png
 ---
 
 C'est la question que tout dirigeant de PME pose avant d'aller plus loin. Et c'est une bonne question — parce que les réponses qu'on trouve en ligne sont souvent soit trop vagues ("ça dépend") soit franchement fantaisistes ("dès 500€").
@@ -71,3 +70,4 @@ Si ce n'est pas le bon moment, je vous le dirai. Pas de rapport pour faire bonne
 ---
 
 *David Gacquer — Magnetic-IA. Cadrage de projets IA pour dirigeants de PME. Wambrechies, Hauts-de-France.*
+

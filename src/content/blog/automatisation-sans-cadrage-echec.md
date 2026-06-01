@@ -56,3 +56,4 @@ Vous voulez automatiser intelligemment ? L'[Audit Flash](/) permet d'identifier 
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+

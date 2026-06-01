@@ -47,3 +47,4 @@ C'est exactement ce que propose l'[Audit Flash](/). 4 heures pour remettre les p
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France et toute la France.*
+

@@ -65,3 +65,4 @@ Ma promesse : si un cadrage ne révèle aucun levier actionnable pour vous, je v
 ---
 
 *David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+
