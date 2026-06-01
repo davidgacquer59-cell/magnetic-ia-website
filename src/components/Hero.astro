@@ -25,21 +25,21 @@
         </div>
 
         <!-- H1 -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] mb-8 md:mb-6">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] mb-5 md:mb-6">
           La plupart des projets IA échouent.<br />
           <span class="font-serif italic" style="color: var(--accent);">Avant même de commencer.</span>
         </h1>
 
         <!-- Sous-texte -->
-        <p class="hero-subtext text-lg leading-[1.75] mb-10 md:mb-10 max-w-lg" style="color: var(--text-secondary);">
+        <p class="hero-subtext text-lg leading-[1.75] mb-4 md:mb-10 max-w-lg" style="color: var(--text-secondary);">
           Pas à cause de la technologie.<br/>
           <strong style="color: var(--text-primary);">À cause du manque de cadrage en amont.</strong><br/>
           <span class="hidden md:inline">J'aide les dirigeants de PME à poser les bonnes questions avant d'investir dans les mauvais outils.</span>
           <span class="md:hidden">J'aide les dirigeants de PME à éviter les mauvais outils.</span>
         </p>
 
-        <!-- CTAs -->
-        <div class="hero-ctas flex flex-col md:flex-row gap-3 md:gap-4">
+        <!-- CTAs desktop uniquement ici -->
+        <div class="hero-ctas-desktop" style="display:none;">
           <a href="#diagnostic"
             class="flex items-center justify-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/25 text-base">
             Faire le diagnostic
@@ -55,7 +55,7 @@
 
       </div>
 
-      <!-- ── SLIDER CHAOS → CLARTÉ ── (caché sur mobile) -->
+      <!-- ── SLIDER CHAOS → CLARTÉ ── -->
       <div class="hero-slider-wrap relative w-full fade-in-up" style="animation-delay:0.2s;">
         <div
           id="heroSlider"
@@ -132,6 +132,22 @@
       </div>
 
     </div>
+
+    <!-- CTAs mobile — après le slider -->
+    <div class="hero-ctas-mobile" style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem; padding-bottom:1rem;">
+      <a href="#diagnostic"
+        class="flex items-center justify-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/25 text-base">
+        Faire le diagnostic
+        <span class="text-xs font-semibold px-2 py-0.5 rounded" style="background: rgba(255,255,255,0.2);">2 min</span>
+        →
+      </a>
+      <a href="#methode"
+        class="flex items-center justify-center gap-2 px-7 py-4 font-medium rounded-xl transition text-base"
+        style="border: 1px solid var(--border); color: var(--text-primary);">
+        Voir la méthode
+      </a>
+    </div>
+
   </div>
 </section>
 

@@ -35,16 +35,13 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* Nav toujours fixe — défensif tous navigateurs */
+/* Nav toujours fixe */
 nav {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   z-index: 9999 !important;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 body {
@@ -327,10 +324,21 @@ body {
   .hero-slider-wrap {
     display: block;
   }
+  .hero-mobile-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+  }
   #heroSlider {
     aspect-ratio: 4/3 !important;
-    max-height: 260px;
+    max-height: 160px;
   }
+
+  /* Hero CTAs : mobile = après slider, desktop = dans colonne texte */
+  .hero-ctas-mobile { display: flex !important; }
+  .hero-ctas-desktop { display: none !important; }
 
   /* Hero — supprime le padding résiduel du slider */
   #hero-section {
@@ -384,6 +392,12 @@ body {
 
   /* Padding horizontal global réduit */
   .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+/* ── DESKTOP+ (>= 768px) : CTAs dans la colonne texte ── */
+@media (min-width: 768px) {
+  .hero-ctas-mobile { display: none !important; }
+  .hero-ctas-desktop { display: flex !important; }
 }
 
 /* ── TABLETTE (768px – 1023px) ── */
