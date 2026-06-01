@@ -32,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Nav toujours fixe — défensif tous navigateurs */
@@ -52,6 +53,7 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Reproduit V2 : Tailwind fournit la family ui-serif/Georgia, on force le weight 400. */
@@ -129,7 +131,7 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.fade-in-up { animation: fadeInUp 0.8s ease-out; }
+.fade-in-up { animation: fadeInUp 0.8s ease-out both; }
 
 /* ── Animations au scroll (IntersectionObserver) ── */
 
@@ -165,6 +167,7 @@ body {
 /* Respect des préférences d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .fade-in-up { animation: none; opacity: 1; transform: none; }
 }
 
 .card-hover { transition: all 0.3s ease; }
@@ -319,6 +322,12 @@ body {
 
 /* ── MOBILE (< 768px) ── */
 @media (max-width: 767px) {
+
+  /* Hero slider — caché sur mobile */
+  .hero-slider-wrap {
+    display: none !important;
+  }
+
 
   /* Typographie globale proportionnelle */
   h1 { font-size: clamp(1.75rem, 8vw, 2.25rem) !important; line-height: 1.15 !important; }

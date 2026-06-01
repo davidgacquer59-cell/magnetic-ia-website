@@ -2,7 +2,7 @@
 // Hero V6 — nouveau positionnement + slider Chaos→Clarté
 ---
 
-<section class="relative overflow-hidden pt-24 pb-12 md:pb-16">
+<section class="relative overflow-hidden pt-20 md:pt-24 pb-12 md:pb-16">
 
   <!-- Fond -->
   <div class="absolute inset-0 z-0 pointer-events-none">
@@ -12,33 +12,34 @@
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-8 md:py-12">
+    <div class="hero-mobile-wrap grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-6 md:py-12">
 
       <!-- ── TEXTE ── -->
       <div class="fade-in-up">
 
         <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-3 mb-8">
+        <div class="hero-eyebrow inline-flex items-center gap-3 mb-6 md:mb-8">
           <span class="w-6 h-px" style="background: var(--accent);"></span>
           <span class="text-xs font-mono font-semibold uppercase tracking-[0.1em] md:tracking-[0.22em]" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
           <span class="w-2 h-2 rounded-full animate-pulse" style="background: var(--accent);"></span>
         </div>
 
         <!-- H1 -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] mb-6">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] mb-7 md:mb-6">
           La plupart des projets IA échouent.<br />
           <span class="font-serif italic" style="color: var(--accent);">Avant même de commencer.</span>
         </h1>
 
         <!-- Sous-texte -->
-        <p class="text-lg leading-relaxed mb-10 max-w-lg" style="color: var(--text-secondary);">
+        <p class="hero-subtext text-lg leading-relaxed mb-9 md:mb-10 max-w-lg" style="color: var(--text-secondary);">
           Pas à cause de la technologie.<br/>
           <strong style="color: var(--text-primary);">À cause du manque de cadrage en amont.</strong><br/>
-          J'aide les dirigeants de PME à poser les bonnes questions avant d'investir dans les mauvais outils.
+          <span class="hidden md:inline">J'aide les dirigeants de PME à poser les bonnes questions avant d'investir dans les mauvais outils.</span>
+          <span class="md:hidden">J'aide les dirigeants de PME à éviter les mauvais outils.</span>
         </p>
 
         <!-- CTAs -->
-        <div class="flex flex-wrap gap-4">
+        <div class="hero-ctas flex flex-wrap gap-4">
           <a href="#diagnostic"
             class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl shadow-blue-500/25 text-base">
             Faire le diagnostic
@@ -54,8 +55,8 @@
 
       </div>
 
-      <!-- ── SLIDER CHAOS → CLARTÉ ── -->
-      <div class="relative w-full fade-in-up" style="animation-delay:0.2s;">
+      <!-- ── SLIDER CHAOS → CLARTÉ ── (caché sur mobile) -->
+      <div class="hero-slider-wrap relative w-full fade-in-up" style="animation-delay:0.2s;">
         <div
           id="heroSlider"
           class="demo-slider relative rounded-2xl overflow-hidden w-full"
@@ -157,18 +158,29 @@
   .demo-slider.is-sorted .demo-sorted-label { opacity: 1; }
 
   @media (max-width: 767px) {
-    section { padding-top: 5rem !important; padding-bottom: 1.5rem !important; }
-    .py-8 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
-    h1 { font-size: 1.75rem !important; line-height: 1.15 !important; margin-bottom: 0.75rem !important; }
-    .mb-6 { margin-bottom: 0.75rem !important; }
-    .mb-10 { margin-bottom: 1rem !important; }
-    .mb-8 { margin-bottom: 0.5rem !important; }
-    .text-lg { font-size: 0.875rem !important; }
-    /* Slider plus compact */
-    #heroSlider { aspect-ratio: 16/9 !important; }
-    .dpi { font-size: 0.65rem !important; padding: 0.25rem 0.35rem !important; width: 16% !important; }
-    /* Gap réduit entre colonne texte et slider */
-    .gap-8 { gap: 1rem !important; }
+    /* Hero plein écran sur mobile */
+    .hero-mobile-wrap {
+      min-height: calc(100svh - 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
+    /* Slider caché sur mobile — apparaît en scrollant */
+    .hero-slider-mobile { display: none !important; }
+    /* Eyebrow compact */
+    .hero-eyebrow { margin-bottom: 1.25rem !important; }
+    /* H1 bien dimensionné */
+    h1 { font-size: clamp(1.9rem, 7vw, 2.4rem) !important; line-height: 1.12 !important; }
+    /* Sous-texte aéré */
+    .hero-subtext { font-size: 1rem !important; line-height: 1.7 !important; margin-bottom: 0 !important; }
+    /* CTAs en bas */
+    .hero-ctas { margin-top: auto; }
+  }
+  /* Slider affiché uniquement au-dessus de 768px */
+  @media (min-width: 768px) {
+    .hero-slider-mobile { display: block !important; }
   }
 </style>
 
