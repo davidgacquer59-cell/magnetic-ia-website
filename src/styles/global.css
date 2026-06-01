@@ -300,3 +300,59 @@ body {
 .dark .moon-icon { opacity: 0; transform: scale(0); position: absolute; }
 :not(.dark) .sun-icon { opacity: 0; transform: scale(0); position: absolute; }
 :not(.dark) .moon-icon { opacity: 1; transform: scale(1); }
+
+/* ============================================================
+   Responsive mobile — corrections uniformité
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Hero — CTAs centrés */
+  .flex.flex-wrap.gap-4 {
+    justify-content: center;
+  }
+
+  /* Constat — chiffres 58%/57% plus petits */
+  .text-6xl, .text-7xl {
+    font-size: 3rem !important;
+  }
+
+  /* Méthode — typographie proportionnelle */
+  #methode h3 {
+    font-size: 0.85rem !important;
+  }
+  #methode p {
+    font-size: 0.72rem !important;
+  }
+
+  /* About — photo centrée */
+  #a-propos img {
+    width: 140px !important;
+    height: 170px !important;
+    margin: 0 auto;
+  }
+  #a-propos .flex.flex-col.md\\:flex-row {
+    align-items: center;
+  }
+
+  /* Footer — centré harmonieux */
+  footer .flex.flex-col.md\\:flex-row {
+    align-items: center;
+    text-align: center;
+  }
+  footer .flex.flex-wrap.gap-10 {
+    justify-content: center;
+    gap: 2rem;
+  }
+  footer .flex.flex-col.gap-2 {
+    align-items: center;
+  }
+  footer .flex.justify-between {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  footer .flex.gap-4 {
+    justify-content: center;
+  }
+}
