@@ -328,13 +328,13 @@ body {
     display: none !important;
   }
 
-  /* Hero — supprime l'espace vide laissé par le slider caché */
+  /* Hero — supprime le padding résiduel du slider */
+  #hero-section {
+    padding-bottom: 2rem !important;
+  }
   .hero-mobile-wrap {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-  }
-  section:has(.hero-mobile-wrap) {
-    padding-bottom: 2rem !important;
   }
 
 
