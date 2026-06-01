@@ -316,12 +316,15 @@ body {
     font-size: 3rem !important;
   }
 
-  /* Méthode — typographie proportionnelle */
+  /* Méthode — typographie proportionnelle mobile */
   #methode h3 {
-    font-size: 0.85rem !important;
+    font-size: 1rem !important;
   }
   #methode p {
-    font-size: 0.72rem !important;
+    font-size: 0.85rem !important;
+  }
+  #methode .text-xs {
+    font-size: 0.8rem !important;
   }
 
   /* About — photo centrée */
