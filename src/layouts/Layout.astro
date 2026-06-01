@@ -195,8 +195,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
             document.documentElement.classList.remove('dark');
           } else {
             document.documentElement.classList.add('dark');
+            if (!saved) localStorage.setItem('theme', 'dark');
           }
-        } catch (e) {}
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
       })();
     </script>
   </head>
