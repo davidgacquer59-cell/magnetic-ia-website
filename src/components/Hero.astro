@@ -63,11 +63,23 @@
           <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 36px 36px;"></div>
 
           <!-- Labels colonnes APRÈS -->
-          <div class="demo-col-labels absolute top-0 left-0 right-0 flex z-10 pointer-events-none" style="padding: 12px 4px 0;">
-            <div class="demo-col-label" style="color: #86efac;">GARDER</div>
-            <div class="demo-col-label" style="color: #60a5fa;">AMPLIFIER</div>
-            <div class="demo-col-label" style="color: #fca5a5;">ARRÊTER</div>
-            <div class="demo-col-label" style="color: #c4b5fd;">PLUS TARD</div>
+          <div class="demo-col-labels absolute top-0 left-0 right-0 flex z-10 pointer-events-none" style="padding: 8px 2px 0;">
+            <div class="demo-col-label" style="color: #86efac; flex-direction: column; gap: 2px;">
+              <span>QUICK WIN</span>
+              <span style="font-size: 7px; opacity: 0.6; letter-spacing: 0.05em; text-transform: none; font-family: inherit;">Fort impact · Faible effort</span>
+            </div>
+            <div class="demo-col-label" style="color: #60a5fa; flex-direction: column; gap: 2px;">
+              <span>À PLANIFIER</span>
+              <span style="font-size: 7px; opacity: 0.6; letter-spacing: 0.05em; text-transform: none; font-family: inherit;">Fort impact · Fort effort</span>
+            </div>
+            <div class="demo-col-label" style="color: #fbbf24; flex-direction: column; gap: 2px;">
+              <span>À DÉLÉGUER</span>
+              <span style="font-size: 7px; opacity: 0.6; letter-spacing: 0.05em; text-transform: none; font-family: inherit;">Faible impact · Faible effort</span>
+            </div>
+            <div class="demo-col-label" style="color: #fca5a5; flex-direction: column; gap: 2px;">
+              <span>ABANDONNER</span>
+              <span style="font-size: 7px; opacity: 0.6; letter-spacing: 0.05em; text-transform: none; font-family: inherit;">Faible impact · Fort effort</span>
+            </div>
           </div>
           <div class="demo-col-sep" style="left: 25%;"></div>
           <div class="demo-col-sep" style="left: 50%;"></div>
@@ -123,7 +135,7 @@
   .demo-slider.is-sorted .dpi { left: var(--sx); top: var(--sy); transform: rotate(var(--sr)); }
   .demo-handle-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent); left: 20%; transform: translateX(-50%); z-index: 8; box-shadow: 0 0 8px rgba(96,165,250,0.5); }
   .demo-handle-knob { position: absolute; top: 50%; left: 20%; transform: translate(-50%,-50%); width: 34px; height: 34px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; color: white; font-weight: bold; z-index: 9; box-shadow: 0 4px 14px rgba(96,165,250,0.45); }
-  .demo-col-label { flex: 1; text-align: center; font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; opacity: 0; transition: opacity 0.5s ease; }
+  .demo-col-label { flex: 1; text-align: center; font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; opacity: 0; transition: opacity 0.5s ease; display: flex; align-items: center; justify-content: center; }
   .demo-slider.is-sorted .demo-col-label { opacity: 1; }
   .demo-col-sep { position: absolute; top: 28px; bottom: 14px; width: 1px; background: rgba(255,255,255,0.07); opacity: 0; transition: opacity 0.5s ease; z-index: 2; }
   .demo-slider.is-sorted .demo-col-sep { opacity: 1; }
