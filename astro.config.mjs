@@ -16,6 +16,7 @@ export default defineConfig({
         'https://magnetic-ia.fr/contact/',
         'https://magnetic-ia.fr/mentions-legales/',
         'https://magnetic-ia.fr/cgv/',
+        'https://magnetic-ia.fr/accompagnement/',
       ],
     }),
   ],

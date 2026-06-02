@@ -1,0 +1,270 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Accompagnement cadrage de projets IA — Magnetic-IA"
+  description="De l'idée au plan d'action : méthode en 5 étapes et 3 niveaux d'accompagnement pour structurer votre projet IA sans se tromper de priorité."
+>
+  <Nav />
+  <main class="pt-28 pb-20">
+
+    <!-- ═══════════════════════════════════
+         SECTION 1 — MÉTHODE
+    ════════════════════════════════════ -->
+    <div class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-16 reveal">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="w-6 h-px" style="background: var(--accent);"></span>
+            <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Ma méthode</span>
+          </div>
+          <h1 class="font-bold tracking-tight leading-tight">
+            De l'idée
+            <span class="font-serif italic" style="color: var(--text-tertiary);"> au plan d'action.</span>
+          </h1>
+          <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
+            5 étapes qui transforment un problème flou en décisions claires.
+          </p>
+        </div>
+
+        <!-- Connecteur horizontal (desktop) -->
+        <div class="hidden lg:block relative mb-2">
+          <div class="absolute top-7 left-[10%] right-[10%] h-px" style="background: linear-gradient(to right, transparent, var(--border) 15%, var(--border) 85%, transparent);"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 relative">
+
+          <!-- 01 COMPRENDRE -->
+          <div class="relative p-6 rounded-2xl reveal reveal-delay-1" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.25);">
+              <svg class="w-6 h-6" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+              </svg>
+            </div>
+            <div class="text-center mb-3">
+              <span class="text-sm font-mono font-semibold uppercase tracking-[0.15em]" style="color: #60a5fa;">01</span>
+              <h3 class="font-bold mt-1">Comprendre</h3>
+            </div>
+            <p class="leading-relaxed text-center" style="color: var(--text-secondary);">Entretiens dirigeant et équipes. Inventaire complet de l'existant. Cartographie des flux et outils.</p>
+            <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Audit de l'existant</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Identification des flux</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Points de friction</div>
+            </div>
+          </div>
+
+          <!-- 02 DÉCOMPOSER -->
+          <div class="relative p-6 rounded-2xl reveal reveal-delay-2" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.25);">
+              <svg class="w-6 h-6" style="color: #a78bfa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+              </svg>
+            </div>
+            <div class="text-center mb-3">
+              <span class="text-sm font-mono font-semibold uppercase tracking-[0.15em]" style="color: #a78bfa;">02</span>
+              <h3 class="font-bold mt-1">Décomposer</h3>
+            </div>
+            <p class="leading-relaxed text-center" style="color: var(--text-secondary);">Méthode des 5 Why. Identification des causes racines. Ce qu'on cherche à résoudre vraiment.</p>
+            <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Causes racines</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Problème réel vs. symptôme</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Données vérifiées</div>
+            </div>
+          </div>
+
+          <!-- 03 PRIORISER -->
+          <div class="relative p-6 rounded-2xl reveal reveal-delay-3" style="background: var(--bg-secondary); border: 1px solid rgba(251,191,36,0.3);">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-xs font-bold" style="background: #fbbf24; color: #1a1a1a;">Étape clé</div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3);">
+              <svg class="w-6 h-6" style="color: #fbbf24;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+              </svg>
+            </div>
+            <div class="text-center mb-3">
+              <span class="text-sm font-mono font-semibold uppercase tracking-[0.15em]" style="color: #fbbf24;">03</span>
+              <h3 class="font-bold mt-1">Prioriser</h3>
+            </div>
+            <p class="leading-relaxed text-center" style="color: var(--text-secondary);">Quick Win · À planifier · À déléguer · À arrêter. Matrice impact / effort. Décisions assumées et documentées.</p>
+            <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Matrice impact / effort</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Quick wins identifiés</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Arbitrages documentés</div>
+            </div>
+          </div>
+
+          <!-- 04 CONSTRUIRE -->
+          <div class="relative p-6 rounded-2xl reveal reveal-delay-4" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.25);">
+              <svg class="w-6 h-6" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+            <div class="text-center mb-3">
+              <span class="text-sm font-mono font-semibold uppercase tracking-[0.15em]" style="color: #34d399;">04</span>
+              <h3 class="font-bold mt-1">Construire</h3>
+            </div>
+            <p class="leading-relaxed text-center" style="color: var(--text-secondary);">Feuille de route 90 jours. Sélection des outils adaptés. KPIs de pilotage. Plan d'action séquencé.</p>
+            <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Roadmap 90 jours</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Outils sélectionnés</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ RGPD / IA Act vérifié</div>
+            </div>
+          </div>
+
+          <!-- 05 MESURER -->
+          <div class="relative p-6 rounded-2xl reveal reveal-delay-5" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mx-auto relative z-10" style="background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.25);">
+              <svg class="w-6 h-6" style="color: #22d3ee;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div class="text-center mb-3">
+              <span class="text-sm font-mono font-semibold uppercase tracking-[0.15em]" style="color: #22d3ee;">05</span>
+              <h3 class="font-bold mt-1">Mesurer</h3>
+            </div>
+            <p class="leading-relaxed text-center" style="color: var(--text-secondary);">Suivi des indicateurs. Ajustements continus. ROI prouvé, pas supposé. Ce qui marche, on amplifie.</p>
+            <div class="mt-4 pt-4 border-t space-y-1.5" style="border-color: var(--border);">
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Tableau de bord KPIs</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Avant / Après mesuré</div>
+              <div class="text-sm" style="color: var(--text-tertiary);">→ Itération continue</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════
+         SECTION 2 — COMMENT ON TRAVAILLE
+    ════════════════════════════════════ -->
+    <div class="py-16 md:py-24" style="background: var(--bg-secondary);">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-16 reveal">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="w-6 h-px" style="background: var(--accent);"></span>
+            <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Comment on travaille ensemble ?</span>
+          </div>
+          <h2 class="font-bold tracking-tight leading-tight">
+            On commence petit,
+            <span class="font-serif italic" style="color: var(--text-tertiary);"> on avance ensemble.</span>
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">
+            Pas de grosse décision dès le départ. On se découvre, on valide que ça a du sens, puis on structure. À chaque étape, vous avez le choix de continuer ou non.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6 mb-10 reveal">
+
+          <!-- Carte 1: Découverte -->
+          <div class="p-8 rounded-2xl flex flex-col" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">1</div>
+              <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Découverte</span>
+            </div>
+            <h3 class="font-bold mb-3">Appel de 30 min</h3>
+            <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">On fait le point sur votre situation, vos enjeux, ce que vous avez déjà testé. Je vous dis franchement si et comment je peux vous aider.</p>
+            <div class="mb-5" style="text-align:center;">
+              <span class="text-2xl font-bold">Gratuit</span>
+              <span class="text-xs ml-2" style="color: var(--text-tertiary);">Sans engagement</span>
+            </div>
+            <a href="https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=site&utm_medium=accompagnement&utm_campaign=decouverte-gratuit" target="_blank" rel="noopener noreferrer" class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition" style="border: 1px solid var(--border); color: var(--text-primary);">
+              Réserver →
+            </a>
+          </div>
+
+          <!-- Carte 2: Audit Flash (vedette) -->
+          <div class="p-8 rounded-2xl flex flex-col relative" style="background: var(--bg-primary); border: 2px solid var(--accent); box-shadow: 0 0 40px -10px rgba(96,165,250,0.2);">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap" style="background: var(--accent); color: white;">Point d'entrée recommandé</div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3);">2</div>
+              <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--accent);">Audit Flash</span>
+            </div>
+            <h3 class="font-bold mb-3">Demi-journée de diagnostic</h3>
+            <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">En 4 heures : état des lieux de votre digital, identification des 3 leviers prioritaires, premières décisions GARDER / AMPLIFIER / ARRÊTER. Vous repartez avec un plan d'action clair.</p>
+            <ul class="space-y-2 text-sm mb-5" style="color: var(--text-secondary);">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Cartographie de l'existant
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Top 3 des priorités identifiées
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Rapport + plan d'action
+              </li>
+            </ul>
+            <div class="mb-5">
+              <span class="text-3xl font-bold" style="display:block; text-align:center;">900 €</span>
+            </div>
+            <a href="https://calendly.com/davidgacquer59/consultation-decouverte?utm_source=site&utm_medium=accompagnement&utm_campaign=audit-flash" target="_blank" rel="noopener noreferrer" class="block text-center px-4 py-3 rounded-xl text-sm font-bold bg-blue-500 hover:bg-blue-600 text-white transition shadow-lg shadow-blue-500/20">
+              Je veux cet audit →
+            </a>
+          </div>
+
+          <!-- Carte 3: Mission complète -->
+          <div class="p-8 rounded-2xl flex flex-col" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background: var(--bg-tertiary); color: var(--text-tertiary); border: 1px solid var(--border);">3</div>
+              <span class="text-xs font-mono font-semibold uppercase tracking-[0.15em]" style="color: var(--text-tertiary);">Mission complète</span>
+            </div>
+            <h3 class="font-bold mb-3">Diagnostic IA Dirigeant</h3>
+            <p class="text-sm leading-relaxed mb-5 flex-1" style="color: var(--text-secondary);">4 à 6 semaines de cadrage complet : état des lieux sans angles morts, cas d'usage IA priorisés, conformité RGPD / IA Act, roadmap 90 jours exécutable.</p>
+            <ul class="space-y-2 text-sm mb-5" style="color: var(--text-secondary);">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Méthode 5 étapes complète
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Rapport + roadmap + présentation
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: var(--accent);" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 001.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Vérification RGPD / IA Act
+              </li>
+            </ul>
+            <div class="mb-5">
+              <span class="text-2xl font-bold" style="display:block; text-align:center;">À partir de 4 500 €</span>
+              <span class="text-xs mt-1" style="display:block; text-align:center; color: var(--text-tertiary);">L'Audit Flash est déductible si vous poursuivez.</span>
+            </div>
+            <a href="mailto:contact@magnetic-ia.fr" class="block text-center px-4 py-2.5 rounded-xl text-sm font-semibold transition" style="border: 1px solid var(--border); color: var(--text-primary);">
+              Discuter du périmètre →
+            </a>
+          </div>
+
+        </div>
+
+        <p class="text-xs mb-10 reveal" style="color: var(--text-tertiary);">
+          TVA non applicable, art. 293B du CGI.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-5 reveal">
+          <div class="p-6 rounded-2xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex items-start justify-between mb-3">
+              <h4 class="font-semibold">Formation équipes</h4>
+              <span class="text-sm font-bold" style="color: var(--accent);">1 500 € / jour</span>
+            </div>
+            <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Initiation IA, cadrage de projets, marketing digital. Format intra ou inter-entreprise. <span style="color: var(--text-tertiary);">Finançable OPCO / CPF.</span></p>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--bg-primary); border: 1px solid var(--border);">
+            <div class="flex items-start justify-between mb-3">
+              <h4 class="font-semibold">Accompagnement projet</h4>
+              <span class="text-sm font-bold" style="color: var(--accent);">Sur devis</span>
+            </div>
+            <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">Pilotage de la conception à la production. Réseau de partenaires devs et no-code. <span style="color: var(--text-tertiary);">500 € / jour.</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+</Layout>

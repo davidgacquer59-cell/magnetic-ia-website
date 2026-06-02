@@ -62,6 +62,8 @@
     }
   ],
   "redirects": [
+    { "source": "/a-propos", "destination": "/#a-propos", "permanent": true },
+    { "source": "/a-propos/", "destination": "/#a-propos", "permanent": true },
     { "source": "/accompagnement-v2", "destination": "/", "permanent": true },
     { "source": "/accompagnement-v2/", "destination": "/", "permanent": true },
 
