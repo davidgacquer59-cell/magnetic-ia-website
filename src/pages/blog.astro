@@ -83,12 +83,21 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
 
             <div class="p-7">
               <div class="flex items-center justify-between mb-4">
-                <span
-                  class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold"
-                  style={`background: ${article.data.tagColor}18; color: ${article.data.tagColor}; border: 1px solid ${article.data.tagColor}30;`}
-                >
-                  {article.data.tag}
-                </span>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold"
+                    style={`background: ${article.data.tagColor}18; color: ${article.data.tagColor}; border: 1px solid ${article.data.tagColor}30;`}
+                  >
+                    {article.data.tag}
+                  </span>
+                  <span
+                    class="new-badge hidden inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold"
+                    data-article-date={article.data.date}
+                    style="background: rgba(255,93,143,0.15); color: #ff5d8f; border: 1px solid rgba(255,93,143,0.35); letter-spacing: 0.05em;"
+                  >
+                    Nouveau
+                  </span>
+                </div>
                 <span class="text-xs" style="color: var(--text-tertiary);">{article.data.readTime} de lecture</span>
               </div>
 
@@ -177,4 +186,14 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
 
   // Activer "Tous" par défaut
   filterByTag('Tous');
+
+  // Badge "Nouveau" : visible pendant 7 jours après la date de l'article
+  const NEW_DAYS = 7;
+  const now = Date.now();
+  document.querySelectorAll<HTMLElement>('.new-badge').forEach((badge) => {
+    const date = badge.dataset.articleDate;
+    if (!date) return;
+    const age = (now - new Date(date).getTime()) / (1000 * 60 * 60 * 24);
+    if (age <= NEW_DAYS) badge.classList.remove('hidden');
+  });
 </script>
