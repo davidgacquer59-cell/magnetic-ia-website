@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -100,14 +101,11 @@ const icon = tagIcon[article.data.tag] ?? '●';
         <!-- ═══ COLONNE GAUCHE ═══ -->
         <div>
 
-          <!-- Breadcrumb — masqué sur mobile (remplacé par le bouton retour navigateur) -->
-          <nav class="hidden md:flex items-center gap-2 text-xs mb-8 flex-wrap" style="color: var(--text-tertiary);">
-            <a href="/" class="hover:opacity-70 transition">Accueil</a>
-            <span>/</span>
-            <a href="/blog" class="hover:opacity-70 transition">Blog</a>
-            <span>/</span>
-            <span class="truncate max-w-[240px]" style="color: var(--text-secondary);">{article.data.title}</span>
-          </nav>
+          <Breadcrumb items={[
+            { label: 'Accueil', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: article.data.title },
+          ]} />
 
           <!-- Tag + meta -->
           <div class="flex items-center gap-3 mb-5 flex-wrap">

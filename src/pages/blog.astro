@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const allArticles = await getCollection('blog');
@@ -19,6 +20,11 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
   <Nav />
   <main class="pt-28 pb-20">
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+      <Breadcrumb items={[
+        { label: 'Accueil', href: '/' },
+        { label: 'Blog' },
+      ]} />
 
       <!-- Header -->
       <div class="mb-12">

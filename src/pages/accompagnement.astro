@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -16,6 +17,11 @@ import Footer from '../components/Footer.astro';
     ════════════════════════════════════ -->
     <div class="py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <Breadcrumb items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Accompagnement' },
+        ]} />
 
         <div class="max-w-3xl mb-16 reveal">
           <div class="inline-flex items-center gap-3 mb-4">
