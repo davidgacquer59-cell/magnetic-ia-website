@@ -76,12 +76,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Hiérarchie typographique globale (s'applique partout, sans overrides section) ── */
-h1 { font-size: var(--fs-display); line-height: var(--lh-tight);  font-weight: 700; }
-h2 { font-size: var(--fs-h1);     line-height: var(--lh-tight);  font-weight: 700; }
-h3 { font-size: var(--fs-h3);     line-height: var(--lh-snug);   font-weight: 600; }
-h4 { font-size: var(--fs-body-lg);line-height: var(--lh-normal); font-weight: 600; }
-p  { font-size: var(--fs-body);   line-height: var(--lh-relaxed); }
+/* ── Hiérarchie typographique de base — dans @layer base pour que les utilitaires Tailwind puissent surcharger ── */
+@layer base {
+  h1 { font-size: var(--fs-display); line-height: var(--lh-tight);  font-weight: 700; }
+  h2 { font-size: var(--fs-h1);     line-height: var(--lh-tight);  font-weight: 700; }
+  h3 { font-size: var(--fs-h3);     line-height: var(--lh-snug);   font-weight: 600; }
+  h4 { font-size: var(--fs-body-lg);line-height: var(--lh-normal); font-weight: 600; }
+  p  { font-size: var(--fs-body);   line-height: var(--lh-relaxed); }
+}
 
 /* Reproduit V2 : Tailwind fournit la family ui-serif/Georgia, on force le weight 400. */
 .font-serif { font-weight: 400; }
@@ -305,6 +307,93 @@ p  { font-size: var(--fs-body);   line-height: var(--lh-relaxed); }
   border-radius: 4px;
   transform: rotate(-2deg);
   max-width: 90%;
+}
+
+/* ============================================================
+   Prose — contenu Markdown des articles de blog
+   ============================================================ */
+.prose {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+  max-width: 65ch;
+}
+.prose h2 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose h3 {
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.prose h4 {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose p {
+  margin-bottom: 1.25rem;
+}
+.prose strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose ul, .prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.prose ul { list-style-type: disc; }
+.prose ol { list-style-type: decimal; }
+.prose li {
+  margin-bottom: 0.4rem;
+}
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-tertiary);
+}
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg-tertiary);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--accent);
+}
+.prose pre {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: var(--text-primary);
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
 }
 
 /* ============================================================
