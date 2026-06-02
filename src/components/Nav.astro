@@ -116,6 +116,7 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
     var menu = document.getElementById('mobile-menu');
     var hamburger = document.getElementById('hamburger-icon');
     var closeIco = document.getElementById('close-icon');
+
     if (btn) {
       btn.addEventListener('click', function () {
         var open = menu.classList.toggle('hidden');
@@ -124,11 +125,38 @@ const CALENDLY_URL = 'https://calendly.com/davidgacquer59/consultation-decouvert
         closeIco.classList.toggle('hidden');
       });
     }
+
     window.closeMobileMenu = function () {
       if (menu) menu.classList.add('hidden');
       if (btn) btn.setAttribute('aria-expanded', 'false');
       if (hamburger) hamburger.classList.remove('hidden');
       if (closeIco) closeIco.classList.add('hidden');
     };
+
+    // Scroll ancres fiable : ferme le menu, attend, puis scrolle avec le bon offset
+    function scrollToAnchor(hash) {
+      var target = document.querySelector(hash);
+      if (!target) return;
+      var navHeight = 80;
+      var top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href*="#"]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      var hashIndex = href.indexOf('#');
+      if (hashIndex === -1) return;
+      var hash = href.slice(hashIndex);
+      if (hash.length <= 1) return;
+      // Même page seulement
+      var path = href.slice(0, hashIndex) || window.location.pathname;
+      if (path && path !== '/' && path !== window.location.pathname) return;
+      e.preventDefault();
+      window.closeMobileMenu();
+      // Attendre la fermeture du menu avant de scroller
+      setTimeout(function () { scrollToAnchor(hash); }, 50);
+    });
   })();
 </script>
