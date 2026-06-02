@@ -49,7 +49,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  overflow-x: hidden;
 }
 
 /* Nav toujours fixe — GPU layer pour éviter le jump Android/Chrome au scroll */
@@ -74,6 +73,7 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ── Hiérarchie typographique de base — dans @layer base pour que les utilitaires Tailwind puissent surcharger ── */
