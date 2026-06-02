@@ -100,8 +100,8 @@ const icon = tagIcon[article.data.tag] ?? '●';
         <!-- ═══ COLONNE GAUCHE ═══ -->
         <div>
 
-          <!-- Breadcrumb -->
-          <nav class="flex items-center gap-2 text-xs mb-8 flex-wrap" style="color: var(--text-tertiary);">
+          <!-- Breadcrumb — masqué sur mobile (remplacé par le bouton retour navigateur) -->
+          <nav class="hidden md:flex items-center gap-2 text-xs mb-8 flex-wrap" style="color: var(--text-tertiary);">
             <a href="/" class="hover:opacity-70 transition">Accueil</a>
             <span>/</span>
             <a href="/blog" class="hover:opacity-70 transition">Blog</a>
