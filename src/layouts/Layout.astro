@@ -205,6 +205,54 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
     <slot />
     <CookieBanner />
 
+    <!-- Scroll ancres : gestion JS complète pour iOS Safari + Android -->
+    <script is:inline>
+      (function () {
+        var NAV_H = 80;
+
+        function scrollToHash(hash, smooth) {
+          if (!hash || hash.length <= 1) return;
+          var target = document.querySelector(hash);
+          if (!target) return;
+          var top = target.getBoundingClientRect().top + window.scrollY - NAV_H;
+          window.scrollTo({ top: top, behavior: smooth ? 'smooth' : 'auto' });
+        }
+
+        // Hash présent à l'arrivée : on corrige après stabilisation du layout
+        // Délai 300ms pour laisser fonts + images se poser sur mobile réel
+        if (window.location.hash) {
+          window.addEventListener('load', function () {
+            setTimeout(function () {
+              scrollToHash(window.location.hash, false);
+            }, 300);
+          });
+        }
+
+        // Clics sur ancres : smooth scroll JS seulement si on est déjà sur la bonne page
+        document.addEventListener('click', function (e) {
+          var link = e.target.closest('a[href*="#"]');
+          if (!link) return;
+          var href = link.getAttribute('href');
+          var hashIdx = href.indexOf('#');
+          if (hashIdx === -1) return;
+          var hash = href.slice(hashIdx);
+          if (hash.length <= 1) return;
+          // Extraire le chemin cible (avant le #)
+          var targetPath = href.slice(0, hashIdx);
+          // Normaliser : "" ou "/" = page d'accueil
+          if (targetPath === '') targetPath = window.location.pathname;
+          if (targetPath === '/') targetPath = '/';
+          var currentPath = window.location.pathname;
+          // Si la cible est une autre page, laisser le navigateur gérer
+          if (targetPath !== currentPath && !(targetPath === '/' && currentPath === '/')) return;
+          // Même page : on intercepte et on scrolle
+          e.preventDefault();
+          if (typeof window.closeMobileMenu === 'function') window.closeMobileMenu();
+          setTimeout(function () { scrollToHash(hash, true); }, 60);
+        });
+      })();
+    </script>
+
     <!-- Analytics chargés après le rendu de la page -->
     <script is:inline>
       window.addEventListener('load', function () {

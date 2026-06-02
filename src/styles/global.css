@@ -47,8 +47,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 80px;
+}
+
+/* Offset ancres pour nav fixe — plus fiable que scroll-padding-top sur Safari/Android */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 /* Nav toujours fixe — GPU layer pour éviter le jump Android/Chrome au scroll */
