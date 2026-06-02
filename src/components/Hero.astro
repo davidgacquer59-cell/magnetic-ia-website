@@ -8,7 +8,7 @@
   <div class="absolute inset-0 z-0 pointer-events-none">
     <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(96,165,250,0.12) 1px, transparent 1px); background-size: 40px 40px;"></div>
     <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, transparent 30%, var(--bg-primary) 100%);"></div>
-    <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%); filter: blur(80px);"></div>
+    <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%);"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -18,7 +18,7 @@
       <div class="fade-in-up">
 
         <!-- Eyebrow -->
-        <div class="hero-eyebrow inline-flex items-center gap-3 mb-8">
+        <div class="hero-eyebrow inline-flex items-center gap-3 mb-8" aria-hidden="true">
           <span class="w-6 h-px" style="background: var(--accent);"></span>
           <span class="text-xs font-mono font-semibold uppercase tracking-[0.1em] md:tracking-[0.22em] whitespace-nowrap" style="color: var(--accent);">Cadrage de projets IA · Hauts-de-France</span>
           <span class="w-2 h-2 rounded-full animate-pulse" style="background: var(--accent);"></span>
@@ -109,8 +109,8 @@
           <div class="dpi postit-blue"   style="--cx:58%; --cy:84%; --cr:-3deg; --sx:77%; --sy:78%; --sr:2deg;">Être partout à la fois</div>
 
           <!-- Handle -->
-          <div id="heroHandleLine" class="demo-handle-line pointer-events-none"></div>
-          <div id="heroHandleKnob" class="demo-handle-knob pointer-events-none">⇄</div>
+          <div id="heroHandleLine" class="demo-handle-line pointer-events-none" aria-hidden="true"></div>
+          <div id="heroHandleKnob" class="demo-handle-knob pointer-events-none" aria-hidden="true">⇄</div>
 
           <!-- Labels bas -->
           <div class="demo-chaos-label absolute bottom-0 left-0 right-0 h-8 flex items-center justify-center pointer-events-none" style="background: linear-gradient(to top, rgba(0,0,0,0.06), transparent); z-index:5;">
@@ -125,6 +125,7 @@
         <input type="range" id="heroRange" min="0" max="100" value="20"
           class="w-full mt-3 h-1.5 rounded-full appearance-none cursor-pointer"
           style="background: linear-gradient(to right, var(--accent) 20%, var(--bg-tertiary) 20%);"
+          aria-label="Ajuster de Chaos à Clarté"
         />
         <div class="flex justify-between mt-1 text-xs" style="color: var(--text-tertiary);">
           <span>← Chaos</span><span>Clarté →</span>
