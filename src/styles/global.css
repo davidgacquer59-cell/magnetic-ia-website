@@ -505,7 +505,7 @@ body {
 /* ── DESKTOP+ (>= 768px) : CTAs dans la colonne texte ── */
 @media (min-width: 768px) {
   .hero-ctas-mobile { display: none !important; }
-  .hero-ctas-desktop { display: flex !important; }
+  .hero-ctas-desktop { display: flex !important; gap: 1rem; align-items: center; }
 }
 
 /* ── TABLETTE (768px – 1023px) ── */
