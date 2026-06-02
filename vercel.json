@@ -90,8 +90,8 @@
     { "source": "/prise-de-rdv", "destination": "/contact", "permanent": true },
     { "source": "/prise-de-rdv/", "destination": "/contact", "permanent": true },
 
-    { "source": "/plan-de-site", "destination": "/sitemap.xml", "permanent": true },
-    { "source": "/plan-de-site/", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/plan-de-site", "destination": "/", "permanent": true },
+    { "source": "/plan-de-site/", "destination": "/", "permanent": true },
 
     { "source": "/merci-contact", "destination": "/contact", "permanent": true },
     { "source": "/merci-contact/", "destination": "/contact", "permanent": true },
