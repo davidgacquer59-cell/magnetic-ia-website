@@ -61,6 +61,12 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
+/* Contient les transforms des animations reveal (translateX ±32px) qui débordent
+   sinon de 32px sur les côtés et créent un scroll horizontal parasite */
+section {
+  overflow-x: hidden;
+}
+
 /* Nav principale toujours fixe */
 nav.site-nav {
   position: fixed !important;
