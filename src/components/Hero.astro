@@ -208,6 +208,8 @@
 </style>
 
 <script>
+  // Slider masqué sur mobile (hidden md:block) — inutile d'initialiser sous 768px
+  if (window.innerWidth >= 768) {
   const slider     = document.getElementById('heroSlider')     as HTMLElement | null;
   const range      = document.getElementById('heroRange')      as HTMLInputElement | null;
   const handleLine = document.getElementById('heroHandleLine') as HTMLElement | null;
@@ -234,4 +236,5 @@
     window.addEventListener('touchend', () => { dragging = false; });
   }
   updatePos(20);
+  } // end mobile guard
 </script>

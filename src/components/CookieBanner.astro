@@ -294,10 +294,15 @@
 <script is:inline>
 (function() {
   const STORAGE_KEY = 'magnetic-ia-cookies';
-
+  // applyConsent au plus tôt pour bloquer GA si refus
   function getConsent() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch { return null; }
   }
+  var _early = getConsent();
+  if (_early && !_early.analytics) window['ga-disable-G-441514514'] = true;
+
+  // Le reste différé après le premier paint
+  function initBanner() {
 
   function saveConsent(analytics, clarity) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ analytics, clarity, date: new Date().toISOString() }));
@@ -368,5 +373,12 @@
       document.getElementById('cookie-modal').style.display = 'flex';
     }
   });
+  } // end initBanner
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initBanner, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', initBanner);
+  }
 })();
 </script>
