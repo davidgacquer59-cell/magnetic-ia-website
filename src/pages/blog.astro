@@ -59,7 +59,7 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
           >
             <!-- Image / header coloré -->
             {article.data.image ? (
-              <div class="aspect-video overflow-hidden">
+              <div class="overflow-hidden" style="height: 120px;">
                 <img
                   src={article.data.image}
                   alt={article.data.imageAlt || article.data.title}
@@ -68,12 +68,12 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
               </div>
             ) : (
               <div
-                class="aspect-video flex items-center justify-center relative overflow-hidden"
-                style={`background: linear-gradient(135deg, ${article.data.tagColor}18, ${article.data.tagColor}08);`}
+                class="flex items-center justify-center relative overflow-hidden"
+                style={`height: 120px; background: linear-gradient(135deg, ${article.data.tagColor}18, ${article.data.tagColor}08);`}
               >
-                <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 24px 24px;"></div>
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 20px 20px;"></div>
                 <span
-                  class="text-4xl font-bold font-serif italic relative"
+                  class="text-2xl font-bold font-serif italic relative"
                   style={`color: ${article.data.tagColor}40;`}
                 >
                   {article.data.tag}
@@ -81,7 +81,7 @@ const tags = ['Tous', ...new Set(articles.map(a => a.data.tag))];
               </div>
             )}
 
-            <div class="p-7">
+            <div class="p-5">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-2">
                   <span

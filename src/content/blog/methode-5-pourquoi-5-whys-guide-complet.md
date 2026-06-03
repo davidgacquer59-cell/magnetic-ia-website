@@ -157,9 +157,7 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
   <div style="padding: 1rem 1.5rem; background: rgba(167,139,250,0.1); border-bottom: 1px solid rgba(167,139,250,0.2);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #a78bfa; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600;">Cas réel — Entrepôt logistique</p>
   </div>
-
   <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(239,68,68,0.15); border: 2px solid rgba(239,68,68,0.5); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: #f87171;">⚠</div>
@@ -170,7 +168,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         <div style="font-size: 0.88rem; color: #e2e8f0; font-weight: 500;">20% des commandes présentent une erreur de picking à l'expédition → 3,5h de retraitement par semaine</div>
       </div>
     </div>
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: #a78bfa; flex-shrink: 0;">1</div>
@@ -183,7 +180,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         </div>
       </div>
     </div>
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: #a78bfa; flex-shrink: 0;">2</div>
@@ -196,7 +192,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         </div>
       </div>
     </div>
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: #a78bfa; flex-shrink: 0;">3</div>
@@ -209,7 +204,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         </div>
       </div>
     </div>
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.4); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: #a78bfa; flex-shrink: 0;">4</div>
@@ -222,7 +216,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         </div>
       </div>
     </div>
-
     <div style="display: flex; align-items: stretch; gap: 1rem;">
       <div style="display: flex; flex-direction: column; align-items: center; width: 32px; flex-shrink: 0;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(110,231,183,0.15); border: 2px solid #6ee7b7; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: #6ee7b7; flex-shrink: 0;">5</div>
@@ -235,7 +228,6 @@ Prenons un exemple classique en logistique pour illustrer la chaîne complète.
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
