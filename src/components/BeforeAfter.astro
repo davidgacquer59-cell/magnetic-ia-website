@@ -189,18 +189,13 @@
 
     setPos(50);
 
-    container.addEventListener('mousedown', (e) => { dragging = true; fromClientX(e.clientX); e.preventDefault(); });
-    window.addEventListener('mousemove', (e) => { if (dragging) fromClientX(e.clientX); });
-    window.addEventListener('mouseup', () => (dragging = false));
-
-    function onTouchMoveBA(e: TouchEvent) { fromClientX(e.touches[0].clientX); }
-    function onTouchEndBA() { dragging = false; window.removeEventListener('touchmove', onTouchMoveBA); window.removeEventListener('touchend', onTouchEndBA); }
-    container.addEventListener('touchstart', (e) => {
-      dragging = true;
-      fromClientX(e.touches[0].clientX);
-      window.addEventListener('touchmove', onTouchMoveBA, { passive: true });
-      window.addEventListener('touchend', onTouchEndBA);
-    }, { passive: true });
+    container.addEventListener('pointerdown', (e) => {
+      container.setPointerCapture(e.pointerId);
+      fromClientX(e.clientX);
+    });
+    container.addEventListener('pointermove', (e) => {
+      if (e.buttons > 0) fromClientX(e.clientX);
+    });
     if (range) range.addEventListener('input', (e) => setPos(Number((e.target as HTMLInputElement).value)));
   }
 </script>

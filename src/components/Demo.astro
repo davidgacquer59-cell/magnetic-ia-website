@@ -149,20 +149,14 @@
   range?.addEventListener('input', () => updatePos(Number(range.value)));
 
   if (slider) {
-    let dragging = false;
     const getPct = (clientX: number) => ((clientX - slider.getBoundingClientRect().left) / slider.getBoundingClientRect().width) * 100;
-    slider.addEventListener('mousedown', (e) => { dragging = true; updatePos(getPct(e.clientX)); e.preventDefault(); });
-    window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
-    window.addEventListener('mouseup', () => { dragging = false; });
-
-    function onTouchMoveDemo(e: TouchEvent) { updatePos(getPct(e.touches[0].clientX)); }
-    function onTouchEndDemo() { dragging = false; window.removeEventListener('touchmove', onTouchMoveDemo); window.removeEventListener('touchend', onTouchEndDemo); }
-    slider.addEventListener('touchstart', (e) => {
-      dragging = true;
-      updatePos(getPct(e.touches[0].clientX));
-      window.addEventListener('touchmove', onTouchMoveDemo, { passive: true });
-      window.addEventListener('touchend', onTouchEndDemo);
-    }, { passive: true });
+    slider.addEventListener('pointerdown', (e) => {
+      slider.setPointerCapture(e.pointerId);
+      updatePos(getPct(e.clientX));
+    });
+    slider.addEventListener('pointermove', (e) => {
+      if (e.buttons > 0) updatePos(getPct(e.clientX));
+    });
   }
 
   updatePos(20);
