@@ -223,9 +223,10 @@ body {
   border-radius: 1.5rem;
   cursor: ew-resize;
   user-select: none;
-  /* pan-y : scroll vertical natif conservé (URL bar mobile, header fixe stable),
-     le JS intercepte uniquement le mouvement horizontal pour le slider */
-  touch-action: pan-y;
+  /* touch-action: none sans e.preventDefault() : le navigateur passe tous les
+     events touch à JS sans bloquer la mise à jour du viewport (URL bar, header).
+     L'absence de preventDefault() + passive:true préserve les animations UA. */
+  touch-action: none;
 }
 .compare-side {
   position: absolute;
