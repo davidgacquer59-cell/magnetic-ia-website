@@ -224,7 +224,9 @@ body {
   border-radius: 1.5rem;
   cursor: ew-resize;
   user-select: none;
-  touch-action: none;
+  /* pan-y : scroll vertical natif conservé (URL bar mobile, header fixe stable),
+     le JS intercepte uniquement le mouvement horizontal pour le slider */
+  touch-action: pan-y;
 }
 .compare-side {
   position: absolute;
@@ -505,11 +507,26 @@ body {
     padding-bottom: 2.5rem !important;
   }
 
-  /* Footer — centré */
-  footer { text-align: center; }
-  footer .flex.flex-wrap.gap-10 { justify-content: center; gap: 1.5rem; }
-  footer .flex.flex-col.gap-2 { align-items: center; }
-  footer .flex.gap-4 { justify-content: center; }
+  /* Footer — aligné à gauche sur mobile */
+  footer { text-align: left; }
+  /* Groupes de liens : grille 2 colonnes propre */
+  footer .flex.flex-wrap.gap-10 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  /* Chaque colonne de liens alignée à gauche */
+  footer .flex.flex-col.gap-2 { align-items: flex-start; }
+  /* Icônes réseaux sociaux alignées à gauche */
+  footer .flex.gap-1 { justify-content: flex-start; }
+  /* Ligne légale : empilée et alignée à gauche */
+  footer .flex.flex-wrap.items-center.justify-between {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+  /* Logo + baseline : pas de centrage */
+  footer .flex.flex-col.gap-3 { align-items: flex-start; }
 
   /* Padding horizontal global réduit */
   .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
