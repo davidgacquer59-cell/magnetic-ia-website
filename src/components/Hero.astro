@@ -232,12 +232,12 @@
     window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
     window.addEventListener('mouseup', () => { dragging = false; });
 
-    function onTouchMoveHero(e: TouchEvent) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); }
+    function onTouchMoveHero(e: TouchEvent) { updatePos(getPct(e.touches[0].clientX)); }
     function onTouchEndHero() { dragging = false; window.removeEventListener('touchmove', onTouchMoveHero); window.removeEventListener('touchend', onTouchEndHero); }
     slider.addEventListener('touchstart', (e) => {
       dragging = true;
       updatePos(getPct(e.touches[0].clientX));
-      window.addEventListener('touchmove', onTouchMoveHero, { passive: false });
+      window.addEventListener('touchmove', onTouchMoveHero, { passive: true });
       window.addEventListener('touchend', onTouchEndHero);
     }, { passive: true });
   }

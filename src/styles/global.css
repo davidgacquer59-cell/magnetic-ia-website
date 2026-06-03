@@ -51,6 +51,9 @@
 html {
   scroll-behavior: auto;
   scroll-padding-top: 80px;
+  /* overflow-x ici (pas sur body) : évite le bug iOS Safari où body overflow:hidden
+     crée un scroll container body qui casse position:fixed (header qui flotte) */
+  overflow-x: hidden;
 }
 
 /* Offset ancres pour nav fixe — plus fiable que scroll-padding-top sur Safari/Android */
@@ -84,7 +87,6 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
   overscroll-behavior-x: none; /* bloque le scroll horizontal hors contenu sur Android */
   overscroll-behavior-y: contain; /* empêche le pull-to-refresh accidentel Android */
 }
