@@ -60,7 +60,7 @@
         <div
           id="heroSlider"
           class="demo-slider relative rounded-2xl overflow-hidden w-full"
-          style="aspect-ratio: 1/1; background: var(--bg-secondary); border: 1px solid var(--border); box-shadow: 0 4px 32px rgba(0,0,0,0.08); cursor: ew-resize;"
+          style="aspect-ratio: 1/1; background: var(--bg-secondary); border: 1px solid var(--border); box-shadow: 0 4px 32px rgba(0,0,0,0.08); cursor: ew-resize; touch-action: none;"
         >
           <div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px); background-size: 36px 36px;"></div>
 
@@ -160,7 +160,7 @@
     box-shadow: 0 6px 16px -6px rgba(0,0,0,0.55);
     left: var(--cx); top: var(--cy); transform: rotate(var(--cr));
     transition: left 0.6s cubic-bezier(.2,.7,.2,1), top 0.6s cubic-bezier(.2,.7,.2,1), transform 0.6s cubic-bezier(.2,.7,.2,1);
-    z-index: 3; user-select: none;
+    z-index: 3; user-select: none; pointer-events: none;
   }
   .demo-slider.is-sorted .dpi { left: var(--sx); top: var(--sy); transform: rotate(var(--sr)); }
   .demo-handle-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent); left: 20%; transform: translateX(-50%); z-index: 8; box-shadow: 0 0 8px rgba(96,165,250,0.5); }
@@ -208,8 +208,6 @@
 </style>
 
 <script>
-  // Slider masqué sur mobile (hidden md:block) — inutile d'initialiser sous 768px
-  if (window.innerWidth >= 768) {
   const slider     = document.getElementById('heroSlider')     as HTMLElement | null;
   const range      = document.getElementById('heroRange')      as HTMLInputElement | null;
   const handleLine = document.getElementById('heroHandleLine') as HTMLElement | null;
@@ -226,21 +224,14 @@
   range?.addEventListener('input', () => updatePos(Number(range.value)));
 
   if (slider) {
-    let dragging = false;
     const getPct = (clientX: number) => ((clientX - slider.getBoundingClientRect().left) / slider.getBoundingClientRect().width) * 100;
-    slider.addEventListener('mousedown', (e) => { dragging = true; updatePos(getPct(e.clientX)); e.preventDefault(); });
-    window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
-    window.addEventListener('mouseup', () => { dragging = false; });
-
-    function onTouchMoveHero(e: TouchEvent) { updatePos(getPct(e.touches[0].clientX)); }
-    function onTouchEndHero() { dragging = false; window.removeEventListener('touchmove', onTouchMoveHero); window.removeEventListener('touchend', onTouchEndHero); }
-    slider.addEventListener('touchstart', (e) => {
-      dragging = true;
-      updatePos(getPct(e.touches[0].clientX));
-      window.addEventListener('touchmove', onTouchMoveHero, { passive: true });
-      window.addEventListener('touchend', onTouchEndHero);
-    }, { passive: true });
+    slider.addEventListener('pointerdown', (e) => {
+      slider.setPointerCapture(e.pointerId);
+      updatePos(getPct(e.clientX));
+    });
+    slider.addEventListener('pointermove', (e) => {
+      if (e.buttons > 0) updatePos(getPct(e.clientX));
+    });
   }
   updatePos(20);
-  } // end mobile guard
 </script>
