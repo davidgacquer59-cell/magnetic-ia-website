@@ -61,21 +61,18 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
-/* Nav principale toujours fixe — GPU layer pour éviter le jump Android/Chrome au scroll */
+/* Nav principale toujours fixe */
 nav.site-nav {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   z-index: 9999 !important;
-  /* transform: translateZ(0) force la couche GPU sans isoler le contexte de position
-     will-change retiré : crée des bugs de composition avec position:fixed sur iOS Safari */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  /* Pas de transform ni will-change : les deux créent un contexte de composition
+     isolé sur iOS Safari qui empêche le repositionnement correct du header.
+     Le backdrop-filter crée déjà la couche GPU nécessaire. */
   background: var(--nav-bg) !important;
-  -webkit-backdrop-filter: blur(24px) !important; /* Safari iOS */
+  -webkit-backdrop-filter: blur(24px) !important;
   backdrop-filter: blur(24px) !important;
 }
 
