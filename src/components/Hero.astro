@@ -231,9 +231,15 @@
     slider.addEventListener('mousedown', (e) => { dragging = true; updatePos(getPct(e.clientX)); e.preventDefault(); });
     window.addEventListener('mousemove', (e) => { if (dragging) updatePos(getPct(e.clientX)); });
     window.addEventListener('mouseup', () => { dragging = false; });
-    slider.addEventListener('touchstart', (e) => { dragging = true; updatePos(getPct(e.touches[0].clientX)); }, { passive: true });
-    window.addEventListener('touchmove', (e) => { if (dragging) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); } }, { passive: false });
-    window.addEventListener('touchend', () => { dragging = false; });
+
+    function onTouchMoveHero(e: TouchEvent) { e.preventDefault(); updatePos(getPct(e.touches[0].clientX)); }
+    function onTouchEndHero() { dragging = false; window.removeEventListener('touchmove', onTouchMoveHero); window.removeEventListener('touchend', onTouchEndHero); }
+    slider.addEventListener('touchstart', (e) => {
+      dragging = true;
+      updatePos(getPct(e.touches[0].clientX));
+      window.addEventListener('touchmove', onTouchMoveHero, { passive: false });
+      window.addEventListener('touchend', onTouchEndHero);
+    }, { passive: true });
   }
   updatePos(20);
   } // end mobile guard
