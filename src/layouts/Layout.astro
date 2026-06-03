@@ -63,18 +63,26 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0e1a" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
 
-    <!-- Fonts — non-render-blocking, display=optional évite le swap tardif qui retarde le LCP -->
+    <!-- Fonts critiques (Inter + Instrument Serif pour le H1) — non-render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=optional" />
+    <!-- Fonts critiques : Inter + Instrument Serif chargées en priorité -->
+    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fonts décoratifs (slider hero desktop seulement) — chargement différé -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=optional"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=optional" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet" />
     </noscript>
 
     <meta name="generator" content={Astro.generator} />
