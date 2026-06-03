@@ -527,6 +527,8 @@ body {
   }
   /* Logo + baseline : pas de centrage */
   footer .flex.flex-col.gap-3 { align-items: flex-start; }
+  /* Footer : padding horizontal généreux sur mobile */
+  footer > .max-w-7xl { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 
   /* Padding horizontal global réduit */
   .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
