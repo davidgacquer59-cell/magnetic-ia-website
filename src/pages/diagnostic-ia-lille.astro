@@ -84,12 +84,21 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       <div class="p-8 rounded-2xl text-center" style="background: var(--bg-secondary); border: 1px solid var(--border);">
         <p class="text-lg font-semibold mb-2" style="color: var(--text-primary);">Prêt à clarifier votre stratégie IA ?</p>
         <p class="mb-6" style="color: var(--text-secondary);">30 minutes offertes pour faire le point sur votre situation, sans engagement.</p>
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl text-base"
-        >
-          Demander un diagnostic IA gratuit
-        </a>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl text-base"
+          >
+            Demander un diagnostic IA gratuit
+          </a>
+          <a
+            href="/#diagnostic"
+            class="inline-flex items-center gap-2 px-7 py-4 font-medium rounded-xl transition text-base"
+            style="border: 1px solid var(--border); color: var(--text-primary);"
+          >
+            Faire le diagnostic IA en 2 min →
+          </a>
+        </div>
       </div>
 
     </div>
