@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Layout
+  title="Diagnostic IA à Lille pour PME | Magnetic-IA"
+  description="Diagnostic IA à Lille et dans la métropole lilloise. Identifiez les projets IA les plus utiles pour votre PME avant d'investir — David Gacquer, Wambrechies."
+  url="https://magnetic-ia.fr/diagnostic-ia-lille"
+>
+  <Nav />
+  <main class="pt-28 pb-20">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+      <Breadcrumb items={[
+        { label: 'Accueil', href: '/' },
+        { label: 'Diagnostic IA Lille' },
+      ]} />
+
+      <div class="mb-16">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <span class="w-6 h-px" style="background: var(--accent);"></span>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Lille & Métropole</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
+          Diagnostic IA pour PME à Lille
+          <span class="font-serif italic" style="color: var(--text-tertiary);"> et dans la métropole lilloise.</span>
+        </h1>
+        <p class="text-lg leading-relaxed mb-4" style="color: var(--text-secondary);">
+          Vous dirigez une PME à Lille, Roubaix, Tourcoing, Villeneuve-d'Ascq ou dans la métropole lilloise ? Avant d'investir dans un projet IA, un diagnostic structuré permet d'identifier les cas d'usage réellement utiles pour votre activité.
+        </p>
+        <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">
+          David Gacquer, basé à Wambrechies (59118), intervient auprès des PME du Nord pour les aider à prioriser leurs projets IA et construire une feuille de route réaliste.
+        </p>
+      </div>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Ce qu'apporte un diagnostic IA à une PME lilloise</h2>
+        <ul class="space-y-4 text-base leading-relaxed" style="color: var(--text-secondary);">
+          <li><strong style="color: var(--text-primary);">Identification des cas d'usage rentables</strong> — parmi toutes les idées IA, lesquelles ont un vrai ROI pour votre secteur et votre taille.</li>
+          <li><strong style="color: var(--text-primary);">Priorisation par impact et faisabilité</strong> — une matrice claire pour décider quoi faire en premier sans disperser vos ressources.</li>
+          <li><strong style="color: var(--text-primary);">Feuille de route IA sur 90 jours</strong> — un plan d'action concret, pas une présentation PowerPoint que personne ne relit.</li>
+          <li><strong style="color: var(--text-primary);">Intervention locale, sans frais de déplacement excessifs</strong> — basé dans les Hauts-de-France, disponible sur site dans la métropole lilloise.</li>
+        </ul>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Pourquoi un diagnostic avant tout projet IA ?</h2>
+        <p class="text-base leading-relaxed mb-4" style="color: var(--text-secondary);">
+          80 % des projets IA en PME échouent. Pas à cause de la technologie, mais parce que les décisions sont prises trop vite, sans avoir clarifié le problème à résoudre, les données disponibles et les ressources mobilisables.
+        </p>
+        <p class="text-base leading-relaxed" style="color: var(--text-secondary);">
+          Le diagnostic IA permet de poser les bonnes questions avant d'engager un budget. C'est 30 minutes à une demi-journée qui évitent des mois de développement inutile.
+        </p>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Les offres disponibles à Lille</h2>
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Découverte gratuite — 30 minutes</div>
+            <p style="color: var(--text-secondary);">Un premier échange pour comprendre votre situation, sans engagement. En visio ou sur site dans la métropole lilloise.</p>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Audit Flash — 900 € HT</div>
+            <p style="color: var(--text-secondary);">Demi-journée d'atelier diagnostic. Identification des cas d'usage IA, priorisation et plan d'action. Livrable : rapport structuré + feuille de route 90 jours.</p>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Mission complète — à partir de 4 500 € HT</div>
+            <p style="color: var(--text-secondary);">Diagnostic approfondi + accompagnement à la mise en œuvre sur 4 à 6 semaines. Pour les PME qui veulent aller au bout de leur projet IA.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Zone d'intervention</h2>
+        <p class="text-base leading-relaxed" style="color: var(--text-secondary);">
+          Lille, Roubaix, Tourcoing, Villeneuve-d'Ascq, Marcq-en-Barœul, Wambrechies, Lambersart, La Madeleine et l'ensemble de la métropole lilloise. Interventions également possibles dans les Hauts-de-France (Valenciennes, Douai, Arras, Dunkerque).
+        </p>
+      </section>
+
+      <div class="p-8 rounded-2xl text-center" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <p class="text-lg font-semibold mb-2" style="color: var(--text-primary);">Prêt à clarifier votre stratégie IA ?</p>
+        <p class="mb-6" style="color: var(--text-secondary);">30 minutes offertes pour faire le point sur votre situation, sans engagement.</p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl text-base"
+        >
+          Demander un diagnostic IA gratuit
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Magnetic-IA — Diagnostic IA Lille",
+    "description": "Diagnostic IA pour PME à Lille et dans la métropole lilloise. Priorisation des projets IA et feuille de route.",
+    "url": "https://magnetic-ia.fr/diagnostic-ia-lille",
+    "founder": {
+      "@type": "Person",
+      "name": "David Gacquer"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Lille" },
+      { "@type": "City", "name": "Roubaix" },
+      { "@type": "City", "name": "Tourcoing" },
+      { "@type": "City", "name": "Villeneuve-d'Ascq" },
+      { "@type": "State", "name": "Hauts-de-France" }
+    ],
+    "serviceType": "Diagnostic IA pour PME",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "290 rue Saint Exupéry, appt 21",
+      "addressLocality": "Wambrechies",
+      "addressRegion": "Hauts-de-France",
+      "postalCode": "59118",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33632351294",
+    "email": "contact@magnetic-ia.fr"
+  }
+  </script>
+
+  <Footer />
+</Layout>

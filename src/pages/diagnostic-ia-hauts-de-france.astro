@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Layout
+  title="Diagnostic IA Hauts-de-France pour PME | Magnetic-IA"
+  description="Diagnostic IA pour les PME des Hauts-de-France. Priorisation des projets IA, feuille de route et ROI — David Gacquer, consultant IA basé à Wambrechies."
+  url="https://magnetic-ia.fr/diagnostic-ia-hauts-de-france"
+>
+  <Nav />
+  <main class="pt-28 pb-20">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+      <Breadcrumb items={[
+        { label: 'Accueil', href: '/' },
+        { label: 'Diagnostic IA Hauts-de-France' },
+      ]} />
+
+      <div class="mb-16">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <span class="w-6 h-px" style="background: var(--accent);"></span>
+          <span class="text-xs font-mono font-semibold uppercase tracking-[0.22em]" style="color: var(--accent);">Hauts-de-France</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
+          Diagnostic IA pour PME dans les Hauts-de-France.
+          <span class="font-serif italic" style="color: var(--text-tertiary);"> Avant d'investir.</span>
+        </h1>
+        <p class="text-lg leading-relaxed mb-4" style="color: var(--text-secondary);">
+          Vous dirigez une PME dans les Hauts-de-France ? Avant de lancer un projet IA, un diagnostic structuré permet d'identifier les cas d'usage rentables et d'éviter les erreurs coûteuses.
+        </p>
+        <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">
+          David Gacquer accompagne les dirigeants de PME et TPE de la région — Lille, Valenciennes, Douai, Arras, Dunkerque, Amiens, Hazebrouck — pour clarifier leur stratégie IA et construire une feuille de route réaliste.
+        </p>
+      </div>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Le contexte IA dans les Hauts-de-France</h2>
+        <p class="text-base leading-relaxed mb-4" style="color: var(--text-secondary);">
+          Les Hauts-de-France comptent parmi les régions les plus actives sur l'IA en France, avec EuraTechnologies à Lille et la Cité de l'IA à Marcq-en-Barœul. Mais la majorité des PME régionales n'ont pas encore structuré leur approche de l'IA.
+        </p>
+        <p class="text-base leading-relaxed" style="color: var(--text-secondary);">
+          Le diagnostic IA permet aux dirigeants de prendre des décisions éclairées, en partant de leur situation réelle : secteur d'activité, équipe, données disponibles, budget.
+        </p>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Ce que le diagnostic IA apporte à votre PME</h2>
+        <ul class="space-y-4 text-base leading-relaxed" style="color: var(--text-secondary);">
+          <li><strong style="color: var(--text-primary);">Cartographie des cas d'usage IA</strong> — identifier où l'IA peut créer de la valeur dans votre activité spécifique.</li>
+          <li><strong style="color: var(--text-primary);">Priorisation par ROI et faisabilité</strong> — concentrer les ressources sur les projets qui ont le meilleur rapport impact/effort.</li>
+          <li><strong style="color: var(--text-primary);">Feuille de route IA sur 90 jours</strong> — un plan d'action concret avec des étapes claires et des critères de succès mesurables.</li>
+          <li><strong style="color: var(--text-primary);">Évaluation des risques</strong> — RGPD, IA Act, dépendance technologique : anticiper les contraintes réglementaires et organisationnelles.</li>
+        </ul>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Les offres</h2>
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Découverte gratuite — 30 minutes</div>
+            <p style="color: var(--text-secondary);">Un premier échange pour comprendre votre situation, identifier les enjeux IA de votre activité, sans engagement.</p>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Audit Flash — 900 € HT</div>
+            <p style="color: var(--text-secondary);">Demi-journée d'atelier : diagnostic IA complet, priorisation des projets et feuille de route 90 jours. Intervention possible sur site dans les Hauts-de-France.</p>
+          </div>
+          <div class="p-6 rounded-2xl" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+            <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">Mission complète — à partir de 4 500 € HT</div>
+            <p style="color: var(--text-secondary);">Diagnostic approfondi + accompagnement à la mise en œuvre sur 4 à 6 semaines.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold mb-6" style="color: var(--text-primary);">Zone d'intervention</h2>
+        <p class="text-base leading-relaxed" style="color: var(--text-secondary);">
+          Ensemble des Hauts-de-France : métropole lilloise (Lille, Roubaix, Tourcoing, Villeneuve-d'Ascq), Valenciennes, Douai, Lens, Arras, Dunkerque, Saint-Omer, Hazebrouck, Amiens, Beauvais. Interventions en visio ou sur site selon localisation.
+        </p>
+      </section>
+
+      <div class="p-8 rounded-2xl text-center" style="background: var(--bg-secondary); border: 1px solid var(--border);">
+        <p class="text-lg font-semibold mb-2" style="color: var(--text-primary);">Vous êtes dans les Hauts-de-France ?</p>
+        <p class="mb-6" style="color: var(--text-secondary);">30 minutes pour faire le point sur votre situation IA, sans engagement.</p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-7 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition shadow-xl text-base"
+        >
+          Demander un diagnostic IA gratuit
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Magnetic-IA — Diagnostic IA Hauts-de-France",
+    "description": "Diagnostic IA pour PME dans les Hauts-de-France. Priorisation, feuille de route et ROI des projets IA.",
+    "url": "https://magnetic-ia.fr/diagnostic-ia-hauts-de-france",
+    "founder": {
+      "@type": "Person",
+      "name": "David Gacquer"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Hauts-de-France"
+    },
+    "serviceType": "Diagnostic IA pour PME",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "290 rue Saint Exupéry, appt 21",
+      "addressLocality": "Wambrechies",
+      "addressRegion": "Hauts-de-France",
+      "postalCode": "59118",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33632351294",
+    "email": "contact@magnetic-ia.fr"
+  }
+  </script>
+
+  <Footer />
+</Layout>
