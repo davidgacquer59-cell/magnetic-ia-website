@@ -48,7 +48,7 @@ Un plan séquencé sur 90 jours. Avec les bons outils — et seulement maintenan
 
 ## Ce que ça donne concrètement
 
-Chez Alfaprint, cette méthode a permis d'identifier 3 leviers prioritaires en une demi-journée de diagnostic. Résultat 3 mois plus tard : +35% de ventes, CAC divisé par 2, +20% de taux de conversion.
+Chez Alfaprint, cette méthode a permis d'identifier 3 leviers prioritaires en une demi-journée de diagnostic. Résultat 3 mois plus tard : +20% de ventes, CAC divisé par 2, +20% de taux de conversion.
 
 Pas parce qu'on a utilisé les meilleurs outils. Parce qu'on a d'abord posé les bonnes questions.
 

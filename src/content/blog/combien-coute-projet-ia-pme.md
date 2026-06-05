@@ -56,7 +56,7 @@ Sans indicateur de succès fixé avant le démarrage, le projet continue indéfi
 
 Les projets bien cadrés que j'ai accompagnés montrent des retours entre 3 et 12 mois selon la complexité :
 
-- **Alfaprint** : +35% de ventes en 3 mois, CAC divisé par 2
+- **Alfaprint** : +20% de ventes en 3 mois, CAC divisé par 2
 - **SwissLife Wambrechies** : +40% d'engagement LinkedIn, génération régulière de leads
 
 Le ROI n'est pas garanti — mais il est mesurable. C'est pourquoi on définit les KPIs avant de commencer, pas après.
