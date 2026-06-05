@@ -1,7 +1,7 @@
 ---
 title: "L'intelligence artificielle : une opportunité concrète pour les PME et TPE"
 excerpt: "L'IA n'est pas réservée aux grandes entreprises. Tour d'horizon des cas d'usage accessibles, des erreurs à éviter et de la bonne façon d'aborder un premier projet IA."
-date: "20 août 2025"
+date: "2025-08-20"
 tag: "IA & PME"
 tagColor: "#f59e0b"
 readTime: "7 min"

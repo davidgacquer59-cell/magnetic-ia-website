@@ -1,7 +1,7 @@
 ---
 title: "Intégration Tally → Google Sheets → Systeme.io : guide complet"
 excerpt: "Comment connecter un formulaire Tally à une feuille Google Sheets puis déclencher une séquence dans Systeme.io, sans coder, en moins d'une heure."
-date: "10 septembre 2025"
+date: "2025-09-10"
 tag: "Automatisation"
 tagColor: "#10b981"
 readTime: "10 min"

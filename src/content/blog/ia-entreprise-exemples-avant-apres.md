@@ -18,8 +18,8 @@ Les gains de temps présentés ci-dessous ne sont pas des économies théoriques
 
 Dans une PME, une heure récupérée sur une tâche administrative, c'est souvent une heure gagnée sur le développement commercial.
 
-<div style="margin: 2rem 0; padding: 1.25rem 1.5rem; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.2); border-radius: 1rem;">
-  <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Ces cas ont été collectés lors d'ateliers et de missions de terrain. Les noms des entreprises sont omis pour des raisons de confidentialité. Les chiffres sont des mesures réelles, pas des estimations.</p>
+<div style="margin: 2rem 0; padding: 1.25rem 1.5rem; background: var(--bg-tertiary); border: 1px solid rgba(52,211,153,0.2); border-radius: 1rem;">
+  <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Ces cas ont été collectés lors d'ateliers et de missions de terrain. Les noms des entreprises sont omis pour des raisons de confidentialité. Les chiffres sont des mesures réelles, pas des estimations.</p>
 </div>
 
 ---
@@ -33,34 +33,34 @@ Dans une PME, une heure récupérée sur une tâche administrative, c'est souven
   <div style="padding: 1.5rem;">
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-      <div style="padding: 1.25rem; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #f87171; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Avant</div>
         <div style="font-size: 2rem; font-weight: 700; color: #f87171; margin-bottom: 0.25rem;">3h</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">par devis chantier complexe (cuisine, salle de bain, menuiseries extérieures)</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">par devis chantier complexe (cuisine, salle de bain, menuiseries extérieures)</div>
       </div>
-      <div style="padding: 1.25rem; background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #6ee7b7; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Après</div>
         <div style="font-size: 2rem; font-weight: 700; color: #6ee7b7; margin-bottom: 0.25rem;">30min</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">pour le même type de devis, avec une présentation client améliorée</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">pour le même type de devis, avec une présentation client améliorée</div>
       </div>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Problème de départ</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Le gérant rédigeait lui-même chaque devis manuellement dans Word. Pour les chantiers complexes, il fallait 3 heures : calcul des métrés, mise en forme, description des prestations, tarification. À raison de 4 à 5 devis par semaine, c'était 12 à 15 heures hebdomadaires sur cette seule tâche.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Le gérant rédigeait lui-même chaque devis manuellement dans Word. Pour les chantiers complexes, il fallait 3 heures : calcul des métrés, mise en forme, description des prestations, tarification. À raison de 4 à 5 devis par semaine, c'était 12 à 15 heures hebdomadaires sur cette seule tâche.</p>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Ce qui a changé</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Construction d'un prompt structuré incluant les types de prestations standards, les formulations habituelles et le ton commercial de l'entreprise. Le gérant dicte les informations spécifiques du chantier (métrés, matériaux retenus, contraintes). L'IA produit le devis formaté. Il vérifie, ajuste les prix, envoie.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Construction d'un prompt structuré incluant les types de prestations standards, les formulations habituelles et le ton commercial de l'entreprise. Le gérant dicte les informations spécifiques du chantier (métrés, matériaux retenus, contraintes). L'IA produit le devis formaté. Il vérifie, ajuste les prix, envoie.</p>
     </div>
 
     <div style="padding: 1rem 1.25rem; background: rgba(251,191,36,0.07); border-radius: 0.75rem;">
       <div style="font-size: 0.7rem; color: #fbbf24; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Impact mesuré après 6 semaines</div>
       <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-        <div style="font-size: 0.83rem; color: #e2e8f0;">⏱ <strong>-85% de temps</strong> sur la rédaction des devis</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">📈 <strong>+30% de devis envoyés</strong> (capacité libérée)</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">💬 <strong>Meilleure présentation client</strong> (structure plus claire)</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">⏱ <strong>-85% de temps</strong> sur la rédaction des devis</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">📈 <strong>+30% de devis envoyés</strong> (capacité libérée)</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">💬 <strong>Meilleure présentation client</strong> (structure plus claire)</div>
       </div>
     </div>
 
@@ -78,34 +78,34 @@ Dans une PME, une heure récupérée sur une tâche administrative, c'est souven
   <div style="padding: 1.5rem;">
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-      <div style="padding: 1.25rem; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #f87171; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Avant</div>
         <div style="font-size: 2rem; font-weight: 700; color: #f87171; margin-bottom: 0.25rem;">2h</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">par offre d'emploi, souvent confiée à une assistante RH débordée</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">par offre d'emploi, souvent confiée à une assistante RH débordée</div>
       </div>
-      <div style="padding: 1.25rem; background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #6ee7b7; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Après</div>
         <div style="font-size: 2rem; font-weight: 700; color: #6ee7b7; margin-bottom: 0.25rem;">15min</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">draft prêt à publier, avec relecture finale de 5 minutes</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">draft prêt à publier, avec relecture finale de 5 minutes</div>
       </div>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Problème de départ</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Marché tendu sur les chauffeurs SPL. Les offres publiées étaient génériques, copiées d'une base existante, peu différenciantes. Résultat : trop peu de candidatures qualifiées, temps perdu à trier des profils inadaptés.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Marché tendu sur les chauffeurs SPL. Les offres publiées étaient génériques, copiées d'une base existante, peu différenciantes. Résultat : trop peu de candidatures qualifiées, temps perdu à trier des profils inadaptés.</p>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Ce qui a changé</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Prompt construit avec le contexte de l'entreprise (taille, ambiance, avantages terrain réels), le profil précis recherché, et la structure souhaitée. L'assistante fournit juste les éléments variables (intitulé, date de démarrage, zone géographique). L'IA génère l'offre complète en 30 secondes. Relecture et publication en 15 minutes total.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Prompt construit avec le contexte de l'entreprise (taille, ambiance, avantages terrain réels), le profil précis recherché, et la structure souhaitée. L'assistante fournit juste les éléments variables (intitulé, date de démarrage, zone géographique). L'IA génère l'offre complète en 30 secondes. Relecture et publication en 15 minutes total.</p>
     </div>
 
     <div style="padding: 1rem 1.25rem; background: rgba(96,165,250,0.07); border-radius: 0.75rem;">
       <div style="font-size: 0.7rem; color: #60a5fa; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Impact mesuré</div>
       <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-        <div style="font-size: 0.83rem; color: #e2e8f0;">⏱ <strong>-87% de temps</strong> sur la rédaction</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">📬 <strong>+2 candidatures qualifiées</strong> en moyenne sur les premières offres</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">🎯 <strong>Meilleur ciblage</strong> des profils reçus</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">⏱ <strong>-87% de temps</strong> sur la rédaction</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">📬 <strong>+2 candidatures qualifiées</strong> en moyenne sur les premières offres</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">🎯 <strong>Meilleur ciblage</strong> des profils reçus</div>
       </div>
     </div>
 
@@ -123,34 +123,34 @@ Dans une PME, une heure récupérée sur une tâche administrative, c'est souven
   <div style="padding: 1.5rem;">
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
-      <div style="padding: 1.25rem; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(239,68,68,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #f87171; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Avant</div>
         <div style="font-size: 2rem; font-weight: 700; color: #f87171; margin-bottom: 0.25rem;">45min</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">par semaine sur les relances prospects inactifs et clients à réactiver</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">par semaine sur les relances prospects inactifs et clients à réactiver</div>
       </div>
-      <div style="padding: 1.25rem; background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
+      <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.9rem;">
         <div style="font-size: 0.7rem; color: #6ee7b7; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Après</div>
         <div style="font-size: 2rem; font-weight: 700; color: #6ee7b7; margin-bottom: 0.25rem;">10min</div>
-        <div style="font-size: 0.82rem; color: #94a3b8;">pour le même travail, avec des emails plus personnalisés qu'avant</div>
+        <div style="font-size: 0.82rem; color: var(--text-secondary);">pour le même travail, avec des emails plus personnalisés qu'avant</div>
       </div>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Problème de départ</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Les relances étaient souvent remises à plus tard — tâche ingrate, pas de canevas fixe, effort de rédaction perçu comme élevé pour des résultats incertains. Résultat : un pipeline commercial qui s'assèche progressivement.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Les relances étaient souvent remises à plus tard — tâche ingrate, pas de canevas fixe, effort de rédaction perçu comme élevé pour des résultats incertains. Résultat : un pipeline commercial qui s'assèche progressivement.</p>
     </div>
 
     <div style="margin-bottom: 1.25rem;">
       <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 600; margin-bottom: 0.5rem;">Ce qui a changé</div>
-      <p style="margin: 0; font-size: 0.88rem; color: #94a3b8; line-height: 1.7;">Création d'un prompt de relance avec des variables : [prénom], [contexte dernier contact], [délai écoulé], [type de relance] (premier silence / deuxième relance / réactivation froide). Chaque vendredi matin, le consultant prépare sa liste de 5 à 8 contacts à relancer, renseigne les variables, et envoie des emails personnalisés en moins de 10 minutes.</p>
+      <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">Création d'un prompt de relance avec des variables : [prénom], [contexte dernier contact], [délai écoulé], [type de relance] (premier silence / deuxième relance / réactivation froide). Chaque vendredi matin, le consultant prépare sa liste de 5 à 8 contacts à relancer, renseigne les variables, et envoie des emails personnalisés en moins de 10 minutes.</p>
     </div>
 
     <div style="padding: 1rem 1.25rem; background: rgba(167,139,250,0.07); border-radius: 0.75rem;">
       <div style="font-size: 0.7rem; color: #a78bfa; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Impact mesuré sur 3 mois</div>
       <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-        <div style="font-size: 0.83rem; color: #e2e8f0;">⏱ <strong>-78% de temps</strong> sur les relances</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">📈 <strong>Relances effectuées x3</strong> (elles se faisaient enfin)</div>
-        <div style="font-size: 0.83rem; color: #e2e8f0;">🤝 <strong>2 contrats signés</strong> issus de prospects réactivés</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">⏱ <strong>-78% de temps</strong> sur les relances</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">📈 <strong>Relances effectuées x3</strong> (elles se faisaient enfin)</div>
+        <div style="font-size: 0.83rem; color: var(--text-primary);">🤝 <strong>2 contrats signés</strong> issus de prospects réactivés</div>
       </div>
     </div>
 
@@ -163,35 +163,35 @@ Dans une PME, une heure récupérée sur une tâche administrative, c'est souven
 
 <div style="margin: 2rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
 
-  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
     <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;">✓</div>
     <div>
-      <div style="font-weight: 600; color: #e2e8f0; font-size: 0.88rem; margin-bottom: 0.2rem;">La tâche était déjà bien définie</div>
-      <div style="font-size: 0.83rem; color: #94a3b8;">Aucun de ces cas n'a nécessité de "cadrer" le travail à la volée. Les processus existaient. L'IA les a juste accélérés.</div>
+      <div style="font-weight: 600; color: var(--text-primary); font-size: 0.88rem; margin-bottom: 0.2rem;">La tâche était déjà bien définie</div>
+      <div style="font-size: 0.83rem; color: var(--text-secondary);">Aucun de ces cas n'a nécessité de "cadrer" le travail à la volée. Les processus existaient. L'IA les a juste accélérés.</div>
     </div>
   </div>
 
-  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
     <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;">✓</div>
     <div>
-      <div style="font-weight: 600; color: #e2e8f0; font-size: 0.88rem; margin-bottom: 0.2rem;">L'humain reste en contrôle</div>
-      <div style="font-size: 0.83rem; color: #94a3b8;">Dans les trois cas, la décision finale appartient à l'humain : envoyer ou non, ajuster le prix, valider le contenu. L'IA produit un draft. L'expert décide.</div>
+      <div style="font-weight: 600; color: var(--text-primary); font-size: 0.88rem; margin-bottom: 0.2rem;">L'humain reste en contrôle</div>
+      <div style="font-size: 0.83rem; color: var(--text-secondary);">Dans les trois cas, la décision finale appartient à l'humain : envoyer ou non, ajuster le prix, valider le contenu. L'IA produit un draft. L'expert décide.</div>
     </div>
   </div>
 
-  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
     <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;">✓</div>
     <div>
-      <div style="font-weight: 600; color: #e2e8f0; font-size: 0.88rem; margin-bottom: 0.2rem;">Pas de budget, pas de développement</div>
-      <div style="font-size: 0.83rem; color: #94a3b8;">ChatGPT ou Claude en abonnement standard (moins de 25€/mois). Un prompt bien construit. Zéro intégration technique. Les résultats arrivent en quelques jours, pas en quelques mois.</div>
+      <div style="font-weight: 600; color: var(--text-primary); font-size: 0.88rem; margin-bottom: 0.2rem;">Pas de budget, pas de développement</div>
+      <div style="font-size: 0.83rem; color: var(--text-secondary);">ChatGPT ou Claude en abonnement standard (moins de 25€/mois). Un prompt bien construit. Zéro intégration technique. Les résultats arrivent en quelques jours, pas en quelques mois.</div>
     </div>
   </div>
 
-  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
+  <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(52,211,153,0.15); border-radius: 0.9rem;">
     <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;">✓</div>
     <div>
-      <div style="font-weight: 600; color: #e2e8f0; font-size: 0.88rem; margin-bottom: 0.2rem;">Le gain se cumule dans le temps</div>
-      <div style="font-size: 0.83rem; color: #94a3b8;">Un prompt sauvegardé s'utilise indéfiniment. Plus on l'affine, meilleur il devient. C'est un actif, pas une dépense.</div>
+      <div style="font-weight: 600; color: var(--text-primary); font-size: 0.88rem; margin-bottom: 0.2rem;">Le gain se cumule dans le temps</div>
+      <div style="font-size: 0.83rem; color: var(--text-secondary);">Un prompt sauvegardé s'utilise indéfiniment. Plus on l'affine, meilleur il devient. C'est un actif, pas une dépense.</div>
     </div>
   </div>
 

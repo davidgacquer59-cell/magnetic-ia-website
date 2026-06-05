@@ -1,7 +1,7 @@
 ---
 title: "Comment l'IA peut structurer une stratégie LinkedIn (sans remplacer l'expertise)"
 excerpt: "Charlotte Baert, experte en assurance chez SwissLife Wambrechies, a transformé sa présence LinkedIn en 2 mois grâce à une stratégie IA bien cadrée. +40 % d'engagement, 5 à 10 leads qualifiés par mois."
-date: "9 février 2026"
+date: "2026-02-09"
 tag: "Cas client"
 tagColor: "#8b5cf6"
 readTime: "6 min"

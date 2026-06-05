@@ -1,7 +1,7 @@
 ---
 title: "Créer facilement un site WordPress grâce à l'automatisation et l'IA"
 excerpt: "L'IA peut accélérer la création d'un site de A à Z : structure, contenus, SEO on-page. Retour d'expérience et outils utilisés."
-date: "1er septembre 2025"
+date: "2025-09-01"
 tag: "Outils"
 tagColor: "#3b82f6"
 readTime: "5 min"

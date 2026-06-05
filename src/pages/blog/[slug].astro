@@ -16,6 +16,8 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await article.render();
 
+const formattedDate = new Date(article.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
 const allArticles = await getCollection('blog');
 const related = allArticles
   .filter(a => a.slug !== article.slug && a.data.tag === article.data.tag)
@@ -115,7 +117,7 @@ const icon = tagIcon[article.data.tag] ?? '●';
             >
               {article.data.tag}
             </span>
-            <span class="text-xs" style="color: var(--text-tertiary);">{article.data.date}</span>
+            <span class="text-xs" style="color: var(--text-tertiary);">{formattedDate}</span>
             <span class="text-xs" style="color: var(--text-tertiary);">·</span>
             <span class="text-xs" style="color: var(--text-tertiary);">{article.data.readTime} de lecture</span>
           </div>

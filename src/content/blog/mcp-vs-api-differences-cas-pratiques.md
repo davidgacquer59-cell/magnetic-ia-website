@@ -1,7 +1,7 @@
 ---
 title: "MCP vs API : différences et cas pratiques"
 excerpt: "Le Model Context Protocol change la façon dont les agents IA accèdent aux données. Quand utiliser MCP plutôt qu'une API classique ? Les réponses avec des exemples concrets."
-date: "25 septembre 2025"
+date: "2025-09-25"
 tag: "Technique"
 tagColor: "#3b82f6"
 readTime: "8 min"

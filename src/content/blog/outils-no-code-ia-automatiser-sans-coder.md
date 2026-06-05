@@ -1,7 +1,7 @@
 ---
 title: "Outils no-code IA : les meilleurs pour automatiser sans coder"
 excerpt: "Make, n8n, Zapier, Tally, Notion AI... Tour d'horizon des outils no-code / low-code que j'utilise et recommande pour automatiser efficacement."
-date: "1er septembre 2025"
+date: "2025-09-01"
 tag: "Outils"
 tagColor: "#3b82f6"
 readTime: "9 min"

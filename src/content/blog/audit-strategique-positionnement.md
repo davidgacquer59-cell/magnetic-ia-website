@@ -1,7 +1,7 @@
 ---
 title: "Audit stratégique de positionnement"
 excerpt: "Avant de déployer l'IA, il faut savoir où vous en êtes. Méthode complète pour auditer son positionnement digital et identifier les leviers à fort impact."
-date: "1er septembre 2025"
+date: "2025-09-01"
 tag: "Stratégie"
 tagColor: "#f59e0b"
 readTime: "7 min"

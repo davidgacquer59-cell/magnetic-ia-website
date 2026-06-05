@@ -1,7 +1,7 @@
 ---
 title: "Comment Alfaprint a transformé son e-commerce"
 excerpt: "Migration vers Odoo, optimisation du flux Google Shopping, stratégie 20/80 sur le catalogue. +35 % de ventes en 3 mois, coût d'acquisition divisé par 2."
-date: "21 août 2025"
+date: "2025-08-21"
 tag: "Cas client"
 tagColor: "#8b5cf6"
 readTime: "8 min"

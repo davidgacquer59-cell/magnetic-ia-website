@@ -1,7 +1,7 @@
 ---
 title: "Stratégie marketing digital à Lille"
 excerpt: "Les spécificités du marché lillois et des Hauts-de-France pour les PME locales. Comment construire une stratégie digitale efficace en tenant compte du tissu économique régional."
-date: "20 août 2025"
+date: "2025-08-20"
 tag: "Stratégie"
 tagColor: "#f59e0b"
 readTime: "5 min"

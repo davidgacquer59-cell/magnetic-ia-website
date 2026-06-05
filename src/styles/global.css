@@ -94,11 +94,11 @@ section {
 /* Nav flottante style "île arrondie" */
 .floating-nav {
   border-radius: 1rem;
-  border: 1px solid rgba(59, 130, 246, 0.4);
-  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(24px) saturate(1.6);
   backdrop-filter: blur(24px) saturate(1.6);
-  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.18), 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 .dark .floating-nav {
   border: 1px solid rgba(59, 130, 246, 0.35);
@@ -560,8 +560,10 @@ body {
   /* Footer : padding horizontal généreux sur mobile */
   footer > .max-w-7xl { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 
-  /* Padding horizontal global réduit */
-  .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  /* Padding horizontal aligné sur la nav île arrondie : 1.5rem = valeur Tailwind native px-6.
+     La bulle de nav a px-6 (1.5rem) de marge externe — le contenu des sections commence
+     ainsi au même bord que la bulle, sans déborder visuellement sur les côtés. */
+  .px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 }
 
 /* ── DESKTOP+ (>= 768px) : CTAs dans la colonne texte ── */

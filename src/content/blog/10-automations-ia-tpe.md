@@ -1,7 +1,7 @@
 ---
 title: "10 automations IA faciles pour les TPE"
 excerpt: "Des automatisations concrètes, faciles à déployer, pour gagner du temps sur les tâches répétitives : relances, facturation, qualification de leads, publication LinkedIn."
-date: "29 août 2025"
+date: "2025-08-29"
 tag: "Automatisation"
 tagColor: "#10b981"
 readTime: "6 min"

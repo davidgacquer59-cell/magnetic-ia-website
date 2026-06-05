@@ -23,12 +23,12 @@ Les outils IA comme ChatGPT ou Claude sont entraînés sur des milliards de docu
 - Quels détails vous incluez systématiquement dans vos rapports
 - Quelle est la façon dont *votre* équipe classe les priorités
 
-<div style="margin: 2.5rem 0; padding: 0; border-radius: 1.25rem; overflow: hidden; border: 1px solid rgba(251,191,36,0.25); background: rgba(251,191,36,0.03);">
+<div style="margin: 2.5rem 0; padding: 0; border-radius: 1.25rem; overflow: hidden; border: 1px solid rgba(251,191,36,0.25); background: var(--bg-secondary);">
   <div style="padding: 1rem 1.5rem; background: rgba(251,191,36,0.1); border-bottom: 1px solid rgba(251,191,36,0.2);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #fbbf24; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600;">Le principe</p>
   </div>
   <div style="padding: 1.5rem;">
-    <p style="margin: 0; font-size: 1rem; color: #e2e8f0; line-height: 1.7;">Plus vous expliquez votre processus comme si vous formiez quelqu'un qui n'en sait rien, meilleure est la réponse. L'IA n'a pas besoin qu'on lui parle en "langage machine". Elle a besoin qu'on lui parle clairement — comme à un humain intelligent mais ignorant de votre contexte.</p>
+    <p style="margin: 0; font-size: 1rem; color: var(--text-primary); line-height: 1.7;">Plus vous expliquez votre processus comme si vous formiez quelqu'un qui n'en sait rien, meilleure est la réponse. L'IA n'a pas besoin qu'on lui parle en "langage machine". Elle a besoin qu'on lui parle clairement — comme à un humain intelligent mais ignorant de votre contexte.</p>
   </div>
 </div>
 
@@ -40,8 +40,8 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
   <div style="padding: 1rem 1.5rem; background: rgba(167,139,250,0.1); border-bottom: 1px solid rgba(167,139,250,0.2);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #a78bfa; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600;">Template — méthode du stagiaire</p>
   </div>
-  <div style="padding: 1.5rem; background: rgba(15,23,42,0.7);">
-    <div style="font-size: 0.88rem; color: #cbd5e1; line-height: 2.2;">
+  <div style="padding: 1.5rem; background: var(--bg-tertiary);">
+    <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 2.2;">
       Chaque <span style="color: #a78bfa; font-weight: 600;">[fréquence]</span>, je dois <span style="color: #a78bfa; font-weight: 600;">[tâche]</span>.<br>
       Voici comment je procède :<br>
       <span style="color: #a78bfa; font-weight: 600;">Étape 1 :</span> ...<br>
@@ -65,7 +65,7 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
   <div style="padding: 0.75rem 1.25rem; background: rgba(96,165,250,0.08); border-bottom: 1px solid rgba(96,165,250,0.15);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #60a5fa; text-transform: uppercase; letter-spacing: 0.1em;">Commerce / Relance prospect inactif</p>
   </div>
-  <div style="padding: 1.25rem; background: rgba(15,23,42,0.5); font-size: 0.85rem; color: #94a3b8; line-height: 1.9;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.9;">
     Chaque vendredi, je dois relancer les prospects qui n'ont pas répondu à notre devis depuis plus de 10 jours.<br>
     Voici comment je procède :<br>
     Étape 1 : Je retrouve le nom du contact et le devis envoyé (montant, prestation).<br>
@@ -82,7 +82,7 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
   <div style="padding: 0.75rem 1.25rem; background: rgba(251,191,36,0.07); border-bottom: 1px solid rgba(251,191,36,0.15);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.1em;">BTP / Compte-rendu chantier</p>
   </div>
-  <div style="padding: 1.25rem; background: rgba(15,23,42,0.5); font-size: 0.85rem; color: #94a3b8; line-height: 1.9;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.9;">
     Après chaque visite de chantier, je dois rédiger un compte-rendu pour le client.<br>
     Voici comment je procède :<br>
     Étape 1 : Je note les travaux effectués ce jour (liste brute de mes notes vocales).<br>
@@ -96,10 +96,10 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
 ### Formation / Conseil — Synthèse de réunion
 
 <div style="margin: 1.5rem 0; border-radius: 1rem; overflow: hidden; border: 1px solid rgba(110,231,183,0.2);">
-  <div style="padding: 0.75rem 1.25rem; background: rgba(110,231,183,0.06); border-bottom: 1px solid rgba(110,231,183,0.15);">
+  <div style="padding: 0.75rem 1.25rem; background: var(--bg-tertiary); border-bottom: 1px solid rgba(110,231,183,0.15);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.1em;">Conseil / Synthèse après réunion client</p>
   </div>
-  <div style="padding: 1.25rem; background: rgba(15,23,42,0.5); font-size: 0.85rem; color: #94a3b8; line-height: 1.9;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.9;">
     Après chaque réunion avec un client, je dois envoyer une synthèse par email dans les 2 heures.<br>
     Voici comment je procède :<br>
     Étape 1 : Je dicte ou colle mes notes brutes de la réunion.<br>
@@ -116,7 +116,7 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
   <div style="padding: 0.75rem 1.25rem; background: rgba(167,139,250,0.07); border-bottom: 1px solid rgba(167,139,250,0.15);">
     <p style="margin: 0; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; color: #a78bfa; text-transform: uppercase; letter-spacing: 0.1em;">RH / Rédaction fiche de poste</p>
   </div>
-  <div style="padding: 1.25rem; background: rgba(15,23,42,0.5); font-size: 0.85rem; color: #94a3b8; line-height: 1.9;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.9;">
     Chaque fois qu'on ouvre un recrutement, je dois rédiger une fiche de poste.<br>
     Voici comment je procède :<br>
     Étape 1 : Je liste les missions du poste et le profil recherché (notes brutes).<br>
@@ -132,18 +132,18 @@ C'est le template que j'enseigne en atelier. Il fonctionne pour n'importe quelle
 La méthode du stagiaire fait une chose que les prompts classiques ne font pas : elle **documente vos processus**. En expliquant votre façon de travailler à l'IA, vous la clarifiez aussi pour vous-même — et vous la rendez transmissible.
 
 <div style="margin: 2rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-  <div style="padding: 1.25rem; background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); border-radius: 0.9rem;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(239,68,68,0.15); border-radius: 0.9rem;">
     <div style="font-size: 0.7rem; color: #f87171; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Sans la méthode</div>
-    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.83rem; color: #94a3b8; line-height: 1.9;">
+    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.83rem; color: var(--text-secondary); line-height: 1.9;">
       <li>Prompt différent à chaque fois</li>
       <li>Résultats inconsistants</li>
       <li>Itérations répétées</li>
       <li>Impossible à déléguer à l'équipe</li>
     </ul>
   </div>
-  <div style="padding: 1.25rem; background: rgba(110,231,183,0.05); border: 1px solid rgba(110,231,183,0.15); border-radius: 0.9rem;">
+  <div style="padding: 1.25rem; background: var(--bg-tertiary); border: 1px solid rgba(110,231,183,0.15); border-radius: 0.9rem;">
     <div style="font-size: 0.7rem; color: #6ee7b7; font-weight: 600; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Avec la méthode</div>
-    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.83rem; color: #94a3b8; line-height: 1.9;">
+    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.83rem; color: var(--text-secondary); line-height: 1.9;">
       <li>Prompt réutilisable, sauvegardé</li>
       <li>Résultat cohérent et ajustable</li>
       <li>2 itérations max en moyenne</li>
@@ -159,25 +159,25 @@ Une fois que vous avez un prompt qui fonctionne pour une tâche récurrente, sau
 Structurez votre bibliothèque par catégorie :
 
 <div style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem;">
-  <div style="padding: 1rem; background: rgba(96,165,250,0.06); border: 1px solid rgba(96,165,250,0.18); border-radius: 0.75rem; text-align: center;">
+  <div style="padding: 1rem; background: var(--bg-tertiary); border: 1px solid rgba(96,165,250,0.18); border-radius: 0.75rem; text-align: center;">
     <div style="font-size: 1.4rem; margin-bottom: 0.4rem;">✉️</div>
-    <div style="font-size: 0.8rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.2rem;">Communication</div>
-    <div style="font-size: 0.75rem; color: #94a3b8;">Relances, devis, emailings, réponses clients</div>
+    <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">Communication</div>
+    <div style="font-size: 0.75rem; color: var(--text-secondary);">Relances, devis, emailings, réponses clients</div>
   </div>
-  <div style="padding: 1rem; background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.18); border-radius: 0.75rem; text-align: center;">
+  <div style="padding: 1rem; background: var(--bg-tertiary); border: 1px solid rgba(167,139,250,0.18); border-radius: 0.75rem; text-align: center;">
     <div style="font-size: 1.4rem; margin-bottom: 0.4rem;">📊</div>
-    <div style="font-size: 0.8rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.2rem;">Reporting</div>
-    <div style="font-size: 0.75rem; color: #94a3b8;">CR réunions, bilans hebdo, synthèses projet</div>
+    <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">Reporting</div>
+    <div style="font-size: 0.75rem; color: var(--text-secondary);">CR réunions, bilans hebdo, synthèses projet</div>
   </div>
-  <div style="padding: 1rem; background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.75rem; text-align: center;">
+  <div style="padding: 1rem; background: var(--bg-tertiary); border: 1px solid rgba(110,231,183,0.18); border-radius: 0.75rem; text-align: center;">
     <div style="font-size: 1.4rem; margin-bottom: 0.4rem;">📣</div>
-    <div style="font-size: 0.8rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.2rem;">Marketing</div>
-    <div style="font-size: 0.75rem; color: #94a3b8;">Posts LinkedIn, articles, argumentaires</div>
+    <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">Marketing</div>
+    <div style="font-size: 0.75rem; color: var(--text-secondary);">Posts LinkedIn, articles, argumentaires</div>
   </div>
-  <div style="padding: 1rem; background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.18); border-radius: 0.75rem; text-align: center;">
+  <div style="padding: 1rem; background: var(--bg-tertiary); border: 1px solid rgba(251,191,36,0.18); border-radius: 0.75rem; text-align: center;">
     <div style="font-size: 1.4rem; margin-bottom: 0.4rem;">👥</div>
-    <div style="font-size: 0.8rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.2rem;">RH</div>
-    <div style="font-size: 0.75rem; color: #94a3b8;">Offres emploi, onboarding, procédures</div>
+    <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem;">RH</div>
+    <div style="font-size: 0.75rem; color: var(--text-secondary);">Offres emploi, onboarding, procédures</div>
   </div>
 </div>
 
