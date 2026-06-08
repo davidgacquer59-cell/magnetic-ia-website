@@ -95,10 +95,12 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": "https://magnetic-ia.fr/#website",
         "name": "Magnetic-IA",
         "url": "https://magnetic-ia.fr",
         "description": "Diagnostic IA et feuille de route pour dirigeants de TPE et PME — Hauts-de-France",
         "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://magnetic-ia.fr/#organization" },
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://magnetic-ia.fr/blog?q={search_term_string}",
@@ -112,6 +114,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://magnetic-ia.fr/#david-gacquer",
         "name": "David Gacquer",
         "url": "https://magnetic-ia.fr",
         "image": "https://magnetic-ia.fr/images/david-gacquer.png",
@@ -159,6 +162,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://magnetic-ia.fr');
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
+        "@id": "https://magnetic-ia.fr/#organization",
         "name": "Magnetic-IA",
         "description": "Diagnostic IA et feuille de route pour dirigeants de TPE et PME — Hauts-de-France",
         "url": "https://magnetic-ia.fr",

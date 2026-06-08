@@ -43,42 +43,69 @@ const icon = tagIcon[article.data.tag] ?? '●';
   description={article.data.excerpt}
   type="article"
 >
-  <!-- JSON-LD Article — GEO/AIO optimisé -->
+  <!-- JSON-LD Article — GEO/LLM optimisé -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `https://magnetic-ia.fr/blog/${article.slug}#article`,
     "headline": article.data.title,
     "description": article.data.excerpt,
     "datePublished": article.data.date,
     "dateModified": article.data.date,
     "url": `https://magnetic-ia.fr/blog/${article.slug}`,
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://magnetic-ia.fr/images/og-image.png",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Person",
+      "@id": "https://magnetic-ia.fr/#david-gacquer",
       "name": "David Gacquer",
       "url": "https://magnetic-ia.fr",
       "jobTitle": "Expert en diagnostic IA pour PME",
+      "knowsAbout": ["Diagnostic IA", "Priorisation de projets IA", "Feuille de route IA", "Intelligence artificielle pour PME"],
       "sameAs": [
         "https://www.linkedin.com/in/david-gacquer-20973064/",
         "https://twitter.com/davidgacquer"
       ],
       "worksFor": {
         "@type": "Organization",
+        "@id": "https://magnetic-ia.fr/#organization",
         "name": "Magnetic-IA",
         "url": "https://magnetic-ia.fr"
       }
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://magnetic-ia.fr/#organization",
       "name": "Magnetic-IA",
       "url": "https://magnetic-ia.fr",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://magnetic-ia.fr/favicon.svg"
+        "url": "https://magnetic-ia.fr/favicon.svg",
+        "width": 512,
+        "height": 512
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://magnetic-ia.fr/blog/${article.slug}`
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://magnetic-ia.fr/blog#blog",
+      "name": "Blog Magnetic-IA — Ressources IA pour dirigeants de PME",
+      "url": "https://magnetic-ia.fr/blog"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://magnetic-ia.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://magnetic-ia.fr/blog" },
+        { "@type": "ListItem", "position": 3, "name": article.data.title, "item": `https://magnetic-ia.fr/blog/${article.slug}` }
+      ]
     },
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -86,10 +113,16 @@ const icon = tagIcon[article.data.tag] ?? '●';
     },
     "about": {
       "@type": "Thing",
+      "@id": "https://magnetic-ia.fr/#diagnostic-ia",
       "name": "Diagnostic IA pour PME",
       "description": "Méthode de diagnostic et de priorisation des projets d'intelligence artificielle pour les dirigeants de TPE et PME"
     },
-    "keywords": `${article.data.tag}, cadrage IA, intelligence artificielle PME, David Gacquer, Magnetic-IA`,
+    "mentions": [
+      { "@type": "Organization", "name": "Magnetic-IA", "url": "https://magnetic-ia.fr" },
+      { "@type": "Person", "name": "David Gacquer", "url": "https://www.linkedin.com/in/david-gacquer-20973064/" },
+      { "@type": "Place", "name": "Hauts-de-France", "address": { "@type": "PostalAddress", "addressRegion": "Hauts-de-France", "addressCountry": "FR" } }
+    ],
+    "keywords": `${article.data.tag}, diagnostic IA, intelligence artificielle PME, David Gacquer, Magnetic-IA, Hauts-de-France`,
     "inLanguage": "fr-FR",
     "isAccessibleForFree": true
   })} />
