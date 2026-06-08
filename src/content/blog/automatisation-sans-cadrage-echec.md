@@ -1,4 +1,4 @@
----
+﻿---
 title: "Automatisation sans cadrage : pourquoi ça échoue toujours"
 excerpt: "L'automatisation IA promet de gagner du temps. Mais sans cadrage préalable, elle crée souvent plus de problèmes qu'elle n'en résout. Voici pourquoi — et comment l'éviter."
 date: "2026-05-08"
@@ -55,5 +55,5 @@ Vous voulez automatiser intelligemment ? L'[Audit Flash](/) permet d'identifier 
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME.*
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "RGPD et IA Act : ce que chaque dirigeant de PME doit savoir en 2026"
 excerpt: "L'IA Act est entré en vigueur. Le RGPD s'applique déjà aux usages IA. Ce que ça change concrètement pour les PME françaises — sans le jargon."
 date: "2026-05-25"
@@ -59,5 +59,5 @@ La conformité RGPD et IA Act fait partie intégrante de ma méthode de cadrage.
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME. Hauts-de-France.*
 

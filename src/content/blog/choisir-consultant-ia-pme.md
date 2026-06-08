@@ -1,4 +1,4 @@
----
+﻿---
 title: "Comment choisir son consultant IA sans se faire avoir"
 excerpt: "Le marché du conseil IA explose. Tout le monde se dit expert. Voici les 5 questions à poser avant de signer — et les réponses qui doivent vous alerter."
 date: "2026-05-22"
@@ -64,5 +64,5 @@ Ma promesse : si un cadrage ne révèle aucun levier actionnable pour vous, je v
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME. Hauts-de-France.*
 

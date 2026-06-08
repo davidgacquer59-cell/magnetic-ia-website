@@ -1,4 +1,4 @@
----
+﻿---
 title: "Les 3 erreurs qui font échouer un projet IA en PME"
 excerpt: "80% des projets IA en PME échouent. Pas à cause de la technologie — à cause de ces 3 erreurs évitables que je vois systématiquement sur le terrain."
 date: "2026-05-15"
@@ -46,5 +46,5 @@ C'est exactement ce que propose l'[Audit Flash](/). 4 heures pour remettre les p
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France et toute la France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME. Hauts-de-France et toute la France.*
 

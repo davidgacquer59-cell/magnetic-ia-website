@@ -1,4 +1,4 @@
----
+﻿---
 title: "Par où commencer avec l'IA quand on dirige une PME ?"
 excerpt: "80% des projets IA en PME échouent faute de cadrage. Voici la méthode concrète pour identifier par où commencer et obtenir des résultats mesurables en 90 jours."
 date: "2026-06-01"
@@ -60,5 +60,5 @@ Si le diagnostic ne révèle aucun levier actionnable, je vous le dis franchemen
 
 ---
 
-*David Gacquer est consultant en cadrage de projets IA pour dirigeants de TPE et PME, basé à Wambrechies (Hauts-de-France). Il intervient en présentiel dans la métropole lilloise et à distance dans toute la France.*
+*David Gacquer est consultant en diagnostic IA pour dirigeants de TPE et PME, basé à Wambrechies (Hauts-de-France). Il intervient en présentiel dans la métropole lilloise et à distance dans toute la France.*
 

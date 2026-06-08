@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ce que l'IA ne sait pas faire : les limites à connaître avant de démarrer"
 excerpt: "Hallucinations, absence de bon sens, données confidentielles, dépendance au prompt : les 6 limites réelles de l'IA que tout dirigeant de PME doit comprendre avant d'intégrer ces outils dans son activité."
 date: "2026-06-02"
@@ -196,4 +196,4 @@ Pour voir ce que ces forces donnent en pratique, consultez [nos 3 exemples concr
 
 ---
 
-*David Gacquer — Magnetic-IA. Consultant en cadrage de projets IA pour dirigeants de TPE et PME. Basé à Wambrechies (Hauts-de-France). Retrouvez-moi sur [LinkedIn](https://www.linkedin.com/in/david-gacquer-20973064) ou contactez-moi via [magnetic-ia.fr](/contact).*
+*David Gacquer — Magnetic-IA. consultant en diagnostic IA pour dirigeants de TPE et PME. Basé à Wambrechies (Hauts-de-France). Retrouvez-moi sur [LinkedIn](https://www.linkedin.com/in/david-gacquer-20973064) ou contactez-moi via [magnetic-ia.fr](/contact).*

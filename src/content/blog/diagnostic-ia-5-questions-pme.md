@@ -1,4 +1,4 @@
----
+﻿---
 title: "Diagnostic IA pour PME : les 5 questions à se poser avant tout projet"
 excerpt: "Avant de choisir un outil IA, 5 questions permettent de savoir si vous êtes prêt — et par où commencer. Un diagnostic honnête vaut mieux que 6 mois d'expérimentation."
 date: "2026-05-12"
@@ -55,5 +55,5 @@ L'[Audit Flash](/) permet de répondre à ces cinq questions et de repartir avec
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Hauts-de-France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME. Hauts-de-France.*
 

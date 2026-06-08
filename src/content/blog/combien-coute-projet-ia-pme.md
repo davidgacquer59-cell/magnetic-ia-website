@@ -1,4 +1,4 @@
----
+﻿---
 title: "Combien coûte vraiment un projet IA pour une PME en 2026 ?"
 excerpt: "Entre 900€ et 50 000€ : voici une grille honnête des coûts réels d'un projet IA en PME, avec ce qui fait échouer les budgets les mieux construits."
 date: "2026-06-01"
@@ -69,5 +69,5 @@ Si ce n'est pas le bon moment, je vous le dirai. Pas de rapport pour faire bonne
 
 ---
 
-*David Gacquer — Magnetic-IA. Cadrage de projets IA pour dirigeants de PME. Wambrechies, Hauts-de-France.*
+*David Gacquer — Magnetic-IA. diagnostic IA pour dirigeants de PME. Wambrechies, Hauts-de-France.*
 

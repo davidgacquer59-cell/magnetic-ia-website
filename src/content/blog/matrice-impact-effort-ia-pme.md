@@ -1,4 +1,4 @@
----
+﻿---
 title: "Matrice impact/effort IA : comment prioriser vos projets d'intelligence artificielle"
 excerpt: "Vous avez 10 idées de projets IA et pas le temps de tout faire. La matrice impact/effort est l'outil le plus simple pour décider par où commencer — et ce qu'on arrête."
 date: "2026-05-10"
@@ -69,5 +69,5 @@ Vous voulez construire votre matrice impact/effort IA avec un regard extérieur 
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME.*
 

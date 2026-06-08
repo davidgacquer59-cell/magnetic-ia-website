@@ -1,4 +1,4 @@
----
+﻿---
 title: "ChatGPT ne suffit pas — pourquoi l'outil n'est pas la solution"
 excerpt: "Tout le monde utilise ChatGPT. Très peu en tirent une vraie valeur business. La différence ne vient pas de l'outil — elle vient de la méthode."
 date: "2026-05-18"
@@ -52,5 +52,5 @@ Un [Audit Flash](/) de 4 heures permet de répondre à ces questions et de défi
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME.*
 

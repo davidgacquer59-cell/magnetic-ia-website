@@ -1,4 +1,4 @@
----
+﻿---
 title: "La méthode du stagiaire intelligent : comment expliquer votre travail à l'IA"
 excerpt: "L'IA est comme un stagiaire brillant qui ne connaît pas votre métier. Si vous lui expliquez vos processus comme vous formeriez quelqu'un, elle reproduit vos tâches répétitives avec une précision surprenante."
 date: "2026-06-02"
@@ -191,4 +191,4 @@ Pour aller plus loin sur la structure d'un prompt individuel, lisez [comment ré
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour PME et TPE. Wambrechies, métropole lilloise.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour PME et TPE. Wambrechies, métropole lilloise.*

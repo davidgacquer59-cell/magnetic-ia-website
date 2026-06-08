@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cadrage IA vs automatisation : quelle différence pour votre PME ?"
 excerpt: "Automatisation et cadrage IA sont souvent confondus. Ce sont pourtant deux démarches très différentes — et les mélanger coûte cher."
 date: "2026-05-20"
@@ -52,5 +52,5 @@ Vous voulez savoir où l'IA peut vraiment créer de la valeur dans votre PME ? L
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME.*
 

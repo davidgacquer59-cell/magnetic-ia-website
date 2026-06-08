@@ -1,4 +1,4 @@
----
+﻿---
 title: "IA générative en PME : le guide pratique pour dirigeants qui n'ont pas le temps"
 excerpt: "ChatGPT, Gemini, Claude, Copilot : que choisir et pour quoi faire ? Un guide sans jargon pour les dirigeants de PME qui veulent des résultats, pas de la théorie."
 date: "2026-04-28"
@@ -63,5 +63,5 @@ C'est là que commence mon travail avec les dirigeants de PME. [Prenez 30 minute
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME.*
 

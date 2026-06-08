@@ -1,4 +1,4 @@
----
+﻿---
 title: "Comment rédiger un prompt IA efficace : la méthode en 5 étapes"
 excerpt: "Un prompt vague produit une réponse vague. Voici la structure en 5 étapes utilisée en atelier pour obtenir des résultats fiables avec ChatGPT, Claude ou Gemini — applicables dès aujourd'hui en PME."
 date: "2026-06-02"
@@ -213,4 +213,4 @@ Si vous voulez aller plus vite, [l'Audit Flash](/contact) vous permet d'identifi
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de TPE/PME. Consultant IA indépendant basé à Wambrechies, intervenant dans la métropole lilloise et à distance dans toute la France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de TPE/PME. Consultant IA indépendant basé à Wambrechies, intervenant dans la métropole lilloise et à distance dans toute la France.*

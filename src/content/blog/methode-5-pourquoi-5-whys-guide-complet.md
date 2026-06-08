@@ -1,4 +1,4 @@
----
+﻿---
 title: "Méthode des 5 Pourquoi (5 Whys) : guide complet, schémas, exemples et application IA"
 excerpt: "La méthode des 5 Pourquoi est l'outil de diagnostic le plus puissant et le plus sous-utilisé en entreprise. Guide complet avec schémas, exemples concrets, erreurs classiques — et comment l'appliquer avant tout projet IA."
 date: "2026-06-02"
@@ -466,4 +466,4 @@ Vous serez souvent surpris par ce que vous trouverez. Et vous éviterez de réso
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de TPE/PME. Hauts-de-France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de TPE/PME. Hauts-de-France.*

@@ -1,4 +1,4 @@
----
+﻿---
 title: "IA en entreprise : 3 exemples concrets avec chiffres (avant / après)"
 excerpt: "Devis BTP, offre d'emploi, relances clients : trois cas réels de PME avec les chiffres avant et après intégration de l'IA. Ce que ça coûte, ce que ça rapporte, et comment reproduire ces résultats."
 date: "2026-06-02"
@@ -209,4 +209,4 @@ Vous souhaitez être accompagné ? [L'Audit Flash](/contact) permet d'identifier
 
 ---
 
-*David Gacquer — Magnetic-IA. Consultant en cadrage de projets IA pour TPE et PME, basé à Wambrechies, métropole lilloise. Interventions en présentiel dans les Hauts-de-France et à distance.*
+*David Gacquer — Magnetic-IA. Consultant en diagnostic IA pour TPE et PME, basé à Wambrechies, métropole lilloise. Interventions en présentiel dans les Hauts-de-France et à distance.*

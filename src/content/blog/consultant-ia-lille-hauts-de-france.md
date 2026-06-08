@@ -1,4 +1,4 @@
----
+﻿---
 title: "Consultant IA à Lille et dans les Hauts-de-France : pourquoi le cadrage change tout"
 excerpt: "Vous cherchez un consultant IA à Lille ou dans les Hauts-de-France ? Pourquoi le cadrage amont est la clé du succès de votre projet IA, et comment choisir le bon accompagnement."
 date: "2026-06-01"
@@ -51,5 +51,5 @@ La première étape est un [appel de 30 minutes, gratuit](/), pour faire le poin
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de TPE et PME. Wambrechies (59), Hauts-de-France. Interventions sur Lille, métropole lilloise et toute la France.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de TPE et PME. Wambrechies (59), Hauts-de-France. Interventions sur Lille, métropole lilloise et toute la France.*
 

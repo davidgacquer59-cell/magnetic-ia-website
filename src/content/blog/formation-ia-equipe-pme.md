@@ -1,4 +1,4 @@
----
+﻿---
 title: "Formation IA en PME : ce qui fonctionne vraiment"
 excerpt: "Les formations IA se multiplient. Beaucoup sont génériques et théoriques. Voici ce qui crée réellement de l'adoption et du changement dans les équipes de PME."
 date: "2026-05-05"
@@ -53,5 +53,5 @@ Vous voulez mettre en place une formation IA adaptée à votre équipe ? [Contac
 
 ---
 
-*David Gacquer — Magnetic-IA, cadrage de projets IA pour dirigeants de PME. Formation finançable OPCO/CPF.*
+*David Gacquer — Magnetic-IA, diagnostic IA pour dirigeants de PME. Formation finançable OPCO/CPF.*
 
