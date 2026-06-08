@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://magnetic-ia.fr/sitemap.xml
+Sitemap: https://magnetic-ia.fr/sitemap-index.xml
